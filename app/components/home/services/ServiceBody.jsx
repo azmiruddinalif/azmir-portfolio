@@ -9,13 +9,13 @@ const ServiceBody = () => {
           const Icon = data.icon;
           return (
             <div
-              className="w-full rounded-md bg-white-200 p-5 hover:scale-105 transition-all ease-linear duration-100"
+              className="w-full rounded-md bg-white-200 p-10 hover:scale-105 transition-all ease-linear duration-100"
               key={index}
             >
               <div className="w-12 h-12 bg-white rounded-full shadow flex flex-wrap items-center justify-center transition-all group-hover:bg-black-500 mb-8">
                 <Icon />
               </div>
-              <h4 className="font-primary text-3xl leading-10 text-black-300 font-semibold">
+              <h4 className="font-primary text-[28px] leading-10 text-black-300 font-semibold">
                 {data.title}
               </h4>
             </div>

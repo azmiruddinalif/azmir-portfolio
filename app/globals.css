@@ -13,6 +13,7 @@
   --white-200: #f7f7fa;
   --white-300: #e6e6e6;
   --green-200: #26e9671a;
+  --shadow-soft: 0 14px 24px 4px #0000000a;
 }
 
 @theme inline {
@@ -28,5 +29,6 @@
   --color-white-200: var(--white-200);
   --color-white-300: var(--white-300);
   --color-green-200: var(--green-200);
+  --shadow-soft: var(--shadow-soft);
   --font-primary: var(--font-avenir);
 }

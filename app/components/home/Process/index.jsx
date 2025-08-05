@@ -35,7 +35,7 @@ const WorkProcess = () => {
             {ProcessData.map((data) => (
               <CardBase
                 key={data.step}
-                className="p-8 rounded-md relative flex flex-col justify-between shadow-lg"
+                className="p-8 rounded-md relative flex flex-col justify-between shadow-soft"
               >
                 <CardBase.Header>
                   <Image src={data.img} alt="steps" width={80} height={80} />
