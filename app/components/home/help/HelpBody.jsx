@@ -5,7 +5,7 @@ import Image from "next/image";
 const HelpBody = () => {
   return (
     <>
-      <div className="grid grid-cols-2 gap-5 mt-12">
+      <div className="grid grid-cols-2 gap-8 mt-12">
         {HelpData.map((data, index) => (
           <div key={index}>
             <div className="flex items-center gap-x-3">
@@ -14,7 +14,7 @@ const HelpBody = () => {
                 {data.title}
               </h4>
             </div>
-            <p className="font-primary text-base max-w-[400px] mt-2">
+            <p className="font-primary text-base max-w-[500px] mt-2">
               {data.desc}
             </p>
           </div>
