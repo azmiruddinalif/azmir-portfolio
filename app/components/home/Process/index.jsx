@@ -10,18 +10,18 @@ const WorkProcess = () => {
     <>
       <div className="bg-white-200 py-[100px]">
         <Container>
-          <div className="flex items-center justify-between">
-            <div className="max-w-[550px]">
-              <h4 className="font-primary text-3xl font-bold leading-10 text-black-300">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="max-w-[550px] order-1 lg:order-[0] text-center lg:text-left">
+              <h4 className="font-primary text-2xl lg:text-3xl font-bold lg:leading-10 text-black-300">
                 My Development Process
               </h4>
-              <p className="font-primary text-lg font-normal text-black-300 mt-3">
+              <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3">
                 a data-driven, user-focused process designed to build reliable,
                 scalable, and maintainable full-stack applications.
               </p>
               <Button
                 text="How it works ?"
-                className="text-black-100 bg-white font-primary font-semibold py-3 mt-5 mb-3 hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
+                className="text-black-100 lg:mx-0 mx-auto text-sm lg:text-base bg-white font-primary font-semibold py-3 mt-5 mb-3 hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
               />
             </div>
             <Image
@@ -31,7 +31,7 @@ const WorkProcess = () => {
               height={200}
             />
           </div>
-          <div className="grid grid-cols-3 gap-5 mt-8">
+          <div className="grid lg:grid-cols-3 gap-5 mt-8">
             {ProcessData.map((data) => (
               <CardBase
                 key={data.step}

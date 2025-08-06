@@ -18,7 +18,7 @@ const Upwork = () => {
     router.push("https://www.upwork.com/freelancers/~014fe9b65d77d048f1");
   };
   return (
-    <div className="bg-white-200 py-25">
+    <div className="bg-white-200 py-10 lg:py-25">
       <Container>
         <div className="flex justify-center">
           <Image
@@ -28,12 +28,12 @@ const Upwork = () => {
             height={200}
           />
         </div>
-        <div className="text-center mt-8">
-          <h4 className="text-3xl font-bold font-primary">
+        <div className="text-center mt-0 lg:mt-8">
+          <h4 className="text-2xl lg:text-3xl font-bold font-primary">
             Former <b className="text-green">Upwork's Verified</b> MERN Stack
             Developer
           </h4>
-          <p className="max-w-[750px] mx-auto mt-3 font-primary font-normal text-black-400 text-base leading-8">
+          <p className="max-w-[750px] mx-auto mt-3 font-primary font-normal text-black-400 text-sm lg:text-base leading-6 lg:leading-8">
             As a Verified MERN Stack Developer on Upwork, I’ve successfully
             delivered <b>scalable web and mobile applications</b> for global
             clients—leveraging{" "}
@@ -48,7 +48,7 @@ const Upwork = () => {
         <Button
           onClick={handleRedirect}
           text="Let's build yours too"
-          className="text-black-100 bg-white font-primary font-semibold py-3 mt-8 mb-3 mx-auto hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
+          className="text-black-100 text-sm lg:text-base bg-white font-primary font-semibold py-3 mt-8 mb-3 mx-auto hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
         />
       </Container>
     </div>

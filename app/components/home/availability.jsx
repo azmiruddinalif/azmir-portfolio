@@ -10,7 +10,7 @@ const Player = dynamic(
 
 const Availability = () => {
   return (
-    <div className="px-3 py-2 bg-green-200 w-fit flex items-center gap-x-1.5 rounded-full">
+    <div className="px-3 py-2 bg-green-200 w-fit mx-auto lg:mx-0 flex items-center gap-x-1.5 rounded-full">
       <Player
         autoplay
         loop

@@ -5,7 +5,7 @@ import Image from "next/image";
 const HelpBody = () => {
   return (
     <>
-      <div className="grid grid-cols-2 gap-8 mt-12">
+      <div className="grid lg:grid-cols-2 gap-8 mt-12">
         {HelpData.map((data, index) => (
           <div key={index} className="flex gap-x-3">
             <div className="shrink-0">

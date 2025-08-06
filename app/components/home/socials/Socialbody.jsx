@@ -5,11 +5,11 @@ import Image from "next/image";
 const SocialBody = () => {
   return (
     <>
-      <div className="grid grid-cols-3 gap-5 mt-5">
+      <div className="grid lg:grid-cols-3 gap-5 mt-5">
         {SocialData.map((data, index) => {
           return (
             <div
-              className="w-full rounded-md bg-white-200 p-10 hover:scale-105 transition-all ease-linear duration-100"
+              className="w-full rounded-md bg-white-200 p-10 lg:hover:scale-105 transition-all ease-linear duration-100"
               key={index}
             >
               <Image src={data.image} width={50} height={50} alt="image" />

@@ -5,11 +5,11 @@ const WormCompany = () => {
   return (
     <>
       <div className="py-10 text-center">
-        <h4 className="font-primary font-normal text-black-400">
+        <h4 className="font-primary font-normal text-sm lg:text-base text-black-400">
           A FEW OF THE PLACES I WORKED
         </h4>
 
-        <div className="flex items-center gap-x-7 justify-center mt-5">
+        <div className="flex items-center gap-x-7 justify-center lg:mt-5">
           <div className="w-[40px] flex items-center justify-center bg-white rounded-md overflow-hidden">
             <Image
               src="/assets/cocoon.svg"
