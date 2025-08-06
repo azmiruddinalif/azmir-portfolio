@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./layouts/header";
 import Footer from "./layouts/footer";
+import "swiper/css";
 
 const avenir = localFont({
   src: [

@@ -20,20 +20,20 @@ const WormCompany = () => {
             />
           </div>
 
-          <div className="w-[60px] flex items-center justify-center bg-white rounded-md overflow-hidden">
+          <div className="w-[80px] flex items-center justify-center bg-white rounded-md overflow-hidden">
             <Image
-              src="/assets/doatkolom.png"
-              alt="Doat Kolom"
+              src="/assets/CampiXlogo.svg"
+              alt="CampiX"
               width={80}
               height={80}
               className="object-contain filter grayscale brightness-25"
             />
           </div>
 
-          <div className="w-[80px] flex items-center justify-center bg-white rounded-md overflow-hidden">
+          <div className="w-[80px] h-[80px] flex items-center justify-center bg-white rounded-md overflow-hidden">
             <Image
-              src="/assets/CampiXlogo.svg"
-              alt="CampiX"
+              src="/assets/cbg.png"
+              alt="CBG"
               width={80}
               height={80}
               className="object-contain filter grayscale brightness-25"
@@ -50,10 +50,10 @@ const WormCompany = () => {
             />
           </div>
 
-          <div className="w-[80px] h-[80px] flex items-center justify-center bg-white rounded-md overflow-hidden">
+          <div className="w-[60px] flex items-center justify-center bg-white rounded-md overflow-hidden">
             <Image
-              src="/assets/cbg.png"
-              alt="CBG"
+              src="/assets/doatkolom.png"
+              alt="Doat Kolom"
               width={80}
               height={80}
               className="object-contain filter grayscale brightness-25"

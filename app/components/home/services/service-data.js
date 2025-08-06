@@ -9,26 +9,26 @@ import {
 export const ServiceData = [
   {
     title: "Web Application Development",
-    icon: WebAppIcon,
+    icon: "/assets/op1.png",
   },
   {
     title: "Mobile App Development",
-    icon: MobileAppIcon,
+    icon: "/assets/op3.png",
   },
   {
     title: "Progressive Web Development",
-    icon: MobileAppIcon,
+    icon: "/assets/progressive.png",
   },
   {
     title: "Full-Stack Web development",
-    icon: FullStackIcon,
+    icon: "/assets/op5.png",
   },
   {
     title: "API Integration Development",
-    icon: ApiIcon,
+    icon: "/assets/appapi.png",
   },
   {
     title: "Website & App Optimization",
-    icon: WebOptimizationIcon,
+    icon: "/assets/op2.png",
   },
 ];

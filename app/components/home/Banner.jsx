@@ -35,7 +35,7 @@ const Banner = () => {
             </div>
             <div className="flex items-center gap-x-2">
               <Button
-                text="Get Start"
+                text="My Socials"
                 className="text-white font-primary font-semibold py-3 mt-5 mb-3 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
               />
               <Button

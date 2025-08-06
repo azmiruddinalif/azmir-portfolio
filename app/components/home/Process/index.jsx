@@ -38,7 +38,12 @@ const WorkProcess = () => {
                 className="p-8 rounded-md relative flex flex-col justify-between shadow-soft"
               >
                 <CardBase.Header>
-                  <Image src={data.img} alt="steps" width={80} height={80} />
+                  <Image
+                    src={data.img}
+                    alt="steps"
+                    width={data.width}
+                    height={data.height}
+                  />
                   <span className="absolute top-2 right-2 px-5 py-2 bg-black-400 rounded-full text-white font-primary text-xs">
                     Step {data.step.toString().padStart(2, "0")}
                   </span>

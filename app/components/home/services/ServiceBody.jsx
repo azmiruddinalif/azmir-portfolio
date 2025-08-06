@@ -1,5 +1,6 @@
 import React from "react";
 import { ServiceData } from "./service-data";
+import Image from "next/image";
 
 const ServiceBody = () => {
   return (
@@ -12,10 +13,8 @@ const ServiceBody = () => {
               className="w-full rounded-md bg-white-200 p-10 hover:scale-105 transition-all ease-linear duration-100"
               key={index}
             >
-              <div className="w-12 h-12 bg-white rounded-full shadow flex flex-wrap items-center justify-center transition-all group-hover:bg-black-500 mb-8">
-                <Icon />
-              </div>
-              <h4 className="font-primary text-[28px] leading-10 text-black-300 font-semibold">
+              <Image src={data.icon} width={50} height={50} alt="icon" />
+              <h4 className="font-primary text-[28px] leading-10 text-black-300 font-semibold mt-3">
                 {data.title}
               </h4>
             </div>

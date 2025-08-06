@@ -5,7 +5,9 @@ import Help from "./components/home/help";
 import Journey from "./components/home/journey";
 import WorkProcess from "./components/home/Process";
 import Projects from "./components/home/projects";
+import Review from "./components/home/review";
 import Services from "./components/home/services";
+import Socials from "./components/home/socials";
 import Upwork from "./components/home/Upwork";
 
 export default function Home() {
@@ -26,6 +28,10 @@ export default function Home() {
       <WorkProcess />
       <Container>
         <Help />
+      </Container>
+      <Review />
+      <Container>
+        <Socials />
       </Container>
     </>
   );

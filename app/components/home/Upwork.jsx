@@ -2,6 +2,9 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import Container from "../common/container";
+import Image from "next/image";
+import Button from "../common/button";
+import { useRouter } from "next/navigation";
 const Player = dynamic(
   () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
   {
@@ -10,16 +13,22 @@ const Player = dynamic(
 );
 
 const Upwork = () => {
+  const router = useRouter();
+  const handleRedirect = () => {
+    router.push("https://www.upwork.com/freelancers/~014fe9b65d77d048f1");
+  };
   return (
-    <div className="bg-white-200 py-5">
-      {/* <Player
-        autoplay
-        loop
-        src="/lottie/upwork.json"
-        style={{ height: "700px", width: "100%" }}
-      /> */}
+    <div className="bg-white-200 py-25">
       <Container>
-        <div className="text-center">
+        <div className="flex justify-center">
+          <Image
+            src="/assets/upwork.webp"
+            alt="upwork"
+            width={200}
+            height={200}
+          />
+        </div>
+        <div className="text-center mt-8">
           <h4 className="text-3xl font-bold font-primary">
             Former <b className="text-green">Upwork's Verified</b> MERN Stack
             Developer
@@ -36,6 +45,11 @@ const Upwork = () => {
             architecture, <b>fast delivery, and long-term maintainability</b>.
           </p>
         </div>
+        <Button
+          onClick={handleRedirect}
+          text="Let's build yours too"
+          className="text-black-100 bg-white font-primary font-semibold py-3 mt-8 mb-3 mx-auto hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
+        />
       </Container>
     </div>
   );
