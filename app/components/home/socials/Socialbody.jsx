@@ -1,6 +1,7 @@
 import React from "react";
 import { SocialData } from "./social-data";
 import Image from "next/image";
+import Link from "next/link";
 
 const SocialBody = () => {
   return (
@@ -16,9 +17,15 @@ const SocialBody = () => {
               <h4 className="font-primary text-[28px] leading-10 text-black-300 font-semibold mt-5">
                 {data.title}
               </h4>
-              <p className="font-primary text-base text-black-300 font-normal mt-1">
+              <p className="font-primary text-base text-black-300 font-normal mt-1 mb-5">
                 {data.des}
               </p>
+              <Link
+                href={data.link}
+                className="font-primary text-base text-black-300 font-semibold flex items-center gap-x-2 underline"
+              >
+                View {data.title}
+              </Link>
             </div>
           );
         })}

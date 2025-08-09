@@ -8,7 +8,7 @@ const ProjectBody = () => {
   return (
     <>
       <div className="grid lg:grid-cols-3 gap-x-8 gap-y-8 lg:gap-y-0 mt-6 lg:mt-14">
-        <CardBase className="lg:group">
+        <CardBase className="group">
           <CardBase.Header>
             <div className="w-full border border-black-800 overflow-hidden rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
               <Image src="/assets/1.png" alt="1" width={500} height={500} />
@@ -35,7 +35,7 @@ const ProjectBody = () => {
           </CardBase.Footer>
         </CardBase>
 
-        <CardBase className="lg:group">
+        <CardBase className="group">
           <CardBase.Header>
             <div className="w-full border border-black-800 overflow-hidden rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
               <Image src="/assets/2.png" alt="2" width={500} height={500} />
@@ -62,7 +62,7 @@ const ProjectBody = () => {
           </CardBase.Footer>
         </CardBase>
 
-        <CardBase className="lg:group">
+        <CardBase className="group">
           <CardBase.Header>
             <div className="w-full border border-black-800 overflow-hidden rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
               <Image src="/assets/3.png" alt="3" width={500} height={500} />

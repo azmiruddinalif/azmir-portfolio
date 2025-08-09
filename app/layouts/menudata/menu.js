@@ -5,7 +5,7 @@ export const MenuData = [
   },
   {
     title: "My Works",
-    link: "/works",
+    link: "/myworks",
   },
   {
     title: "Services",

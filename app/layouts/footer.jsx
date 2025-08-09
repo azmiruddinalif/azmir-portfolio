@@ -27,7 +27,7 @@ const Footer = () => {
           </Container>
         </div>
         <div className="flex items-center px-5 max-w-[95%] mx-auto bg-white py-3 justify-between">
-          <span className="font-primary font-semibold text-black-800">
+          <span className="font-primary font-semibold text-black-400">
             &copy;{getFullYear()} Dev Azmir
           </span>
           <ul className="flex items-center justify-end">
