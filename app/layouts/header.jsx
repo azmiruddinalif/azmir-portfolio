@@ -29,7 +29,12 @@ const Header = () => {
           <div className="flex items-center justify-between py-2 lg:py-0">
             {/* Logo */}
             <div className="flex items-center gap-4">
-              <Image src="/assets/logo.svg" alt="logo" width={80} height={80} />
+              <Image
+                src="/assets/logo.svg"
+                alt="logo"
+                width={150}
+                height={150}
+              />
             </div>
 
             {/* Desktop Menu */}
