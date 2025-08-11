@@ -1,11 +1,10 @@
 "use client";
-import React from "react";
-import Button from "../components/common/button";
-import { BsBoxArrowInUpRight } from "react-icons/bs";
-import { useRouter } from "next/navigation";
-import { WorkData } from "./workdata";
-import Projects from "./Projects";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { BsBoxArrowInUpRight } from "react-icons/bs";
+import Button from "../components/common/button";
+import Projects from "./Projects";
+import { WorkData } from "./workdata";
 
 const MyWorkData = () => {
   const router = useRouter();
@@ -56,7 +55,7 @@ const MyWorkData = () => {
             <div
               key={idx}
               onClick={() => handleProjectClick(project.slug)}
-              className="mb-10"
+              className="mb-10 border-b border-b-white-100 pb-10"
             >
               <Projects
                 title={project.title}

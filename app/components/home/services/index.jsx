@@ -1,6 +1,6 @@
-import React from "react";
-import Button from "../../common/button";
 import Image from "next/image";
+import Link from "next/link";
+import Button from "../../common/button";
 import ServiceBody from "./ServiceBody";
 
 const Services = () => {
@@ -18,7 +18,11 @@ const Services = () => {
               Node.js, Express, MongoDB, and React Native.
             </p>
             <Button
-              text="Let's Book a Free Call"
+              text={
+                <Link href="/meeting/azmir" target="_blank">
+                  Let's Book a Free Call
+                </Link>
+              }
               className="text-black-100 lg:mx-0 mx-auto text-sm lg:text-base bg-white font-primary font-semibold py-3 mt-5 mb-3 hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
             />
           </div>

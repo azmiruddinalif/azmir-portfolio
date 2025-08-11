@@ -1,10 +1,10 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { MenuData } from "./menudata/menu";
-import Link from "next/link";
 import Image from "next/image";
-import Container from "../components/common/container";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import Button from "../components/common/button";
+import Container from "../components/common/container";
+import { MenuData } from "./menudata/menu";
 
 const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -28,14 +28,14 @@ const Header = () => {
         <Container>
           <div className="flex items-center justify-between py-2 lg:py-0">
             {/* Logo */}
-            <div className="flex items-center gap-4">
+            <Link href="/" className="flex items-center gap-4">
               <Image
                 src="/assets/logo.svg"
                 alt="logo"
                 width={150}
                 height={150}
               />
-            </div>
+            </Link>
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex items-center justify-end">
@@ -61,7 +61,14 @@ const Header = () => {
                 </li>
               ))}
               <Button
-                text="Hire Me"
+                text={
+                  <Link
+                    href="https://www.upwork.com/freelancers/~014fe9b65d77d048f1"
+                    target="_blank"
+                  >
+                    Hire Me
+                  </Link>
+                }
                 className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
               />
             </ul>
@@ -226,9 +233,18 @@ const Header = () => {
         {/* CTA Button */}
         <div className="absolute bottom-8 left-0 w-full px-6">
           <Button
-            text="Hire Me"
+            text={
+              <Link
+                href="https://www.upwork.com/freelancers/~014fe9b65d77d048f1"
+                target="_blank"
+              >
+                Hire Me
+              </Link>
+            }
             className="w-full text-white font-primary font-semibold py-3 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
-            onClick={() => setSidebarOpen(false)}
+            onClick={() => {
+              setSidebarOpen(false);
+            }}
           />
         </div>
       </div>

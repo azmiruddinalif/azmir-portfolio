@@ -1,8 +1,7 @@
-import React from "react";
-import Container from "../components/common/container";
-import Button from "../components/common/button";
-import { FooterMenu } from "./menudata/menu";
 import Link from "next/link";
+import Button from "../components/common/button";
+import Container from "../components/common/container";
+import { FooterMenu } from "./menudata/menu";
 
 const Footer = () => {
   const getFullYear = () => new Date().getFullYear();
@@ -26,15 +25,15 @@ const Footer = () => {
             </div>
           </Container>
         </div>
-        <div className="flex items-center px-5 max-w-[95%] mx-auto bg-white py-3 justify-between">
-          <span className="font-primary font-semibold text-black-400">
-            &copy;{getFullYear()} Dev Azmir
+        <div className="flex flex-col lg:flex-row gap-5 items-center px-5 max-w-[95%] mx-auto bg-white py-3 justify-between">
+          <span className="font-primary font-semibold text-black-400 text-sm lg:text-base">
+            &copy;{getFullYear()} Azmir Uddin Alif (Software Developer)
           </span>
           <ul className="flex items-center justify-end">
             {FooterMenu.map((data, index) => (
               <li
                 key={index}
-                className="font-primary font-normal text-base relative text-black-400 hover:text-black"
+                className="font-primary font-normal text-sm lg:text-base relative text-black-400 hover:text-black"
               >
                 <Link href={data.link} className="inline-block px-6">
                   {data.title}
