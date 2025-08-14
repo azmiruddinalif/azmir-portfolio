@@ -17,14 +17,12 @@ const Socials = () => {
               Follow me on social media for tips, tutorials, project updates,
               and a look behind the scenes of my web development journey.
             </p>
-            <Button
-              text={
-                <Link href="/meeting/azmir" target="_blank">
-                  Let's Book a Free Call
-                </Link>
-              }
-              className="text-white font-primary lg:mx-0 mx-auto text-sm lg:text-base font-semibold py-3 mt-5 mb-3 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
-            />
+            <Link href="/meeting/azmir" target="_blank">
+              <Button
+                text="Let's Book For a Free Call"
+                className="text-white font-primary lg:mx-0 mx-auto text-sm lg:text-base font-semibold py-3 mt-5 mb-3 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
+              />
+            </Link>
           </div>
           <Image
             src="/assets/social.png"

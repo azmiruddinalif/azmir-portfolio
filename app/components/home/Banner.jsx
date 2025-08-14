@@ -38,17 +38,15 @@ const Banner = () => {
                 text={<Link href="#socials">My Socials</Link>}
                 className="text-white text-sm lg:text-base font-primary font-semibold py-3 mt-5 mb-3 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
               />
-              <Button
-                text={
-                  <Link
-                    href="https://www.upwork.com/freelancers/~014fe9b65d77d048f1"
-                    target="_blank"
-                  >
-                    Hire Me
-                  </Link>
-                }
-                className="text-black-100 text-sm lg:text-base bg-white font-primary font-semibold py-3 mt-5 mb-3 hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
-              />
+              <Link
+                href="https://www.upwork.com/freelancers/~014fe9b65d77d048f1"
+                target="_blank"
+              >
+                <Button
+                  text="Hire Me"
+                  className="text-black-100 text-sm lg:text-base bg-white font-primary font-semibold py-3 mt-5 mb-3 hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
+                />
+              </Link>
             </div>
             <span className="font-primary text-sm font-normal text-black-400">
               I work independently, offering exceptional value and quality in my

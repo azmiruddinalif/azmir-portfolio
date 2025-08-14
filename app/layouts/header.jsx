@@ -12,6 +12,19 @@ const Header = () => {
 
   const servicesItem = MenuData.find((item) => item.title === "Services");
 
+  let hoverTimeout = null;
+
+  const handleMouseEnter = () => {
+    if (hoverTimeout) clearTimeout(hoverTimeout);
+    setIsServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    hoverTimeout = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 200); // 200ms delay before closing
+  };
+
   // Disable body scroll when sidebar is open
   useEffect(() => {
     if (sidebarOpen) {
@@ -43,11 +56,11 @@ const Header = () => {
                 <li
                   key={index}
                   className="relative group font-primary font-normal text-base text-black-200"
-                  onMouseEnter={() =>
-                    data.title === "Services" && setIsServicesOpen(true)
+                  onMouseEnter={
+                    data.title === "Services" ? handleMouseEnter : undefined
                   }
-                  onMouseLeave={() =>
-                    data.title === "Services" && setIsServicesOpen(false)
+                  onMouseLeave={
+                    data.title === "Services" ? handleMouseLeave : undefined
                   }
                 >
                   <Link
@@ -58,19 +71,51 @@ const Header = () => {
                       {data.title}
                     </span>
                   </Link>
+
+                  {data.title === "Services" &&
+                    isServicesOpen &&
+                    servicesItem?.dropdown && (
+                      <div
+                        className="hidden fixed left-0 top-[100px] w-screen bg-white shadow-soft py-12 px-20 lg:grid grid-cols-3 gap-10 z-40 animate-fadeIn"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                      >
+                        {servicesItem.dropdown.map((item, subIndex) => (
+                          <Link
+                            href={item.link}
+                            key={subIndex}
+                            className="flex items-start gap-4 hover:bg-gray-100 p-4 rounded-lg transition-all duration-200"
+                          >
+                            <Image
+                              src={item.icon}
+                              alt={item.title}
+                              width={80}
+                              height={80}
+                              className="flex-shrink-0"
+                            />
+                            <div>
+                              <h4 className="text-lg font-bold text-black font-primary">
+                                {item.title}
+                              </h4>
+                              <p className="text-sm text-black-400 font-primary">
+                                {item.description}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                 </li>
               ))}
-              <Button
-                text={
-                  <Link
-                    href="https://www.upwork.com/freelancers/~014fe9b65d77d048f1"
-                    target="_blank"
-                  >
-                    Hire Me
-                  </Link>
-                }
-                className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
-              />
+              <Link
+                href="https://www.upwork.com/freelancers/~014fe9b65d77d048f1"
+                target="_blank"
+              >
+                <Button
+                  text="Hire Me"
+                  className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
+                />
+              </Link>
             </ul>
 
             {/* Hamburger Icon - Mobile */}
@@ -232,20 +277,15 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="absolute bottom-8 left-0 w-full px-6">
-          <Button
-            text={
-              <Link
-                href="https://www.upwork.com/freelancers/~014fe9b65d77d048f1"
-                target="_blank"
-              >
-                Hire Me
-              </Link>
-            }
-            className="w-full text-white font-primary font-semibold py-3 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
-            onClick={() => {
-              setSidebarOpen(false);
-            }}
-          />
+          <Link
+            href="https://www.upwork.com/freelancers/~014fe9b65d77d048f1"
+            target="_blank"
+          >
+            <Button
+              text="Hire Me"
+              className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
+            />
+          </Link>
         </div>
       </div>
 
