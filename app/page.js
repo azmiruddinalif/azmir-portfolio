@@ -3,6 +3,8 @@ import Banner from "./components/home/Banner";
 import WormCompany from "./components/home/company";
 import Help from "./components/home/help";
 import Journey from "./components/home/journey";
+import MySkills from "./components/home/my-skills";
+import Plans from "./components/home/plans";
 import WorkProcess from "./components/home/Process";
 import Projects from "./components/home/projects";
 import Review from "./components/home/review";
@@ -32,6 +34,10 @@ export default function Home() {
       <Review />
       <Container>
         <Socials />
+      </Container>
+      <MySkills/>
+      <Container>
+        <Plans/>
       </Container>
     </>
   );

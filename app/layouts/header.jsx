@@ -107,10 +107,7 @@ const Header = () => {
                     )}
                 </li>
               ))}
-              <Link
-                href="https://www.upwork.com/freelancers/~014fe9b65d77d048f1"
-                target="_blank"
-              >
+              <Link href="/meeting/azmir" target="_blank">
                 <Button
                   text="Hire Me"
                   className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
@@ -277,10 +274,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="absolute bottom-8 left-0 w-full px-6">
-          <Link
-            href="https://www.upwork.com/freelancers/~014fe9b65d77d048f1"
-            target="_blank"
-          >
+          <Link href="/meeting/azmir" target="_blank">
             <Button
               text="Hire Me"
               className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"

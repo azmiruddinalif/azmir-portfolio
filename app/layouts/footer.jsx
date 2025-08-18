@@ -14,10 +14,15 @@ const Footer = () => {
               <h5 className="font-primary font-bold text-3xl max-w-[400px] mx-auto leading-12 text-black-300">
                 Looks like you’re serious about getting stuff done!
               </h5>
-              <Button
-                text="Get in touch"
-                className="text-white font-primary font-normal py-3 mt-5 mb-3 mx-auto hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
-              />
+              <Link
+                href="https://www.linkedin.com/in/azmiruddinalif/"
+                target="_blank"
+              >
+                <Button
+                  text="Get in touch"
+                  className="text-white font-primary font-normal py-3 mt-5 mb-3 mx-auto hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
+                />
+              </Link>
               <span className="font-primary font-normal text-xs text-black-300 max-w-[240px] mx-auto block">
                 Opportunities like this don't come twice it's a small world, so
                 make it count.

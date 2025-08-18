@@ -4,6 +4,7 @@ import Button from "../../common/button";
 import Image from "next/image";
 import { ProcessData } from "./Pprodess-data";
 import CardBase from "../../common/Card";
+import Link from "next/link";
 
 const WorkProcess = () => {
   return (
@@ -19,10 +20,12 @@ const WorkProcess = () => {
                 a data-driven, user-focused process designed to build reliable,
                 scalable, and maintainable full-stack applications.
               </p>
-              <Button
-                text="How it works ?"
-                className="text-black-100 lg:mx-0 mx-auto text-sm lg:text-base bg-white font-primary font-semibold py-3 mt-5 mb-3 hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
-              />
+              <Link href="/how-it-works" target="_blank">
+                <Button
+                  text="How it works ?"
+                  className="text-black-100 lg:mx-0 mx-auto text-sm lg:text-base bg-white font-primary font-semibold py-3 mt-5 mb-3 hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
+                />
+              </Link>
             </div>
             <Image
               src="/assets/process.svg"

@@ -8,8 +8,12 @@ export const MenuData = [
     link: "/myworks",
   },
   {
+    title: "Project Plans",
+    link: "#plans",
+  },
+  {
     title: "Services",
-    link: "/service",
+    link: "https://www.linkedin.com/services/page/94092931a554b121a0/",
     dropdown: [
       {
         title: "Custom Web Application Development",
@@ -64,14 +68,14 @@ export const MenuData = [
 export const FooterMenu = [
   {
     title: "Blogs",
-    link: "/blogs",
+    link: "https://medium.com/@alifazmiruddin",
   },
   {
-    title: "Terms & Services",
-    link: "/terms-service",
+    title: "Terms & Conditions",
+    link: "/terms-and-conditions",
   },
   {
     title: "About",
-    link: "/about",
+    link: "https://www.linkedin.com/in/azmiruddinalif/",
   },
 ];

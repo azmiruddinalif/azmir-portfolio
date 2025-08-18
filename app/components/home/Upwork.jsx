@@ -15,34 +15,29 @@ const Player = dynamic(
 const Upwork = () => {
   const router = useRouter();
   const handleRedirect = () => {
-    router.push("https://www.upwork.com/freelancers/~014fe9b65d77d048f1");
+    router.push("/meeting/azmir");
   };
   return (
     <div className="bg-white-200 py-10 lg:py-25">
       <Container>
         <div className="flex justify-center">
-          <Image
-            src="/assets/upwork.webp"
-            alt="upwork"
-            width={200}
-            height={200}
-          />
+          <Image src="/assets/logo.svg" alt="upwork" width={200} height={200} />
         </div>
         <div className="text-center mt-0 lg:mt-8">
           <h4 className="text-2xl lg:text-3xl font-bold font-primary">
-            Former <b className="text-green">Upwork's Verified</b> MERN Stack
-            Developer
+            Former <b className="text-green">MERN Stack Developer</b>
           </h4>
           <p className="max-w-[750px] mx-auto mt-3 font-primary font-normal text-black-400 text-sm lg:text-base leading-6 lg:leading-8">
-            As a Verified MERN Stack Developer on Upwork, I’ve successfully
-            delivered <b>scalable web and mobile applications</b> for global
+            As a <b> MERN Stack Developer</b>, I’ve successfully delivered{" "}
+            <b>scalable web and mobile applications</b> for global
             clients—leveraging{" "}
             <b>
               React.js, Next.js, Node.js, Express, MongoDB, and React Native
             </b>{" "}
             to turn complex ideas into high-performing digital products. With
-            experience working for international companies, I focus on clean
-            architecture, <b>fast delivery, and long-term maintainability</b>.
+            experience working for <b>international clients</b>, I focus on
+            clean architecture,{" "}
+            <b>fast delivery, and long-term maintainability</b>.
           </p>
         </div>
         <Button

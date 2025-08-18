@@ -10,7 +10,7 @@ const SocialBody = () => {
         {SocialData.map((data, index) => {
           return (
             <div
-              className="w-full rounded-md bg-white-200 p-10 lg:hover:scale-105 transition-all ease-linear duration-100"
+              className="w-full rounded-md bg-white-200 p-10 lg:hover:scale-105 transition-all ease-linear duration-100 flex flex-col justify-between"
               key={index}
             >
               <Image src={data.image} width={50} height={50} alt="image" />
