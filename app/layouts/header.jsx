@@ -2,11 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Button from "../components/common/button";
 import Container from "../components/common/container";
 import { MenuData } from "./menudata/menu";
 
 const Header = () => {
+  const router = useRouter();
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -22,16 +24,12 @@ const Header = () => {
   const handleMouseLeave = () => {
     hoverTimeout = setTimeout(() => {
       setIsServicesOpen(false);
-    }, 200); // 200ms delay before closing
+    }, 200); // delay to avoid flicker
   };
 
   // Disable body scroll when sidebar is open
   useEffect(() => {
-    if (sidebarOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = sidebarOpen ? "hidden" : "";
   }, [sidebarOpen]);
 
   return (
@@ -72,19 +70,19 @@ const Header = () => {
                     </span>
                   </Link>
 
+                  {/* Desktop Dropdown */}
                   {data.title === "Services" &&
                     isServicesOpen &&
                     servicesItem?.dropdown && (
-                      <div
-                        className="hidden fixed left-0 top-[100px] w-screen bg-white shadow-soft py-12 px-20 lg:grid grid-cols-3 gap-10 z-40 animate-fadeIn"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                      >
+                      <div className="fixed left-0 top-[100px] w-screen bg-white shadow-soft py-12 px-20 lg:grid grid-cols-3 gap-10 z-40 animate-fadeIn">
                         {servicesItem.dropdown.map((item, subIndex) => (
-                          <Link
-                            href={item.link}
+                          <div
                             key={subIndex}
-                            className="flex items-start gap-4 hover:bg-gray-100 p-4 rounded-lg transition-all duration-200"
+                            onClick={() => {
+                              setIsServicesOpen(false); // hide dropdown
+                              router.push(item.link); // navigate
+                            }}
+                            className="flex items-start gap-4 hover:bg-gray-100 p-4 rounded-lg transition-all duration-200 cursor-pointer"
                           >
                             <Image
                               src={item.icon}
@@ -101,7 +99,7 @@ const Header = () => {
                                 {item.description}
                               </p>
                             </div>
-                          </Link>
+                          </div>
                         ))}
                       </div>
                     )}
@@ -140,43 +138,11 @@ const Header = () => {
         </Container>
       </nav>
 
-      {/* Full Width Dropdown - Desktop Services */}
-      {isServicesOpen && servicesItem?.dropdown && (
-        <div
-          className="hidden fixed left-0 top-[50px] w-screen bg-white shadow-soft py-12 px-20 lg:grid grid-cols-3 gap-10 z-40 animate-fadeIn"
-          onMouseEnter={() => setIsServicesOpen(true)}
-          onMouseLeave={() => setIsServicesOpen(false)}
-        >
-          {servicesItem.dropdown.map((item, subIndex) => (
-            <Link
-              href={item.link}
-              key={subIndex}
-              className="flex items-start gap-4 hover:bg-gray-100 p-4 rounded-lg transition-all duration-200"
-            >
-              <Image
-                src={item.icon}
-                alt={item.title}
-                width={80}
-                height={80}
-                className="flex-shrink-0"
-              />
-              <div>
-                <h4 className="text-lg font-bold text-black font-primary">
-                  {item.title}
-                </h4>
-                <p className="text-sm text-black-400 font-primary">
-                  {item.description}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      )}
-
       {/* Sidebar - Mobile */}
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out
-          ${sidebarOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 h-full w-[280px] bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+          sidebarOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         {/* Close Button */}
         <div className="flex justify-end p-4">
@@ -190,7 +156,6 @@ const Header = () => {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 strokeLinecap="round"
@@ -209,11 +174,7 @@ const Header = () => {
               return (
                 <div key={index}>
                   <button
-                    onClick={() =>
-                      setIsServicesOpen((prev) =>
-                        sidebarOpen && isServicesOpen ? false : true
-                      )
-                    }
+                    onClick={() => setIsServicesOpen((prev) => !prev)}
                     className="w-full text-left flex justify-between items-center font-semibold text-lg"
                   >
                     <span className="font-primary text-base font-bold">
@@ -226,7 +187,6 @@ const Header = () => {
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         strokeLinecap="round"
