@@ -43,8 +43,8 @@ const Header = () => {
               <Image
                 src="/assets/logo.svg"
                 alt="logo"
-                width={150}
-                height={150}
+                width={110}
+                height={110}
               />
             </Link>
 
@@ -63,7 +63,7 @@ const Header = () => {
                 >
                   <Link
                     href={data.link}
-                    className="relative inline-block px-6 py-8"
+                    className="relative inline-block px-6 py-6"
                   >
                     <span className="after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-black after:transition-all after:duration-300 group-hover:after:w-full">
                       {data.title}
@@ -74,7 +74,7 @@ const Header = () => {
                   {data.title === "Services" &&
                     isServicesOpen &&
                     servicesItem?.dropdown && (
-                      <div className="fixed left-0 top-[100px] w-screen bg-white shadow-soft py-12 px-20 lg:grid grid-cols-3 gap-10 z-40 animate-fadeIn">
+                      <div className="fixed left-0 top-[80px] w-screen bg-white shadow-soft py-12 px-20 lg:grid grid-cols-3 gap-10 z-40 animate-fadeIn">
                         {servicesItem.dropdown.map((item, subIndex) => (
                           <div
                             key={subIndex}

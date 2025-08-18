@@ -28,19 +28,19 @@ const Footer = () => {
               </span>
               <div className="flex justify-center gap-x-2 mt-3">
                 <Link href="https://www.facebook.com/Azmir02" target="_blank">
-                  <FaFacebookSquare size={25} />
+                  <FaFacebookSquare size={25} color="#333333" />
                 </Link>
                 <Link href="https://x.com/azmiruddinalif" target="_blank">
-                  <FaSquareXTwitter size={25} />
+                  <FaSquareXTwitter size={25} color="#333333" />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/azmiruddinalif/"
                   target="_blank"
                 >
-                  <FaLinkedin size={25} />
+                  <FaLinkedin size={25} color="#333333" />
                 </Link>
                 <Link href="https://github.com/azmiruddinalif" target="_blank">
-                  <FaGithubSquare size={25} />
+                  <FaGithubSquare size={25} color="#333333" />
                 </Link>
               </div>
             </div>
@@ -54,9 +54,9 @@ const Footer = () => {
             {FooterMenu.map((data, index) => (
               <li
                 key={index}
-                className="font-primary font-normal text-sm lg:text-base relative text-black-400 hover:text-black"
+                className="font-primary font-normal text-xs lg:text-base relative text-black-400 hover:text-black"
               >
-                <Link href={data.link} className="inline-block px-6">
+                <Link href={data.link} className="inline-block px-2 lg:px-6">
                   {data.title}
                 </Link>
               </li>
