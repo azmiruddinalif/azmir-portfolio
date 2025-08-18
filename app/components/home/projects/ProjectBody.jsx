@@ -26,7 +26,7 @@ const ProjectBody = () => {
           <CardBase.Footer className="transition-transform duration-300 ease-in-out group-hover:scale-105">
             <div className="mt-3">
               <Link
-                href="/"
+                href="/my-work/logensa"
                 className="flex items-center gap-x-2 font-primary font-semibold text-base"
               >
                 Details <MdOutlineArrowRightAlt size={20} />
@@ -53,7 +53,7 @@ const ProjectBody = () => {
           <CardBase.Footer className="transition-transform duration-300 ease-in-out group-hover:scale-105">
             <div className="mt-3">
               <Link
-                href="/"
+                href="/my-work/bocklight"
                 className="flex items-center gap-x-2 font-primary font-semibold text-base"
               >
                 Details <MdOutlineArrowRightAlt size={20} />
@@ -80,7 +80,7 @@ const ProjectBody = () => {
           <CardBase.Footer className="transition-transform duration-300 ease-in-out group-hover:scale-105">
             <div className="mt-3">
               <Link
-                href="/"
+                href="/my-work/campix-ai"
                 className="flex items-center gap-x-2 font-primary font-semibold text-base"
               >
                 Details <MdOutlineArrowRightAlt size={20} />

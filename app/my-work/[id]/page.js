@@ -39,7 +39,7 @@ const SingleWorkPage = ({ params }) => {
           {project.category}
         </span>
       </div>
-      <div className="flex items-center justify-between mb-10">
+      <div className="flex flex-col lg:flex-row items-center justify-between mb-10">
         <h1 className="text-4xl font-bold font-primary">{project.title}</h1>
         <Button
           onClick={()=>handleRedirect(project.link)}
@@ -54,6 +54,7 @@ const SingleWorkPage = ({ params }) => {
         width={500}
         height={500}
         className="w-full max-h-[500px] object-cover rounded mb-6"
+       
       />
       <p className="mb-6 font-primary text-lg text-black-200">{project.description}</p>
 

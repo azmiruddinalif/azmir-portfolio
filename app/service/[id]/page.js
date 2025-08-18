@@ -46,6 +46,7 @@ const ServiceSingle = ({ params }) => {
         width={500}
         height={500}
         className="w-full max-h-[500px] object-cover rounded mb-6"
+       
       />
      
       <div

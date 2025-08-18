@@ -2,6 +2,8 @@ import Link from "next/link";
 import Button from "../components/common/button";
 import Container from "../components/common/container";
 import { FooterMenu } from "./menudata/menu";
+import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const getFullYear = () => new Date().getFullYear();
@@ -14,10 +16,7 @@ const Footer = () => {
               <h5 className="font-primary font-bold text-3xl max-w-[400px] mx-auto leading-12 text-black-300">
                 Looks like you’re serious about getting stuff done!
               </h5>
-              <Link
-                href="https://www.linkedin.com/in/azmiruddinalif/"
-                target="_blank"
-              >
+              <Link href="/how-it-works" target="_blank">
                 <Button
                   text="Get in touch"
                   className="text-white font-primary font-normal py-3 mt-5 mb-3 mx-auto hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
@@ -27,6 +26,23 @@ const Footer = () => {
                 Opportunities like this don't come twice it's a small world, so
                 make it count.
               </span>
+              <div className="flex justify-center gap-x-2 mt-3">
+                <Link href="https://www.facebook.com/Azmir02" target="_blank">
+                  <FaFacebookSquare size={25} />
+                </Link>
+                <Link href="https://x.com/azmiruddinalif" target="_blank">
+                  <FaSquareXTwitter size={25} />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/azmiruddinalif/"
+                  target="_blank"
+                >
+                  <FaLinkedin size={25} />
+                </Link>
+                <Link href="https://github.com/azmiruddinalif" target="_blank">
+                  <FaGithubSquare size={25} />
+                </Link>
+              </div>
             </div>
           </Container>
         </div>

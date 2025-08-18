@@ -116,7 +116,7 @@ const HowItWorks = () => {
             />
           </Link>
         </div>
-        <Image src="/assets/plans.png" alt="plans" width={140} height={140} />
+        <Image src="/assets/plans.png" alt="plans" width={140} height={140}  />
       </div>
 
       <div className="flex flex-col gap-6">
@@ -137,6 +137,7 @@ const HowItWorks = () => {
                       alt="Azmir"
                       width={40}
                       height={40}
+                      
                       className="rounded-full object-cover w-10 h-10 shrink-0"
                     />
                     <div className="relative max-w-[70%]">
