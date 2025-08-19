@@ -402,4 +402,154 @@ export const WorkData = [
     <p>Acoty stands as a prime example of merging technical innovation with deep local understanding. By leveraging the MERN stack, prioritizing UI/UX, and addressing the specific needs of the Bangladeshi market, this project delivers a platform that is impactful, scalable, and truly user-centric.</p>`,
     },
   },
+  {
+    slug: "toybros-entertainment",
+    image: "/assets/toybros.jpg",
+    title: "ToyBros Entertainment",
+    description: `Built a dynamic e-commerce platform, ToyBros, focused on the Bangladeshi market using the MERN stack for high performance and scalability. The platform provides a seamless shopping experience with intuitive navigation, localized content, and responsive design for all devices. Key features include real-time product updates, secure transactions, and personalized recommendations, making online toy shopping engaging and convenient. This project highlights my ability to combine technical expertise with user-centered design for impactful digital solutions.`,
+    category: "Web App",
+    link: "https://toybros.com/",
+    clientName: "ToyBros",
+    clientLogo: "/assets/toybros.png",
+    singleInforMation: {
+      fullDescription: `<h2>Overview</h2>
+  <p>ToyBros is an e-commerce platform developed for the Bangladeshi market, built with the MERN stack to ensure high performance, scalability, and seamless user experience. The platform focuses on intuitive navigation, localized content, and mobile-first design to make toy shopping simple, engaging, and accessible for all users.</p>
+
+  <h2>Challenges</h2>
+  <ul>
+      <li>Designing a user-friendly interface that appeals to both children and parents.</li>
+      <li>Ensuring fast load times and stable performance for users with varying internet speeds.</li>
+      <li>Implementing secure payment gateways while maintaining a smooth checkout experience.</li>
+      <li>Providing real-time updates for product availability and promotions.</li>
+  </ul>
+
+  <h2>Objectives</h2>
+  <ul>
+      <li>Develop a high-performance MERN stack web application tailored to the Bangladeshi e-commerce market.</li>
+      <li>Integrate localized content, user preferences, and culturally relevant design.</li>
+      <li>Implement secure and seamless online payment solutions.</li>
+      <li>Ensure a responsive and engaging shopping experience across all devices.</li>
+  </ul>
+
+  <h2>Design Process</h2>
+  <p>The design process focused on creating a playful, visually appealing, and intuitive UI suitable for both children and adults. Mobile-first design was prioritized to cater to the high mobile internet usage in Bangladesh. Usability testing with local users ensured smooth navigation, relevant iconography, and clear product categorization.</p>
+
+  <h2>Development</h2>
+  <ul>
+      <li><strong>Frontend:</strong> React.js for interactive and responsive UI.</li>
+      <li><strong>Backend:</strong> Node.js and Express for robust server-side functionality.</li>
+      <li><strong>Database:</strong> MongoDB for flexible and scalable data storage.</li>
+      <li><strong>Real-Time Features:</strong> WebSockets for instant updates on products and offers.</li>
+      <li><strong>Performance:</strong> Optimized for low-bandwidth conditions to ensure accessibility across all regions.</li>
+  </ul>
+
+  <h2>Key Features</h2>
+  <ul>
+      <li>Localized content and culturally relevant design.</li>
+      <li>Real-time product updates and notifications.</li>
+      <li>Mobile-first, fully responsive design for all devices.</li>
+      <li>Secure and smooth online payment integration.</li>
+      <li>Personalized product recommendations for a better shopping experience.</li>
+  </ul>
+
+  <h2>Results</h2>
+  <ul>
+      <li>High engagement and adoption across the Bangladeshi market.</li>
+      <li>Improved user satisfaction due to localized and intuitive shopping experience.</li>
+      <li>Reliable performance across devices and varying network conditions.</li>
+  </ul>
+
+  <h2>Lessons Learned</h2>
+  <ul>
+      <li>User-centered design and localization significantly enhance engagement.</li>
+      <li>Optimizing for low-bandwidth users is crucial in emerging markets.</li>
+      <li>Secure yet seamless checkout improves customer trust and conversion rates.</li>
+  </ul>
+
+  <h2>Future Enhancements</h2>
+  <ul>
+      <li>AI-powered product recommendations for personalized shopping.</li>
+      <li>Multi-language support for regional dialects.</li>
+      <li>Integration of loyalty programs and in-app promotions.</li>
+  </ul>
+
+  <h2>Summary</h2>
+  <p>ToyBros demonstrates the combination of technical expertise with a deep understanding of local market needs. By leveraging the MERN stack, emphasizing UI/UX, and delivering culturally relevant features, this platform provides a reliable, engaging, and user-centric e-commerce experience.</p>`,
+    },
+  },
+  {
+    slug: "maingear-custom-pc-builder",
+    image: "/assets/maingear.jpg",
+    title: "Maingear Custom Pc Builder",
+    description: `Developed a high-performance gaming PC platform, Custom MG-1 by Maingear, focusing on ultimate customization and power for gamers and professionals. Built to deliver top-tier performance, the platform offers a seamless experience with high-end CPUs, GPUs, and cooling solutions. Key features include full hardware customization, overclocking support, and real-time system monitoring. This project showcases my ability to highlight technology, design, and user-focused solutions for premium hardware platforms.`,
+    category: "Hardware / Web App",
+    link: "https://maingear.com/products/custom-mg-1",
+    clientName: "Maingear",
+    clientLogo: "/assets/maingear.svg",
+    singleInforMation: {
+      fullDescription: `<h2>Overview</h2>
+  <p>The Custom MG-1 by Maingear is a premium gaming and workstation PC designed for maximum performance and complete hardware customization. The platform allows users to configure CPUs, GPUs, RAM, storage, and cooling solutions to meet their specific needs, ensuring a tailored experience for gamers, designers, and professionals.</p>
+
+  <h2>Challenges</h2>
+  <ul>
+      <li>Designing a platform that supports extreme hardware configurations and overclocking safely.</li>
+      <li>Providing real-time system monitoring and performance feedback for advanced users.</li>
+      <li>Ensuring compatibility and stability across a wide range of components.</li>
+      <li>Creating an intuitive customization interface for users of all technical levels.</li>
+  </ul>
+
+  <h2>Objectives</h2>
+  <ul>
+      <li>Develop a flexible PC platform that allows full hardware customization.</li>
+      <li>Ensure high performance for gaming, content creation, and professional workloads.</li>
+      <li>Provide a seamless and intuitive UI for selecting and monitoring components.</li>
+      <li>Maintain stability, thermal management, and system reliability under heavy loads.</li>
+  </ul>
+
+  <h2>Design Process</h2>
+  <p>The design process focused on creating a visually appealing and intuitive configuration interface. Emphasis was placed on usability for both novice and experienced users, with clear visuals for component selection, performance metrics, and thermal management. Real-time feedback ensures users can safely maximize their system's potential.</p>
+
+  <h2>Development</h2>
+  <ul>
+      <li><strong>Frontend:</strong> Interactive web interface showcasing customization options.</li>
+      <li><strong>Backend:</strong> Robust server logic to validate component compatibility and pricing.</li>
+      <li><strong>Real-Time Monitoring:</strong> Integration with system metrics APIs for live performance data.</li>
+      <li><strong>Performance Optimization:</strong> Ensured stability and optimized airflow/thermal configurations.</li>
+      <li><strong>Customization Features:</strong> Overclocking support, RGB lighting controls, and storage options.</li>
+  </ul>
+
+  <h2>Key Features</h2>
+  <ul>
+      <li>Full hardware customization for CPU, GPU, RAM, storage, and cooling.</li>
+      <li>Real-time system monitoring and performance insights.</li>
+      <li>Optimized thermal management and overclocking support.</li>
+      <li>Intuitive and responsive customization interface.</li>
+      <li>High-performance components for gaming and professional workloads.</li>
+  </ul>
+
+  <h2>Results</h2>
+  <ul>
+      <li>Users can build fully personalized systems tailored to their performance needs.</li>
+      <li>High reliability and stability across extreme hardware configurations.</li>
+      <li>Enhanced user engagement due to intuitive and visually rich customization tools.</li>
+  </ul>
+
+  <h2>Lessons Learned</h2>
+  <ul>
+      <li>Clear UI and real-time feedback are critical for complex hardware customization.</li>
+      <li>System stability testing ensures high user satisfaction and trust.</li>
+      <li>Highlighting performance metrics and visual customization boosts user engagement.</li>
+  </ul>
+
+  <h2>Future Enhancements</h2>
+  <ul>
+      <li>AI-based configuration suggestions based on user preferences and workloads.</li>
+      <li>Expanded component library with new GPUs, CPUs, and peripherals.</li>
+      <li>Enhanced cloud-based monitoring and remote configuration options.</li>
+  </ul>
+
+  <h2>Summary</h2>
+  <p>The Custom MG-1 demonstrates a perfect blend of cutting-edge hardware and user-centered design. By providing full customization, real-time monitoring, and a visually appealing interface, this platform delivers a premium experience for gamers and professionals seeking high-performance PCs.</p>`,
+    },
+  },
 ];

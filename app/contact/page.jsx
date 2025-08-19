@@ -271,7 +271,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={loading}
-                      className={`flex-1 text-white bg-black font-semibold py-4 px-8 rounded-xl border border-black hover:bg-transparent hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${
+                      className={`flex-1 text-white bg-black font-semibold py-4 px-8 rounded-xl border border-black hover:bg-transparent hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer ${
                         loading ? "cursor-not-allowed opacity-70" : ""
                       }`}
                     >
@@ -307,7 +307,7 @@ const Contact = () => {
                     <button
                       type="button"
                       onClick={handleScheduleMeeting}
-                      className="flex-1 text-black bg-white font-semibold py-4 px-8 rounded-xl border border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                      className="flex-1 text-black bg-white font-semibold py-4 px-8 rounded-xl border border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
                     >
                       Schedule Meeting
                     </button>

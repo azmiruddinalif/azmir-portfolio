@@ -96,7 +96,7 @@ const HowItWorks = () => {
     <div className="max-w-6xl mx-auto p-5 mt-30">
       <div className="flex flex-col lg:flex-row items-center justify-between mb-20">
         <div className="max-w-[600px] order-1 lg:order-[0] text-center lg:text-left">
-          <h4 className="font-primary text-sm font-medium text-black-300">
+          <h4 className="font-primary text-sm font-medium text-black-300 my-3">
             💚 Trust The Process
           </h4>
           <h1 className="text-4xl font-bold mb-2 font-primary text-black-300 my-2">
@@ -116,7 +116,7 @@ const HowItWorks = () => {
             />
           </Link>
         </div>
-        <Image src="/assets/plans.png" alt="plans" width={140} height={140}  />
+        <Image src="/assets/chat.svg" alt="plans" width={100} height={100}  />
       </div>
 
       <div className="flex flex-col gap-6">
