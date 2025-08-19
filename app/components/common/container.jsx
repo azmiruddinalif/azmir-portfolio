@@ -5,7 +5,7 @@ const Container = ({ children, className }) => {
   return (
     <div
       className={clsx(
-        "w-full max-w-[1170px] mx-auto px-[32px] xl:px-0",
+        "w-full max-w-[1170px] mx-auto px-[32px] 2xl:px-0",
         className
       )}
     >

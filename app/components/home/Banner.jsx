@@ -18,11 +18,9 @@ const Banner = () => {
               MERN Stack Developer
             </h1>
             <p className="font-primary text-black-300 text-sm lg:text-base mt-3">
-              For startups to large organizations, transforming complex software
-              and application challenges into simple, scalable MERN-based
-              solutions.
+              From innovative startups to large enterprises, I deliver custom web solutions by transforming complex software challenges into scalable, future-ready applications with the MERN stack. Using MongoDB, Express.js, React, and Node.js, I develop responsive websites, dynamic web apps, and mobile solutions that boost performance, drive business growth, and enhance user experience.
             </p>
-            <div className="mt-4 flex flex-col lg:flex-row items-center gap-x-3">
+            {/* <div className="mt-4 flex flex-col lg:flex-row items-center gap-x-3">
               <Image
                 src="https://cdn.prod.website-files.com/639db6279835785a1ddda5bb/67745bddd340d42d008f0695_Avater%20Group.svg"
                 alt="clients"
@@ -32,7 +30,7 @@ const Banner = () => {
               <p className="text-black font-primary mt-1 lg:mt-0 text-xs lg:text-sm">
                 30+ Happy And Satisfied Clients
               </p>
-            </div>
+            </div> */}
             <div className="flex items-center justify-center lg:justify-start gap-x-2">
               <Button
                 text={<Link href="#socials">My Socials</Link>}
