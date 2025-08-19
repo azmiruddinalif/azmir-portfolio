@@ -48,7 +48,18 @@ const Footer = () => {
         </div>
         <div className="flex flex-col lg:flex-row gap-5 items-center px-5 max-w-[95%] mx-auto bg-white py-3 justify-between">
           <span className="font-primary font-semibold text-black-400 text-sm lg:text-base">
-            &copy;{getFullYear()} Azmir Uddin Alif (Software Developer)
+            &copy;{getFullYear()} Azmir Uddin Alif `(Inspired by
+            {
+              <Link
+                href="https://www.ashikprottoy.com/"
+                className="underline"
+                target="_blank"
+              >
+                {" "}
+                Ashik Prottoy
+              </Link>
+            }
+            )`
           </span>
           <ul className="flex items-center justify-end">
             {FooterMenu.map((data, index) => (
