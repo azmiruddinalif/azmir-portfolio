@@ -24,7 +24,7 @@ const Header = () => {
   const handleMouseLeave = () => {
     hoverTimeout = setTimeout(() => {
       setIsServicesOpen(false);
-    }, 200); // delay to avoid flicker
+    }, 200);
   };
 
   // Disable body scroll when sidebar is open
@@ -74,13 +74,13 @@ const Header = () => {
                   {data.title === "Services" &&
                     isServicesOpen &&
                     servicesItem?.dropdown && (
-                      <div className="fixed left-0 top-[80px] w-screen bg-white shadow-soft py-12 px-20 lg:grid grid-cols-3 gap-10 z-40 animate-fadeIn">
+                      <div className="fixed left-0 top-[72px] w-screen bg-white shadow-soft py-12 px-20 lg:grid grid-cols-3 gap-10 z-40 animate-fadeIn">
                         {servicesItem.dropdown.map((item, subIndex) => (
                           <div
                             key={subIndex}
                             onClick={() => {
-                              setIsServicesOpen(false); // hide dropdown
-                              router.push(item.link); // navigate
+                              setIsServicesOpen(false);
+                              router.push(item.link);
                             }}
                             className="flex items-start gap-4 hover:bg-gray-100 p-4 rounded-lg transition-all duration-200 cursor-pointer"
                           >

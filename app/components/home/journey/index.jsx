@@ -25,12 +25,13 @@ const Journey = () => {
           <div>
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-x-3 w-[60%]">
-                <div className="w-[40px] h-[40px] bg-white-300 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] bg-white-300 rounded-lg flex items-center justify-center shrink-0">
                   <Image
                     src="/assets/startup.png"
                     alt="icon"
                     width={20}
                     height={20}
+                    className="w-4 h-4"
                   />
                 </div>
                 <span className="font-primary font-normal text-xs lg:text-base text-black-300">
@@ -47,12 +48,13 @@ const Journey = () => {
 
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-x-3 w-[60%]">
-                <div className="w-[40px] h-[40px] bg-white-300 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] bg-white-300 rounded-lg flex items-center justify-center shrink-0">
                   <Image
                     src="/assets/startup.png"
                     alt="icon"
                     width={20}
                     height={20}
+                    className="w-4 h-4"
                   />
                 </div>
                 <span className="font-primary font-normal text-xs lg:text-base text-black-300">
@@ -69,12 +71,13 @@ const Journey = () => {
 
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-x-3 w-[60%]">
-                <div className="w-[40px] h-[40px] bg-white-300 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] bg-white-300 rounded-lg flex items-center justify-center shrink-0">
                   <Image
                     src="/assets/startup.png"
                     alt="icon"
                     width={20}
                     height={20}
+                    className="w-4 h-4"
                   />
                 </div>
                 <span className="font-primary font-normal text-xs lg:text-base text-black-300">
@@ -91,12 +94,13 @@ const Journey = () => {
 
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-x-3 w-[60%]">
-                <div className="w-[40px] h-[40px] bg-white-300 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] bg-white-300 rounded-lg flex items-center justify-center shrink-0">
                   <Image
                     src="/assets/startup.png"
                     alt="icon"
                     width={20}
                     height={20}
+                    className="w-4 h-4"
                   />
                 </div>
                 <span className="font-primary font-normal text-xs lg:text-base text-black-300">
@@ -114,12 +118,13 @@ const Journey = () => {
 
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-x-3 w-[60%]">
-                <div className="w-[40px] h-[40px] bg-white-300 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] bg-white-300 rounded-lg flex items-center justify-center shrink-0">
                   <Image
                     src="/assets/startup.png"
                     alt="icon"
                     width={20}
                     height={20}
+                    className="w-4 h-4"
                   />
                 </div>
                 <span className="font-primary font-normal text-xs lg:text-base text-black-300">

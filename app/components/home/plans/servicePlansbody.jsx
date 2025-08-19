@@ -18,7 +18,7 @@ const ServicePlansBody = () => {
 
         return (
           <div
-            className="relative w-full rounded-md bg-white p-10 lg:hover:scale-105 transition-all ease-linear duration-100 border border-black-300"
+            className="relative flex flex-col justify-between w-full rounded-md bg-white p-5 lg:p-10 lg:hover:scale-105 transition-all ease-linear duration-100 border border-black-300"
             key={index}
           >
             {/* Full-Stack Recommended Badge */}
@@ -28,17 +28,20 @@ const ServicePlansBody = () => {
               </div>
             )}
 
-            <h4 className="font-primary text-[28px] leading-10 text-black font-semibold mt-5">
+            <h4 className="font-primary text-lg lg:text-[28px] leading-10 text-black font-semibold mt-5">
               {plan.title}
             </h4>
 
-            <p className="font-primary text-base text-black font-normal mt-1 mb-5">
+            <p className="font-primary text-sm lg:text-base text-black font-normal mt-1 mb-5">
               {plan.description}
             </p>
 
             <div className="flex flex-col gap-2 mb-5">
               {plan.services.map((service, idx) => (
-                <div key={idx} className="flex items-start gap-3">
+                <div
+                  key={idx}
+                  className="flex items-start gap-3 font-primary text-sm lg:text-base"
+                >
                   <span className="font-semibold text-black">{idx + 1}.</span>
                   <span className="text-black">{service}</span>
                 </div>

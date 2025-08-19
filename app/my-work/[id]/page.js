@@ -26,7 +26,7 @@ const SingleWorkPage = ({ params }) => {
   }
 
   return (
-    <section className="my-56 max-w-3xl mx-auto px-4">
+    <section className="my-22 lg:my-56 max-w-3xl mx-auto px-4">
       <Link href="/myworks" className="mb-10 flex items-center gap-x-3">
         <IoMdArrowBack size={20} />
         <span className="font-primary text-lg text-black-300 font-semibold">
