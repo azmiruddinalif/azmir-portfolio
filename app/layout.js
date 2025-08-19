@@ -1,30 +1,12 @@
-import localFont from "next/font/local";
+import {Inter} from "next/font/google";
 import "./globals.css";
 import Header from "./layouts/header";
 import Footer from "./layouts/footer";
 import "swiper/css";
 
-const avenir = localFont({
-  src: [
-    {
-      path: "../public/fonts/AvenirNextLTProBold.otf",
-      weight: "700",
-    },
-    {
-      path: "../public/fonts/AvenirNextLTProRegular.otf",
-      weight: "400",
-    },
-    {
-      path: "../public/fonts/avenir-next-world-extrabold.otf",
-      weight: "800",
-    },
-    {
-      path: "../public/fonts/avenir-next-demi-bold.ttf",
-      weight: "600",
-    },
-  ],
-  variable: "--font-avenir",
-  display: "swap",
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -43,7 +25,7 @@ export default function RootLayout({ children }) {
           src="https://cdn.chatway.app/widget.js?id=9PJUig2t0HHe"
         ></script>
       </head>
-      <body className={`${avenir.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased`}>
         <Header />
         {children}
         <Footer />

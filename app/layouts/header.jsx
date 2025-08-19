@@ -37,7 +37,7 @@ const Header = () => {
       {/* Top Nav */}
       <nav className="fixed top-0 left-0 w-full backdrop-blur-md bg-white/30 border-b border-b-white-100 transition-all duration-300 z-50">
         <Container>
-          <div className="flex items-center justify-between py-2 lg:py-0">
+          <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-4">
               <Image
@@ -53,7 +53,7 @@ const Header = () => {
               {MenuData.map((data, index) => (
                 <li
                   key={index}
-                  className="relative group font-primary font-normal text-base text-black-200"
+                  className="relative group font-primary font-normal text-sm lg:text-base text-black-200"
                   onMouseEnter={
                     data.title === "Services" ? handleMouseEnter : undefined
                   }
@@ -63,7 +63,7 @@ const Header = () => {
                 >
                   <Link
                     href={data.link}
-                    className="relative inline-block px-6 py-6"
+                    className="relative inline-block px-4 md:px-3 lg:px-6 py-6"
                   >
                     <span className="after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-black after:transition-all after:duration-300 group-hover:after:w-full">
                       {data.title}
@@ -74,7 +74,7 @@ const Header = () => {
                   {data.title === "Services" &&
                     isServicesOpen &&
                     servicesItem?.dropdown && (
-                      <div className="fixed left-0 top-[72px] w-screen bg-white shadow-soft py-12 px-20 lg:grid grid-cols-3 gap-10 z-40 animate-fadeIn">
+                      <div className="fixed left-0 top-[72px] w-screen bg-white shadow-soft py-8 xl:py-12 px-5 xl:px-20 grid grid-cols-3 gap-3 xl:gap-10 z-40 animate-fadeIn">
                         {servicesItem.dropdown.map((item, subIndex) => (
                           <div
                             key={subIndex}
@@ -82,17 +82,17 @@ const Header = () => {
                               setIsServicesOpen(false);
                               router.push(item.link);
                             }}
-                            className="flex items-start gap-4 hover:bg-gray-100 p-4 rounded-lg transition-all duration-200 cursor-pointer"
+                            className="flex flex-col xl:flex-row items-start gap-4 hover:bg-gray-100 p-4 rounded-lg transition-all duration-200 cursor-pointer"
                           >
                             <Image
                               src={item.icon}
                               alt={item.title}
                               width={80}
                               height={80}
-                              className="flex-shrink-0"
+                              className="flex-shrink-0 w-12 lg:w-20"
                             />
                             <div>
-                              <h4 className="text-lg font-bold text-black font-primary">
+                              <h4 className="text-base xl:text-lg font-bold text-black font-primary">
                                 {item.title}
                               </h4>
                               <p className="text-sm text-black-400 font-primary">

@@ -30,7 +30,7 @@
   --color-white-300: var(--white-300);
   --color-green-200: var(--green-200);
   --shadow-soft: var(--shadow-soft);
-  --font-primary: var(--font-avenir);
+  --font-primary: var(--font-inter);
   --breakpoint-xs: 320px;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;

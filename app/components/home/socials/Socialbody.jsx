@@ -6,7 +6,7 @@ import Link from "next/link";
 const SocialBody = () => {
   return (
     <>
-      <div className="grid lg:grid-cols-3 gap-5 mt-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
         {SocialData.map((data, index) => {
           return (
             <div

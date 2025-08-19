@@ -7,7 +7,7 @@ import { MdOutlineArrowRightAlt } from "react-icons/md";
 const ProjectBody = () => {
   return (
     <>
-      <div className="grid lg:grid-cols-3 gap-x-8 gap-y-8 lg:gap-y-0 mt-6 lg:mt-14">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 lg:gap-y-0 mt-6 lg:mt-14">
         <Link href="/my-work/logensa">
           <CardBase className="group">
             <CardBase.Header>

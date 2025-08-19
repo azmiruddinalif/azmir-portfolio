@@ -15,7 +15,7 @@ const Coding = () => {
         autoplay
         loop
         src="/lottie/lf30_editor_ipst4mvt.json"
-        className="w-full h-[40vh] sm:h-[50vh] md:h-[70vh] lg:h-[80vh]"
+        className="w-full h-[40vh] sm:h-[50vh] lg:h-[80vh]"
       />
     </>
   );

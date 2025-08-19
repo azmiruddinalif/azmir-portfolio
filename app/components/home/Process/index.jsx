@@ -34,7 +34,7 @@ const WorkProcess = () => {
               height={200}
             />
           </div>
-          <div className="grid lg:grid-cols-3 gap-5 mt-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
             {ProcessData.map((data) => (
               <CardBase
                 key={data.step}
