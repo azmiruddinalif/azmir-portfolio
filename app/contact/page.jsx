@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaLinkedin, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import { HiOutlineMail, HiOutlinePhone, HiOutlineUser } from "react-icons/hi";
 import Link from "next/link";
 import Button from "../components/common/button";
 import { useRouter } from "next/navigation";
@@ -78,7 +79,7 @@ const Contact = () => {
           });
         }
       )
-      .finally(() => setLoading(false)); // stop loading
+      .finally(() => setLoading(false));
   };
 
   const handleScheduleMeeting = () => {
@@ -86,139 +87,234 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center my-36">
+    <div className="min-h-screen bg-gray-50 py-16 mt-12">
       <Container>
-        <div className="flex flex-col lg:flex-row gap-6">
-          {/* Left Side */}
-          <div className="lg:w-1/3 flex flex-col gap-6">
-            <h2 className="text-2xl font-bold">Contact via Social Platform</h2>
-            <Link
-              href="https://www.linkedin.com/in/azmiruddinalif/"
-              target="_blank"
-              className="flex items-center gap-3 p-4 border rounded-lg hover:bg-blue-600 hover:text-white transition-all"
-            >
-              <FaLinkedin size={24} /> LinkedIn
-            </Link>
-            <Link
-              href="https://www.facebook.com/Azmir02"
-              target="_blank"
-              className="flex items-center gap-3 p-4 border rounded-lg hover:bg-blue-800 hover:text-white transition-all"
-            >
-              <FaFacebookF size={24} /> Facebook
-            </Link>
-            <Link
-              href="https://wa.me/+8801849702157"
-              target="_blank"
-              className="flex items-center gap-3 p-4 border rounded-lg hover:bg-green-500 hover:text-white transition-all"
-            >
-              <FaWhatsapp size={24} /> WhatsApp
-            </Link>
-          </div>
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Let's Connect
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Ready to start your next project? Get in touch and let's make
+            something amazing together.
+          </p>
+        </div>
 
-          {/* Right Side */}
-          <div className="lg:w-2/3 w-full rounded-lg">
-            <h2 className="text-2xl font-bold mb-6">Manual Contact</h2>
-            <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-              <div className="flex flex-col lg:flex-row gap-4">
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className="flex-1 p-3 border rounded"
-                  required
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className="flex-1 p-3 border rounded"
-                  required
-                />
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-12">
+            {/* Social Links - Left Side */}
+            <div className="lg:col-span-2">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <h2 className="text-2xl font-bold text-gray-800 mb-8">
+                  Connect via Social
+                </h2>
+
+                <div className="space-y-4">
+                  <Link
+                    href="https://www.linkedin.com/in/azmiruddinalif/"
+                    target="_blank"
+                    className="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 hover:border-blue-500 hover:bg-blue-50 transition-all duration-300"
+                  >
+                    <div className="p-3 bg-blue-100 group-hover:bg-blue-500 rounded-xl transition-colors duration-300">
+                      <FaLinkedin className="text-blue-600 group-hover:text-white text-xl" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-800 group-hover:text-blue-600">
+                        LinkedIn
+                      </h3>
+                      <p className="text-sm text-gray-500">
+                        Professional network
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="https://www.facebook.com/Azmir02"
+                    target="_blank"
+                    className="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all duration-300"
+                  >
+                    <div className="p-3 bg-blue-100 group-hover:bg-blue-600 rounded-xl transition-colors duration-300">
+                      <FaFacebookF className="text-blue-700 group-hover:text-white text-xl" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-800 group-hover:text-blue-700">
+                        Facebook
+                      </h3>
+                      <p className="text-sm text-gray-500">Social connection</p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="https://wa.me/+8801849702157"
+                    target="_blank"
+                    className="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 hover:border-green-500 hover:bg-green-50 transition-all duration-300"
+                  >
+                    <div className="p-3 bg-green-100 group-hover:bg-green-500 rounded-xl transition-colors duration-300">
+                      <FaWhatsapp className="text-green-600 group-hover:text-white text-xl" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-800 group-hover:text-green-600">
+                        WhatsApp
+                      </h3>
+                      <p className="text-sm text-gray-500">Quick messaging</p>
+                    </div>
+                  </Link>
+                </div>
+
+                {/* Quick Info */}
+                <div className="mt-8 pt-8 border-t border-gray-100">
+                  <h3 className="font-semibold text-gray-800 mb-4">
+                    Quick Response
+                  </h3>
+                  <div className="space-y-2 text-sm text-gray-600">
+                    <p>📧 Email response: Within 24 hours</p>
+                    <p>💬 WhatsApp: Usually within 2 hours</p>
+                    <p>📞 Meeting: Available for scheduling</p>
+                  </div>
+                </div>
               </div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                className="p-3 border rounded"
-                required
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-                className="p-3 border rounded"
-                required
-              />
-              <input
-                type="text"
-                name="profile"
-                placeholder="Facebook or LinkedIn Profile"
-                value={formData.profile}
-                onChange={handleChange}
-                className="p-3 border rounded"
-                required
-              />
-              <textarea
-                name="description"
-                placeholder="Project Details / Description"
-                value={formData.description}
-                onChange={handleChange}
-                className="p-3 border rounded h-32"
-                required
-              />
-              <div className="flex flex-col lg:flex-row gap-4 mt-4">
-                <Button
-                  text={
-                    loading ? (
-                      <div className="flex items-center gap-2">
-                        <svg
-                          className="animate-spin h-5 w-5 text-white"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                          ></circle>
-                          <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                          ></path>
-                        </svg>
-                        Sending...
-                      </div>
-                    ) : (
-                      "Submit"
-                    )
-                  }
-                  type="submit"
-                  disabled={loading}
-                  className={`text-white bg-black font-primary font-semibold py-3 px-6 border border-black-100 hover:bg-transparent hover:text-black transition-all ease-linear duration-100 ${
-                    loading ? "cursor-not-allowed opacity-70" : ""
-                  }`}
-                />
-                <Button
-                  text="Schedule a Meeting"
-                  type="button"
-                  onClick={handleScheduleMeeting}
-                  className="text-black-100 bg-white font-primary font-semibold py-3 px-6 border border-black-100 hover:bg-black hover:text-white transition-all ease-linear duration-100"
-                />
+            </div>
+
+            {/* Contact Form - Right Side */}
+            <div className="lg:col-span-3">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <h2 className="text-2xl font-bold text-gray-800 mb-8">
+                  Send a Message
+                </h2>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Name Fields */}
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="relative">
+                      <HiOutlineUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                      <input
+                        type="text"
+                        name="firstName"
+                        placeholder="First Name"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                        required
+                      />
+                    </div>
+                    <div className="relative">
+                      <HiOutlineUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                      <input
+                        type="text"
+                        name="lastName"
+                        placeholder="Last Name"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="relative">
+                    <HiOutlineMail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="your@email.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      required
+                    />
+                  </div>
+
+                  {/* Phone */}
+                  <div className="relative">
+                    <HiOutlinePhone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone Number"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      required
+                    />
+                  </div>
+
+                  {/* Profile */}
+                  <div className="relative">
+                    <FaLinkedin className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <input
+                      type="text"
+                      name="profile"
+                      placeholder="Facebook or LinkedIn Profile URL"
+                      value={formData.profile}
+                      onChange={handleChange}
+                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      required
+                    />
+                  </div>
+
+                  {/* Description */}
+                  <div>
+                    <textarea
+                      name="description"
+                      placeholder="Tell me about your project... What are your goals, timeline, and requirements?"
+                      value={formData.description}
+                      onChange={handleChange}
+                      rows="5"
+                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300 resize-none"
+                      required
+                    />
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className={`flex-1 text-white bg-black font-semibold py-4 px-8 rounded-xl border border-black hover:bg-transparent hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${
+                        loading ? "cursor-not-allowed opacity-70" : ""
+                      }`}
+                    >
+                      {loading ? (
+                        <div className="flex items-center justify-center gap-2">
+                          <svg
+                            className="animate-spin h-5 w-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <circle
+                              className="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              strokeWidth="4"
+                            ></circle>
+                            <path
+                              className="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                            ></path>
+                          </svg>
+                          Sending...
+                        </div>
+                      ) : (
+                        "Send Message"
+                      )}
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={handleScheduleMeeting}
+                      className="flex-1 text-black bg-white font-semibold py-4 px-8 rounded-xl border border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    >
+                      Schedule Meeting
+                    </button>
+                  </div>
+                </form>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </Container>
