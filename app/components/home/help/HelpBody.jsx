@@ -11,11 +11,11 @@ const HelpBody = () => {
             <div className="shrink-0">
               <Image src={data.img} alt="check" width={20} height={20} />
             </div>
-            <div className="">
-              <h4 className="font-primary text-lg text-black-300 font-semibold leading-[0.8]">
+            <div>
+              <h4 className="font-primary text-lg text-black-300 font-semibold leading-[0.8] dark:text-white">
                 {data.title}
               </h4>
-              <p className="font-primary text-base max-w-[500px] mt-2">
+              <p className="font-primary text-base max-w-[500px] mt-2 dark:text-white/70">
                 {data.desc}
               </p>
             </div>

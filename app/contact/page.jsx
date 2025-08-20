@@ -87,14 +87,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16 mt-12">
+    <div className="min-h-screen py-16 mt-12">
       <Container>
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 dark:text-white">
             Let's Connect
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto dark:text-white/100">
             Ready to start your next project? Get in touch and let's make
             something amazing together.
           </p>
@@ -104,8 +104,8 @@ const Contact = () => {
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Social Links - Left Side */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-2xl font-bold text-gray-800 mb-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 dark:bg-gray-800/40 dark:backdrop-blur-md dark:border-white/10">
+                <h2 className="text-2xl font-bold text-gray-800 mb-8 dark:text-white">
                   Connect via Social
                 </h2>
 
@@ -113,16 +113,16 @@ const Contact = () => {
                   <Link
                     href="https://www.linkedin.com/in/azmiruddinalif/"
                     target="_blank"
-                    className="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 hover:border-blue-500 hover:bg-blue-50 transition-all duration-300"
+                    className="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-white/20 hover:border-blue-500 hover:bg-blue-50 transition-all duration-300"
                   >
                     <div className="p-3 bg-blue-100 group-hover:bg-blue-500 rounded-xl transition-colors duration-300">
                       <FaLinkedin className="text-blue-600 group-hover:text-white text-xl" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800 group-hover:text-blue-600">
+                      <h3 className="font-semibold text-gray-800 group-hover:text-blue-600 dark:text-white">
                         LinkedIn
                       </h3>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-gray-500 dark:text-white-300/50 dark:group-hover:text-black-400">
                         Professional network
                       </p>
                     </div>
@@ -131,42 +131,46 @@ const Contact = () => {
                   <Link
                     href="https://www.facebook.com/Azmir02"
                     target="_blank"
-                    className="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all duration-300"
+                    className="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-white/20 hover:border-blue-600 hover:bg-blue-50 transition-all duration-300"
                   >
                     <div className="p-3 bg-blue-100 group-hover:bg-blue-600 rounded-xl transition-colors duration-300">
                       <FaFacebookF className="text-blue-700 group-hover:text-white text-xl" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800 group-hover:text-blue-700">
+                      <h3 className="font-semibold text-gray-800 group-hover:text-blue-700 dark:text-white">
                         Facebook
                       </h3>
-                      <p className="text-sm text-gray-500">Social connection</p>
+                      <p className="text-sm text-gray-500 dark:text-white-300/50 dark:group-hover:text-black-400">
+                        Social connection
+                      </p>
                     </div>
                   </Link>
 
                   <Link
                     href="https://wa.me/+8801849702157"
                     target="_blank"
-                    className="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 hover:border-green-500 hover:bg-green-50 transition-all duration-300"
+                    className="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-white/20 hover:border-green-500 hover:bg-green-50 transition-all duration-300"
                   >
                     <div className="p-3 bg-green-100 group-hover:bg-green-500 rounded-xl transition-colors duration-300">
                       <FaWhatsapp className="text-green-600 group-hover:text-white text-xl" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800 group-hover:text-green-600">
+                      <h3 className="font-semibold text-gray-800 group-hover:text-green-600 dark:text-white">
                         WhatsApp
                       </h3>
-                      <p className="text-sm text-gray-500">Quick messaging</p>
+                      <p className="text-sm text-gray-500 dark:text-white-300/50 dark:group-hover:text-black-400">
+                        Quick messaging
+                      </p>
                     </div>
                   </Link>
                 </div>
 
                 {/* Quick Info */}
-                <div className="mt-8 pt-8 border-t border-gray-100">
-                  <h3 className="font-semibold text-gray-800 mb-4">
+                <div className="mt-8 pt-8 border-t border-gray-100 dark:border-white/20">
+                  <h3 className="font-semibold text-gray-800 mb-4 dark:text-white">
                     Quick Response
                   </h3>
-                  <div className="space-y-2 text-sm text-gray-600">
+                  <div className="space-y-2 text-sm text-gray-600 dark:text-white/70">
                     <p>📧 Email response: Within 24 hours</p>
                     <p>💬 WhatsApp: Usually within 2 hours</p>
                     <p>📞 Meeting: Available for scheduling</p>
@@ -177,8 +181,8 @@ const Contact = () => {
 
             {/* Contact Form - Right Side */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-2xl font-bold text-gray-800 mb-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-white/10 dark:bg-gray-800/40 dark:backdrop-blur-md">
+                <h2 className="text-2xl font-bold text-gray-800 mb-8 dark:text-white">
                   Send a Message
                 </h2>
 
@@ -193,7 +197,10 @@ const Contact = () => {
                         placeholder="First Name"
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                        className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl 
+             focus:ring-2 dark:border-white/20 focus:ring-blue-500 
+             focus:border-transparent outline-none transition-all duration-300
+             text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
                         required
                       />
                     </div>
@@ -205,7 +212,10 @@ const Contact = () => {
                         placeholder="Last Name"
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                        className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl 
+             focus:ring-2 dark:border-white/20 focus:ring-blue-500 
+             focus:border-transparent outline-none transition-all duration-300
+             text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
                         required
                       />
                     </div>
@@ -220,7 +230,10 @@ const Contact = () => {
                       placeholder="your@email.com"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl 
+             focus:ring-2 dark:border-white/20 focus:ring-blue-500 
+             focus:border-transparent outline-none transition-all duration-300
+             text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
                       required
                     />
                   </div>
@@ -234,7 +247,10 @@ const Contact = () => {
                       placeholder="Phone Number"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl 
+                      focus:ring-2 dark:border-white/20 focus:ring-blue-500 
+                      focus:border-transparent outline-none transition-all duration-300
+                      text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
                       required
                     />
                   </div>
@@ -248,7 +264,10 @@ const Contact = () => {
                       placeholder="Facebook or LinkedIn Profile URL"
                       value={formData.profile}
                       onChange={handleChange}
-                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl 
+                      focus:ring-2 dark:border-white/20 focus:ring-blue-500 
+                      focus:border-transparent outline-none transition-all duration-300
+                      text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
                       required
                     />
                   </div>
@@ -261,7 +280,10 @@ const Contact = () => {
                       value={formData.description}
                       onChange={handleChange}
                       rows="5"
-                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300 resize-none"
+                      className="w-full p-4 border border-gray-200 rounded-xl 
+                      focus:ring-2 focus:ring-blue-500 dark:border-white/20 
+                      focus:border-transparent outline-none transition-all duration-300 resize-none
+                      text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
                       required
                     />
                   </div>
@@ -271,7 +293,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={loading}
-                      className={`flex-1 text-white bg-black font-semibold py-4 px-8 rounded-xl border border-black hover:bg-transparent hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer ${
+                      className={`flex-1 text-white bg-orange font-semibold py-4 px-8 rounded-xl border border-orange hover:bg-transparent hover:text-orange transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer ${
                         loading ? "cursor-not-allowed opacity-70" : ""
                       }`}
                     >
@@ -307,7 +329,7 @@ const Contact = () => {
                     <button
                       type="button"
                       onClick={handleScheduleMeeting}
-                      className="flex-1 text-black bg-white font-semibold py-4 px-8 rounded-xl border border-black hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
+                      className="flex-1 text-orange bg-transparent font-semibold py-4 px-8 rounded-xl border border-orange hover:bg-orange hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
                     >
                       Schedule Meeting
                     </button>

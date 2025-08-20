@@ -44,7 +44,7 @@ export const MenuData = [
         link: "/service/admin-panel-and-dashboard",
       },
       {
-        title: "Mobile Application Development (React Native)",
+        title: "Mobile Application Development",
         description:
           "Build cross-platform apps with React Native & Node.js backend. Integrate Firebase/Auth & push notifications. Enable offline sync, local storage, and modern UI with Tailwind/NativeBase.",
         icon: "/assets/op5.png",
