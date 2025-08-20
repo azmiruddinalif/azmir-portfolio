@@ -98,12 +98,17 @@ const Header = () => {
                   >
                     <Link
                       href={data.link}
-                      className="relative inline-block px-4 md:px-3 lg:px-6 py-6 text-xs lg:text-base"
+                      className="relative inline-block px-4 md:px-3 lg:px-6 py-6 text-xs lg:text-base hover:text-orange dark:hover:text-white"
                     >
                       <span
-                        className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:transition-all after:duration-300 group-hover:after:w-full ${
-                          isDarkMode ? "after:bg-white" : "after:bg-black"
-                        }`}
+                        className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:transition-all after:duration-300
+                        ${isDarkMode ? "after:bg-white" : "after:bg-orange"}
+                        ${
+                          data.title === "Services" && isServicesOpen
+                            ? "after:w-full text-orange dark:text-white"
+                            : "after:w-0 group-hover:after:w-full"
+                        } 
+                      `}
                       >
                         {data.title}
                       </span>

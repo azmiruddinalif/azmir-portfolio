@@ -9,7 +9,7 @@ const Skills = ({ activeTab }) => {
         {skillsData[activeTab].map((skill) => (
           <div
             key={skill.name}
-            className="flex flex-col md:flex-row items-center gap-2 p-4 border dark:border-primary-100 rounded-xl"
+            className="flex flex-col md:flex-row items-center gap-2 p-4 border border-orange/50 dark:border-primary-600/15 rounded-xl"
           >
             <Image
               src={skill.icon}

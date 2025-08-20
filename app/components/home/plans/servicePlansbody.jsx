@@ -18,25 +18,27 @@ const ServicePlansBody = () => {
 
         return (
           <div
-            className="relative flex flex-col justify-between w-full rounded-md dark:bg-gray-800/40 dark:backdrop-blur-md bg-white p-5 xl:p-10 lg:hover:scale-105 transition-all ease-linear duration-100 border border-black-300 dark:border-white/10"
+            className="relative flex flex-col justify-between w-full rounded-md dark:bg-gray-800/40 dark:backdrop-blur-md lg:hover:scale-105 transition-all ease-linear duration-100 border border-primary-400/50 dark:border-white/10 group hover:shadow-soft"
             key={index}
           >
             {/* Full-Stack Recommended Badge */}
-            {plan.recommended && (
-              <div className="absolute top-5 right-5 bg-black-200 text-white text-xs font-semibold px-3 py-2 rounded-full dark:bg-gray-800/40 dark:backdrop-blur-md">
-                Recommended
-              </div>
-            )}
+            <div className="p-5 xl:p-10 group-hover:bg-gradient-to-t group-hover:from-white group-hover:to-primary-600/15 group-hover:dark:bg-gradient-to-t group-hover:dark:from-gray-900/10 group-hover:dark:to-primary-600/20">
+              {plan.recommended && (
+                <div className="absolute top-5 right-5 bg-orange text-white text-xs font-semibold px-3 py-2 rounded-full dark:bg-gray-800/40 dark:backdrop-blur-md group-hover:dark:bg-orange/20">
+                  Recommended
+                </div>
+              )}
 
-            <h4 className="font-primary text-lg xl:text-[28px] leading-10 text-black font-semibold sm:mt-10 xl:mt-5 dark:text-white mt-8">
-              {plan.title}
-            </h4>
+              <h4 className="font-primary text-lg xl:text-[28px] leading-10 text-black font-semibold sm:mt-10 xl:mt-5 dark:text-white mt-8">
+                {plan.title}
+              </h4>
 
-            <p className="font-primary text-sm xl:text-base text-black font-normal mt-1 mb-5 dark:text-white/70">
-              {plan.description}
-            </p>
+              <p className="font-primary text-sm xl:text-base text-black font-normal mt-1 mb-5 dark:text-white/70">
+                {plan.description}
+              </p>
+            </div>
 
-            <div className="flex flex-col gap-2 mb-5">
+            <div className="flex flex-col gap-2 mb-5 px-5 xl:px-10">
               {plan.services.map((service, idx) => (
                 <div
                   key={idx}
@@ -54,7 +56,7 @@ const ServicePlansBody = () => {
 
             <Link
               href={ctaLink}
-              className="font-primary text-base text-black font-semibold flex items-center gap-x-2 underline dark:text-white"
+              className="font-primary text-base text-black font-semibold flex items-center gap-x-2 underline dark:text-white px-5 xl:px-10 pb-5 xl:pb-10 hover:text-orange"
             >
               {plan.cta}
             </Link>
