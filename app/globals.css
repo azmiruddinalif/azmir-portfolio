@@ -1,36 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --white: #fff;
-  --black: #000;
-  --green: #4bb543;
-  --black-100: #111;
-  --black-200: #232323;
-  --black-300: #333333;
-  --black-400: #2e2e2e;
-  --black-800: #3333333e;
-  --white-100: #f3f3f3;
-  --white-200: #f7f7fa;
-  --white-300: #e6e6e6;
-  --green-200: #26e9671a;
-  --shadow-soft: 0 14px 24px 4px #0000000a;
-}
+@theme {
+  /* Primary color scale */
+  --color-primary-50: #fffbeb;
+  --color-primary-100: #fef3c7;
+  --color-primary-200: #fde68a;
+  --color-primary-300: #fcd34d;
+  --color-primary-400: #fbbf24;
+  --color-primary-500: #f59e0b;
+  --color-primary-600: #d97706;
+  --color-primary-700: #b45309;
+  --color-primary-800: #92400e;
+  --color-primary-900: #78350f;
+  --color-primary-950: #451a03;
 
-@theme inline {
-  --color-white: var(--white);
-  --color-black: var(--black);
-  --color-green: var(--green);
-  --color-black-100: var(--black-100);
-  --color-black-200: var(--black-200);
-  --color-black-300: var(--black-300);
-  --color-black-400: var(--black-400);
-  --color-black-800: var(--black-800);
-  --color-white-100: var(--white-100);
-  --color-white-200: var(--white-200);
-  --color-white-300: var(--white-300);
-  --color-green-200: var(--green-200);
-  --shadow-soft: var(--shadow-soft);
-  --font-primary: var(--font-inter);
+  /* Custom colors - define directly in @theme */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-green: #4bb543;
+  --color-orange: #ffa539;
+
+  /* Black variants */
+  --color-black-100: #111;
+  --color-black-200: #232323;
+  --color-black-300: #333333;
+  --color-black-400: #2e2e2e;
+  --color-black-800: #3333333e;
+
+  /* White variants */
+  --color-white-100: #f3f3f3;
+  --color-white-200: #f7f7fa;
+  --color-white-300: #e6e6e6;
+
+  /* Green variants */
+  --color-green-200: #26e9671a;
+
+  /* Custom shadows */
+  --shadow-soft: 0 14px 24px 4px #0000000a;
+
+  /* Font family */
+  --font-primary: Inter, system-ui, sans-serif;
+
+  /* Custom breakpoints */
   --breakpoint-xs: 320px;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -39,6 +50,8 @@
   --breakpoint-2xl: 1400px;
   --breakpoint-3xl: 1700px;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer utilities {
   .animate-fadeIn {
@@ -55,6 +68,33 @@
       transform: translateY(0);
     }
   }
+
+  /* Force custom gradient classes */
+  .bg-gradient-primary {
+    background: linear-gradient(to right, #fcd34d, #f59e0b, #b45309);
+  }
+
+  .bg-gradient-primary-opacity {
+    background: linear-gradient(to right, #fcd34d, #f59e0b, #b45309);
+    opacity: 0.4;
+  }
+
+  /* Custom shadow utility */
+  .shadow-soft {
+    box-shadow: 0 14px 24px 4px #0000000a;
+  }
+}
+
+/* Alternative: Define colors in :root as backup */
+:root {
+  --tw-color-primary-300: #fcd34d;
+  --tw-color-primary-500: #f59e0b;
+  --tw-color-primary-700: #b45309;
+}
+
+/* Prose styles */
+.prose {
+  max-width: none;
 }
 
 .prose ul {
@@ -82,4 +122,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Debug: Force gradient to work */
+.debug-gradient {
+  background: linear-gradient(to right, #fcd34d, #f59e0b, #b45309) !important;
+  opacity: 0.4;
 }

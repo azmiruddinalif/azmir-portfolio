@@ -9,10 +9,10 @@ const TabIndex = ({ activeTab, setActiveTab }) => {
         <button
           key={tab}
           onClick={() => setActiveTab(tab)}
-          className={`px-2 sm:px-4 py-3 rounded-lg font-medium text-sm lg:text-base capitalize transition-all border border-black-200 text-start cursor-pointer ${
+          className={`px-2 sm:px-4 py-3 rounded-lg font-medium text-sm lg:text-base capitalize transition-all border border-orange text-start cursor-pointer ${
             activeTab === tab
-              ? "bg-black text-white"
-              : "text-gray-600 hover:bg-gray-200"
+              ? "bg-orange text-white"
+              : "text-black-400 hover:bg-orange hover:text-white dark:text-primary-50"
           }`}
         >
           {tab}

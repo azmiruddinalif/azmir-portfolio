@@ -27,24 +27,24 @@ const SingleWorkPage = ({ params }) => {
 
   return (
     <section className="my-22 lg:my-56 max-w-3xl mx-auto px-4">
-      <Link href="/myworks" className="mb-10 flex items-center gap-x-3">
+      <Link href="/myworks" className="mb-10 flex items-center gap-x-3 dark:text-white/70">
         <IoMdArrowBack size={20} />
-        <span className="font-primary text-lg text-black-300 font-semibold">
+        <span className="font-primary text-lg text-black-300 font-semibold dark:text-white/70">
           Go Back
         </span>
       </Link>
-      <div className="px-5 py-2 bg-white-200 inline-block rounded-full mb-2 mt-2 lg:mt-0">
-        <span className="font-primary text-sm text-black-200 font-bold">
+      <div className="px-5 py-2 bg-white-200 inline-block rounded-full mb-2 mt-2 lg:mt-0 dark:bg-gray-800/40 dark:backdrop-blur-md">
+        <span className="font-primary text-sm text-black-200 font-bold dark:text-white">
           {" "}
           {project.category}
         </span>
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-between mb-10">
-        <h1 className="text-4xl font-bold font-primary">{project.title}</h1>
+        <h1 className="text-4xl font-bold font-primary dark:text-white">{project.title}</h1>
         <Button
           onClick={()=>handleRedirect(project.link)}
           text="Visit Project"
-          className="text-black-100 lg:mx-0 mx-auto text-sm lg:text-base bg-white font-primary font-semibold py-3 mt-5 mb-3 hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
+          className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-primary font-semibold py-3 mt-5 mb-3  hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 "
           icon={<BsBoxArrowInUpRight />}
         />
       </div>
@@ -56,10 +56,10 @@ const SingleWorkPage = ({ params }) => {
         className="w-full max-h-[500px] object-cover rounded mb-6"
        
       />
-      <p className="mb-6 font-primary text-lg text-black-200">{project.description}</p>
+      <p className="mb-6 font-primary text-lg text-black-200 dark:text-white">{project.description}</p>
 
       <div
-        className="prose max-w-none font-primary text-black-300"
+        className="prose max-w-none font-primary text-black-300 dark:text-white"
         dangerouslySetInnerHTML={{
           __html: project.singleInforMation.fullDescription,
         }}

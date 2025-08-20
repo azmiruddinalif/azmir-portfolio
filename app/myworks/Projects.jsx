@@ -21,20 +21,20 @@ const Projects = ({
             width={1000}
             height={1000}
             alt="project"
-            className="group-hover:scale-110 transition-transform duration-700 ease-out"
+            className="group-hover:scale-110 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
         </div>
         <div className="flex flex-col justify-between items-start h-full">
           <div>
-            <div className="px-5 py-2 bg-white-200 inline-block rounded-full mb-5 mt-5 lg:mt-0">
-              <span className="font-primary text-sm text-black-200 font-semibold">
+            <div className="px-5 py-2 bg-white-200 inline-block rounded-full mb-5 mt-5 lg:mt-0 dark:bg-gray-800/40 dark:backdrop-blur-md">
+              <span className="font-primary text-sm text-black-200 font-semibold dark:text-white">
                 {" "}
                 {category}
               </span>
             </div>
             <div className="flex items-center justify-between lg:flex-none">
-              <h2 className="font-primary text-2xl lg:text-4xl font-bold text-black-200 mb-3">
+              <h2 className="font-primary text-2xl lg:text-4xl font-bold text-black-200 mb-3 dark:text-white">
                 {title}
               </h2>
               <Link
@@ -50,18 +50,18 @@ const Projects = ({
                 />
               </Link>
             </div>
-            <p className="font-primary text-base font-normal text-black-400 mb-5">
+            <p className="font-primary text-base font-normal text-black-400 mb-5 dark:text-white/70">
               {description}
             </p>
             <Link
               href={link}
-              className="hidden lg:flex items-center gap-x-3 font-primary text-base font-semibold text-black-200 hover:underline transition-all duration-300 ease-out"
+              className="hidden lg:flex items-center gap-x-3 font-primary text-base font-semibold text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white/70"
             >
               {" "}
-              Check It Out <GoArrowRight color="#000" size={20} />
+              Check It Out <GoArrowRight color="currentColor" size={20} />
             </Link>
           </div>
-          <p className="font-primary text-lg text-black-40 flex items-center gap-x-1">
+          <p className="font-primary text-lg text-black-40 flex items-center gap-x-1 dark:text-white">
             Client:
             <Image src={clientLogo} width={30} height={30} alt="logo" />{" "}
             <span className="font-semibold">{clientName}</span>

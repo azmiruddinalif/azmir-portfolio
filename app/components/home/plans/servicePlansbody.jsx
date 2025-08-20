@@ -18,21 +18,21 @@ const ServicePlansBody = () => {
 
         return (
           <div
-            className="relative flex flex-col justify-between w-full rounded-md bg-white p-5 xl:p-10 lg:hover:scale-105 transition-all ease-linear duration-100 border border-black-300"
+            className="relative flex flex-col justify-between w-full rounded-md dark:bg-gray-800/40 dark:backdrop-blur-md bg-white p-5 xl:p-10 lg:hover:scale-105 transition-all ease-linear duration-100 border border-black-300 dark:border-white/10"
             key={index}
           >
             {/* Full-Stack Recommended Badge */}
             {plan.recommended && (
-              <div className="absolute top-5 right-5 bg-black-200 text-white text-xs font-semibold px-3 py-2 rounded-full">
+              <div className="absolute top-5 right-5 bg-black-200 text-white text-xs font-semibold px-3 py-2 rounded-full dark:bg-gray-800/40 dark:backdrop-blur-md">
                 Recommended
               </div>
             )}
 
-            <h4 className="font-primary text-lg xl:text-[28px] leading-10 text-black font-semibold lg:mt-10 xl:mt-5">
+            <h4 className="font-primary text-lg xl:text-[28px] leading-10 text-black font-semibold lg:mt-10 xl:mt-5 dark:text-white">
               {plan.title}
             </h4>
 
-            <p className="font-primary text-sm xl:text-base text-black font-normal mt-1 mb-5">
+            <p className="font-primary text-sm xl:text-base text-black font-normal mt-1 mb-5 dark:text-white/70">
               {plan.description}
             </p>
 
@@ -42,15 +42,19 @@ const ServicePlansBody = () => {
                   key={idx}
                   className="flex items-start gap-3 font-primary text-sm xl:text-base"
                 >
-                  <span className="font-semibold text-black">{idx + 1}.</span>
-                  <span className="text-black">{service}</span>
+                  <span className="font-semibold text-black dark:text-white/70">
+                    {idx + 1}.
+                  </span>
+                  <span className="text-black dark:text-white/70">
+                    {service}
+                  </span>
                 </div>
               ))}
             </div>
 
             <Link
               href={ctaLink}
-              className="font-primary text-base text-black font-semibold flex items-center gap-x-2 underline"
+              className="font-primary text-base text-black font-semibold flex items-center gap-x-2 underline dark:text-white"
             >
               {plan.cta}
             </Link>
