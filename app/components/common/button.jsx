@@ -17,7 +17,7 @@ const Button = ({
       disabled={disabled}
       onClick={onClick}
       className={clsx(
-        "bg-black-100 cursor-pointer rounded-md px-8",
+        "bg-orange cursor-pointer rounded-md px-8",
         "flex items-center justify-center gap-2",
         disabled && "opacity-50 cursor-not-allowed",
         className

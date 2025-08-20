@@ -15,7 +15,7 @@ const MySkills = () => {
   const [activeTab, setActiveTab] = useState("frontend");
 
   return (
-    <section className="py-12 bg-white-200">
+    <section className="py-12 bg-white-200 dark:bg-gray-800/40 dark:backdrop-blur-md">
       <Container>
         <div className="text-center mb-12">
           <Player
@@ -24,10 +24,10 @@ const MySkills = () => {
             src="/lottie/coding.json"
             style={{ height: "250px", width: "250px" }}
           />
-          <h4 className="font-primary text-2xl lg:text-3xl font-bold text-black-300">
+          <h4 className="font-primary text-2xl lg:text-3xl font-bold text-black-300 dark:text-white">
             All over my skills find here
           </h4>
-          <p className="mt-2 text-sm lg:text-lg font-primary font-normal text-black-400">
+          <p className="mt-2 text-sm lg:text-lg font-primary font-normal text-black-400 dark:text-white/70">
             I create modern, user-friendly digital experiences that combine
             creativity, performance, and scalability
           </p>

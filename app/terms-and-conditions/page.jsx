@@ -17,9 +17,9 @@ const today = new Date().toLocaleDateString();
 
 const TermsAndConditions = () => {
   return (
-    <div className="font-primate min-h-screen bg-gray-50">
+    <div className="font-primate min-h-screen">
       {/* Hero Banner with Clean Design */}
-      <div className="relative bg-white py-32 text-center overflow-hidden border-b border-gray-200">
+      <div className="relative py-32 text-center overflow-hidden border-b border-gray-200 dark:border-white/10">
         <Container>
           <div className="relative z-10">
             {/* Icon Badge */}
@@ -27,10 +27,10 @@ const TermsAndConditions = () => {
               <HiOutlineDocumentText className="w-8 h-8 text-blue-600" />
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-800">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-800 dark:text-white">
               Terms & Conditions
             </h1>
-            <div className="flex items-center justify-center gap-2 text-gray-600 text-lg">
+            <div className="flex items-center justify-center gap-2 text-gray-600 text-lg dark:text-white/70">
               <HiOutlineShieldCheck className="w-5 h-5" />
               <span>Effective Date: {today}</span>
             </div>
@@ -48,7 +48,7 @@ const TermsAndConditions = () => {
       <Container>
         {/* Back Navigation with Enhanced Style */}
         <div className="relative -mt-8 z-10">
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-6 mx-4">
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-6 mx-4 dark:border-white/10 dark:bg-gray-800/40 dark:backdrop-blur-md">
             <Link
               href="/"
               className="group inline-flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-all duration-300 transform hover:-translate-x-1"
@@ -59,25 +59,27 @@ const TermsAndConditions = () => {
                   className="group-hover:text-blue-600"
                 />
               </div>
-              <span className="font-semibold text-lg">Go Back</span>
+              <span className="font-semibold text-lg dark:text-white">
+                Go Back
+              </span>
             </Link>
           </div>
         </div>
 
         {/* Content Section with Glass Card */}
-        <div className="py-16 px-4">
+        <div className="py-16 lg:px-4">
           <div className="max-w-4xl mx-auto">
             {/* Content Header */}
-            <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 mb-8 p-8">
-              <div className="flex items-center gap-4 mb-6">
+            <div className="bg-white dark:bg-gray-800/40 dark:backdrop-blur-md dark:border-white/10 rounded-3xl shadow-2xl border border-gray-200 mb-8 p-8">
+              <div className="flex flex-col lg:flex-row items-center gap-4 mb-6">
                 <div className="p-3 bg-blue-600 rounded-full">
                   <HiOutlineScale className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-800">
+                  <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
                     Legal Agreement
                   </h2>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-white/70">
                     Please read these terms carefully before using our services
                   </p>
                 </div>
@@ -85,27 +87,27 @@ const TermsAndConditions = () => {
 
               {/* Key Points */}
               <div className="grid md:grid-cols-3 gap-4">
-                <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-                  <div className="text-blue-600 font-semibold mb-2">
+                <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 dark:bg-gray-700">
+                  <div className="text-blue-600 font-semibold mb-2 dark:text-white">
                     Binding Agreement
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-600 dark:text-white/50">
                     By using our services, you agree to these terms
                   </div>
                 </div>
-                <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-                  <div className="text-blue-600 font-semibold mb-2">
+                <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 dark:bg-gray-700">
+                  <div className="text-blue-600 font-semibold mb-2 dark:text-white">
                     Your Rights
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-600 dark:text-white/50">
                     Understanding what you can and cannot do
                   </div>
                 </div>
-                <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-                  <div className="text-blue-600 font-semibold mb-2">
+                <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 dark:bg-gray-700">
+                  <div className="text-blue-600 font-semibold mb-2 dark:text-white">
                     Updates
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-600 dark:text-white/50">
                     Terms may be updated periodically
                   </div>
                 </div>
@@ -113,22 +115,22 @@ const TermsAndConditions = () => {
             </div>
 
             {/* Main Content */}
-            <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-12">
+            <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-4 lg:p-12 dark:bg-gray-800/40 dark:backdrop-blur-md dark:border-white/10">
               <div className="prose prose-lg prose-blue max-w-none">
                 <div
                   dangerouslySetInnerHTML={{ __html: termsContent }}
-                  className="space-y-6 leading-relaxed"
+                  className="space-y-6 leading-relaxed dark:text-white"
                 />
               </div>
             </div>
 
             {/* Footer Actions */}
             <div className="mt-12 text-center">
-              <div className="rounded-2xl p-8 border border-black-800">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">
+              <div className="rounded-2xl p-8 border border-black-800 dark:border-white/10">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 dark:text-white">
                   Have Questions?
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-6 dark:text-white">
                   If you have any questions about these terms, please don't
                   hesitate to contact me.
                 </p>
@@ -136,7 +138,7 @@ const TermsAndConditions = () => {
                   <Link href="mailto:alifazmiruddin@gmail.com">
                     <Button
                       text="Contact Support"
-                      className="text-white text-sm lg:text-base font-primary font-semibold py-3 mt-5 mb-3 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
+                      className="text-white font-primary font-normal py-3 mt-5 mb-3 mx-auto hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100"
                     />
                   </Link>
                 </div>
