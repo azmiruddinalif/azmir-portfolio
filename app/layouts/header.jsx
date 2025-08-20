@@ -11,6 +11,7 @@ const Header = () => {
   const router = useRouter();
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const servicesItem = MenuData.find((item) => item.title === "Services");
 
@@ -27,122 +28,251 @@ const Header = () => {
     }, 200);
   };
 
+  // Initialize dark mode from localStorage
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    if (savedMode) {
+      setIsDarkMode(savedMode === "true");
+    } else {
+      // Check system preference
+      setIsDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    }
+  }, []);
+
+  // Apply dark mode to document
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("darkMode", isDarkMode.toString());
+  }, [isDarkMode]);
+
   // Disable body scroll when sidebar is open
   useEffect(() => {
     document.body.style.overflow = sidebarOpen ? "hidden" : "";
   }, [sidebarOpen]);
 
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
     <header className="relative z-50">
       {/* Top Nav */}
-      <nav className="fixed top-0 left-0 w-full backdrop-blur-md bg-white/30 border-b border-b-white-100 transition-all duration-300 z-50">
-        <Container>
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-4">
-              <Image
-                src="/assets/logo.svg"
-                alt="logo"
-                width={110}
-                height={110}
-              />
-            </Link>
-
-            {/* Desktop Menu */}
-            <ul className="hidden md:flex items-center justify-end">
-              {MenuData.map((data, index) => (
-                <li
-                  key={index}
-                  className="relative group font-primary font-normal text-sm lg:text-base text-black-200"
-                  onMouseEnter={
-                    data.title === "Services" ? handleMouseEnter : undefined
-                  }
-                  onMouseLeave={
-                    data.title === "Services" ? handleMouseLeave : undefined
-                  }
-                >
-                  <Link
-                    href={data.link}
-                    className="relative inline-block px-4 md:px-3 lg:px-6 py-6"
-                  >
-                    <span className="after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-black after:transition-all after:duration-300 group-hover:after:w-full">
-                      {data.title}
-                    </span>
-                  </Link>
-
-                  {/* Desktop Dropdown */}
-                  {data.title === "Services" &&
-                    isServicesOpen &&
-                    servicesItem?.dropdown && (
-                      <div className="fixed left-0 top-[72px] w-screen bg-white shadow-soft py-8 xl:py-12 px-5 xl:px-20 grid grid-cols-3 gap-3 xl:gap-10 z-40 animate-fadeIn">
-                        {servicesItem.dropdown.map((item, subIndex) => (
-                          <div
-                            key={subIndex}
-                            onClick={() => {
-                              setIsServicesOpen(false);
-                              router.push(item.link);
-                            }}
-                            className="flex flex-col xl:flex-row items-start gap-4 hover:bg-gray-100 p-4 rounded-lg transition-all duration-200 cursor-pointer"
-                          >
-                            <Image
-                              src={item.icon}
-                              alt={item.title}
-                              width={80}
-                              height={80}
-                              className="flex-shrink-0 w-12 lg:w-20"
-                            />
-                            <div>
-                              <h4 className="text-base xl:text-lg font-bold text-black font-primary">
-                                {item.title}
-                              </h4>
-                              <p className="text-sm text-black-400 font-primary">
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                </li>
-              ))}
-              <Link href="/meeting/azmir" target="_blank">
-                <Button
-                  text="Hire Me"
-                  className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
+      <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-7xl px-4">
+        <nav
+          className={`border rounded-2xl shadow-lg transition-all duration-300 ${
+            isDarkMode
+              ? "bg-gray-900 border-gray-400/20"
+              : "bg-white border border-white-200"
+          }`}
+        >
+          <div className="px-6">
+            <div className="flex items-center justify-between">
+              {/* Logo */}
+              <Link href="/" className="flex items-center gap-4">
+                <Image
+                  src="/assets/logo.svg"
+                  alt="logo"
+                  width={110}
+                  height={110}
                 />
               </Link>
-            </ul>
 
-            {/* Hamburger Icon - Mobile */}
-            <button
-              onClick={() => setSidebarOpen(true)}
-              className="md:hidden flex items-center justify-center p-2 focus:outline-none"
-              aria-label="Open Menu"
-            >
-              <svg
-                className="w-8 h-8 text-black-200"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </button>
+              {/* Desktop Menu */}
+              <ul className="hidden md:flex items-center justify-end">
+                {MenuData.map((data, index) => (
+                  <li
+                    key={index}
+                    className={`relative group font-primary font-normal text-sm lg:text-base ${
+                      isDarkMode ? "text-gray-200" : "text-black-200"
+                    }`}
+                    onMouseEnter={
+                      data.title === "Services" ? handleMouseEnter : undefined
+                    }
+                    onMouseLeave={
+                      data.title === "Services" ? handleMouseLeave : undefined
+                    }
+                  >
+                    <Link
+                      href={data.link}
+                      className="relative inline-block px-4 md:px-3 lg:px-6 py-6 text-xs lg:text-base"
+                    >
+                      <span
+                        className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:transition-all after:duration-300 group-hover:after:w-full ${
+                          isDarkMode ? "after:bg-white" : "after:bg-black"
+                        }`}
+                      >
+                        {data.title}
+                      </span>
+                    </Link>
+
+                    {/* Desktop Dropdown */}
+                    {data.title === "Services" &&
+                      isServicesOpen &&
+                      servicesItem?.dropdown && (
+                        <div
+                          className={`absolute left-0 top-full mt-2 shadow-lg rounded-lg border py-2 w-[320px] z-40 animate-fadeIn ${
+                            isDarkMode
+                              ? "bg-gray-800 border-gray-600"
+                              : "bg-white border-gray-200"
+                          }`}
+                        >
+                          {servicesItem.dropdown.map((item, subIndex) => (
+                            <div
+                              key={subIndex}
+                              onClick={() => {
+                                setIsServicesOpen(false);
+                                router.push(item.link);
+                              }}
+                              className={`px-4 py-2 cursor-pointer transition-colors duration-200 ${
+                                isDarkMode
+                                  ? "hover:bg-gray-700 text-gray-200"
+                                  : "hover:bg-gray-100 text-gray-800"
+                              }`}
+                            >
+                              <span className="text-sm font-medium">
+                                {item.title}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                  </li>
+                ))}
+
+                {/* Dark Mode Toggle */}
+                <li className="ml-4">
+                  <button
+                    onClick={toggleDarkMode}
+                    className={`p-2 rounded-lg transition-colors duration-200 ${
+                      isDarkMode
+                        ? "hover:bg-gray-700 text-gray-200"
+                        : "hover:bg-gray-100 text-gray-700"
+                    }`}
+                    aria-label="Toggle dark mode"
+                  >
+                    {isDarkMode ? (
+                      // Sun icon for light mode
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                        />
+                      </svg>
+                    ) : (
+                      // Moon icon for dark mode
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                        />
+                      </svg>
+                    )}
+                  </button>
+                </li>
+
+                <Link href="/meeting/azmir" target="_blank">
+                  <Button
+                    text="Hire Me"
+                    className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 text-xs lg:text-base"
+                  />
+                </Link>
+              </ul>
+
+              {/* Mobile Menu Items */}
+              <div className="md:hidden flex items-center gap-3">
+                {/* Dark Mode Toggle - Mobile */}
+                <button
+                  onClick={toggleDarkMode}
+                  className={`p-2 rounded-lg transition-colors duration-200 ${
+                    isDarkMode
+                      ? "hover:bg-gray-700 text-gray-200"
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
+                  aria-label="Toggle dark mode"
+                >
+                  {isDarkMode ? (
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      />
+                    </svg>
+                  )}
+                </button>
+
+                {/* Hamburger Icon */}
+                <button
+                  onClick={() => setSidebarOpen(true)}
+                  className="flex items-center justify-center p-2 focus:outline-none"
+                  aria-label="Open Menu"
+                >
+                  <svg
+                    className={`w-8 h-8 ${
+                      isDarkMode ? "text-gray-200" : "text-black-200"
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
-        </Container>
-      </nav>
+        </nav>
+      </div>
 
       {/* Sidebar - Mobile */}
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[280px] shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        } ${isDarkMode ? "bg-gray-800" : "bg-white"}`}
       >
         {/* Close Button */}
         <div className="flex justify-end p-4">
@@ -152,7 +282,9 @@ const Header = () => {
             className="p-2 focus:outline-none"
           >
             <svg
-              className="w-6 h-6 text-black-200"
+              className={`w-6 h-6 ${
+                isDarkMode ? "text-gray-200" : "text-black-200"
+              }`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -168,7 +300,11 @@ const Header = () => {
         </div>
 
         {/* Sidebar Links */}
-        <nav className="flex flex-col px-6 gap-6 font-primary text-black-200">
+        <nav
+          className={`flex flex-col px-6 gap-6 font-primary ${
+            isDarkMode ? "text-gray-200" : "text-black-200"
+          }`}
+        >
           {MenuData.map((data, index) => {
             if (data.title === "Services" && data.dropdown) {
               return (
@@ -203,7 +339,11 @@ const Header = () => {
                         <Link
                           href={subItem.link}
                           key={subIndex}
-                          className="hover:text-black-400 font-normal"
+                          className={`font-normal transition-colors ${
+                            isDarkMode
+                              ? "hover:text-gray-400"
+                              : "hover:text-black-400"
+                          }`}
                           onClick={() => setSidebarOpen(false)}
                         >
                           <span className="font-primary text-sm">
@@ -243,10 +383,12 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Glassy Overlay */}
+      {/* Overlay */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-white bg-opacity-20 backdrop-blur-sm z-40"
+          className={`fixed inset-0 bg-opacity-20 backdrop-blur-sm z-40 ${
+            isDarkMode ? "bg-black" : "bg-white"
+          }`}
           onClick={() => setSidebarOpen(false)}
           aria-hidden="true"
         />
