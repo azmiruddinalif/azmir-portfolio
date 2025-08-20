@@ -7,50 +7,92 @@ import Coding from "./Coding";
 const Banner = () => {
   return (
     <>
-      <div className="grid lg:grid-cols-[1.6fr_2fr] items-center">
-        <div className="-mt-10 lg:mt-0 order-1 lg:order-[0] text-center lg:text-left">
-          <Availability />
+      {/* Main Content - Responsive grid with consistent centering */}
+      <div className="grid grid-cols-1 lg:grid-cols-[1.9fr_2fr] items-center gap-6 sm:gap-8 lg:gap-0 px-4 sm:px-6 lg:px-0 mt-20 lg:mt-40 mb-4">
+        {/* Text Content - Maintains center alignment on mobile, left on desktop */}
+        <div className="-mt-6 sm:-mt-8 lg:mt-0 order-2 lg:order-1 text-center lg:text-left">
+          <div className="flex justify-center lg:justify-start mb-4">
+            <Availability />
+          </div>
+
           <div className="max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
-            <h6 className="font-primary text-sm lg:text-base font-bold text-black-400 my-3">
+            {/* Greeting - Responsive text */}
+            <h6 className="font-primary text-xs sm:text-sm lg:text-base font-bold text-theme-secondary my-2 sm:my-3 dark:text-white">
               👋 Hi! I'm Azmir Uddin Alif & your go-to
             </h6>
-            <h1 className="font-primary text-3xl lg:text-4xl font-bold text-black-400">
+
+            {/* Main Title - Better responsive scaling */}
+            <h1 className="font-primary text-black-200 text-2xl sm:text-3xl lg:text-4xl font-bold text-theme-primary leading-tight dark:text-white">
               MERN Stack Developer
             </h1>
-            <p className="font-primary text-black-300 text-sm lg:text-base mt-3">
-              From innovative startups to large enterprises, I deliver custom web solutions by transforming complex software challenges into scalable, future-ready applications with the MERN stack. Using MongoDB, Express.js, React, and Node.js, I develop responsive websites, dynamic web apps, and mobile solutions that boost performance, drive business growth, and enhance user experience.
+
+            {/* Description - Responsive text size */}
+            <p className="font-primary text-theme-secondary text-black-400 text-xs sm:text-sm lg:text-base mt-2 sm:mt-3 leading-relaxed dark:text-gray-100/80">
+              I build custom web solutions for startups and enterprises using
+              the MERN stack. With MongoDB, Express.js, React, and Node.js, I
+              create responsive websites and dynamic web apps. My scalable,
+              high-performance solutions drive business growth and seamless user
+              experiences. Specializing in web and mobile development, I turn
+              complex software challenges into future ready applications.
             </p>
-            {/* <div className="mt-4 flex flex-col lg:flex-row items-center gap-x-3">
-              <Image
-                src="https://cdn.prod.website-files.com/639db6279835785a1ddda5bb/67745bddd340d42d008f0695_Avater%20Group.svg"
-                alt="clients"
-                width={190}
-                height={190}
-              />
-              <p className="text-black font-primary mt-1 lg:mt-0 text-xs lg:text-sm">
-                30+ Happy And Satisfied Clients
-              </p>
-            </div> */}
-            <div className="flex items-center justify-center lg:justify-start gap-x-2">
+
+            {/* Action Buttons - Responsive layout */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-x-2 mt-4 sm:mt-5">
               <Button
                 text={<Link href="#socials">My Socials</Link>}
-                className="text-white text-sm lg:text-base font-primary font-semibold py-3 mt-5 mb-3 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
+                className="w-full sm:w-auto text-white text-xs sm:text-sm lg:text-base font-primary font-semibold py-2 sm:py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 mb-2 sm:mb-3"
               />
-              <Link href="/meeting/azmir" target="_blank">
+              <Link
+                href="/meeting/azmir"
+                target="_blank"
+                className="w-full sm:w-auto"
+              >
                 <Button
                   text="Hire Me"
-                  className="text-black-100 text-sm lg:text-base bg-white font-primary font-semibold py-3 mt-5 mb-3 hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
+                  className="w-full sm:w-auto text-orange text-xs sm:text-sm lg:text-base bg-transparent font-primary font-semibold py-2 sm:py-3 px-4 sm:px-6 hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 mb-2 sm:mb-3"
                 />
               </Link>
             </div>
-            <span className="font-primary text-sm font-normal text-black-400">
+
+            {/* Subtitle - Responsive text */}
+            <span className="font-primary text-xs sm:text-sm font-normal text-theme-muted block dark:text-gray-400">
               I work independently, offering exceptional value and quality in my
               services.
             </span>
           </div>
         </div>
-        <div className="mt-5 lg:mt-0">
-          <Coding />
+
+        {/* Coding Animation - Responsive sizing while maintaining aspect ratio */}
+        {/* <div className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-none">
+            <Coding />
+          </div> */}
+        {/* <div className="order-1 lg:order-2 mt-4 sm:mt-5 lg:mt-0 flex justify-center overflow-hidden">
+          <Image
+            src="/assets/azmir.jpg"
+            alt="image"
+            width={400}
+            height={400}
+            className="rounded-xl"
+          />
+        </div> */}
+        <div className="order-1 lg:order-2 mt-4 sm:mt-5 lg:mt-0 flex justify-center overflow-hidden relative">
+          {/* Light mode image */}
+          <Image
+            src="/assets/azmir.jpg"
+            alt="Light mode image"
+            width={400}
+            height={400}
+            className="rounded-xl dark:hidden"
+          />
+
+          {/* Dark mode image */}
+          <Image
+            src="/assets/azmir-dark.png"
+            alt="Dark mode image"
+            width={400}
+            height={400}
+            className="rounded-xl hidden dark:block"
+          />
         </div>
       </div>
     </>

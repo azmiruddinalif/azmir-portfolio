@@ -26,7 +26,9 @@ const Timeline = () => {
               {/* Year label */}
               <span
                 className={`text-[11px] md:text-sm ${
-                  isActive ? "text-black font-semibold" : "text-gray-400"
+                  isActive
+                    ? "text-black font-semibold dark:text-white-300/80"
+                    : "text-gray-400 dark:text-white-300/80"
                 }`}
               >
                 {year}
