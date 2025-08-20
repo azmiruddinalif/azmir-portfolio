@@ -34,15 +34,15 @@ const Projects = ({
               </span>
             </div>
             <div className="flex items-center justify-between lg:flex-none">
-              <h2 className="font-primary text-2xl lg:text-4xl font-bold text-black-200 mb-3 dark:text-white">
+              <h2 className="font-primary text-lg md:text-2xl lg:text-4xl font-bold text-black-200 mb-3 dark:text-white">
                 {title}
               </h2>
               <Link
                 href={link}
-                className="flex lg:hidden items-center gap-x-3 font-primary text-base font-semibold text-black-200 hover:underline transition-all duration-300 ease-out"
+                className="flex lg:hidden items-center gap-x-3 font-primary text-sm md:text-base font-semibold mb-3 text-black-200 hover:underline transition-all duration-300 ease-out"
               >
                 {" "}
-                {/* Check It Out{" "} */}
+                Live{" "}
                 <GoArrowRight
                   color="#000"
                   size={20}
@@ -50,18 +50,18 @@ const Projects = ({
                 />
               </Link>
             </div>
-            <p className="font-primary text-base font-normal text-black-400 mb-5 dark:text-white/70">
+            <p className="font-primary text-sm md:text-base font-normal text-black-400 mb-5 dark:text-white/70">
               {description}
             </p>
             <Link
               href={link}
-              className="hidden lg:flex items-center gap-x-3 font-primary text-base font-semibold text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white/70"
+              className="hidden lg:flex items-center gap-x-3 font-primary text-sm lg:text-base font-semibold text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white/70"
             >
               {" "}
               Check It Out <GoArrowRight color="currentColor" size={20} />
             </Link>
           </div>
-          <p className="font-primary text-lg text-black-40 flex items-center gap-x-1 dark:text-white">
+          <p className="font-primary text-sm lg:text-lg text-black-40 flex items-center gap-x-1 dark:text-white">
             Client:
             <Image src={clientLogo} width={30} height={30} alt="logo" />{" "}
             <span className="font-semibold">{clientName}</span>

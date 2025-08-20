@@ -21,7 +21,7 @@ const MyWorkData = () => {
 
   return (
     <>
-      <div className="my-[200px] cursor-pointer" role="button">
+      <div className="my-28 lg:my-[200px] cursor-pointer" role="button">
         <div className="order-1 lg:order-[0] text-center lg:text-left flex justify-between">
           <div className="w-full flex flex-col lg:flex-row items-center justify-between">
             <div className="max-w-[550px] order-1 lg:order-[0] text-center lg:text-left">

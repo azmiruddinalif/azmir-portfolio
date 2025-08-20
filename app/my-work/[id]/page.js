@@ -57,7 +57,6 @@ const SingleWorkPage = ({ params }) => {
        
       />
       <p className="mb-6 font-primary text-lg text-black-200 dark:text-white">{project.description}</p>
-
       <div
         className="prose max-w-none font-primary text-black-300 dark:text-white"
         dangerouslySetInnerHTML={{
