@@ -8,9 +8,9 @@ const Banner = () => {
   return (
     <>
       {/* Main Content - Responsive grid with consistent centering */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1.9fr_2fr] items-center gap-6 sm:gap-8 lg:gap-0 px-4 sm:px-6 lg:px-0 mt-20 lg:mt-40 mb-4">
+      <div className="grid grid-cols-1 lg:grid-cols-[1.9fr_2fr] items-center gap-6 sm:gap-8 lg:gap-0 sm:px-6 lg:px-0 mt-20 lg:mt-40 mb-4">
         {/* Text Content - Maintains center alignment on mobile, left on desktop */}
-        <div className="-mt-6 sm:-mt-8 lg:mt-0 order-2 lg:order-1 text-center lg:text-left">
+        <div className="order-2 lg:order-1 text-center lg:text-left">
           <div className="flex justify-center lg:justify-start mb-4">
             <Availability />
           </div>
@@ -40,7 +40,7 @@ const Banner = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-x-2 mt-4 sm:mt-5">
               <Button
                 text={<Link href="#socials">My Socials</Link>}
-                className="w-full sm:w-auto text-white text-xs sm:text-sm lg:text-base font-primary font-semibold py-2 sm:py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 mb-2 sm:mb-3"
+                className="w-full sm:w-auto text-white text-sm lg:text-base font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 sm:mb-3"
               />
               <Link
                 href="/meeting/azmir"
@@ -49,7 +49,7 @@ const Banner = () => {
               >
                 <Button
                   text="Hire Me"
-                  className="w-full sm:w-auto text-orange text-xs sm:text-sm lg:text-base bg-transparent font-primary font-semibold py-2 sm:py-3 px-4 sm:px-6 hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 mb-2 sm:mb-3"
+                  className="w-full sm:w-auto text-orange text-sm lg:text-base bg-transparent font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 mb-2 sm:mb-3"
                 />
               </Link>
             </div>

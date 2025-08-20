@@ -22,7 +22,7 @@ const Journey = () => {
             </div>
           </div>
           <Timeline />
-          <div>
+          <div className="max-w-5xl mx-auto">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-x-3 w-[60%]">
                 <div className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] bg-white-300 dark:bg-gray-600 rounded-lg flex items-center justify-center shrink-0">

@@ -63,7 +63,7 @@ const Header = () => {
       {/* Top Nav */}
       <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-7xl px-4">
         <nav
-          className={`border rounded-2xl shadow-lg transition-all duration-300 ${
+          className={`border rounded-2xl shadow-lg transition-all duration-300 py-2 lg:py-0 ${
             isDarkMode
               ? "bg-gray-900 border-gray-400/20"
               : "bg-white border border-white-200"
@@ -377,7 +377,7 @@ const Header = () => {
           <Link href="/meeting/azmir" target="_blank">
             <Button
               text="Hire Me"
-              className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-black-100 hover:text-black-100 transition-all ease-linear duration-100"
+              className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100"
             />
           </Link>
         </div>
@@ -386,9 +386,12 @@ const Header = () => {
       {/* Overlay */}
       {sidebarOpen && (
         <div
-          className={`fixed inset-0 bg-opacity-20 backdrop-blur-sm z-40 ${
-            isDarkMode ? "bg-black" : "bg-white"
-          }`}
+          className={`fixed inset-0 z-40 transition-all duration-300
+      ${
+        isDarkMode
+          ? "bg-black/40 backdrop-blur-md"
+          : "bg-white/40 backdrop-blur-md"
+      }`}
           onClick={() => setSidebarOpen(false)}
           aria-hidden="true"
         />

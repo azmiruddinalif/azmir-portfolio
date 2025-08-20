@@ -5,7 +5,7 @@ const Timeline = () => {
   const activeYear = 2025;
 
   return (
-    <div className="relative w-full px-4 py-10">
+    <div className="relative w-full px-4 py-10 max-w-5xl mx-auto">
       {/* Bottom line */}
       <div className="absolute left-0 right-0 top-[45px]  bg-white-300 rounded-r-full rounded-l-full z-0">
         <div className="h-1 bg-gradient-to-r from-green to-white-300 w-[30%] rounded-l-full"></div>

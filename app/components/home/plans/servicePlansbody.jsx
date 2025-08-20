@@ -28,7 +28,7 @@ const ServicePlansBody = () => {
               </div>
             )}
 
-            <h4 className="font-primary text-lg xl:text-[28px] leading-10 text-black font-semibold lg:mt-10 xl:mt-5 dark:text-white">
+            <h4 className="font-primary text-lg xl:text-[28px] leading-10 text-black font-semibold sm:mt-10 xl:mt-5 dark:text-white mt-8">
               {plan.title}
             </h4>
 
