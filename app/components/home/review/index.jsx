@@ -79,7 +79,7 @@ const Review = () => {
   if (!hasMounted) return null;
 
   return (
-    <div className="py-10 bg-white-200">
+    <div className="py-10 bg-white-200 dark:bg-gray-800/40 dark:backdrop-blur-md">
       <Container>
         <div
           style={{
@@ -88,7 +88,7 @@ const Review = () => {
             backgroundPosition: "center",
             backgroundSize: "contain",
           }}
-          className="py-20 bg-white-200"
+          className="py-20"
         >
           <Swiper
             modules={[Navigation, Autoplay]}
@@ -100,10 +100,10 @@ const Review = () => {
             {reviews.map((review) => (
               <SwiperSlide key={review.id}>
                 <div className="max-w-2xl mx-auto text-center px-6">
-                  <p className="text-lg italic text-black-200 mb-4 font-primary">
+                  <p className="text-lg italic text-black-200 mb-4 font-primary dark:text-white">
                     “{review.quote}”
                   </p>
-                  <h4 className="font-semibold text-black text-xl font-primary">
+                  <h4 className="font-semibold text-black text-xl font-primary dark:text-white/70">
                     - {review.author}
                   </h4>
                 </div>
