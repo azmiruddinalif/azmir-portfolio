@@ -13,9 +13,7 @@ const Help = () => {
               When I can help?
             </h4>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
-              When you're launching from scratch, scaling fast, or stuck with a
-              clunky UI, I jump in with clean code, modern tech, and scalable
-              architecture.
+              I help startups and teams launch, scale, or fix clunky UIs with clean code, modern tech, and scalable architecture.
             </p>
             <Link href="/meeting/azmir" target="_blank">
               <Button

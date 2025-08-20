@@ -13,7 +13,7 @@ const Journey = () => {
             <CarAnimation />
             <div className="-mt-12">
               <h4 className="font-primary text-2xl lg:text-3xl font-bold text-black-300 dark:text-white">
-                My Journey as a Full Stack JavaScript Developer
+                My journey as a full stack javaScript developer
               </h4>
               <p className="mt-2 text-sm lg:text-base font-primary font-normal text-black-400 dark:text-white/70">
                 Year-by-year growth in building powerful web and mobile

@@ -22,7 +22,7 @@ const ServicePlansBody = () => {
             key={index}
           >
             {/* Full-Stack Recommended Badge */}
-            <div className="p-5 xl:p-10 group-hover:bg-gradient-to-t group-hover:from-white group-hover:to-primary-600/15 group-hover:dark:bg-gradient-to-t group-hover:dark:from-gray-900/10 group-hover:dark:to-primary-600/20">
+            <div className="px-5 xl:px-10 pt-5 xl:pt-10 group-hover:bg-gradient-to-t group-hover:from-white group-hover:to-primary-600/15 group-hover:dark:bg-gradient-to-t group-hover:dark:from-gray-900/10 group-hover:dark:to-primary-600/20">
               {plan.recommended && (
                 <div className="absolute top-5 right-5 bg-orange text-white text-xs font-semibold px-3 py-2 rounded-full dark:bg-gray-800/40 dark:backdrop-blur-md group-hover:dark:bg-orange/20">
                   Recommended

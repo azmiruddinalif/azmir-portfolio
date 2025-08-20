@@ -34,13 +34,7 @@ const Footer = () => {
                 >
                   <FaFacebookSquare size={25} color="currentColor" />
                 </Link>
-                <Link
-                  href="https://x.com/azmiruddinalif"
-                  target="_blank"
-                  className="dark:text-white text-[#111]"
-                >
-                  <FaSquareXTwitter size={25} color="currentColor" />
-                </Link>
+                
                 <Link
                   href="https://www.linkedin.com/in/azmiruddinalif/"
                   target="_blank"
@@ -54,6 +48,13 @@ const Footer = () => {
                   className="dark:text-white text-[#111]"
                 >
                   <FaGithubSquare size={25} color="currentColor" />
+                </Link>
+                <Link
+                  href="https://x.com/azmiruddinalif"
+                  target="_blank"
+                  className="dark:text-white text-[#111]"
+                >
+                  <FaSquareXTwitter size={25} color="currentColor" />
                 </Link>
               </div>
             </div>

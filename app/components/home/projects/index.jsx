@@ -14,9 +14,8 @@ const Projects = () => {
               Check out some of the projects I've worked on
             </h4>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white-300/70">
-              worked closely with clients to understand their goals and user
-              needs, then built full-stack MERN web and cross-platform mobile
-              apps that delivered real business value.
+            Built full-stack MERN web and cross-platform mobile apps.
+Focused on client goals, user needs, and real business value.
             </p>
             <Button
               text={<Link href="/myworks">View All Works</Link>}

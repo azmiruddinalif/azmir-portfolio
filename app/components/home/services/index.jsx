@@ -13,9 +13,7 @@ const Services = () => {
               Start your journey with me, I’ve expertise in those Services
             </h4>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
-              Skilled in turning ideas into full-stack web and mobile
-              applications using modern technologies like React.js, Next.js,
-              Node.js, Express, MongoDB, and React Native.
+             Skilled in building full-stack web and mobile apps with React, Next.js, Node, Express, MongoDB, and React Native.
             </p>
             <Button
               text={

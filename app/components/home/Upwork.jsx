@@ -1,10 +1,11 @@
 "use client";
 import dynamic from "next/dynamic";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Container from "../common/container";
 import Image from "next/image";
 import Button from "../common/button";
 import { useRouter } from "next/navigation";
+
 const Player = dynamic(
   () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
   {
@@ -12,13 +13,101 @@ const Player = dynamic(
   }
 );
 
+const AnimatedHighlight = ({ children, delay = 0, className = "" }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setTimeout(() => {
+            setIsVisible(true);
+            setHasAnimated(true);
+          }, delay);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [delay, hasAnimated]);
+
+  return (
+    <span
+      ref={ref}
+      className={`relative inline-block ${className}`}
+      style={{ position: 'relative' }}
+    >
+      <span
+        className="absolute inset-0 bg-orange"
+        style={{
+          transform: isVisible ? 'scaleX(1)' : 'scaleX(0)',
+          transformOrigin: 'left',
+          transition: 'transform 0.8s ease-out',
+          borderRadius: '3px',
+          zIndex: 0,
+          opacity: 0.3,
+        }}
+      />
+      <span 
+        className="relative"
+        style={{ 
+          zIndex: 1,
+          position: 'relative',
+          backgroundColor: 'transparent'
+        }}
+      >
+        {children}
+      </span>
+    </span>
+  );
+};
+
 const Upwork = () => {
   const router = useRouter();
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef(null);
+
   const handleRedirect = () => {
     router.push("/meeting/azmir");
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="bg-white-200 py-10 lg:py-25 dark:bg-gray-800/40 dark:backdrop-blur-md">
+    <div 
+      ref={sectionRef}
+      className="bg-white-200 py-10 lg:py-25 dark:bg-gray-800/40 dark:backdrop-blur-md"
+    >
       <Container>
         <div className="flex justify-center mb-8">
           <Image
@@ -36,17 +125,29 @@ const Upwork = () => {
               Your Business Growth
             </b>
           </h4>
-          <p className="max-w-[750px] mx-auto mt-3 font-primary font-semibold text-black-400 text-sm lg:text-base leading-6 lg:leading-8 dark:text-white/70">
-            As a <b> MERN Stack Developer</b>, I’ve successfully delivered{" "}
-            <b>scalable web and mobile applications</b> for global
-            clients—leveraging{" "}
-            <b>
+          <p className="max-w-[750px] mx-auto mt-3 font-primary text-black-400 text-sm lg:text-base leading-6 lg:leading-8 dark:text-white/70">
+            As a{" "}
+            <AnimatedHighlight delay={500}>
+              MERN Stack Developer
+            </AnimatedHighlight>
+            , I've successfully delivered{" "}
+            <AnimatedHighlight delay={800}>
+              scalable web and mobile applications
+            </AnimatedHighlight>{" "}
+            for global clients—leveraging{" "}
+            <AnimatedHighlight delay={1100}>
               React.js, Next.js, Node.js, Express, MongoDB, and React Native
-            </b>{" "}
+            </AnimatedHighlight>{" "}
             to turn complex ideas into high-performing digital products. With
-            experience working for <b>international clients</b>, I focus on
-            clean architecture,{" "}
-            <b>fast delivery, and long-term maintainability</b>.
+            experience working for{" "}
+            <AnimatedHighlight delay={1400}>
+              international clients
+            </AnimatedHighlight>
+            , I focus on clean architecture,{" "}
+            <AnimatedHighlight delay={1700}>
+              fast delivery, and long-term maintainability
+            </AnimatedHighlight>
+            .
           </p>
         </div>
         <Button

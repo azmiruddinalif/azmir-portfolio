@@ -30,12 +30,7 @@ const Banner = () => {
 
             {/* Description - Responsive text size */}
             <p className="font-primary text-theme-secondary text-black-400 text-xs sm:text-sm lg:text-base mt-2 sm:mt-3 leading-relaxed dark:text-gray-100/80">
-              I build custom web solutions for startups and enterprises using
-              the MERN stack. With MongoDB, Express.js, React, and Node.js, I
-              create responsive websites and dynamic web apps. My scalable,
-              high-performance solutions drive business growth and seamless user
-              experiences. Specializing in web and mobile development, I turn
-              complex software challenges into future ready applications.
+              I build custom MERN stack solutions for startups and enterprises, creating responsive websites and dynamic apps. My scalable, high-performance web and mobile applications transform complex challenges into future ready solutions that drive growth and enhance user experience.
             </p>
 
             {/* Action Buttons - Responsive layout */}

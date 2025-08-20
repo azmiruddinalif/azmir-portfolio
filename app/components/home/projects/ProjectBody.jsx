@@ -20,8 +20,8 @@ const ProjectBody = () => {
                 B2B
               </h5>
               <p className="font-primary text-base text-black-200 dark:text-white/80">
-                Logensa is a scalable SaaS startup based in Baden-Württemberg,
-                Germany, focused on the healthcare sector.
+                Logensa is a scalable healthcare SaaS startup in
+                Baden-Württemberg, Germany.
               </p>
             </CardBase.Body>
             <CardBase.Footer className="transition-transform duration-300 ease-in-out group-hover:scale-105 dark:text-white">
@@ -46,8 +46,8 @@ const ProjectBody = () => {
                 B2C
               </h5>
               <p className="font-primary text-base text-black-200 dark:text-white/80">
-                bock lighting, founded in 2009 and headquartered in Twinsburg,
-                Ohio, continues the legacy of Spero Electric.
+                Bock Lighting (2009, Twinsburg, Ohio) continues Spero Electric’s
+                legacy.{" "}
               </p>
             </CardBase.Body>
             <CardBase.Footer className="transition-transform duration-300 ease-in-out group-hover:scale-105 dark:text-white">
@@ -72,8 +72,8 @@ const ProjectBody = () => {
                 B2C
               </h5>
               <p className="font-primary text-base text-black-200 dark:text-white/80">
-                Campix.ai is an AI-driven advertising platform that automates
-                campaign creation across major channels.
+                Campix.ai is an AI platform that automates advertising across
+                major channels.{" "}
               </p>
             </CardBase.Body>
             <CardBase.Footer className="transition-transform duration-300 ease-in-out group-hover:scale-105 dark:text-white">

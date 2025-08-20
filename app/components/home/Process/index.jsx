@@ -49,7 +49,7 @@ const WorkProcess = () => {
                     height={data.height}
                     className="dark:invert"
                   />
-                  <span className="absolute top-2 right-2 px-5 py-2 bg-orange/80 rounded-full text-white dark:bg-gray-700 font-primary text-xs">
+                  <span className="absolute top-2 right-2 px-5 py-2 bg-black-400 rounded-full text-white dark:bg-gray-700 font-primary text-xs">
                     Step {data.step.toString().padStart(2, "0")}
                   </span>
                 </CardBase.Header>

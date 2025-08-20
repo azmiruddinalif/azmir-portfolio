@@ -63,10 +63,10 @@ const Header = () => {
       {/* Top Nav */}
       <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-7xl px-4">
         <nav
-          className={`border rounded-2xl shadow-lg transition-all duration-300 py-2 lg:py-0 ${
+          className={` rounded-2xl shadow-lg transition-all duration-300 py-2 lg:py-0 ${
             isDarkMode
-              ? "bg-gray-900 border-gray-400/20"
-              : "bg-white border border-white-200"
+              ? "bg-gray-900 border border-gray-400/20"
+              : "bg-white"
           }`}
         >
           <div className="px-6">

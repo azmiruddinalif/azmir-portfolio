@@ -11,12 +11,10 @@ const Plans = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="max-w-[600px] order-1 lg:order-[0] text-center lg:text-left">
             <h4 className="font-primary text-2xl lg:text-3xl font-bold lg:leading-10 text-black-300 dark:text-white">
-              Development Plans That Accelerate Your Growth
+              Development Plans That  Accelerate <br/> Your Growth
             </h4>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
-              Fuel your business with robust, scalable web and mobile solutions.
-              Our development plans are clear, flexible, and designed to help
-              your brand succeed online.
+             Power your business with scalable web and mobile solutions <br/> flexible plans built to grow your brand online.
             </p>
             <Link href="/how-it-works" target="_blank">
               <Button
