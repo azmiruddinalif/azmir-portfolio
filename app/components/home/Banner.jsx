@@ -23,7 +23,9 @@ const Banner = () => {
 
             {/* Main Title - Better responsive scaling */}
             <h1 className="font-primary text-black-200 text-2xl sm:text-3xl lg:text-4xl font-bold text-theme-primary leading-tight dark:text-white">
-              MERN Stack Developer
+              <span className="bg-clip-text text-transparent bg-linear-to-r font-bold from-primary-600 to-secondary-600 dark:from-primary-400 selection:text-gray-800 dark:selection:text-gray-200">
+                MERN Stack Developer
+              </span>
             </h1>
 
             {/* Description - Responsive text size */}

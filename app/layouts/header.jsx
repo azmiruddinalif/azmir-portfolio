@@ -316,11 +316,9 @@ const Header = () => {
                 <div key={index}>
                   <button
                     onClick={() => setIsServicesOpen((prev) => !prev)}
-                    className="w-full text-left flex justify-between items-center font-semibold text-lg"
+                    className="w-full text-left flex justify-between items-center text-lg"
                   >
-                    <span className="font-primary text-base font-bold">
-                      {data.title}
-                    </span>
+                    <span className="font-primary text-base">{data.title}</span>
                     <svg
                       className={`w-5 h-5 transition-transform duration-300 ${
                         isServicesOpen ? "rotate-180" : "rotate-0"
@@ -365,12 +363,10 @@ const Header = () => {
                 <Link
                   href={data.link}
                   key={index}
-                  className="font-semibold text-lg"
+                  className="text-lg"
                   onClick={() => setSidebarOpen(false)}
                 >
-                  <span className="font-primary text-base font-bold">
-                    {data.title}
-                  </span>
+                  <span className="font-primary text-base">{data.title}</span>
                 </Link>
               );
             }
