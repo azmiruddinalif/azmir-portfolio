@@ -33,7 +33,7 @@ const Journey = () => {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-gray-900 pb-20">
+    <div className="bg-white-200 dark:bg-gray-800/40 dark:backdrop-blur-md pb-20 py-20">
       <Container>
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -54,7 +54,7 @@ const Journey = () => {
           >
             {/* Hover Slider */}
             <div
-              className="absolute top-0 left-0 w-full h-full bg-primary-50 dark:bg-primary-800/50 pointer-events-none transition-all duration-300 opacity-0 z-10"
+              className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-white to-primary-600/10 dark:bg-gradient-to-t dark:from-gray-900/10 dark:to-primary-600/20 pointer-events-none transition-all duration-300 opacity-0 z-10"
               id="hover-slider"
             ></div>
 
@@ -70,27 +70,27 @@ const Journey = () => {
                   className={`
                     relative group overflow-hidden
                     bg-white dark:bg-gray-800/40 dark:backdrop-blur-md 
-                    border border-gray-200 dark:border-gray-700/50
+                    border border-gray-200 dark:border-gray-700/50 
                     ${isLastCard ? "md:col-span-2" : ""}
                     ${!isLastCard && isEvenIndex ? "md:border-r-0" : ""}
                     ${isNotLastTwoCards ? "border-b-0" : ""}
                     ${isLastCard ? "border-t-0 md:border-t" : ""}
-                    hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300
+                     transition-all duration-300
                   `}
                 >
                   {/* Card Content */}
-                  <div className="p-6 lg:p-8 relative z-10">
+                  <div className="p-6 lg:p-8 relative z-10 group">
                     {/* Company Header */}
                     <div className="flex items-start gap-4 mb-6">
                       {/* Company Logo */}
                       <div className="relative">
-                        <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-700 dark:to-gray-600 rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                        <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300 dark:bg-white">
                           <Image
                             src={exp.icon}
                             alt={`${exp.company} logo`}
-                            width={32}
-                            height={32}
-                            className="w-8 h-8 lg:w-9 lg:h-9 object-contain dark:brightness-110"
+                            width={100}
+                            height={100}
+                            className="w-8 h-8 lg:w-12 lg:h-12 object-contain dark:brightness-110"
                           />
                         </div>
                         {/* Active indicator for current role */}
@@ -101,16 +101,16 @@ const Journey = () => {
 
                       {/* Company Details */}
                       <div className="flex-1 min-w-0">
-                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
+                        <div className="flex flex-col xl:flex-row sm:items-start sm:justify-between gap-2 mb-2">
                           <div>
-                            <h3 className="font-primary font-bold text-lg lg:text-xl text-gray-900 dark:text-white leading-tight">
+                            <h3 className="font-primary font-bold text-lg lg:text-xl text-gray-900 dark:text-white leading-tight group-hover:text-orange transition-all ease-linear duration-75">
                               {exp.role}
                             </h3>
-                            <p className="font-primary font-semibold text-blue-600 dark:text-blue-400 text-base lg:text-lg">
+                            <p className="font-primary font-semibold text-base text-gray-600 dark:text-gray-200/80">
                               {exp.company}
                             </p>
                           </div>
-                          <span className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-gray-700/70 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 shrink-0">
+                          <span className="inline-flex items-center px-3 py-1.5 bg-gray-200/50 dark:bg-gray-700/70 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 shrink-0">
                             {exp.period}
                           </span>
                         </div>
@@ -139,8 +139,8 @@ const Journey = () => {
                             key={detailIndex}
                             className="flex items-start gap-3"
                           >
-                            <div className="w-1.5 h-1.5 bg-blue-500 dark:bg-blue-400 rounded-full mt-2.5 shrink-0"></div>
-                            <p className="font-primary text-sm lg:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                            <div className="w-1.5 h-1.5 bg-orange rounded-full mt-2.5 shrink-0"></div>
+                            <p className="font-primary text-sm  text-gray-600 dark:text-gray-300 leading-relaxed">
                               {detail}
                             </p>
                           </div>
@@ -152,7 +152,7 @@ const Journey = () => {
                         {exp.technologies.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="inline-flex items-center px-3 py-1 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700/50 rounded-full text-xs lg:text-sm font-medium text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors duration-200"
+                            className="inline-flex group-hover:dark:text-white items-center px-3 py-1 dark:bg-gray-700 border border-primary-400 dark:border-gray-500 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-white/80 group-hover:bg-primary-50/50 dark:hover:bg-blue-900/50 transition-colors duration-200"
                           >
                             {tech}
                           </span>

@@ -4,20 +4,20 @@ export const experiences = [
     role: "Senior Software Developer",
     period: "July 2025 - Present",
     location: "United States (Remote)",
-    icon: "/assets/campix-logo.png",
+    icon: "/assets/office1.png",
     details: [
       "Leading development of AI-powered applications with modern JavaScript frameworks",
       "Implementing scalable solutions for machine learning integration",
       "Collaborating with cross-functional teams to deliver innovative AI products",
     ],
-    technologies: ["React", "Node.js", "AI/ML", "TypeScript", "Cloud Services"],
+    technologies: ["React", "Node.js", "Next JS", "TypeScript", "Cloud Services"],
   },
   {
     company: "StepUp Soft",
     role: "Senior Software Developer",
     period: "Dec 2023 - June 2025",
     location: "Germany (Remote)",
-    icon: "/assets/stepup-logo.png",
+    icon: "/assets/office02.png",
     details: [
       "Lead frontend development of Logensa SaaS, ensuring HIPAA, GDPR, and data privacy compliance",
       "Contributed to backend with NestJS, ensuring seamless integration and efficient data flow",
@@ -36,7 +36,7 @@ export const experiences = [
     role: "Senior Full Stack Developer",
     period: "Nov 2021 - Dec 2023",
     location: "UK (Remote)",
-    icon: "/assets/cocoon-logo.png",
+    icon: "/assets/office03.png",
     details: [
       "Developed 7 projects using React, Next.js, Gatsby, Firebase, and more",
       "Lead frontend architecture and code reviews to ensure consistency and quality",
@@ -48,7 +48,7 @@ export const experiences = [
       "Gatsby",
       "Firebase",
       "Node.js",
-      "Shopify",
+      "Three JS",
     ],
   },
   {
@@ -56,7 +56,7 @@ export const experiences = [
     role: "Full Stack Developer",
     period: "Oct 2020 - Nov 2021",
     location: "Bangladesh (On-site)",
-    icon: "/assets/cbg-logo.png",
+    icon: "/assets/office04.png",
     details: [
       "Developed frontend and backend for a SaaS Call Management System to optimize customer communication",
       "Built React Native features for real-time call handling and notifications",
@@ -75,7 +75,7 @@ export const experiences = [
     role: "Full Stack Developer",
     period: "Jan 2018 - Oct 2020",
     location: "Bangladesh (Remote)",
-    icon: "/assets/doatkolom-logo.png",
+    icon: "/assets/office05.png",
     details: [
       "Built scalable, responsive frontends using modern JS frameworks and tools",
       "Built custom, dynamic UIs with ReactJS for intuitive editing experiences",
