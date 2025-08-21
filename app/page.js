@@ -1,6 +1,7 @@
 import Container from "./components/common/container";
 import Banner from "./components/home/Banner";
 import WormCompany from "./components/home/company";
+import Counter from "./components/home/counter";
 import Help from "./components/home/help";
 import Journey from "./components/home/journey";
 import MySkills from "./components/home/my-skills";
@@ -18,6 +19,7 @@ export default function Home() {
     <>
       <Container>
         <Banner />
+        <Counter/>
         {/* <WormCompany /> */}
       </Container>
       <RecentWork/>

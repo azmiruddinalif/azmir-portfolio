@@ -34,7 +34,7 @@ const Footer = () => {
                 >
                   <FaFacebookSquare size={25} color="currentColor" />
                 </Link>
-                
+
                 <Link
                   href="https://www.linkedin.com/in/azmiruddinalif/"
                   target="_blank"
