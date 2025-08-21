@@ -7,6 +7,7 @@ import MySkills from "./components/home/my-skills";
 import Plans from "./components/home/plans";
 import WorkProcess from "./components/home/Process";
 import Projects from "./components/home/projects";
+import RecentWork from "./components/home/recent-work";
 import Review from "./components/home/review";
 import Services from "./components/home/services";
 import Socials from "./components/home/socials";
@@ -17,8 +18,9 @@ export default function Home() {
     <>
       <Container>
         <Banner />
-        <WormCompany />
+        {/* <WormCompany /> */}
       </Container>
+      <RecentWork/>
       <Journey />
       <Container>
         <Projects />

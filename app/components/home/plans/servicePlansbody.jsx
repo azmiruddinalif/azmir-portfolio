@@ -29,7 +29,7 @@ const ServicePlansBody = () => {
                 </div>
               )}
 
-              <h4 className="font-primary text-lg xl:text-[28px] leading-10 text-black font-semibold sm:mt-10 xl:mt-5 dark:text-white mt-8">
+              <h4 className="font-primary text-lg xl:text-[28px] leading-10 text-black font-semibold sm:mt-10 xl:mt-5 dark:text-white mt-8 group-hover:text-orange">
                 {plan.title}
               </h4>
 
