@@ -9,13 +9,13 @@ export async function generateMetadata({ params }) {
   // You can customize metadata based on the meeting ID
   const meetingTypes = {
     azmir: {
-      title: "Schedule a Meeting with Azmir - MERN Stack Developer",
+      title:
+        "Schedule a Meeting with Azmir - MERN Stack | Full-Stack | Software Developer",
       description:
         "Book a free consultation call with Azmir, a MERN Stack & Full-Stack JavaScript Developer. Discuss your project, get expert advice, and explore how we can build your next digital solution.",
       name: "Azmir Uddin Alif",
       expertise: "MERN Stack & Full-Stack Development",
     },
-    // Add more meeting types if needed
   };
 
   const meetingInfo = meetingTypes[meetingId] || meetingTypes.azmir;
@@ -38,27 +38,6 @@ export async function generateMetadata({ params }) {
       "full-stack consultation",
       "JavaScript developer meeting",
     ].join(", "),
-    openGraph: {
-      title: `Book a Free Call - ${meetingInfo.name}`,
-      description: `Schedule a free consultation with ${meetingInfo.name}, expert in ${meetingInfo.expertise}. Get professional advice for your next project.`,
-      type: "website",
-      images: [
-        {
-          url: "/images/meeting-og.jpg", // Add your meeting OG image
-          width: 1200,
-          height: 630,
-          alt: "Schedule a free consultation call",
-        },
-      ],
-      siteName: "MERN Stack Developer Consultation",
-      // url: `https://yoursite.com/meeting/${meetingId}`, // Add your actual URL
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `Free Consultation - ${meetingInfo.name}`,
-      description: `Book a free call to discuss your project with ${meetingInfo.name}. Expert MERN Stack development consultation.`,
-      images: ["/images/meeting-twitter.jpg"], // Add your Twitter image
-    },
     robots: {
       index: true,
       follow: true,

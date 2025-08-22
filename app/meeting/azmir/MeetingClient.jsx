@@ -1,6 +1,5 @@
 "use client";
 import { getCalApi } from "@calcom/embed-react";
-import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { IoMdArrowBack } from "react-icons/io";
@@ -20,7 +19,6 @@ const MeetingClient = ({ params }) => {
       duration: "30 minutes",
       description: "Get expert advice on your web/mobile app project",
     },
-    // Add more meeting configs if needed
   };
 
   const config = meetingConfigs[meetingId] || meetingConfigs.azmir;
@@ -44,7 +42,6 @@ const MeetingClient = ({ params }) => {
   return (
     <section className="min-h-screen py-20 w-full flex justify-center items-center flex-col mt-22">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        {/* Header Section */}
         <div className="mb-12">
           <h1 className="text-4xl lg:text-5xl font-bold font-primary dark:text-white mb-4">
             Let's Build Something Amazing Together
@@ -79,7 +76,7 @@ const MeetingClient = ({ params }) => {
               data-cal-link={config.calLink}
               data-cal-config='{"layout":"month_view"}'
               disabled={!calLoaded}
-              className={`text-white font-primary text-lg font-semibold py-4 px-12 bg-orange hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 rounded-lg cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 ${
+              className={`text-white font-primary text-sm lg:text-lg font-semibold py-4 px-12 bg-orange hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 rounded-lg cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 ${
                 !calLoaded ? 'opacity-50 cursor-not-allowed' : ''
               }`}
             >
@@ -119,10 +116,6 @@ const MeetingClient = ({ params }) => {
             </p>
           </div>
         </div>
-
-        
-        
-
         {/* What to Expect Section */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl max-w-3xl mx-auto">
           <h3 className="text-2xl font-bold font-primary dark:text-white mb-6">

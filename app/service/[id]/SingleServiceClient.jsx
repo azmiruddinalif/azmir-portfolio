@@ -3,7 +3,6 @@ import Button from "@/app/components/common/button";
 import { ServiceData } from "@/app/components/home/services/service-data";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { IoMdArrowBack } from "react-icons/io";
 import { BsCalendar3, BsCheckCircle } from "react-icons/bs";
