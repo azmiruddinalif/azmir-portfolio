@@ -26,6 +26,7 @@ const RecentWorkBody = () => {
               width={300}
               height={300}
               key={item.image}
+              className="w-[300px] h-[200px] object-contain"
             />
           ))}
         </div>
@@ -40,6 +41,7 @@ const RecentWorkBody = () => {
               width={300}
               height={300}
               key={item.image}
+              className="w-[300px] h-[200px] object-contain"
             />
           ))}
         </div>
