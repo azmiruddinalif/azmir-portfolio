@@ -30,7 +30,11 @@ const Banner = () => {
 
             {/* Description - Responsive text size */}
             <p className="font-primary text-theme-secondary text-black-400 text-xs sm:text-sm lg:text-base mt-2 sm:mt-3 leading-relaxed dark:text-gray-100/80">
-              I build custom MERN stack solutions for startups and enterprises, creating responsive websites and dynamic apps. My scalable, high-performance web and mobile applications transform complex challenges into future ready solutions that drive growth and enhance user experience.
+              I build custom MERN stack solutions for startups and enterprises,
+              creating responsive websites and dynamic apps. My scalable,
+              high-performance web and mobile applications transform complex
+              challenges into future ready solutions that drive growth and
+              enhance user experience.
             </p>
 
             {/* Action Buttons - Responsive layout */}
@@ -79,6 +83,8 @@ const Banner = () => {
             alt="Light mode image"
             width={400}
             height={400}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="
             className="rounded-xl dark:hidden"
           />
 
@@ -88,6 +94,8 @@ const Banner = () => {
             alt="Dark mode image"
             width={400}
             height={400}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="
             className="rounded-xl hidden dark:block"
           />
         </div>
