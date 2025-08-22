@@ -73,8 +73,8 @@ export const WorkData = [
     singleInforMation: {
       overview: "Overview",
       fullDescription: `
-      <h2>Overview</h2>
-      <p>Logensa is an innovative platform developed after in-depth research in the healthcare management sector. Its primary goal is to streamline complex supply chain processes in the global logistics industry. Built using the MERN stack, the platform ensures exceptional performance, scalability, and security — making it suitable for both small and large-scale healthcare logistics operations.</p>
+      <h2 id="HyperMern">Overview</h2>
+      <p>Logensa is an innovative platform developed after in-depth research in the healthcare management sector. Its primary goal is to streamline complex supply chain processes in the global logistics industry. Built using the <b>MERN stack</b>, the platform ensures exceptional performance, scalability, and security — making it suitable for both small and large-scale healthcare logistics operations.</p>
       <p>The platform merges advanced technical capabilities with user-friendly design principles, enhancing transparency, efficiency, and overall operational productivity.</p>
 
       <h2>Challenges</h2>

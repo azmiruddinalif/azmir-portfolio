@@ -91,6 +91,47 @@ const howItWorksData = [
   },
 ];
 
+export async function generateMetadata({ params, searchParams }) {
+  return {
+    title: "How it works - MERN Stack & Full-Stack Developer Portfolio",
+    description:
+      "Explore MVPs & scalable web/mobile apps I've built for coaches, startups, health & wellness, real estate, e-commerce & EdTech using MERN Stack, Next.js & React Native.",
+    keywords: [
+      "MERN Stack developer",
+      "Next.js developer",
+      "React Native developer",
+      "MVP development",
+      "scalable web apps",
+      "mobile app development",
+      "startup development",
+      "e-commerce development",
+      "health wellness apps",
+      "real estate apps",
+      "EdTech solutions",
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Firebase",
+      "REST API",
+      "GraphQL",
+      "Figma to code",
+      "game developer",
+    ],
+    robots: {
+      index: true,
+      follow: true,
+    },
+    authors: [{ name: "MERN Stack & Full-Stack JavaScript Developer" }],
+    category: "portfolio",
+    alternates: {
+      canonical: "/my-works",
+    },
+  };
+}
+
 const HowItWorks = () => {
   return (
     <div className="max-w-6xl mx-auto p-5 mt-30">
@@ -106,17 +147,14 @@ const HowItWorks = () => {
             Learn about my development process and how I deliver scalable web
             and mobile solutions.
           </p>
-          <Link
-            href="/meeting/azmir"
-            target="_blank"
-          >
+          <Link href="/meeting/azmir" target="_blank">
             <Button
               text="Hire Me"
               className="text-black-100 mx-auto lg:mx-0 text-sm lg:text-base bg-white font-primary font-semibold py-3 mt-3 mb-3 hover:bg-black border border-black-100 hover:text-white transition-all ease-linear duration-100 "
             />
           </Link>
         </div>
-        <Image src="/assets/chat.svg" alt="plans" width={100} height={100}  />
+        <Image src="/assets/chat.svg" alt="plans" width={100} height={100} />
       </div>
 
       <div className="flex flex-col gap-6">
@@ -137,12 +175,10 @@ const HowItWorks = () => {
                       alt="Azmir"
                       width={40}
                       height={40}
-                      
                       className="rounded-full object-cover w-10 h-10 shrink-0"
                     />
                     <div className="relative max-w-[70%]">
                       <div className="p-4 rounded-lg bg-gray-100 text-black font-primary text-blac">
-
                         {item.content}
                       </div>
                       <div className="absolute left-[-6px] top-4 w-0 h-0 border-t-6 border-b-6 border-r-6 border-t-transparent border-b-transparent border-r-gray-100"></div>

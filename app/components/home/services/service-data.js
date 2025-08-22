@@ -269,8 +269,8 @@ I deliver Progressive Web Applications that provide real-world value to users an
       Iterative feedback ensures the final application meets user expectations and business needs.</p>
 
       <h2>Development</h2>
-      <ul>
-        <li>Frontend: React and Next.js for dynamic, responsive, and fast user interfaces.</li>
+      <ul id="react-next">
+        <li>Frontend: <b>React and Next.js</b> for dynamic, responsive, and fast user interfaces.</li>
         <li>Backend: Node.js and Express for secure, scalable server-side logic.</li>
         <li>Database: MongoDB for flexible and high-performance data management.</li>
         <li>Service Workers: Enable offline functionality, caching, and background sync.</li>
