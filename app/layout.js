@@ -9,12 +9,6 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Azmir - Software Developer",
-  description:
-    "MERN Stack Developer | Full Stack JavaScript Engineer | React Native | Next JS | Nest JS | Web & Mobile Application Developer",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

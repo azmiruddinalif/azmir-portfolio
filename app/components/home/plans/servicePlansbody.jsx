@@ -47,9 +47,18 @@ const ServicePlansBody = () => {
                   <span className="font-semibold text-black dark:text-white/70">
                     {idx + 1}.
                   </span>
-                  <span className="text-black dark:text-white/70">
-                    {service}
-                  </span>
+                  {service.link ? (
+                    <Link
+                      href={service.link}
+                      className="text-orange underline hover:text-primary-600"
+                    >
+                      {service.name}
+                    </Link>
+                  ) : (
+                    <span className="text-black dark:text-white/70">
+                      {service.name}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>

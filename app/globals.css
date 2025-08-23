@@ -105,6 +105,10 @@
   font-size: 16px;
 }
 
+.prose ul li b{
+  font-weight: 700;
+}
+
 .prose h1,
 .prose h2,
 .prose h3,

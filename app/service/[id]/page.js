@@ -1,68 +1,96 @@
-"use client";
-import Button from "@/app/components/common/button";
 import { ServiceData } from "@/app/components/home/services/service-data";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import { IoMdArrowBack } from "react-icons/io";
+import SingleServiceClient from "./SingleServiceClient";
 
-const ServiceSingle = ({ params }) => {
-  const unwrappedParams = React.use(params);
-
-  const service = ServiceData?.find((p) => p.slug === unwrappedParams?.id);
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const service = ServiceData?.find((p) => p.slug === resolvedParams?.id);
 
   if (!service) {
-    return (
-      <div className="mt-20 text-center text-red-600 font-semibold">
-        Services not found.
-      </div>
-    );
+    return {
+      title: "Azmir - MERN Stack Developer",
+      description: "The requested service could not be found.",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
   }
 
-  return (
-    <section className="my-20 lg:my-56 max-w-3xl mx-auto px-4">
-      <Link href="/" className="mb-10 flex items-center gap-x-3 dark:text-white/70">
-        <IoMdArrowBack size={20} />
-        <span className="font-primary text-lg text-black-300 font-semibold dark:text-white/70">
-          Go Back
-        </span>
-      </Link>
-      <div className="flex flex-col lg:flex-row items-center justify-between mb-10">
-        <h1 className="text-4xl font-bold font-primary max-w-[400px] text-center lg:text-start dark:text-white">
-          {service.title}
-        </h1>
-        <Button
-          text={
-            <Link href="/meeting/azmir" target="_blank">
-              Let's Book For a Free Call
-            </Link>
-          }
-          className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-primary font-semibold py-3 mt-5 mb-3 hover:bg-transparent border-orange border hover:text-orange transition-all ease-linear duration-100"
-        />
-      </div>
-      <Image
-        src={service.image}
-        alt={service.title}
-        width={500}
-        height={500}
-        className="w-full max-h-[500px] object-cover rounded mb-6"
-      />
+  return {
+    title: `${service.title} - MERN Stack | Full-Stack | Software Developer`,
+    description:
+      service.shortDescription ||
+      `Professional ${service.title} services for coaches, startups, and businesses. Expert MERN Stack development solutions.`,
+    keywords: [
+      service.title,
+      "MERN Stack services",
+      "web development services",
+      "mobile app development",
+      "MVP development",
+      "startup development",
+      "Next.js services",
+      "React Native services",
+      "full-stack developer",
+      "JavaScript developer services",
+      "scalable web applications",
+      "business solutions",
+    ].join(", "),
+    openGraph: {
+      title: `${service.title} - Professional MERN Stack Services`,
+      description:
+        service.shortDescription ||
+        `Get professional ${service.title} services. Expert MERN Stack development for coaches, startups, and growing businesses.`,
+      type: "website",
+      images: [
+        {
+          url: service.image,
+          width: 1200,
+          height: 630,
+          alt: `${service.title} - Professional development service`,
+        },
+      ],
+      siteName: "MERN Stack Developer Services",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} - MERN Stack Services`,
+      description:
+        service.shortDescription ||
+        `Professional ${service.title} services for modern businesses and startups.`,
+      images: [service.image],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    authors: [{ name: "Azmir - MERN Stack & Full-Stack JavaScript Developer" }],
+    creator: "MERN Stack & Full-Stack JavaScript Developer",
+    category: "services",
+    alternates: {
+      canonical: `/services/${service.slug}`,
+    },
+    other: {
+      "application-name": "Developer Services",
+    },
+  };
+}
 
-      <div
-        className="prose max-w-none mb-6 font-primary text-lg text-black-200 dark:text-white"
-        dangerouslySetInnerHTML={{
-          __html: service.description,
-        }}
-      />
+export async function generateStaticParams() {
+  return ServiceData.map((service) => ({
+    id: service.slug,
+  }));
+}
 
-      <div
-        className="prose max-w-none font-primary text-black-300 dark:text-white"
-        dangerouslySetInnerHTML={{
-          __html: service.fullDescription,
-        }}
-      />
-    </section>
-  );
-};
-
-export default ServiceSingle;
+// Server Component that passes data to Client Component (Next.js 15)
+export default async function ServiceSinglePage({ params }) {
+  // Await params in the component as well
+  const resolvedParams = await params;
+  return <SingleServiceClient params={resolvedParams} />;
+}

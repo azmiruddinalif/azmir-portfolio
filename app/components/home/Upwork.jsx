@@ -5,6 +5,7 @@ import Container from "../common/container";
 import Image from "next/image";
 import Button from "../common/button";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Player = dynamic(
   () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
@@ -46,25 +47,25 @@ const AnimatedHighlight = ({ children, delay = 0, className = "" }) => {
     <span
       ref={ref}
       className={`relative inline-block ${className}`}
-      style={{ position: 'relative' }}
+      style={{ position: "relative" }}
     >
       <span
         className="absolute inset-0 bg-orange"
         style={{
-          transform: isVisible ? 'scaleX(1)' : 'scaleX(0)',
-          transformOrigin: 'left',
-          transition: 'transform 0.8s ease-out',
-          borderRadius: '3px',
+          transform: isVisible ? "scaleX(1)" : "scaleX(0)",
+          transformOrigin: "left",
+          transition: "transform 0.8s ease-out",
+          borderRadius: "3px",
           zIndex: 0,
           opacity: 0.3,
         }}
       />
-      <span 
+      <span
         className="relative"
-        style={{ 
+        style={{
           zIndex: 1,
-          position: 'relative',
-          backgroundColor: 'transparent'
+          position: "relative",
+          backgroundColor: "transparent",
         }}
       >
         {children}
@@ -104,7 +105,7 @@ const Upwork = () => {
   }, []);
 
   return (
-    <div 
+    <div
       ref={sectionRef}
       className="bg-white-200 py-10 lg:py-25 dark:bg-gray-800/40 dark:backdrop-blur-md"
     >
@@ -128,26 +129,19 @@ const Upwork = () => {
           <p className="max-w-[750px] mx-auto mt-3 font-primary text-black-400 text-sm lg:text-base leading-6 lg:leading-8 dark:text-white/70">
             As a{" "}
             <AnimatedHighlight delay={500}>
-              MERN Stack Developer
+              <Link
+                href="/my-work/logensa#HyperMern"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange underline hover:text-primary-600"
+              >
+                MERN Stack and web application Developer  
+              </Link>
             </AnimatedHighlight>
             , I've successfully delivered{" "}
-            <AnimatedHighlight delay={800}>
-              scalable web and mobile applications
-            </AnimatedHighlight>{" "}
-            for global clients—leveraging{" "}
-            <AnimatedHighlight delay={1100}>
-              React.js, Next.js, Node.js, Express, MongoDB, and React Native
-            </AnimatedHighlight>{" "}
-            to turn complex ideas into high-performing digital products. With
-            experience working for{" "}
-            <AnimatedHighlight delay={1400}>
-              international clients
-            </AnimatedHighlight>
-            , I focus on clean architecture,{" "}
-            <AnimatedHighlight delay={1700}>
-              fast delivery, and long-term maintainability
-            </AnimatedHighlight>
-            .
+            Building MVPs &amp; Scalable Web &amp; Mobile Apps for global clients and companies/agencies with{" "}React.js, Next.js, Node.js, Express, MongoDB, and React Native to turn complex ideas into high-performing digital products. With
+            experience working for{" "}international clients
+            , I focus on clean architecture,{" "} fast delivery, and long-term maintainability.
           </p>
         </div>
         <Button
