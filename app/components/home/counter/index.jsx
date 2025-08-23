@@ -7,7 +7,7 @@ const Counter = () => {
     <Container>
       <div className="mt-22">
         <div className="bg-gradient-to-r from-orange/20 to-primary-50  dark:from-backdrop-blur-md dark:to-gray-800/40 dark:backdrop-blur-md rounded-2xl border border-gray-200 dark:border-white/20 p-8">
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="relative">
               <AnimatedCounter end={7} suffix="+" duration={2500} />
               <div className="text-sm lg:text-base font-semibold text-gray-600 dark:text-gray-300 mb-1">

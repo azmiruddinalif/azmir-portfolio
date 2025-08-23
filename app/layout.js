@@ -9,6 +9,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  metadataBase: new URL('https://azmiruddin.com'),
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
