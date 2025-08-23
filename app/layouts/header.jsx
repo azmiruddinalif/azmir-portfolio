@@ -64,9 +64,7 @@ const Header = () => {
       <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-7xl px-4">
         <nav
           className={` rounded-2xl shadow-lg transition-all duration-300 py-2 lg:py-0 ${
-            isDarkMode
-              ? "bg-gray-900 border border-gray-400/20"
-              : "bg-white"
+            isDarkMode ? "bg-gray-900 border border-gray-400/20" : "bg-white"
           }`}
         >
           <div className="px-6">
@@ -96,23 +94,38 @@ const Header = () => {
                       data.title === "Services" ? handleMouseLeave : undefined
                     }
                   >
-                    <Link
-                      href={data.link}
-                      className="relative inline-block px-4 md:px-3 lg:px-6 py-6 text-xs lg:text-base hover:text-orange dark:hover:text-white"
-                    >
-                      <span
-                        className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:transition-all after:duration-300
-                        ${isDarkMode ? "after:bg-white" : "after:bg-orange"}
-                        ${
-                          data.title === "Services" && isServicesOpen
-                            ? "after:w-full text-orange dark:text-white"
-                            : "after:w-0 group-hover:after:w-full"
-                        } 
-                      `}
-                      >
-                        {data.title}
+                    {data.title === "Services" ? (
+                      // Services menu item - not clickable, just displays text
+                      <span className="relative inline-block px-4 md:px-3 lg:px-6 py-6 text-xs lg:text-base hover:text-orange dark:hover:text-white cursor-pointer">
+                        <span
+                          className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:transition-all after:duration-300
+                          ${isDarkMode ? "after:bg-white" : "after:bg-orange"}
+                          ${
+                            isServicesOpen
+                              ? "after:w-full text-orange dark:text-white"
+                              : "after:w-0 group-hover:after:w-full"
+                          } 
+                        `}
+                        >
+                          {data.title}
+                        </span>
                       </span>
-                    </Link>
+                    ) : (
+                      // Regular menu items - clickable
+                      <Link
+                        href={data.link}
+                        className="relative inline-block px-4 md:px-3 lg:px-6 py-6 text-xs lg:text-base hover:text-orange dark:hover:text-white"
+                      >
+                        <span
+                          className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:transition-all after:duration-300
+                          ${isDarkMode ? "after:bg-white" : "after:bg-orange"}
+                          after:w-0 group-hover:after:w-full
+                        `}
+                        >
+                          {data.title}
+                        </span>
+                      </Link>
+                    )}
 
                     {/* Desktop Dropdown */}
                     {data.title === "Services" &&
