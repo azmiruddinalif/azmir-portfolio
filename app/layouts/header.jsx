@@ -12,6 +12,7 @@ const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const servicesItem = MenuData.find((item) => item.title === "Services");
 
@@ -54,6 +55,17 @@ const Header = () => {
     document.body.style.overflow = sidebarOpen ? "hidden" : "";
   }, [sidebarOpen]);
 
+  // Handle scroll animation
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
@@ -61,13 +73,31 @@ const Header = () => {
   return (
     <header className="relative z-50">
       {/* Top Nav */}
-      <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-7xl px-4">
+      <div
+        className={`fixed left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-out ${
+          isScrolled ? "top-0 w-full" : "top-4 w-full max-w-7xl px-4"
+        }`}
+      >
         <nav
-          className={` rounded-2xl shadow-lg transition-all duration-300 py-2 lg:py-0 ${
-            isDarkMode ? "bg-gray-900 border border-gray-400/20" : "bg-white"
+          className={`transition-all duration-500 ease-out py-2 lg:py-0 ${
+            isScrolled
+              ? "rounded-none shadow-2xl backdrop-blur-xl border-b"
+              : "rounded-2xl shadow-lg"
+          } ${
+            isDarkMode
+              ? isScrolled
+                ? "bg-gray-900/80 border-gray-400/30 backdrop-blur-xl"
+                : "bg-gray-900 border border-gray-400/20 backdrop-blur-xl"
+              : isScrolled
+              ? "bg-white/80 border-gray-200/50 backdrop-blur-xl"
+              : "bg-white border border-white"
           }`}
         >
-          <div className="px-6">
+          <div
+            className={`transition-all duration-500 ${
+              isScrolled ? "px-6 max-w-7xl mx-auto" : "px-6"
+            }`}
+          >
             <div className="flex items-center justify-between">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-4">
@@ -134,8 +164,8 @@ const Header = () => {
                         <div
                           className={`absolute left-0 top-full mt-2 shadow-lg rounded-lg border py-2 w-[320px] z-40 animate-fadeIn ${
                             isDarkMode
-                              ? "bg-gray-800 border-gray-600"
-                              : "bg-white border-gray-200"
+                              ? "bg-gray-800/95 border-gray-600 backdrop-blur-xl"
+                              : "bg-white/95 border-gray-200 backdrop-blur-xl"
                           }`}
                         >
                           {servicesItem.dropdown.map((item, subIndex) => (
