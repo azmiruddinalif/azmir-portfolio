@@ -49,7 +49,7 @@ export async function generateMetadata({ params }) {
         "max-snippet": -1,
       },
     },
-    authors: [{ name: "MERN Stack & Full-Stack JavaScript Developer" }],
+    authors: [{ name: "Azmir - MERN Stack & Full-Stack JavaScript Developer" }],
     creator: "MERN Stack & Full-Stack JavaScript Developer",
     category: "consultation",
     alternates: {
