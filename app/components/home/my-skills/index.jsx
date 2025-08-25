@@ -3,48 +3,42 @@ import React, { useState } from "react";
 import Container from "../../common/container";
 import TabIndex from "./tabs-index";
 import Skills from "./skills";
-import dynamic from "next/dynamic";
-import Link from "next/link";
-import Button from "../../common/button";
 import Image from "next/image";
-const Player = dynamic(
-  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
-  {
-    ssr: false,
-  }
-);
 
 const MySkills = () => {
   const [activeTab, setActiveTab] = useState("frontend");
 
   return (
-    <section className="py-12 bg-white-200 dark:bg-gray-800/40 dark:backdrop-blur-md">
+    <section className="py-20 bg-white-200 dark:bg-gray-800/40 relative overflow-hidden">
       <Container>
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="max-w-[500px] order-1 lg:order-[0] text-center lg:text-left">
-            <h4 className="font-primary text-2xl lg:text-3xl font-bold lg:leading-10 text-black-300 dark:text-white">
-              All over my skills find here
-            </h4>
-            <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
-              I create modern, user-friendly digital experiences that combine
-              creativity, performance, and scalability
+        <div className="lg:max-w-7xl mx-auto">
+          {/* Hero Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block relative">
+              <h4 className="font-primary text-2xl lg:text-3xl font-bold lg:leading-10 text-black-300 dark:text-white">
+                My Skills
+              </h4>
+              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-orange to-transparent"></div>
+            </div>
+            <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-5 dark:text-white/70">
+              Crafting digital experiences with cutting-edge technologies
             </p>
           </div>
-          <Image
-            src="/assets/skills.png"
-            alt="workIcon"
-            width={100}
-            height={100}
-            className="dark:invert"
-          />
-        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_3.5fr] gap-x-12 mt-12">
-          <div>
-            <TabIndex activeTab={activeTab} setActiveTab={setActiveTab} />
-          </div>
-          <div>
-            <Skills activeTab={activeTab} />
+          {/* Main Content Area */}
+          <div className="relative">
+            {/* Floating Tab Navigation */}
+            <div className="flex justify-center lg:mb-12">
+              <TabIndex activeTab={activeTab} setActiveTab={setActiveTab} />
+            </div>
+
+            {/* Skills Showcase */}
+            <div className="relative">
+              {/* Content */}
+              <div className="relative z-10 p-8 lg:p-12">
+                <Skills activeTab={activeTab} />
+              </div>
+            </div>
           </div>
         </div>
       </Container>

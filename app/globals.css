@@ -105,7 +105,7 @@
   font-size: 16px;
 }
 
-.prose ul li b{
+.prose ul li b {
   font-weight: 700;
 }
 
@@ -133,4 +133,15 @@ html {
 .debug-gradient {
   background: linear-gradient(to right, #fcd34d, #f59e0b, #b45309) !important;
   opacity: 0.4;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
