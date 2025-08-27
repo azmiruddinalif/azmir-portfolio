@@ -1,6 +1,6 @@
 "use client";
 import Button from "@/app/components/common/button";
-import { WorkData } from "@/app/myworks/workdata";
+import { WorkData } from "@/app/my-works/workdata";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -13,7 +13,7 @@ const SingleWorkClient = ({ params }) => {
 
   const handleRedirect = (link) => {
     if (link) {
-      window.open(link, '_blank', 'noopener,noreferrer');
+      window.open(link, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -27,7 +27,7 @@ const SingleWorkClient = ({ params }) => {
           The project you're looking for doesn't exist or has been moved.
         </p>
         <Link
-          href="/myworks"
+          href="/my-works"
           className="inline-flex items-center gap-3 px-6 py-3 bg-orange text-white font-primary font-semibold rounded-lg hover:bg-orange/90 transition-colors duration-200"
         >
           <IoMdArrowBack size={20} />
@@ -41,22 +41,20 @@ const SingleWorkClient = ({ params }) => {
     <section className="my-28 lg:my-56 max-w-4xl mx-auto px-4">
       {/* Back Button */}
       <Link
-        href="/myworks"
+        href="/my-works"
         className="mb-10 flex items-center gap-x-3 text-gray-700 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors duration-200 w-fit"
       >
         <IoMdArrowBack size={20} />
-        <span className="font-primary text-lg font-semibold">
-          Go Back
-        </span>
+        <span className="font-primary text-lg font-semibold">Go Back</span>
       </Link>
-      
+
       {/* Category Badge */}
       <div className="px-5 py-2 bg-white-200 inline-block rounded-full mb-4 dark:bg-gray-800/40 dark:backdrop-blur-md">
         <span className="font-primary text-sm text-black-200 font-bold dark:text-white">
           {project.category}
         </span>
       </div>
-      
+
       {/* Title and CTA Section */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-10 gap-6">
         <h1 className="text-4xl lg:text-5xl font-bold font-primary dark:text-white leading-tight">
@@ -71,7 +69,7 @@ const SingleWorkClient = ({ params }) => {
           />
         )}
       </div>
-      
+
       {/* Project Image */}
       <div className="mb-8 rounded-lg overflow-hidden shadow-xl">
         <Image
@@ -83,7 +81,7 @@ const SingleWorkClient = ({ params }) => {
           priority
         />
       </div>
-      
+
       {/* Project Description */}
       <div className="mb-8">
         <h2 className="text-2xl font-bold font-primary dark:text-white mb-4">
@@ -93,7 +91,7 @@ const SingleWorkClient = ({ params }) => {
           {project.description}
         </p>
       </div>
-      
+
       {/* Full Description */}
       {project.singleInforMation?.fullDescription && (
         <div className="mb-8">
@@ -126,7 +124,7 @@ const SingleWorkClient = ({ params }) => {
             ))}
           </div>
         </div>
-      )}      
+      )}
     </section>
   );
 };

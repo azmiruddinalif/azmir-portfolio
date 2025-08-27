@@ -77,7 +77,7 @@
 
 // app/my-works/[id]/page.jsx (Server Component)
 
-import { WorkData } from "@/app/myworks/workdata";
+import { WorkData } from "@/app/my-works/workdata";
 import SingleWorkClient from "./SingleWorkClient";
 
 // Generate metadata for the page (Next.js 15)

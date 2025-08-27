@@ -14,11 +14,11 @@ const Projects = () => {
               Check out some of the projects I've worked on
             </h4>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white-300/70">
-            Built full-stack MERN web and cross-platform mobile apps.
-Focused on client goals, user needs, and real business value.
+              Built full-stack MERN web and cross-platform mobile apps. Focused
+              on client goals, user needs, and real business value.
             </p>
             <Button
-              text={<Link href="/myworks">View All Works</Link>}
+              text={<Link href="/my-works">View All Works</Link>}
               className="text-white font-primary text-sm lg:text-base mx-auto lg:mx-0 font-semibold py-3 mt-5 mb-3 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100"
             />
           </div>
