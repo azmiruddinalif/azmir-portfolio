@@ -47,7 +47,7 @@ export async function generateMetadata({ params, searchParams }) {
       index: true,
       follow: true,
     },
-    authors: [{ name: "MERN Stack & Full-Stack JavaScript Developer" }],
+    authors: [{ name: "Azmir - MERN Stack & Full-Stack JavaScript Developer" }],
     category: "portfolio",
     alternates: {
       canonical: "/my-works",

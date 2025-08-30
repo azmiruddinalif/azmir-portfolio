@@ -39,12 +39,12 @@ const Projects = ({
               </h2>
               <Link
                 href={link}
-                className="flex lg:hidden items-center gap-x-3 font-primary text-sm md:text-base font-semibold mb-3 text-black-200 hover:underline transition-all duration-300 ease-out"
+                className="flex lg:hidden items-center gap-x-3 font-primary text-sm md:text-base font-semibold mb-3 text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white"
               >
                 {" "}
                 Live{" "}
                 <GoArrowRight
-                  color="#000"
+                  color="currentColor"
                   size={20}
                   className=" transition-transform duration-300 ease-out"
                 />
