@@ -154,7 +154,7 @@ const HowItWorks = () => {
             />
           </Link>
         </div>
-        <Image src="/assets/chat.svg" alt="plans" width={100} height={100} />
+        <Image src="/assets/chat.svg" alt="plans" width={100} height={100} className="dark:invert" />
       </div>
 
       <div className="flex flex-col gap-6">
