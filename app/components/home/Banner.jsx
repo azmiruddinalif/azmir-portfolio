@@ -30,15 +30,21 @@ const Banner = () => {
 
             {/* Description - Responsive text size */}
             <p className="font-primary text-theme-secondary text-black-400 text-xs sm:text-sm lg:text-base mt-2 sm:mt-3 leading-relaxed dark:text-gray-100/80">
-              I am a MERN Stack developer skilled in React JS, Next.js, React Native, Node.js, Express.js, and MongoDB. I build scalable web and mobile applications and MVPs with high performance, responsive design, and reliable backend solutions.
+              I am a MERN Stack developer skilled in React JS, Next.js, React
+              Native, Node.js, Express.js, and MongoDB. I build scalable web and
+              mobile applications and MVPs with high performance, responsive
+              design, and reliable backend solutions.
             </p>
 
             {/* Action Buttons - Responsive layout */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-x-2 mt-4 sm:mt-5">
-              <Button
-                text={<Link href="#socials">My Socials</Link>}
-                className="w-full sm:w-auto text-white text-sm lg:text-base font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 sm:mb-3"
-              />
+              <Link href="#socials">
+                <Button
+                  text="My Socials"
+                  className="w-full sm:w-auto text-white text-sm lg:text-base font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 sm:mb-3"
+                />
+              </Link>
+
               <Link
                 href="/meeting/azmir"
                 target="_blank"
