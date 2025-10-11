@@ -71,7 +71,7 @@ const Journey = () => {
                     relative group overflow-hidden
                     bg-white dark:bg-gray-800/40 dark:backdrop-blur-md 
                     border border-gray-200 dark:border-gray-700/50 
-                    ${isLastCard ? "md:col-span-2" : ""}
+                    
                     ${!isLastCard && isEvenIndex ? "md:border-r-0" : ""}
                     ${isNotLastTwoCards ? "border-b-0" : ""}
                     ${isLastCard ? "border-t-0 md:border-t" : ""}

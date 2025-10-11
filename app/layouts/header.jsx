@@ -90,7 +90,7 @@ const Header = () => {
                 : "bg-gray-900 border border-gray-400/20 backdrop-blur-xl"
               : isScrolled
               ? "bg-white/80 border-gray-200/50 backdrop-blur-xl"
-              : "bg-white border border-white"
+              : "bg-white border border-white/50 backdrop-blur-xl"
           }`}
         >
           <div

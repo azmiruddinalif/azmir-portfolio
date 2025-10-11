@@ -76,6 +76,6 @@ export const FooterMenu = [
   },
   {
     title: "About",
-    link: "https://www.linkedin.com/in/azmiruddinalif/",
+    link: "/about-me",
   },
 ];
