@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           async
           src="https://cdn.chatway.app/widget.js?id=9PJUig2t0HHe"
         ></script> */}
-       <script id="linquo" async src="https://admin.linquo.app/widget.js?id=cbf75c11-59d8-4e98-a87c-119e8b90f2dd"></script>
+      <script id="linquo" async="true" src="https://admin.linquo.app/widget.js?id=61114e23-9da6-4b3d-a040-1434bf8e1b2e"></script>
       </head>
       <body className={`${inter.variable} antialiased dark:bg-gray-900`}>
         {/* Background Pattern - Responsive but maintains center positioning */}
