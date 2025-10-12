@@ -17,12 +17,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script
+        {/* <script
           id="chatway"
           async
           src="https://cdn.chatway.app/widget.js?id=9PJUig2t0HHe"
-        ></script>
-        {/* <script id="linquo" async="true" src="https://admin.linquo.app/widget.js?id=6e1b6060-370e-4ae4-a4c8-9803a0e1049b"></script> */}
+        ></script> */}
+       <script id="linquo" async src="https://admin.linquo.app/widget.js?id=cbf75c11-59d8-4e98-a87c-119e8b90f2dd"></script>
       </head>
       <body className={`${inter.variable} antialiased dark:bg-gray-900`}>
         {/* Background Pattern - Responsive but maintains center positioning */}
