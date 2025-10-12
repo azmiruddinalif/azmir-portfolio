@@ -1,0 +1,21 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "ashik-vai",
+    "images-optimization-and-og-config",
+    "main",
+    "new-version"
+  ],
+  "parent": {
+    "ashik-vai": "main",
+    "images-optimization-and-og-config": "main",
+    "main": null,
+    "new-version": "main"
+  },
+  "order": [
+    "main",
+    "ashik-vai",
+    "images-optimization-and-og-config",
+    "new-version"
+  ]
+}
