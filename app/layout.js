@@ -50,6 +50,7 @@ export default function RootLayout({ children }) {
                     "React Native",
                     "Web Development",
                     "Software Development"
+                    "Full-stack Development"
                   ],
                   "description": "MERN Stack & Full-Stack JavaScript Developer building scalable web and mobile apps for startups and enterprises."
                 }
