@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://azmiruddin.com'),
-}
+  metadataBase: new URL("https://azmiruddin.com"),
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -22,7 +22,70 @@ export default function RootLayout({ children }) {
           async
           src="https://cdn.chatway.app/widget.js?id=9PJUig2t0HHe"
         ></script> */}
-      <script id="linquo" async="true" src="https://admin.linquo.app/widget.js?id=e3d77fc7-5140-41d0-b3e1-9d58d68a185d"></script>
+        {/* Person Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Person",
+                  "@id": "https://azmiruddin.com/#person",
+                  "name": "Azmir Uddin Alif",
+                  "url": "https://azmiruddin.com/",
+                  "image": "https://azmiruddin.com/azmir-uddin-alif.jpg",
+                  "jobTitle": "Full-Stack Developer",
+                  "worksFor": {
+                    "@type": "Organization",
+                    "name": "Craftlane"
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/in/azmiruddinalif/",
+                    "https://github.com/azmiruddin",
+                    "https://twitter.com/azmiruddinalif"
+                  ],
+                  "knowsAbout": [
+                    "MERN Stack",
+                    "Next.js",
+                    "React Native",
+                    "Web Development",
+                    "Software Development"
+                  ],
+                  "description": "MERN Stack & Full-Stack JavaScript Developer building scalable web and mobile apps for startups and enterprises."
+                }
+              `,
+                      }}
+                    />
+
+                    {/* Website Schema */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                     __html: `
+                {
+                  "@context": "https://schema.org",
+                  "@type": "WebSite",
+                  "@id": "https://azmiruddin.com/#website",
+                  "url": "https://azmiruddin.com/",
+                  "name": "Azmir Uddin Alif Portfolio",
+                  "publisher": {
+                    "@id": "https://azmiruddin.com/#person"
+                  },
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://azmiruddin.com/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  }
+                }
+              `,
+          }}
+        />
+
+        <script
+          id="linquo"
+          async="true"
+          src="https://admin.linquo.app/widget.js?id=e3d77fc7-5140-41d0-b3e1-9d58d68a185d"
+        ></script>
       </head>
       <body className={`${inter.variable} antialiased dark:bg-gray-900`}>
         {/* Background Pattern - Responsive but maintains center positioning */}

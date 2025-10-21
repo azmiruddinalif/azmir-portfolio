@@ -14,7 +14,7 @@ export const aboutCards = [
     "image": "/assets/workspace.jpg",
     "alt": "Modern developer workspace setup with coding environment",
     "description": "My workspace is where design meets logic. Every project begins with brainstorming, clean architecture, and an obsession with performance, accessibility, and global scalability.",
-    "link": "/contact",
+    "link": "https://www.linkedin.com/in/azmiruddinalif/",
     "linkText": "Let’s Build Something Together →"
   }
 ]

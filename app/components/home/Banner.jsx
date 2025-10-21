@@ -38,7 +38,7 @@ const Banner = () => {
 
             {/* Action Buttons - Responsive layout */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-x-2 mt-4 sm:mt-5">
-              <Link href="#socials">
+              <Link href="#socials" className="w-full sm:w-auto">
                 <Button
                   text="My Socials"
                   className="w-full sm:w-auto text-white text-sm lg:text-base font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 sm:mb-3"
