@@ -13,6 +13,16 @@ import {
 } from "react-icons/hi";
 import Button from "../components/common/button";
 
+export const metadata = {
+  title: "Terms & Conditions - Azmir Uddin Alif",
+  description: "Terms and conditions for the services provided by Azmir Uddin Alif, MERN Stack & Full-Stack JavaScript Developer.",
+  openGraph: {
+    title: "Terms & Conditions - Azmir Uddin Alif",
+    description: "Terms and conditions for the services provided by Azmir Uddin Alif, MERN Stack & Full-Stack JavaScript Developer.",
+    images: '/og/azmir_og_learg.png',
+  },
+};
+
 const today = new Date().toLocaleDateString();
 
 const TermsAndConditions = () => {

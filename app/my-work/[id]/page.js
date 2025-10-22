@@ -122,14 +122,7 @@ export async function generateMetadata({ params }) {
         project.description ||
         `Explore ${project.title}, a ${project.category} project showcasing modern web/mobile development.`,
       type: "website",
-      images: [
-        {
-          url: project.image,
-          width: 1200,
-          height: 630,
-          alt: `${project.title} - ${project.category} project`,
-        },
-      ],
+      images: "/og/azmir_og_learg.png",
       siteName: "MERN Stack Developer Portfolio",
     },
     twitter: {
@@ -138,7 +131,7 @@ export async function generateMetadata({ params }) {
       description:
         project.description ||
         `Explore ${project.title}, a ${project.category} project showcasing modern development.`,
-      images: [project.image],
+      images: "/og/azmir_og_learg.png",
     },
     robots: {
       index: true,

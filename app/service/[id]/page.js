@@ -41,14 +41,7 @@ export async function generateMetadata({ params }) {
         service.shortDescription ||
         `Get professional ${service.title} services. Expert MERN Stack development for coaches, startups, and growing businesses.`,
       type: "website",
-      images: [
-        {
-          url: service.image,
-          width: 1200,
-          height: 630,
-          alt: `${service.title} - Professional development service`,
-        },
-      ],
+      images: "/og/azmir_og_learg.png",
       siteName: "MERN Stack Developer Services",
     },
     twitter: {
@@ -57,7 +50,7 @@ export async function generateMetadata({ params }) {
       description:
         service.shortDescription ||
         `Professional ${service.title} services for modern businesses and startups.`,
-      images: [service.image],
+      images: "/og/azmir_og_learg.png",
     },
     robots: {
       index: true,

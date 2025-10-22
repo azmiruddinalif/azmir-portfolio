@@ -52,6 +52,12 @@ export async function generateMetadata({ params, searchParams }) {
     alternates: {
       canonical: "/my-works",
     },
+    openGraph: {
+      title: "Azmir - MERN Stack | Full-Stack | Software Developer",
+      description:
+        "Building scalable Web & Mobile Apps for Coaches, Startups, Health, Real Estate & EdTech using MERN Stack, Next.js & React Native.",
+      images: "/og/azmir_og_learg.png",
+    },
   };
 }
 

@@ -9,8 +9,7 @@ export async function generateMetadata({ params }) {
   // You can customize metadata based on the meeting ID
   const meetingTypes = {
     azmir: {
-      title:
-        "Schedule a Meeting with Azmir - MERN Stack | Full-Stack | Software Developer",
+      title: "Schedule a Meeting with Azmir - MERN Stack | Full-Stack | Software Developer",
       description:
         "Book a free consultation call with Azmir, a MERN Stack & Full-Stack JavaScript Developer. Discuss your project, get expert advice, and explore how we can build your next digital solution.",
       name: "Azmir Uddin Alif",
@@ -57,6 +56,11 @@ export async function generateMetadata({ params }) {
     },
     other: {
       "application-name": "Developer Consultation Booking",
+    },
+    openGraph: {
+      title: meetingInfo.title,
+      description: meetingInfo.description,
+      images: "/og/azmir_og_learg.png",
     },
   };
 }

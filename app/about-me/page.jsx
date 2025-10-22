@@ -5,6 +5,16 @@ import Link from "next/link";
 import { aboutCards } from "./aboutCards";
 import Button from "../components/common/button";
 
+export const metadata = {
+  title: "About Me - Azmir Uddin Alif | MERN Stack Developer",
+  description: "Learn about my journey, skills, and experience as a MERN Stack & Full-Stack Developer building solutions for startups and businesses.",
+  openGraph: {
+    title: "About Me - Azmir Uddin Alif | MERN Stack Developer",
+    description: "Learn about my journey, skills, and experience as a MERN Stack & Full-Stack Developer building solutions for startups and businesses.",
+    images: '/og/azmir_og_learg.png',
+  },
+};
+
 const About = () => {
   return (
     <div className="mt-42">
