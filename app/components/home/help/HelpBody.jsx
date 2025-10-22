@@ -9,15 +9,20 @@ const HelpBody = () => {
         {HelpData.map((data, index) => (
           <div key={index} className="flex gap-x-3">
             <div className="shrink-0">
-              <Image src={data.img} alt="check" width={20} height={20} />
+              <Image
+                src={data.img}
+                alt="check"
+                width={20}
+                height={20}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
+              />
             </div>
             <div>
               <h4 className="font-primary text-lg text-black-300 font-semibold leading-[0.8] dark:text-white">
                 {data.title}
               </h4>
-              <p className="font-primary text-base max-w-[500px] mt-2 dark:text-white/70">
-                {data.desc}
-              </p>
+              <p className="font-primary text-base max-w-[500px] mt-2 dark:text-white/70">{data.desc}</p>
             </div>
           </div>
         ))}
