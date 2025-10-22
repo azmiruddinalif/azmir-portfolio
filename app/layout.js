@@ -12,7 +12,31 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL("https://azmiruddin.com"),
   openGraph: {
-    images: "/og/azmir_og_learg.png",
+    images: [
+      {
+        url: "/og/azmir_og_learg.png",
+        width: 1200,
+        height: 630,
+        alt: "Azmir Uddin Alif - MERN Stack & Full-Stack Developer",
+      }
+    ],
+    siteName: "Azmir Uddin Alif",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Azmir Uddin Alif - MERN Stack Developer",
+    description: "MERN Stack & Full-Stack Developer building scalable web and mobile apps",
+    images: ["/og/azmir_og_learg.png"],
+    creator: "@azmiruddinalif",
+  },
+  other: {
+    "msapplication-TileImage": "/og/azmir_og_learg.png",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:image:alt": "Azmir Uddin Alif - MERN Stack & Full-Stack Developer",
+    "og:image:type": "image/png",
   },
 };
 

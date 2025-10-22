@@ -41,8 +41,16 @@ export async function generateMetadata({ params }) {
         service.shortDescription ||
         `Get professional ${service.title} services. Expert MERN Stack development for coaches, startups, and growing businesses.`,
       type: "website",
-      images: "/og/azmir_og_learg.png",
-      siteName: "MERN Stack Developer Services",
+      images: [
+        {
+          url: "/og/azmir_og_learg.png",
+          width: 1200,
+          height: 630,
+          alt: `${service.title} - Professional Development Service by Azmir`,
+        }
+      ],
+      siteName: "Azmir Uddin Alif",
+      locale: "en_US",
     },
     twitter: {
       card: "summary_large_image",
@@ -50,7 +58,8 @@ export async function generateMetadata({ params }) {
       description:
         service.shortDescription ||
         `Professional ${service.title} services for modern businesses and startups.`,
-      images: "/og/azmir_og_learg.png",
+      images: ["/og/azmir_og_learg.png"],
+      creator: "@azmiruddinalif",
     },
     robots: {
       index: true,

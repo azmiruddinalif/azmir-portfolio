@@ -56,7 +56,24 @@ export async function generateMetadata({ params, searchParams }) {
       title: "Azmir - MERN Stack | Full-Stack | Software Developer",
       description:
         "Building scalable Web & Mobile Apps for Coaches, Startups, Health, Real Estate & EdTech using MERN Stack, Next.js & React Native.",
-      images: "/og/azmir_og_learg.png",
+      images: [
+        {
+          url: "/og/azmir_og_learg.png",
+          width: 1200,
+          height: 630,
+          alt: "Azmir Uddin Alif - MERN Stack & Full-Stack Developer",
+        }
+      ],
+      siteName: "Azmir Uddin Alif",
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Azmir - MERN Stack | Full-Stack | Software Developer",
+      description: "Building scalable Web & Mobile Apps using MERN Stack, Next.js & React Native",
+      images: ["/og/azmir_og_learg.png"],
+      creator: "@azmiruddinalif",
     },
   };
 }

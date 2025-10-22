@@ -122,8 +122,16 @@ export async function generateMetadata({ params }) {
         project.description ||
         `Explore ${project.title}, a ${project.category} project showcasing modern web/mobile development.`,
       type: "website",
-      images: "/og/azmir_og_learg.png",
-      siteName: "MERN Stack Developer Portfolio",
+      images: [
+        {
+          url: "/og/azmir_og_learg.png",
+          width: 1200,
+          height: 630,
+          alt: `${project.title} - ${project.category} Project by Azmir`,
+        }
+      ],
+      siteName: "Azmir Uddin Alif",
+      locale: "en_US",
     },
     twitter: {
       card: "summary_large_image",
@@ -131,7 +139,8 @@ export async function generateMetadata({ params }) {
       description:
         project.description ||
         `Explore ${project.title}, a ${project.category} project showcasing modern development.`,
-      images: "/og/azmir_og_learg.png",
+      images: ["/og/azmir_og_learg.png"],
+      creator: "@azmiruddinalif",
     },
     robots: {
       index: true,
