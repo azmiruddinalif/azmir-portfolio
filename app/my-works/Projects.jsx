@@ -21,7 +21,7 @@ const Projects = ({
             width={1000}
             height={1000}
             alt="project"
-            className="group-hover:scale-110 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+            className="group-hover:scale-110 transition-transform duration-700 ease-out"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
           />
@@ -41,7 +41,8 @@ const Projects = ({
               </h2>
               <Link
                 href={link}
-                className="flex lg:hidden items-center gap-x-3 font-primary text-sm md:text-base font-semibold mb-3 text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white">
+                className="flex lg:hidden items-center gap-x-3 font-primary text-sm md:text-base font-semibold mb-3 text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white"
+              >
                 {" "}
                 Live{" "}
                 <GoArrowRight
@@ -56,7 +57,8 @@ const Projects = ({
             </p>
             <Link
               href={link}
-              className="hidden lg:flex items-center gap-x-3 font-primary text-sm lg:text-base font-semibold text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white/70">
+              className="hidden lg:flex items-center gap-x-3 font-primary text-sm lg:text-base font-semibold text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white/70"
+            >
               {" "}
               Check It Out <GoArrowRight color="currentColor" size={20} />
             </Link>

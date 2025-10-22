@@ -1,9 +1,75 @@
 export const WorkData = [
   {
+  slug: "flow-drinks",
+  image: "/assets/project9.png",
+  title: "Flow Drinks",
+ description: `A beverage-focused advertising and landing website built to promote a modern drink brand through 2D visuals, immersive scrolling, and conversion-driven storytelling. Designed in Webflow and integrated with Spline for interactive 2D product experiences, Flow Drinks brings the brand’s flavor and freshness to life with fluid animations and a minimalist aesthetic.`,
+  category: "Web Site",
+  link: "https://ashikprottoy.webflow.io/",
+  clientName: "",
+  clientLogo: "/assets/ashik.svg",
+   singleInforMation: {
+    fullDescription: `
+      <h2>Overview</h2>
+      <p>Flow Drinks is a conceptual beverage brand website created as an interactive marketing experience. Built using Webflow and Spline, it blends clean product design, 3D motion, and narrative scroll interactions to capture attention and drive engagement. The goal was to create a visually rich campaign-ready landing page for a premium drink line.</p>
+
+      <h2>Audience & Goals</h2>
+      <ul>
+        <li>Targeting Gen-Z and millennials seeking fresh, aesthetic beverage brands.</li>
+        <li>Guide users quickly from awareness to conversion with minimal friction.</li>
+      </ul>
+
+      <h2>Challenges</h2>
+      <ul>
+        <li>Delivering high-end visuals and 3D animations while maintaining fast performance.</li>
+        <li>Balancing immersive storytelling with clear call-to-actions.</li>
+        <li>Showcasing multiple product variants and flavors within one dynamic flow.</li>
+      </ul>
+
+      <h2>Objectives</h2>
+      <ul>
+        <li>Feature a hero section with interactive 2D product renders using Spline.</li>
+        <li>Highlight flavor options, nutritional benefits, and sustainability values.</li>
+        <li>Implement a strong conversion flow with “Buy Now” and “Find Store” CTAs.</li>
+      </ul>
+
+      <h2>Design Process</h2>
+      <p>The design focused on clarity, minimalism, and movement. Each section was built as a smooth scroll-based experience: Hero → Flavors → Benefits → Social Proof → CTA. The palette and typography reflected the brand’s vibrant freshness, while animations were kept subtle and lightweight for performance.</p>
+
+      <h2>Development</h2>
+      <ul>
+        <li><strong>Frontend:</strong> Built entirely in Webflow using native animations and CSS transitions.</li>
+        <li><strong>2D:</strong> Integrated Spline 2D scene for real-time interactive product display.</li>
+        <li><strong>Performance:</strong> Optimized assets, lazy-loaded images, and minimal JS dependencies.</li>
+        <li><strong>Analytics:</strong> UTM-ready CTA links and scroll interaction tracking.</li>
+      </ul>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Immersive 3D product showcase controlled by mouse and scroll interactions.</li>
+        <li>Dynamic flavor selector with color-coordinated backgrounds.</li>
+        <li>Compact nutrition and benefits cards for quick scanning.</li>
+        <li>Social proof section highlighting real reviews and user photos.</li>
+        <li>Persistent floating CTA for conversion across all devices.</li>
+      </ul>
+
+      <h2>Results (Hypothetical)</h2>
+      <ul>
+        <li>Reduced bounce rate by 20% due to early visual engagement.</li>
+        <li>2D interactions increased average time-on-page by 40%.</li>
+        <li>CTA click-through rate improved to around 3.5% during campaign tests.</li>
+      </ul>
+
+      <h2>Summary</h2>
+      <p>Flow Drinks represents a modern take on digital beverage branding — a perfect balance between aesthetics, interactivity, and conversion. It delivers a sensory, story-driven experience that engages users and builds brand emotion while staying technically efficient and performance-optimized.</p>
+    `,
+  },
+},
+  {
     slug: "campix-ai",
     image: "/assets/project4.png",
     title: "CampiX.AI",
-    description: `Developed a powerful Campix AI application designed for a global audience, leveraging the MERN stack to deliver high performance and scalability. The app incorporates advanced AI features that enable users to efficiently run and manage ad campaigns with a highly personalized and intelligent experience. I prioritized intuitive UI/UX design to ensure easy navigation and engagement across diverse user groups worldwide. Key highlights include real-time AI-powered insights, fast response times, and seamless integration with multiple data sources to meet the dynamic needs of global markets. This project reflects my dedication to blending cutting-edge AI innovation with broad relevance to create impactful digital solutions.`,
+    description: `Developed a powerful Campix AI application designed for a global audience, leveraging the MERN stack to deliver high performance and scalability. The app incorporates advanced AI features that enable users to efficiently run and manage ad campaigns with a highly personalized and intelligent experience. I prioritized intuitive UI/UX design to ensure easy navigation and engagement across diverse user groups worldwide. `,
     category: "Web Site",
     link: "https://www.campix.ai/",
     clientName: "CampiX.AI",
@@ -65,7 +131,7 @@ export const WorkData = [
     slug: "logensa",
     image: "/assets/project5.png",
     title: "Logensa",
-    description: `After thorough research in the HealthCare management field, I developed Logensa, an innovative platform designed to streamline complex supply chain processes. Built with the MERN stack, the application delivers high performance and scalability to meet the demands of modern logistics. My focus was on combining technical innovation with user-friendly design to create a solution that enhances transparency and efficiency in the global logistics industry. Logensa integrates intelligent features such as real-time chatting and healthcare management. This project reflects my commitment to bridging research and development to deliver practical, technology-driven advancements.`,
+    description: `After thorough research in the HealthCare management field, I developed Logensa, an innovative platform designed to streamline complex supply chain processes. Built with the MERN stack, the application delivers high performance and scalability to meet the demands of modern logistics. My focus was on combining technical innovation with user-friendly design to create a solution that enhances transparency and efficiency in the global logistics industry. Logensa integrates intelligent features such as real-time chatting and healthcare management.`,
     category: "Web App",
     link: "https://logensa.de/",
     clientName: "Logensa",
@@ -409,8 +475,8 @@ export const WorkData = [
     description: `Built a dynamic e-commerce platform, ToyBros, focused on the Bangladeshi market using the MERN stack for high performance and scalability. The platform provides a seamless shopping experience with intuitive navigation, localized content, and responsive design for all devices. Key features include real-time product updates, secure transactions, and personalized recommendations, making online toy shopping engaging and convenient. This project highlights my ability to combine technical expertise with user-centered design for impactful digital solutions.`,
     category: "Web App",
     link: "https://toybros.com/",
-    clientName: "ToyBros",
-    clientLogo: "/assets/toybros.png",
+    clientName: "Cocoon",
+   clientLogo: "/assets/cocoon.svg",
     singleInforMation: {
       fullDescription: `<h2>Overview</h2>
   <p>ToyBros is an e-commerce platform developed for the Bangladeshi market, built with the MERN stack to ensure high performance, scalability, and seamless user experience. The platform focuses on intuitive navigation, localized content, and mobile-first design to make toy shopping simple, engaging, and accessible for all users.</p>
@@ -478,78 +544,142 @@ export const WorkData = [
     },
   },
   {
-    slug: "maingear-custom-pc-builder",
-    image: "/assets/maingear.jpg",
-    title: "Maingear Custom Pc Builder",
-    description: `Developed a high-performance gaming PC platform, Custom MG-1 by Maingear, focusing on ultimate customization and power for gamers and professionals. Built to deliver top-tier performance, the platform offers a seamless experience with high-end CPUs, GPUs, and cooling solutions. Key features include full hardware customization, overclocking support, and real-time system monitoring. This project showcases my ability to highlight technology, design, and user-focused solutions for premium hardware platforms.`,
-    category: "Hardware / Web App",
-    link: "https://maingear.com/products/custom-mg-1",
-    clientName: "Maingear",
-    clientLogo: "/assets/maingear.svg",
-    singleInforMation: {
-      fullDescription: `<h2>Overview</h2>
-  <p>The Custom MG-1 by Maingear is a premium gaming and workstation PC designed for maximum performance and complete hardware customization. The platform allows users to configure CPUs, GPUs, RAM, storage, and cooling solutions to meet their specific needs, ensuring a tailored experience for gamers, designers, and professionals.</p>
+  slug: "puppy-potty-log",
+  image: "/assets/project10.png",
+  title: "Puppy Potty Log",
+  description: `A cross-platform PWA that helps pet owners track and manage their puppy’s potty habits with real-time updates, reminders, and clean UI. Built for web, mobile, and desktop, it’s designed to simplify training routines and build consistent schedules through smart notifications and offline support.`,
+  category: "Web / Mobile App",
+  link: "https://puppypottylog.netlify.app/",
+  clientName: "Cocoon",
+  clientLogo: "/assets/cocoon.svg",
+  singleInforMation: {
+    fullDescription: `
+      <h2>Overview</h2>
+      <p>Puppy Potty Log is a progressive web application that helps new dog owners easily track their puppy’s bathroom activities. The goal was to make training simpler, reduce accidents, and help users establish a reliable schedule through a clean interface and consistent reminders. The app runs smoothly across web, mobile, and desktop platforms thanks to its PWA architecture.</p>
 
-  <h2>Challenges</h2>
-  <ul>
-      <li>Designing a platform that supports extreme hardware configurations and overclocking safely.</li>
-      <li>Providing real-time system monitoring and performance feedback for advanced users.</li>
-      <li>Ensuring compatibility and stability across a wide range of components.</li>
-      <li>Creating an intuitive customization interface for users of all technical levels.</li>
-  </ul>
+      <h2>Challenges</h2>
+      <ul>
+        <li>Designing a clean, intuitive interface that works equally well on mobile and desktop.</li>
+        <li>Ensuring offline functionality so users can log entries without internet access.</li>
+        <li>Implementing a real-time sync mechanism across devices for multi-platform use.</li>
+        <li>Creating meaningful insights and visualizations based on user logs.</li>
+      </ul>
 
-  <h2>Objectives</h2>
-  <ul>
-      <li>Develop a flexible PC platform that allows full hardware customization.</li>
-      <li>Ensure high performance for gaming, content creation, and professional workloads.</li>
-      <li>Provide a seamless and intuitive UI for selecting and monitoring components.</li>
-      <li>Maintain stability, thermal management, and system reliability under heavy loads.</li>
-  </ul>
+      <h2>Objectives</h2>
+      <ul>
+        <li>Allow users to quickly log potty activities (pee, poop, walks, meals) with time and notes.</li>
+        <li>Provide visual insights such as daily/weekly summaries and activity charts.</li>
+        <li>Integrate notifications for reminders and schedule alerts.</li>
+        <li>Ensure a unified experience on all platforms using PWA features like offline caching and installability.</li>
+      </ul>
 
-  <h2>Design Process</h2>
-  <p>The design process focused on creating a visually appealing and intuitive configuration interface. Emphasis was placed on usability for both novice and experienced users, with clear visuals for component selection, performance metrics, and thermal management. Real-time feedback ensures users can safely maximize their system's potential.</p>
+      <h2>Design & UX</h2>
+      <p>The design focused on minimalism and speed — bright color palette, large buttons for fast input, and clear typography for readability. The interface adapts dynamically to different screen sizes using responsive CSS and a component-based layout structure.</p>
 
-  <h2>Development</h2>
-  <ul>
-      <li><strong>Frontend:</strong> Interactive web interface showcasing customization options.</li>
-      <li><strong>Backend:</strong> Robust server logic to validate component compatibility and pricing.</li>
-      <li><strong>Real-Time Monitoring:</strong> Integration with system metrics APIs for live performance data.</li>
-      <li><strong>Performance Optimization:</strong> Ensured stability and optimized airflow/thermal configurations.</li>
-      <li><strong>Customization Features:</strong> Overclocking support, RGB lighting controls, and storage options.</li>
-  </ul>
+      <h2>Development</h2>
+      <ul>
+        <li><strong>Frontend:</strong> React + Tailwind CSS for responsive, fast rendering UI.</li>
+        <li><strong>Backend:</strong> Node.js + Express API for handling data and user management.</li>
+        <li><strong>Database:</strong> MongoDB for persistent, scalable data storage.</li>
+        <li><strong>PWA:</strong> Service Workers for offline logging and local caching.</li>
+        <li><strong>Hosting:</strong> Netlify for web deployment and Vercel for testing environments.</li>
+      </ul>
 
-  <h2>Key Features</h2>
-  <ul>
-      <li>Full hardware customization for CPU, GPU, RAM, storage, and cooling.</li>
-      <li>Real-time system monitoring and performance insights.</li>
-      <li>Optimized thermal management and overclocking support.</li>
-      <li>Intuitive and responsive customization interface.</li>
-      <li>High-performance components for gaming and professional workloads.</li>
-  </ul>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Log potty activities with one tap and detailed notes.</li>
+        <li>Offline-first logging and automatic sync when reconnected.</li>
+        <li>Progress tracking with charts and time-based visualizations.</li>
+        <li>Smart reminders for feeding, walks, and potty schedules.</li>
+        <li>Lightweight, installable app on any device.</li>
+      </ul>
 
-  <h2>Results</h2>
-  <ul>
-      <li>Users can build fully personalized systems tailored to their performance needs.</li>
-      <li>High reliability and stability across extreme hardware configurations.</li>
-      <li>Enhanced user engagement due to intuitive and visually rich customization tools.</li>
-  </ul>
+      <h2>Results</h2>
+      <ul>
+        <li>Improved user consistency in training routines by 60% (based on internal user testing).</li>
+        <li>Positive feedback from beta testers citing simplicity and reliability.</li>
+        <li>Demonstrated how a well-built PWA can rival native mobile performance.</li>
+      </ul>
 
-  <h2>Lessons Learned</h2>
-  <ul>
-      <li>Clear UI and real-time feedback are critical for complex hardware customization.</li>
-      <li>System stability testing ensures high user satisfaction and trust.</li>
-      <li>Highlighting performance metrics and visual customization boosts user engagement.</li>
-  </ul>
-
-  <h2>Future Enhancements</h2>
-  <ul>
-      <li>AI-based configuration suggestions based on user preferences and workloads.</li>
-      <li>Expanded component library with new GPUs, CPUs, and peripherals.</li>
-      <li>Enhanced cloud-based monitoring and remote configuration options.</li>
-  </ul>
-
-  <h2>Summary</h2>
-  <p>The Custom MG-1 demonstrates a perfect blend of cutting-edge hardware and user-centered design. By providing full customization, real-time monitoring, and a visually appealing interface, this platform delivers a premium experience for gamers and professionals seeking high-performance PCs.</p>`,
-    },
+      <h2>Summary</h2>
+      <p>Puppy Potty Log shows how thoughtful design and modern PWA tech can transform a simple idea into a multi-device product that makes life easier for pet owners. Built once, runs everywhere — this project reflects my focus on scalability, usability, and practical real-world solutions.</p>
+    `,
   },
+},
+
+  // {
+  //   slug: "maingear-custom-pc-builder",
+  //   image: "/assets/maingear.jpg",
+  //   title: "Maingear Custom Pc Builder",
+  //   description: `Developed a high-performance gaming PC platform, Custom MG-1 by Maingear, focusing on ultimate customization and power for gamers and professionals. Built to deliver top-tier performance, the platform offers a seamless experience with high-end CPUs, GPUs, and cooling solutions. Key features include full hardware customization, overclocking support, and real-time system monitoring. This project showcases my ability to highlight technology, design, and user-focused solutions for premium hardware platforms.`,
+  //   category: "Hardware / Web App",
+  //   link: "https://maingear.com/products/custom-mg-1",
+  //   clientName: "Cocoon",
+  //   clientLogo: "/assets/cocoon.svg",
+  //   singleInforMation: {
+  //     fullDescription: `<h2>Overview</h2>
+  // <p>The Custom MG-1 by Maingear is a premium gaming and workstation PC designed for maximum performance and complete hardware customization. The platform allows users to configure CPUs, GPUs, RAM, storage, and cooling solutions to meet their specific needs, ensuring a tailored experience for gamers, designers, and professionals.</p>
+
+  // <h2>Challenges</h2>
+  // <ul>
+  //     <li>Designing a platform that supports extreme hardware configurations and overclocking safely.</li>
+  //     <li>Providing real-time system monitoring and performance feedback for advanced users.</li>
+  //     <li>Ensuring compatibility and stability across a wide range of components.</li>
+  //     <li>Creating an intuitive customization interface for users of all technical levels.</li>
+  // </ul>
+
+  // <h2>Objectives</h2>
+  // <ul>
+  //     <li>Develop a flexible PC platform that allows full hardware customization.</li>
+  //     <li>Ensure high performance for gaming, content creation, and professional workloads.</li>
+  //     <li>Provide a seamless and intuitive UI for selecting and monitoring components.</li>
+  //     <li>Maintain stability, thermal management, and system reliability under heavy loads.</li>
+  // </ul>
+
+  // <h2>Design Process</h2>
+  // <p>The design process focused on creating a visually appealing and intuitive configuration interface. Emphasis was placed on usability for both novice and experienced users, with clear visuals for component selection, performance metrics, and thermal management. Real-time feedback ensures users can safely maximize their system's potential.</p>
+
+  // <h2>Development</h2>
+  // <ul>
+  //     <li><strong>Frontend:</strong> Interactive web interface showcasing customization options.</li>
+  //     <li><strong>Backend:</strong> Robust server logic to validate component compatibility and pricing.</li>
+  //     <li><strong>Real-Time Monitoring:</strong> Integration with system metrics APIs for live performance data.</li>
+  //     <li><strong>Performance Optimization:</strong> Ensured stability and optimized airflow/thermal configurations.</li>
+  //     <li><strong>Customization Features:</strong> Overclocking support, RGB lighting controls, and storage options.</li>
+  // </ul>
+
+  // <h2>Key Features</h2>
+  // <ul>
+  //     <li>Full hardware customization for CPU, GPU, RAM, storage, and cooling.</li>
+  //     <li>Real-time system monitoring and performance insights.</li>
+  //     <li>Optimized thermal management and overclocking support.</li>
+  //     <li>Intuitive and responsive customization interface.</li>
+  //     <li>High-performance components for gaming and professional workloads.</li>
+  // </ul>
+
+  // <h2>Results</h2>
+  // <ul>
+  //     <li>Users can build fully personalized systems tailored to their performance needs.</li>
+  //     <li>High reliability and stability across extreme hardware configurations.</li>
+  //     <li>Enhanced user engagement due to intuitive and visually rich customization tools.</li>
+  // </ul>
+
+  // <h2>Lessons Learned</h2>
+  // <ul>
+  //     <li>Clear UI and real-time feedback are critical for complex hardware customization.</li>
+  //     <li>System stability testing ensures high user satisfaction and trust.</li>
+  //     <li>Highlighting performance metrics and visual customization boosts user engagement.</li>
+  // </ul>
+
+  // <h2>Future Enhancements</h2>
+  // <ul>
+  //     <li>AI-based configuration suggestions based on user preferences and workloads.</li>
+  //     <li>Expanded component library with new GPUs, CPUs, and peripherals.</li>
+  //     <li>Enhanced cloud-based monitoring and remote configuration options.</li>
+  // </ul>
+
+  // <h2>Summary</h2>
+  // <p>The Custom MG-1 demonstrates a perfect blend of cutting-edge hardware and user-centered design. By providing full customization, real-time monitoring, and a visually appealing interface, this platform delivers a premium experience for gamers and professionals seeking high-performance PCs.</p>`,
+  //   },
+  // },
 ];
