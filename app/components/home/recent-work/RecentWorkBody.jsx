@@ -27,6 +27,8 @@ const RecentWorkBody = () => {
               height={300}
               key={item.image}
               className="w-[300px] h-[200px] object-contain"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />
           ))}
         </div>
@@ -42,6 +44,8 @@ const RecentWorkBody = () => {
               height={300}
               key={item.image}
               className="w-[300px] h-[200px] object-contain"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />
           ))}
         </div>
