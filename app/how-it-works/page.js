@@ -144,8 +144,7 @@ const HowItWorks = () => {
             How I Work?
           </h1>
           <p className="text-gray-600 font-primary text-lg dark:text-white-300/80">
-            Learn about my development process and how I deliver scalable web
-            and mobile solutions.
+            Learn about my development process and how I deliver scalable web and mobile solutions.
           </p>
           <Link href="/meeting/azmir" target="_blank">
             <Button
@@ -154,7 +153,15 @@ const HowItWorks = () => {
             />
           </Link>
         </div>
-        <Image src="/assets/chat.svg" alt="plans" width={100} height={100} className="dark:invert" />
+        <Image
+          src="/assets/chat.svg"
+          alt="plans"
+          width={100}
+          height={100}
+          className="dark:invert"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
+        />
       </div>
 
       <div className="flex flex-col gap-6">
@@ -163,10 +170,7 @@ const HowItWorks = () => {
             const isAzmir = item.from === "Azmir";
 
             return (
-              <div
-                key={index}
-                className={`flex ${isAzmir ? "justify-start" : "justify-end"}`}
-              >
+              <div key={index} className={`flex ${isAzmir ? "justify-start" : "justify-end"}`}>
                 {/* Azmir's Messages */}
                 {isAzmir && (
                   <div className="flex items-start gap-3">
@@ -176,6 +180,8 @@ const HowItWorks = () => {
                       width={40}
                       height={40}
                       className="rounded-full object-cover w-10 h-10 shrink-0"
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
                     />
                     <div className="relative max-w-[70%]">
                       <div className="p-4 rounded-lg bg-gray-100 text-black font-primary text-blac">
@@ -191,9 +197,7 @@ const HowItWorks = () => {
                   <div className="flex items-start gap-3 justify-end">
                     {/* Chat bubble */}
                     <div className="relative max-w-[70%] order-1">
-                      <div className="p-4 rounded-lg bg-black text-white">
-                        {item.content}
-                      </div>
+                      <div className="p-4 rounded-lg bg-black text-white">{item.content}</div>
                       {/* Arrow pointing right (toward avatar) */}
                       <div className="absolute right-[-6px] top-4 w-0 h-0 border-t-6 border-b-6 border-l-6 border-t-transparent border-b-transparent border-l-black"></div>
                     </div>
