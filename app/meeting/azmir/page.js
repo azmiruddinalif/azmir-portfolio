@@ -66,7 +66,7 @@ export async function generateMetadata({ params }) {
           width: 1200,
           height: 630,
           alt: "Schedule a Meeting with Azmir - MERN Stack Developer",
-        }
+        },
       ],
       siteName: "Azmir Uddin Alif",
       locale: "en_US",
