@@ -23,7 +23,8 @@ const Skills = ({ activeTab }) => {
               animationDelay: `${index * 100}ms`,
               animation: "fadeInUp 0.6s ease-out forwards",
               opacity: 0,
-            }}>
+            }}
+          >
             <div className="relative overflow-hidden bg-white dark:bg-gray-700/40 rounded-2xl p-4 lg:p-6 border border-gray-100 dark:border-gray-600/30 hover:border-orange/30 dark:hover:border-orange/30 transition-all duration-500 hover:shadow-2xl hover:shadow-orange/20 hover:-translate-y-2 group-hover:scale-[1.02]">
               <div className="absolute inset-0 bg-gradient-to-br from-orange/0 via-orange/5 to-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -35,6 +36,7 @@ const Skills = ({ activeTab }) => {
                       alt={skill.name}
                       width={40}
                       height={40}
+                      loading="lazy"
                       className="object-contain dark:invert group-hover:scale-110 transition-transform duration-500"
                       placeholder="blur"
                       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="

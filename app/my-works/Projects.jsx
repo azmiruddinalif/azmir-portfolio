@@ -23,6 +23,7 @@ const Projects = ({
             alt="project"
             className="group-hover:scale-110 transition-transform duration-700 ease-out"
             placeholder="blur"
+            loading="lazy"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
@@ -71,6 +72,7 @@ const Projects = ({
               height={30}
               alt="logo"
               placeholder="blur"
+              loading="lazy"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />{" "}
             <span className="font-semibold">{clientName}</span>

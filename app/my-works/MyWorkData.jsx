@@ -32,8 +32,8 @@ const MyWorkData = () => {
                 20+ Projects
               </h1>
               <p className="max-w-[500px] mt-3 text-black-300 font-primary dark:text-white/70">
-                As a MERN stack developer, I merge technical skill with UX design to build seamless,
-                user-centered digital experiences.
+                As a MERN stack developer, I merge technical skill with UX
+                design to build seamless, user-centered digital experiences.
               </p>
               <Button
                 onClick={handleRedirect}
@@ -47,6 +47,7 @@ const MyWorkData = () => {
               alt="processIcon"
               width={200}
               height={200}
+              loading="lazy"
               className="dark:invert"
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
@@ -58,7 +59,8 @@ const MyWorkData = () => {
             <div
               key={idx}
               onClick={() => handleProjectClick(project.slug)}
-              className="mb-10 border-b border-b-white-100 dark:border-b-white-300/10 last:border-b-transparent pb-10">
+              className="mb-10 border-b border-b-white-100 dark:border-b-white-300/10 last:border-b-transparent pb-10"
+            >
               <Projects
                 title={project.title}
                 clientName={project.clientName}

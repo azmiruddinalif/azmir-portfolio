@@ -42,7 +42,8 @@ const SingleWorkClient = ({ params }) => {
       {/* Back Button */}
       <Link
         href="/my-works"
-        className="mb-10 flex items-center gap-x-3 text-gray-700 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors duration-200 w-fit">
+        className="mb-10 flex items-center gap-x-3 text-gray-700 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors duration-200 w-fit"
+      >
         <IoMdArrowBack size={20} />
         <span className="font-primary text-lg font-semibold">Go Back</span>
       </Link>
@@ -76,6 +77,7 @@ const SingleWorkClient = ({ params }) => {
           alt={`${project.title} - ${project.category} project screenshot`}
           width={1000}
           height={600}
+          loading="lazy"
           className="w-full max-h-[600px] object-cover"
           priority
           placeholder="blur"
@@ -85,7 +87,9 @@ const SingleWorkClient = ({ params }) => {
 
       {/* Project Description */}
       <div className="mb-8">
-        <h2 className="text-2xl font-bold font-primary dark:text-white mb-4">Project Overview</h2>
+        <h2 className="text-2xl font-bold font-primary dark:text-white mb-4">
+          Project Overview
+        </h2>
         <p className="font-primary text-lg text-black-200 dark:text-white/90 leading-relaxed">
           {project.description}
         </p>
@@ -94,7 +98,9 @@ const SingleWorkClient = ({ params }) => {
       {/* Full Description */}
       {project.singleInforMation?.fullDescription && (
         <div className="mb-8">
-          <h2 className="text-2xl font-bold font-primary dark:text-white mb-4">Project Details</h2>
+          <h2 className="text-2xl font-bold font-primary dark:text-white mb-4">
+            Project Details
+          </h2>
           <div
             className="prose prose-lg max-w-none font-primary text-black-300 dark:text-white/90 dark:prose-invert prose-headings:font-primary prose-headings:text-black-300 dark:prose-headings:text-white prose-p:text-black-200 dark:prose-p:text-white/90"
             dangerouslySetInnerHTML={{
@@ -107,12 +113,15 @@ const SingleWorkClient = ({ params }) => {
       {/* Technologies Used (if available) */}
       {project.technologies && (
         <div className="mb-8">
-          <h2 className="text-2xl font-bold font-primary dark:text-white mb-4">Technologies Used</h2>
+          <h2 className="text-2xl font-bold font-primary dark:text-white mb-4">
+            Technologies Used
+          </h2>
           <div className="flex flex-wrap gap-3">
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-black-200 dark:text-white font-primary text-sm rounded-full">
+                className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-black-200 dark:text-white font-primary text-sm rounded-full"
+              >
                 {tech}
               </span>
             ))}

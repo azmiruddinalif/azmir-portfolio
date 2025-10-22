@@ -14,8 +14,8 @@ const Projects = () => {
               Check out some of the projects I've worked on
             </h4>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white-300/70">
-              Built full-stack MERN web and cross-platform mobile apps. Focused on client goals, user needs,
-              and real business value.
+              Built full-stack MERN web and cross-platform mobile apps. Focused
+              on client goals, user needs, and real business value.
             </p>
             <Button
               text={<Link href="/my-works">View All Works</Link>}
@@ -29,6 +29,7 @@ const Projects = () => {
             height={180}
             className="dark:invert"
             placeholder="blur"
+            loading="lazy"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
           />
         </div>
@@ -42,7 +43,8 @@ const Projects = () => {
                 href="https://github.com/azmiruddinalif"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold underline">
+                className="font-bold underline"
+              >
                 GitHub
               </Link>{" "}
               for more.

@@ -25,6 +25,7 @@ const RecentWorkBody = () => {
               alt="data"
               width={300}
               height={300}
+              loading="lazy"
               key={item.image}
               className="w-[300px] h-[200px] object-contain"
               placeholder="blur"
@@ -42,6 +43,7 @@ const RecentWorkBody = () => {
               alt="data"
               width={300}
               height={300}
+              loading="lazy"
               key={item.image}
               className="w-[300px] h-[200px] object-contain"
               placeholder="blur"

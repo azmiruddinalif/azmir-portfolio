@@ -11,12 +11,14 @@ const ServiceBody = () => {
           return (
             <div
               className="w-full rounded-md bg-white-200 dark:bg-gray-800/40 dark:backdrop-blur-md p-5 lg:p-10 lg:hover:scale-105 transition-all ease-linear duration-100"
-              key={index}>
+              key={index}
+            >
               <Image
                 src={data.icon}
                 width={50}
                 height={50}
                 alt="icon"
+                loading="lazy"
                 className="dark:invert"
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="

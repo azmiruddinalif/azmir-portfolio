@@ -13,6 +13,7 @@ const HelpBody = () => {
                 src={data.img}
                 alt="check"
                 width={20}
+                loading="lazy"
                 height={20}
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
@@ -22,7 +23,9 @@ const HelpBody = () => {
               <h4 className="font-primary text-lg text-black-300 font-semibold leading-[0.8] dark:text-white">
                 {data.title}
               </h4>
-              <p className="font-primary text-base max-w-[500px] mt-2 dark:text-white/70">{data.desc}</p>
+              <p className="font-primary text-base max-w-[500px] mt-2 dark:text-white/70">
+                {data.desc}
+              </p>
             </div>
           </div>
         ))}

@@ -14,8 +14,8 @@ const Plans = () => {
               Development Plans That Accelerate <br /> Your Growth
             </h4>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
-              Power your business with scalable web and mobile solutions <br /> flexible plans built to grow
-              your brand online.
+              Power your business with scalable web and mobile solutions <br />{" "}
+              flexible plans built to grow your brand online.
             </p>
             <Link href="/how-it-works" target="_blank">
               <Button
@@ -29,6 +29,7 @@ const Plans = () => {
             alt="plans"
             width={140}
             height={140}
+            loading="lazy"
             className="dark:invert"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="

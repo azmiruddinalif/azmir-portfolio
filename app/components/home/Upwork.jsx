@@ -105,13 +105,17 @@ const Upwork = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="bg-white-200 py-10 lg:py-25 dark:bg-gray-800/40 dark:backdrop-blur-md">
+    <div
+      ref={sectionRef}
+      className="bg-white-200 py-10 lg:py-25 dark:bg-gray-800/40 dark:backdrop-blur-md"
+    >
       <Container>
         <div className="flex justify-center mb-8">
           <Image
             src="/assets/setup.svg"
             alt="upwork"
             width={100}
+            loading="lazy"
             height={100}
             className="dark:invert"
             placeholder="blur"
@@ -132,15 +136,17 @@ const Upwork = () => {
                 href="/my-work/logensa#HyperMern"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange underline hover:text-primary-600">
+                className="text-orange underline hover:text-primary-600"
+              >
                 MERN Stack and web application Developer
               </Link>
             </AnimatedHighlight>
-            , I've successfully delivered Building MVPs &amp; Scalable Web &amp; Mobile Apps for global
-            clients and companies/agencies with React.js, Next.js, Node.js, Express, MongoDB, and React Native
-            to turn complex ideas into high-performing digital products. With experience working for{" "}
-            international clients , I focus on clean architecture, fast delivery, and long-term
-            maintainability.
+            , I've successfully delivered Building MVPs &amp; Scalable Web &amp;
+            Mobile Apps for global clients and companies/agencies with React.js,
+            Next.js, Node.js, Express, MongoDB, and React Native to turn complex
+            ideas into high-performing digital products. With experience working
+            for international clients , I focus on clean architecture, fast
+            delivery, and long-term maintainability.
           </p>
         </div>
         <Button

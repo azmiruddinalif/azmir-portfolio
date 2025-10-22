@@ -196,6 +196,7 @@ const About = () => {
                       fill
                       className="object-cover"
                       placeholder="blur"
+                      loading="lazy"
                       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
                     />
                   </div>

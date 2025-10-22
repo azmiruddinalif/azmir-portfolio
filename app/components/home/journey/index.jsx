@@ -76,7 +76,8 @@ const Journey = () => {
                     ${isNotLastTwoCards ? "border-b-0" : ""}
                     ${isLastCard ? "border-t-0 md:border-t" : ""}
                      transition-all duration-300
-                  `}>
+                  `}
+                >
                   {/* Card Content */}
                   <div className="p-6 lg:p-8 relative z-10 group">
                     {/* Company Header */}
@@ -89,6 +90,7 @@ const Journey = () => {
                             alt={`${exp.company} logo`}
                             width={100}
                             height={100}
+                            loading="lazy"
                             className="w-8 h-8 lg:w-12 lg:h-12 object-contain dark:brightness-110"
                             placeholder="blur"
                             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
@@ -116,7 +118,11 @@ const Journey = () => {
                           </span>
                         </div>
                         <p className="font-primary text-sm lg:text-base text-gray-500 dark:text-gray-400 flex items-center gap-2">
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
                             <path
                               fillRule="evenodd"
                               d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
@@ -132,7 +138,10 @@ const Journey = () => {
                     <div className="space-y-4">
                       <div className="space-y-2">
                         {exp.details.map((detail, detailIndex) => (
-                          <div key={detailIndex} className="flex items-start gap-3">
+                          <div
+                            key={detailIndex}
+                            className="flex items-start gap-3"
+                          >
                             <div className="w-1.5 h-1.5 bg-orange rounded-full mt-2.5 shrink-0"></div>
                             <p className="font-primary text-sm  text-gray-600 dark:text-gray-300 leading-relaxed">
                               {detail}
@@ -146,7 +155,8 @@ const Journey = () => {
                         {exp.technologies.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="inline-flex group-hover:dark:text-white items-center px-3 py-1 dark:bg-gray-700 border border-primary-400 dark:border-gray-500 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-white/80 group-hover:bg-primary-50/50 dark:hover:bg-blue-900/50 transition-colors duration-200">
+                            className="inline-flex group-hover:dark:text-white items-center px-3 py-1 dark:bg-gray-700 border border-primary-400 dark:border-gray-500 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-white/80 group-hover:bg-primary-50/50 dark:hover:bg-blue-900/50 transition-colors duration-200"
+                          >
                             {tech}
                           </span>
                         ))}

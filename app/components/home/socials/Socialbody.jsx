@@ -11,7 +11,8 @@ const SocialBody = () => {
           return (
             <div
               className="w-full rounded-md bg-white-200 p-10 lg:hover:scale-105 transition-all ease-linear duration-100 flex flex-col justify-between dark:bg-gray-800/40 dark:backdrop-blur-md"
-              key={index}>
+              key={index}
+            >
               <Image
                 src={data.image}
                 width={50}
@@ -19,6 +20,7 @@ const SocialBody = () => {
                 alt="image"
                 className="dark:invert"
                 placeholder="blur"
+                loading="lazy"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
               />
               <h4 className="font-primary text-[28px] leading-10 text-black-300 font-semibold mt-5 dark:text-white">
@@ -29,7 +31,8 @@ const SocialBody = () => {
               </p>
               <Link
                 href={data.link}
-                className="font-primary text-base text-black-300 font-semibold flex items-center gap-x-2 underline dark:text-white">
+                className="font-primary text-base text-black-300 font-semibold flex items-center gap-x-2 underline dark:text-white"
+              >
                 View {data.title}
               </Link>
             </div>

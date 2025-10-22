@@ -159,6 +159,7 @@ const HowItWorks = () => {
           width={100}
           height={100}
           className="dark:invert"
+           loading="lazy"
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
         />
@@ -181,6 +182,7 @@ const HowItWorks = () => {
                       height={40}
                       className="rounded-full object-cover w-10 h-10 shrink-0"
                       placeholder="blur"
+                       loading="lazy"
                       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
                     />
                     <div className="relative max-w-[70%]">

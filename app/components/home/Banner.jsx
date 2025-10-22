@@ -85,6 +85,7 @@ const Banner = () => {
             alt="Light mode image"
             width={400}
             height={400}
+            loading="lazy"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="
             className="rounded-xl dark:hidden"
@@ -95,6 +96,7 @@ const Banner = () => {
             src="/assets/azmir-dark.png"
             alt="Dark mode image"
             width={400}
+            loading="lazy"
             height={400}
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="

@@ -16,6 +16,7 @@ const WormCompany = () => {
               alt="Cocoon"
               width={80}
               height={80}
+              loading="lazy"
               className="object-contain dark:invert"
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
@@ -28,6 +29,7 @@ const WormCompany = () => {
               alt="CampiX"
               width={80}
               height={80}
+              loading="lazy"
               className="object-contain dark:invert"
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
@@ -40,6 +42,7 @@ const WormCompany = () => {
               alt="CBG"
               width={80}
               height={80}
+              loading="lazy"
               className="object-contain dark:invert"
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
@@ -52,6 +55,7 @@ const WormCompany = () => {
               alt="StepUpSoft"
               width={80}
               height={80}
+              loading="lazy"
               className="object-contain dark:invert"
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
@@ -64,6 +68,7 @@ const WormCompany = () => {
               alt="Doat Kolom"
               width={80}
               height={80}
+              loading="lazy"
               className="object-contain dark:invert"
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="

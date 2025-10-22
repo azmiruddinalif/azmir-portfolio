@@ -13,8 +13,8 @@ const Help = () => {
               When I can help?
             </h4>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
-              I help startups and teams launch, scale, or fix clunky UIs with clean code, modern tech, and
-              scalable architecture.
+              I help startups and teams launch, scale, or fix clunky UIs with
+              clean code, modern tech, and scalable architecture.
             </p>
             <Link href="/meeting/azmir" target="_blank">
               <Button
@@ -27,6 +27,7 @@ const Help = () => {
             src="/assets/analysis.webp"
             alt="processIcon"
             width={200}
+            loading="lazy"
             height={200}
             className="dark:invert"
             placeholder="blur"
