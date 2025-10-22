@@ -129,14 +129,15 @@ export async function generateMetadata({ params, searchParams }) {
     },
     openGraph: {
       title: "How It Works - Azmir Uddin Alif | MERN Stack Developer",
-      description: "Learn about my development process, technologies, and how I work with clients to build scalable web and mobile applications.",
+      description:
+        "Learn about my development process, technologies, and how I work with clients to build scalable web and mobile applications.",
       images: [
         {
-          url: '/og/azmir_og_learg.png',
+          url: "/og/azmir_og_learg.png",
           width: 1200,
           height: 630,
           alt: "How It Works - Azmir Uddin Alif's Development Process",
-        }
+        },
       ],
       siteName: "Azmir Uddin Alif",
       locale: "en_US",
@@ -146,7 +147,7 @@ export async function generateMetadata({ params, searchParams }) {
       card: "summary_large_image",
       title: "How It Works - Azmir Uddin Alif | MERN Stack Developer",
       description: "Learn about my development process and collaboration workflow",
-      images: ['/og/azmir_og_learg.png'],
+      images: ["/og/azmir_og_learg.png"],
       creator: "@azmiruddinalif",
     },
   };
