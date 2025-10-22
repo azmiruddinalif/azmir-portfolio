@@ -13,8 +13,8 @@ const Services = () => {
               Start your journey with me, I’ve expertise in those Services
             </h4>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
-              Skilled in building full-stack web and mobile apps with React,
-              Next.js, Node, Express, MongoDB, and React Native.
+              Skilled in building full-stack web and mobile apps with React, Next.js, Node, Express, MongoDB,
+              and React Native.
             </p>
             <Button
               text={
@@ -32,6 +32,8 @@ const Services = () => {
               width={250}
               height={250}
               className="dark:invert"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />
           </div>
         </div>
