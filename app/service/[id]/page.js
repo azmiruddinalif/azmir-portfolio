@@ -47,7 +47,7 @@ export async function generateMetadata({ params }) {
           width: 1200,
           height: 630,
           alt: `${service.title} - Professional Development Service by Azmir`,
-        }
+        },
       ],
       siteName: "Azmir Uddin Alif",
       locale: "en_US",
