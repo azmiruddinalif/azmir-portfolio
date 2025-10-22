@@ -8,8 +8,13 @@ import Button from "../components/common/button";
 export async function generateMetadata({ params, searchParams }) {
   return {
     title: "Azmir - MERN Stack | Full-Stack | Software Developer",
-    description:
-      "Building high-performance Web & Mobile Apps with MERN Stack, Next.js & React Native.",
+    description: "Building high-performance Web & Mobile Apps with MERN Stack, Next.js & React Native.",
+    openGraph: {
+      title: "About Me - Azmir Uddin Alif | MERN Stack Developer",
+      description:
+        "Learn about my journey, skills, and experience as a MERN Stack & Full-Stack Developer building solutions for startups and businesses.",
+      images: "/og/azmir_og_learg.png",
+    },
     keywords: [
       "MERN Stack developer",
       "Next.js developer",

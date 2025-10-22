@@ -3,6 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../components/common/button";
 
+export const metadata = {
+  title: "How It Works - Azmir Uddin Alif | MERN Stack Developer",
+  description:
+    "Learn about my development process, technologies, and how I work with clients to build scalable web and mobile applications.",
+  openGraph: {
+    title: "How It Works - Azmir Uddin Alif | MERN Stack Developer",
+    description:
+      "Learn about my development process, technologies, and how I work with clients to build scalable web and mobile applications.",
+    images: "/og/azmir_og_learg.png",
+  },
+};
+
 const howItWorksData = [
   {
     type: "message",
@@ -57,8 +69,7 @@ const howItWorksData = [
   {
     type: "message",
     from: "Azmir",
-    content:
-      "I revise until it matches your expectations. I rarely miss the mark.",
+    content: "I revise until it matches your expectations. I rarely miss the mark.",
   },
   {
     type: "message",
@@ -68,8 +79,7 @@ const howItWorksData = [
   {
     type: "message",
     from: "Azmir",
-    content:
-      "Startups, solo founders, and anyone wanting to build scalable web/mobile products.",
+    content: "Startups, solo founders, and anyone wanting to build scalable web/mobile products.",
   },
   // Client message: "What's next?" on right side
   {

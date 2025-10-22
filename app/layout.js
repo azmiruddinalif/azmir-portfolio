@@ -11,6 +11,9 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL("https://azmiruddin.com"),
+  openGraph: {
+    images: "/og/azmir_og_learg.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -55,14 +58,14 @@ export default function RootLayout({ children }) {
                   "description": "MERN Stack & Full-Stack JavaScript Developer building scalable web and mobile apps for startups and enterprises."
                 }
               `,
-                      }}
-                    />
+          }}
+        />
 
-                    {/* Website Schema */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                     __html: `
+        {/* Website Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
                 {
                   "@context": "https://schema.org",
                   "@type": "WebSite",
@@ -85,8 +88,7 @@ export default function RootLayout({ children }) {
         <script
           id="linquo"
           async="true"
-          src="https://admin.linquo.app/widget.js?id=e3d77fc7-5140-41d0-b3e1-9d58d68a185d"
-        ></script>
+          src="https://admin.linquo.app/widget.js?id=e3d77fc7-5140-41d0-b3e1-9d58d68a185d"></script>
       </head>
       <body className={`${inter.variable} antialiased dark:bg-gray-900`}>
         {/* Background Pattern - Responsive but maintains center positioning */}
@@ -95,8 +97,7 @@ export default function RootLayout({ children }) {
             <div className="absolute inset-0 bg-gradient-to-r from-primary-300 via-primary-500 to-primary-700 opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-primary-300/30 dark:via-primary-500/30 dark:to-primary-700/30 dark:opacity-100">
               <svg
                 aria-hidden="true"
-                className="absolute inset-x-0 inset-y-[-50%] h-[200%] w-full skew-y-[-18deg] fill-black/40 stroke-black/50 mix-blend-overlay dark:fill-white/2.5 dark:stroke-white/5"
-              >
+                className="absolute inset-x-0 inset-y-[-50%] h-[200%] w-full skew-y-[-18deg] fill-black/40 stroke-black/50 mix-blend-overlay dark:fill-white/2.5 dark:stroke-white/5">
                 <defs>
                   <pattern
                     id="pattern-1609"
@@ -104,40 +105,16 @@ export default function RootLayout({ children }) {
                     height={56}
                     patternUnits="userSpaceOnUse"
                     x={-12}
-                    y={4}
-                  >
+                    y={4}>
                     <path d="M.5 56V.5H72" fill="none" />
                   </pattern>
                 </defs>
-                <rect
-                  width="100%"
-                  height="100%"
-                  strokeWidth={0}
-                  fill="url(#pattern-1609)"
-                />
+                <rect width="100%" height="100%" strokeWidth={0} fill="url(#pattern-1609)" />
                 <svg x={-12} y={4} className="overflow-visible">
-                  <rect
-                    strokeWidth={0}
-                    width={73}
-                    height={57}
-                    x={288}
-                    y={168}
-                  />
+                  <rect strokeWidth={0} width={73} height={57} x={288} y={168} />
                   <rect strokeWidth={0} width={73} height={57} x={144} y={56} />
-                  <rect
-                    strokeWidth={0}
-                    width={73}
-                    height={57}
-                    x={504}
-                    y={168}
-                  />
-                  <rect
-                    strokeWidth={0}
-                    width={73}
-                    height={57}
-                    x={720}
-                    y={336}
-                  />
+                  <rect strokeWidth={0} width={73} height={57} x={504} y={168} />
+                  <rect strokeWidth={0} width={73} height={57} x={720} y={336} />
                 </svg>
               </svg>
             </div>
