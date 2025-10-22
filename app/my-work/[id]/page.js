@@ -153,7 +153,7 @@ export async function generateMetadata({ params }) {
     },
     authors: [{ name: "Azmir - MERN Stack & Full-Stack JavaScript Developer" }],
     creator: "MERN Stack & Full-Stack JavaScript Developer",
-    category: "portfolio",
+     category: "Web Development Portfolio",
     alternates: {
       canonical: `/my-works/${project.slug}`,
     },
