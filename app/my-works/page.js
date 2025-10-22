@@ -48,7 +48,7 @@ export async function generateMetadata({ params, searchParams }) {
           width: 1200,
           height: 630,
           alt: "My Works - Azmir Uddin Alif's Portfolio Projects",
-        }
+        },
       ],
       siteName: "Azmir Uddin Alif",
       locale: "en_US",
