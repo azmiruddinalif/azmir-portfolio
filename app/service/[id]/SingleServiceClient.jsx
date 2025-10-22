@@ -155,7 +155,6 @@ const SingleServiceClient = ({ params }) => {
         </div>
       )}
 
-      {/* Call to Action */}
       <div className="bg-gradient-to-r from-orange/10 to-orange/5 dark:from-orange/20 dark:to-orange/10 rounded-xl p-8 text-center mt-22">
         <h3 className="text-2xl font-bold font-primary dark:text-white mb-4">
           Ready to Get Started?
