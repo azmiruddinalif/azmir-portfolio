@@ -11,7 +11,7 @@ export const WorkData = [
    singleInforMation: {
     fullDescription: `
       <h2>Overview</h2>
-      <p>Flow Drinks is a conceptual beverage brand website created as an interactive marketing experience. Built using Webflow and Spline, it blends clean product design, 3D motion, and narrative scroll interactions to capture attention and drive engagement. The goal was to create a visually rich campaign-ready landing page for a premium drink line.</p>
+      <p>Flow Drinks is a conceptual beverage brand website created as an interactive marketing experience. Built using Webflow and Spline, it blends clean product design, 2D motion, and narrative scroll interactions to capture attention and drive engagement. The goal was to create a visually rich campaign-ready landing page for a premium drink line.</p>
 
       <h2>Audience & Goals</h2>
       <ul>
@@ -21,7 +21,7 @@ export const WorkData = [
 
       <h2>Challenges</h2>
       <ul>
-        <li>Delivering high-end visuals and 3D animations while maintaining fast performance.</li>
+        <li>Delivering high-end visuals and 2D animations while maintaining fast performance.</li>
         <li>Balancing immersive storytelling with clear call-to-actions.</li>
         <li>Showcasing multiple product variants and flavors within one dynamic flow.</li>
       </ul>
