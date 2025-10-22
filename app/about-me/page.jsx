@@ -9,7 +9,7 @@ export async function generateMetadata({ params, searchParams }) {
   return {
     title: "Azmir - MERN Stack | Full-Stack | Software Developer",
     description:
-      "Building scalable Web & Mobile Apps for Coaches, Startups, Health, Real Estate & EdTech using MERN Stack, Next.js & React Native.",
+      "Building high-performance Web & Mobile Apps with MERN Stack, Next.js & React Native.",
     keywords: [
       "MERN Stack developer",
       "Next.js developer",
