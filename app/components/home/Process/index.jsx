@@ -17,8 +17,8 @@ const WorkProcess = () => {
                 My Development Process
               </h4>
               <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
-                a data-driven, user-focused process designed to build reliable,
-                scalable, and maintainable full-stack applications.
+                a data-driven, user-focused process designed to build reliable, scalable, and maintainable
+                full-stack applications.
               </p>
               <Link href="/how-it-works" target="_blank">
                 <Button
@@ -33,14 +33,15 @@ const WorkProcess = () => {
               width={200}
               height={200}
               className="dark:invert"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
             {ProcessData.map((data) => (
               <CardBase
                 key={data.step}
-                className="p-8 rounded-md relative flex flex-col justify-between shadow-soft dark:bg-gray-800/40 dark:backdrop-blur-md"
-              >
+                className="p-8 rounded-md relative flex flex-col justify-between shadow-soft dark:bg-gray-800/40 dark:backdrop-blur-md">
                 <CardBase.Header>
                   <Image
                     src={data.img}
@@ -48,18 +49,16 @@ const WorkProcess = () => {
                     width={data.width}
                     height={data.height}
                     className="dark:invert"
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
                   />
                   <span className="absolute top-2 right-2 px-5 py-2 bg-black-400 rounded-full text-white dark:bg-gray-700 font-primary text-xs">
                     Step {data.step.toString().padStart(2, "0")}
                   </span>
                 </CardBase.Header>
                 <CardBase.Body>
-                  <h4 className="mt-3 font-primary text-lg font-bold dark:text-white">
-                    {data.title}
-                  </h4>
-                  <p className="mt-1 font-primary text-base text-black-300 dark:text-white/70">
-                    {data.desc}
-                  </p>
+                  <h4 className="mt-3 font-primary text-lg font-bold dark:text-white">{data.title}</h4>
+                  <p className="mt-1 font-primary text-base text-black-300 dark:text-white/70">{data.desc}</p>
                 </CardBase.Body>
               </CardBase>
             ))}
