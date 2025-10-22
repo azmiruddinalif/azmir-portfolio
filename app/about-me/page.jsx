@@ -13,7 +13,24 @@ export async function generateMetadata({ params, searchParams }) {
       title: "About Me - Azmir Uddin Alif | MERN Stack Developer",
       description:
         "Learn about my journey, skills, and experience as a MERN Stack & Full-Stack Developer building solutions for startups and businesses.",
-      images: "/og/azmir_og_learg.png",
+      images: [
+        {
+          url: "/og/azmir_og_learg.png",
+          width: 1200,
+          height: 630,
+          alt: "About Azmir Uddin Alif - MERN Stack & Full-Stack Developer",
+        },
+      ],
+      siteName: "Azmir Uddin Alif",
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "About Me - Azmir Uddin Alif | MERN Stack Developer",
+      description: "Learn about my journey, skills, and experience as a MERN Stack & Full-Stack Developer",
+      images: ["/og/azmir_og_learg.png"],
+      creator: "@azmiruddinalif",
     },
     keywords: [
       "MERN Stack developer",
