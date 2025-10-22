@@ -81,7 +81,6 @@ const howItWorksData = [
     from: "Azmir",
     content: "Startups, solo founders, and anyone wanting to build scalable web/mobile products.",
   },
-  // Client message: "What's next?" on right side
   {
     type: "message",
     from: "You",
