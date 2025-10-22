@@ -13,7 +13,8 @@ const Help = () => {
               When I can help?
             </h4>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
-              I help startups and teams launch, scale, or fix clunky UIs with clean code, modern tech, and scalable architecture.
+              I help startups and teams launch, scale, or fix clunky UIs with clean code, modern tech, and
+              scalable architecture.
             </p>
             <Link href="/meeting/azmir" target="_blank">
               <Button
@@ -28,6 +29,8 @@ const Help = () => {
             width={200}
             height={200}
             className="dark:invert"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
           />
         </div>
         <HelpBody />
