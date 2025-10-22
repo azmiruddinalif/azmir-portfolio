@@ -17,6 +17,8 @@ const WormCompany = () => {
               width={80}
               height={80}
               className="object-contain dark:invert"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />
           </div>
 
@@ -27,6 +29,8 @@ const WormCompany = () => {
               width={80}
               height={80}
               className="object-contain dark:invert"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />
           </div>
 
@@ -37,6 +41,8 @@ const WormCompany = () => {
               width={80}
               height={80}
               className="object-contain dark:invert"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />
           </div>
 
@@ -47,6 +53,8 @@ const WormCompany = () => {
               width={80}
               height={80}
               className="object-contain dark:invert"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />
           </div>
 
@@ -57,6 +65,8 @@ const WormCompany = () => {
               width={80}
               height={80}
               className="object-contain dark:invert"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />
           </div>
         </div>
