@@ -3,18 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../components/common/button";
 
-export const metadata = {
-  title: "How It Works - Azmir Uddin Alif | MERN Stack Developer",
-  description:
-    "Learn about my development process, technologies, and how I work with clients to build scalable web and mobile applications.",
-  openGraph: {
-    title: "How It Works - Azmir Uddin Alif | MERN Stack Developer",
-    description:
-      "Learn about my development process, technologies, and how I work with clients to build scalable web and mobile applications.",
-    images: "/og/azmir_og_learg.png",
-  },
-};
-
 const howItWorksData = [
   {
     type: "message",
@@ -102,9 +90,9 @@ const howItWorksData = [
 
 export async function generateMetadata({ params, searchParams }) {
   return {
-    title: "How it works - MERN Stack & Full-Stack Developer Portfolio",
+    title: "How It Works - Azmir Uddin Alif | MERN Stack Developer",
     description:
-      "Explore MVPs & scalable web/mobile apps I've built for coaches, startups, health & wellness, real estate, e-commerce & EdTech using MERN Stack, Next.js & React Native.",
+      "Learn about my development process, technologies, and how I work with clients to build scalable web and mobile applications.",
     keywords: [
       "MERN Stack developer",
       "Next.js developer",
@@ -136,7 +124,7 @@ export async function generateMetadata({ params, searchParams }) {
     authors: [{ name: "Azmir - MERN Stack & Full-Stack JavaScript Developer" }],
     category: "Development Process & Workflow",
     alternates: {
-      canonical: "/how-it-works",
+      canonical: "/my-works",
     },
   };
 }
