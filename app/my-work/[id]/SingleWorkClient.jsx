@@ -77,7 +77,6 @@ const SingleWorkClient = ({ params }) => {
           alt={`${project.title} - ${project.category} project screenshot`}
           width={1000}
           height={600}
-          loading="lazy"
           className="w-full max-h-[600px] object-cover"
           priority
           placeholder="blur"

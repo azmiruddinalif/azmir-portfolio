@@ -76,12 +76,12 @@ const ProjectBody = () => {
           </CardBase>
         </Link>
 
-        <Link href="/my-work/campix-ai">
+        <Link href="/my-work/linquo">
           <CardBase className="group dark:bg-gray-900">
             <CardBase.Header>
               <div className="w-full border border-black-800 overflow-hidden rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
                 <Image
-                  src="/assets/3.png"
+                  src="/assets/4.png"
                   alt="3"
                   width={500}
                   height={500}
@@ -96,8 +96,8 @@ const ProjectBody = () => {
                 B2C
               </h5>
               <p className="font-primary text-base text-black-200 dark:text-white/80">
-                Campix.ai is an AI platform that automates advertising across
-                major channels.{" "}
+                An AI-powered chatbot system built to assist users in real-time
+                with website analytics.{" "}
               </p>
             </CardBase.Body>
             <CardBase.Footer className="transition-transform duration-300 ease-in-out group-hover:scale-105 dark:text-white">

@@ -1,4 +1,68 @@
 export const WorkData = [
+{
+  slug: "linquo",
+  image: "/assets/project11.png",
+  title: "Linquo — AI Chatbot with Web Analytics",
+  description: `An AI-powered chatbot system built to assist users in real-time with smart insights, automation, and website analytics. Linquo combines conversational AI, data visualization, and intelligent task handling into a single unified dashboard. It’s designed for businesses and individuals who want a personal assistant that can both chat and act.`,
+  category: "Web Application",
+  link: "https://www.linquo.app/",
+  clientName: "Linquo",
+  clientLogo: "/assets/linquo.svg",
+  singleInforMation: {
+    fullDescription: `
+      <h2>Overview</h2>
+      <p>Linquo is an AI chatbot platform designed to make web interaction smarter and more productive. It goes beyond simple conversations — offering real-time analytics, automated insights, and actionable data through a clean, intuitive dashboard. Built with the MERN stack and integrated with AI APIs, Linquo merges conversational intelligence with web performance tracking to provide a holistic business assistant experience.</p>
+
+      <h2>Challenges</h2>
+      <ul>
+        <li>Building a conversational engine capable of handling both chat and analytical queries.</li>
+        <li>Designing an adaptive dashboard that visualizes website data dynamically.</li>
+        <li>Integrating AI-driven automation without overwhelming users with complexity.</li>
+        <li>Ensuring high responsiveness and data security across all user sessions.</li>
+      </ul>
+
+      <h2>Objectives</h2>
+      <ul>
+        <li>Create a seamless blend of AI chatbot and analytics visualization.</li>
+        <li>Enable users to get website metrics, reports, and recommendations directly via chat.</li>
+        <li>Implement real-time AI suggestions for optimization and engagement tracking.</li>
+        <li>Deliver an intuitive admin dashboard for managing chat data and insights.</li>
+      </ul>
+
+      <h2>Design Process</h2>
+      <p>The design philosophy behind Linquo was clarity and control. We combined conversational elements with dashboard visualization — a hybrid interface where users can talk to the AI and instantly see data updates, charts, and summaries. Light animations and subtle micro-interactions make the experience feel fluid and human-centered.</p>
+
+      <h2>Development</h2>
+      <ul>
+        <li><strong>Frontend:</strong> React + Tailwind CSS for modular, responsive UI components.</li>
+        <li><strong>Backend:</strong> Node.js + Express for secure, fast API requests.</li>
+        <li><strong>Database:</strong> MongoDB for structured chat history, analytics, and logs.</li>
+        <li><strong>AI Integration:</strong> OpenAI GPT models for natural conversation and contextual understanding.</li>
+        <li><strong>Analytics Engine:</strong> Real-time data tracking and visualization with custom metrics endpoints.</li>
+        <li><strong>Hosting:</strong> Vercel + Render for efficient deployment and load handling.</li>
+      </ul>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Real-time AI chatbot that can answer, analyze, and take actions.</li>
+        <li>Web analytics dashboard showing traffic, engagement, and performance trends.</li>
+        <li>Smart automation — generate reports, recommendations, and summaries via chat.</li>
+        <li>Multi-user support with personalized dashboards and chat sessions.</li>
+        <li>Secure token-based authentication and session management.</li>
+      </ul>
+
+      <h2>Results</h2>
+      <ul>
+        <li>Reduced manual reporting time by over 70% for test businesses.</li>
+        <li>Improved decision-making through fast, conversational data access.</li>
+        <li>Demonstrated scalability across multiple clients and datasets.</li>
+      </ul>
+
+      <h2>Summary</h2>
+      <p>Linquo represents the next step in intelligent automation — an AI-powered chatbot that doesn’t just talk, but acts, analyzes, and delivers insights. It’s a complete system for businesses that want to merge data, decisions, and dialogue into one smart assistant.</p>
+    `,
+  },
+},
   {
   slug: "flow-drinks",
   image: "/assets/project9.png",
