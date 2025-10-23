@@ -1,21 +1,21 @@
 export const experiences = [
   {
-    company: "Craftlane",
-    role: "Co-Founder & CTO",
-    period: "July 2025 - Present",
-    location: "Bangladesh (Remote)",
-    icon: "/assets/craftlane.png",
+    company: "FlexLab Studio",
+    role: "Sr.Software Developer",
+    period: "Sep 2025 - Present",
+    location: "USA (Remote)",
+    icon: "/assets/flexlab.svg",
     details: [
       "Define the technology roadmap: which stacks, frameworks, platforms to adopt.",
       "Ensure the system is scalable, performant, maintainable as client acquisitions grow, as products expand in complexity, as traffic surges",
-      "Evaluate and adopt emerging technologies (AI/ML, IoT, edge computing, etc.) where appropriate to keep differentiation.",
+      "Evaluate and adopt emerging technologies where appropriate to keep differentiation.",
     ],
     technologies: ["React", "Node.js", "Next JS", "TypeScript", "Cloud Services"],
   },
   {
     company: "One-year Academy",
-    role: "Lead Developer (Contract)",
-    period: "July 2024 - Present",
+    role: "Frontend Developer (Contract)",
+    period: "July 2025 - Sep 2025",
     location: "Bangladesh (Remote)",
     icon: "/assets/one-year.png",
     details: [
@@ -46,7 +46,7 @@ export const experiences = [
   },
   {
     company: "Created By Cocoon",
-    role: "Senior Full Stack Developer",
+    role: "Full Stack Developer",
     period: "Nov 2021 - Dec 2023",
     location: "UK (Remote)",
     icon: "/assets/office03.png",
