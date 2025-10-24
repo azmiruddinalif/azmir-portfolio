@@ -4,17 +4,17 @@ import React from "react";
 const JourneyCard = ({ exp, index, isEven }) => {
   // glossy effect for even cards
   const bgClass = isEven
-    ? "bg-[#f2f2f2]/60 backdrop-blur-md dark:bg-gray-800/40"
+    ? "bg-[#f2f2f2]/60 backdrop-blur-md dark:bg-gray-800/40 border border-gray-200"
     : "bg-white border border-gray-200 dark:bg-gray-800 dark:backdrop-blur-md";
 
   return (
     <div
       data-index={index}
       className={`w-full ${bgClass} rounded-xl dark:border-gray-700
-              p-8 text-gray-900 dark:text-white transition-all duration-300 hover:scale-[1.01] min-h-[280px]`}
+              p-5 md:p-8 text-gray-900 dark:text-white transition-all duration-300 hover:scale-[1.01] min-h-[280px]`}
     >
       {/* Header */}
-      <div className="flex items-start gap-4 mb-6">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6">
         <div className="relative">
           <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center bg-white/80 dark:bg-white">
             <Image
@@ -63,8 +63,8 @@ const JourneyCard = ({ exp, index, isEven }) => {
       <div className="space-y-3">
         {exp.details.map((detail, i) => (
           <div key={i} className="flex items-start gap-3">
-            <div className="w-1.5 h-1.5 bg-orange rounded-full mt-2"></div>
-            <p className="text-sm lg:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+            <div className="w-1.5 h-1.5 bg-orange rounded-full mt-2 shrink-0"></div>
+            <p className="text-xs lg:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
               {detail}
             </p>
           </div>
