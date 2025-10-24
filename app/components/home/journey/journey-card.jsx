@@ -14,7 +14,7 @@ const JourneyCard = ({ exp, index, isEven }) => {
               p-5 md:p-8 text-gray-900 dark:text-white transition-all duration-300 hover:scale-[1.01] min-h-[280px]`}
     >
       {/* Header */}
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
         <div className="relative">
           <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center bg-white/80 dark:bg-white">
             <Image
@@ -64,7 +64,7 @@ const JourneyCard = ({ exp, index, isEven }) => {
         {exp.details.map((detail, i) => (
           <div key={i} className="flex items-start gap-3">
             <div className="w-1.5 h-1.5 bg-orange rounded-full mt-2 shrink-0"></div>
-            <p className="text-xs lg:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-xs sm:text-sm lg:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
               {detail}
             </p>
           </div>
