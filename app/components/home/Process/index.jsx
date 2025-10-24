@@ -55,7 +55,7 @@ const WorkProcess = () => {
                     placeholder="blur"
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
                   />
-                  <span className="absolute top-2 right-2 px-5 py-2 bg-black-400 rounded-full text-white dark:bg-gray-700 font-primary text-xs">
+                  <span className="absolute top-2 right-2 px-5 py-2 bg-white-300 rounded-full text-grey-700 dark:text-white dark:bg-gray-700 font-primary text-xs">
                     Step {data.step.toString().padStart(2, "0")}
                   </span>
                 </CardBase.Header>

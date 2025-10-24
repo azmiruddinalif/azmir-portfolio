@@ -4,7 +4,7 @@ export const ProcessData = [
     title: "Requirement Analysis",
     width: 150,
     height: 150,
-    desc: "understand client goals and user needs to define clear, achievable project objectives.",
+    desc: "Understand client goals, audience pain points, and project scope. This step includes requirement gathering sessions, competitor research, and defining clear success metrics before a single line of code is written.",
     img: "/assets/analysis.webp",
   },
   {
@@ -12,7 +12,7 @@ export const ProcessData = [
     title: "Planning & Architecture",
     width: 100,
     height: 100,
-    desc: "design scalable backend and frontend architecture with the right tools and technologies.",
+    desc: "Translate insights into a structured technical plan. Define frontend and backend architecture, database relationships, and APIs. Every component and dependency is chosen for scalability and maintainability.",
     img: "/assets/planning.webp",
   },
   {
@@ -20,7 +20,7 @@ export const ProcessData = [
     title: "API & Database Design",
     width: 80,
     height: 80,
-    desc: "structure robust RESTful APIs and design efficient database schemas with MongoDB.",
+    desc: "Design RESTful or GraphQL APIs with secure endpoints and efficient query patterns. Set up well-structured MongoDB schemas ensuring consistency, performance, and easy future migrations.",
     img: "/assets/api.png",
   },
   {
@@ -28,7 +28,7 @@ export const ProcessData = [
     title: "Full-Stack Development",
     width: 100,
     height: 100,
-    desc: "develop frontend with React/Next.js and backend with Node.js/Express, ensuring seamless integration.",
+    desc: "Build dynamic frontend interfaces with React or Next.js and powerful backend logic with Node.js and Express. Integrate APIs, implement authentication, and make sure every feature feels fast and intuitive.",
     img: "/assets/dev.png",
   },
   {
@@ -36,7 +36,7 @@ export const ProcessData = [
     title: "Testing & Debugging",
     width: 80,
     height: 80,
-    desc: "conduct unit, integration, and end-to-end testing to ensure bug-free and performant apps.",
+    desc: "Run comprehensive unit and integration tests. Use tools like Jest or Cypress to catch regressions early. Optimize code, fix edge cases, and ensure smooth performance across all devices and browsers.",
     img: "/assets/testing.webp",
   },
   {
@@ -44,7 +44,7 @@ export const ProcessData = [
     title: "Deployment & Monitoring",
     width: 140,
     height: 140,
-    desc: "deploy applications on cloud platforms and monitor for uptime, performance, and security.",
+    desc: "Deploy the application to production using platforms like Vercel, AWS, or DigitalOcean. Set up real-time monitoring, error tracking, and analytics to ensure stability, uptime, and ongoing performance.",
     img: "/assets/dep.webp",
   },
 ];

@@ -123,13 +123,13 @@ const Upwork = () => {
           />
         </div>
         <div className="text-center mt-0 lg:mt-8">
-          <h4 className="text-2xl lg:text-3xl font-bold font-primary text-black-400 dark:text-white">
-            Professional Web Solutions for{" "}
+          <h4 className="text-2xl lg:text-4xl font-bold font-primary text-black-400 dark:text-white">
+            Professional Web & App Solutions for{" "}
             <b className="bg-clip-text text-transparent bg-linear-to-r font-bold from-primary-600 to-secondary-600 dark:from-primary-400 selection:text-gray-800 dark:selection:text-gray-200">
               Your Business Growth
             </b>
           </h4>
-          <p className="max-w-[750px] mx-auto mt-3 font-primary text-black-400 text-sm lg:text-base leading-6 lg:leading-8 dark:text-white/70">
+          <p className="max-w-[950px] mx-auto mt-3 font-primary text-black-400 text-sm lg:text-xl leading-6 lg:leading-9 dark:text-white/70">
             As a{" "}
             <AnimatedHighlight delay={500}>
               <Link

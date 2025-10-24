@@ -22,18 +22,18 @@ const Banner = () => {
             </h6>
 
             {/* Main Title - Better responsive scaling */}
-            <h1 className="font-primary text-black-200 text-2xl sm:text-3xl lg:text-4xl font-bold text-theme-primary leading-tight dark:text-white">
+            <h1 className="font-primary text-black-200 text-2xl sm:text-4xl lg:text-[57px] font-bold text-theme-primary leading-tight dark:text-white">
               <span className="bg-clip-text text-transparent bg-linear-to-r font-bold from-primary-600 to-secondary-600 dark:from-primary-400 selection:text-gray-800 dark:selection:text-gray-200">
-                MERN Stack Developer
+                Full Stack Developer
               </span>
             </h1>
 
             {/* Description - Responsive text size */}
             <p className="font-primary text-theme-secondary text-black-400 text-xs sm:text-sm lg:text-base mt-2 sm:mt-3 leading-relaxed dark:text-gray-100/80">
-              I am a MERN Stack developer skilled in React JS, Next.js, React
-              Native, Node.js, Express.js, and MongoDB. I build scalable web and
-              mobile applications and MVPs with high performance, responsive
-              design, and reliable backend solutions.
+              I am a Full Stack & MERN developer skilled in React JS, Next.js,
+              React Native, Node.js, Express.js, and MongoDB. I build scalable
+              web and mobile applications and MVPs with high performance,
+              responsive design, and reliable backend solutions.
             </p>
 
             {/* Action Buttons - Responsive layout */}
@@ -81,18 +81,18 @@ const Banner = () => {
         <div className="order-1 lg:order-2 mt-4 sm:mt-5 lg:mt-0 flex justify-center overflow-hidden relative">
           {/* Light mode image */}
           <Image
-            src="/assets/azmir.jpg"
+            src="/assets/azmir-2.png"
             alt="Light mode image"
-            width={400}
-            height={400}
+            width={700}
+            height={700}
             loading="lazy"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="
-            className="rounded-xl dark:hidden"
+            // className="rounded-xl dark:hidden"
           />
 
           {/* Dark mode image */}
-          <Image
+          {/* <Image
             src="/assets/azmir-dark.png"
             alt="Dark mode image"
             width={400}
@@ -101,7 +101,7 @@ const Banner = () => {
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="
             className="rounded-xl hidden dark:block"
-          />
+          /> */}
         </div>
       </div>
     </>
