@@ -16,7 +16,11 @@ const Footer = () => {
               <h5 className="font-primary font-bold text-3xl max-w-[400px] mx-auto leading-12 text-black-300 dark:text-white">
                 Looks like you’re serious about getting stuff done!
               </h5>
-              <Link href="/how-it-works" target="_blank">
+              <Link
+                href="/how-it-works"
+                target="_blank"
+                className="inline-block"
+              >
                 <Button
                   text="Get in touch"
                   className="text-white font-primary font-normal py-3 mt-5 mb-3 mx-auto hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100"

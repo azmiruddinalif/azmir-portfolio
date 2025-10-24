@@ -2,7 +2,7 @@ import React from "react";
 
 const Timeline = () => {
   const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
-  const activeYear = 2025;
+  const activeYear = new Date().getFullYear();
 
   return (
     <div className="relative w-full px-4 py-10 max-w-5xl mx-auto">
