@@ -1,8 +1,72 @@
 export const WorkData = [
+ {
+  slug: "linquo-mobile",
+  image: "/assets/linquo-mobile.png",
+  title: "Linquo Mobile AI Chat & Business Assistant",
+  description: `The mobile version of Linquo brings AI chat, real-time analytics, and smart automation directly to your pocket. It’s designed for professionals who need to manage conversations, insights, and tasks anywhere — fast, secure, and beautifully intuitive.`,
+  category: "Mobile Application",
+  link: "https://play.google.com/store/apps/details?id=com.linquo.app",
+  clientName: "Linquo",
+  clientLogo: "/assets/linquo.svg",
+  singleInforMation: {
+    fullDescription: `
+      <h2>Overview</h2>
+      <p>Linquo Mobile extends the power of the Linquo AI chatbot system into a seamless mobile experience. Built for Android, it allows users to manage chats, monitor analytics, and execute smart tasks through an elegant, responsive interface. It’s not just a chat app — it’s your AI-powered assistant that fits in your hand.</p>
+
+      <h2>Challenges</h2>
+      <ul>
+        <li>Translating a complex web dashboard into a mobile-friendly design without losing functionality.</li>
+        <li>Optimizing AI interactions for small-screen usability and performance.</li>
+        <li>Implementing offline sync and push notifications for continuous engagement.</li>
+        <li>Ensuring secure, encrypted data handling on mobile devices.</li>
+      </ul>
+
+      <h2>Objectives</h2>
+      <ul>
+        <li>Deliver a native-like, responsive experience using React Native.</li>
+        <li>Enable users to chat, track analytics, and automate tasks from anywhere.</li>
+        <li>Integrate real-time updates with minimal latency.</li>
+        <li>Maintain visual consistency and performance parity with the web platform.</li>
+      </ul>
+
+      <h2>Design Process</h2>
+      <p>The mobile design focused on simplicity and focus. The chat screen, analytics cards, and quick-action buttons were redesigned for thumb-friendly interaction. We prioritized speed, accessibility, and clarity — every tap feels intuitive, and every response is instant.</p>
+
+      <h2>Development</h2>
+      <ul>
+        <li><strong>Framework:</strong> React Native for cross-platform scalability.</li>
+        <li><strong>Backend:</strong> Node.js + Express shared with Linquo Web.</li>
+        <li><strong>Database:</strong> MongoDB for chat history, analytics, and user data.</li>
+        <li><strong>AI Integration:</strong> GPT-based models for context-aware conversations.</li>
+        <li><strong>Push Notifications:</strong> Firebase Cloud Messaging for real-time updates.</li>
+        <li><strong>Deployment:</strong> Google Play Store (Android) with automatic updates.</li>
+      </ul>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Instant AI chat with contextual understanding and task execution.</li>
+        <li>Compact analytics view with dynamic visualizations.</li>
+        <li>Offline access and real-time sync.</li>
+        <li>Push notifications for new messages and insights.</li>
+        <li>Secure authentication and encrypted communication.</li>
+      </ul>
+
+      <h2>Results</h2>
+      <ul>
+        <li>Reduced response time and improved team collaboration on mobile.</li>
+        <li>Over 1,000 downloads in the first month of release.</li>
+        <li>Positive feedback for UI speed, clarity, and AI response accuracy.</li>
+      </ul>
+
+      <h2>Summary</h2>
+      <p>Linquo Mobile is the evolution of digital assistance — AI, analytics, and communication unified in one powerful app. Whether you're managing clients, checking reports, or chatting with your AI assistant, Linquo keeps you connected, informed, and in control — wherever you are.</p>
+    `,
+  },
+},
 {
   slug: "linquo",
   image: "/assets/project11.png",
-  title: "Linquo — AI Chatbot with Web Analytics",
+  title: "Linquo AI Chatbot with Web Analytics",
   description: `An AI-powered chatbot system built to assist users in real-time with smart insights, automation, and website analytics. Linquo combines conversational AI, data visualization, and intelligent task handling into a single unified dashboard. It’s designed for businesses and individuals who want a personal assistant that can both chat and act.`,
   category: "Web Application",
   link: "https://www.linquo.app/",
