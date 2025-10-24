@@ -6,7 +6,7 @@ import JourneyCard from "./journey-card";
 
 const Journey = () => {
   return (
-    <section className="bg-white dark:bg-gray-900 py-20">
+    <section className="bg-white-200 dark:bg-gray-900 py-20">
       <Container>
         <div className="text-center mb-16">
           <h2 className="font-primary text-3xl font-bold text-gray-900 dark:text-white">
