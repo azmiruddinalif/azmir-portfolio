@@ -81,11 +81,10 @@ const Banner = () => {
         <div className="order-1 lg:order-2 mt-4 sm:mt-5 lg:mt-0 flex justify-center overflow-hidden relative">
           {/* Light mode image */}
           <Image
-            src="/assets/azmir-2.png"
+            src="/assets/azmir-2.webp"
             alt="Light mode image"
             width={700}
             height={700}
-            loading="lazy"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="
             // className="rounded-xl dark:hidden"
