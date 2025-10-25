@@ -1,27 +1,23 @@
+// app/api/blogs/route.js
 import { NextResponse } from "next/server";
 
-export async function GET() {
-  try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*`,
-      {
-        // prevent caching during dev
-        cache: "no-store",
-      }
-    );
+export async function GET(req) {
+  const { searchParams } = new URL(req.url);
+  const page = Number(searchParams.get("page")) || 1;
+  const pageSize = 2; // 👈 now Strapi will return 2 per page
 
-    if (!res.ok) {
-      throw new Error(`Failed to fetch blogs: ${res.status}`);
-    }
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort[0]=date_of_post:desc`,
+    { cache: "no-store" }
+  );
 
-    const data = await res.json();
+  if (!res.ok)
+    return NextResponse.json({ error: "Failed to fetch blogs" }, { status: 500 });
 
-    return NextResponse.json(data);
-  } catch (error) {
-    console.error("Error fetching blogs:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch blogs" },
-      { status: 500 }
-    );
-  }
+  const data = await res.json();
+
+  return NextResponse.json({
+    data: data?.data || [],
+    meta: data?.meta?.pagination || {},
+  });
 }

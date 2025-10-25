@@ -1,13 +1,34 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CardBase from "../common/Card";
 import clsx from "clsx";
+import BlogCardSkeleton from "./BlogCardSkeleton";
+import useInfiniteBlogs from "@/app/hooks/useInfiniteBlogs";
 
-export default function BlogsCard({ blogs = [] }) {
-  if (!blogs?.length) {
+export default function BlogsCard({ blogs: initialBlogs = [] }) {
+  const [page, setPage] = useState(1);
+
+  const { blogs, loading, hasMore, observerRef } = useInfiniteBlogs(
+    "/api/blogs",
+    initialBlogs
+  );
+
+  // ✅ First load skeleton
+  if (!blogs?.length && loading) {
+    return (
+      <div className="space-y-8">
+        <BlogCardSkeleton />
+        <BlogCardSkeleton />
+        <BlogCardSkeleton />
+      </div>
+    );
+  }
+
+  // ✅ Empty state
+  if (!blogs?.length && !loading) {
     return (
       <p className="text-center text-gray-500 py-10 dark:text-gray-400">
         No blogs found. Check back soon!
@@ -15,6 +36,7 @@ export default function BlogsCard({ blogs = [] }) {
     );
   }
 
+  // ✅ Blog card render
   return (
     <div className="space-y-8">
       {blogs.map((blog) => {
@@ -36,8 +58,8 @@ export default function BlogsCard({ blogs = [] }) {
 
         const cleanedText = blog_description?.replace(/[#*_>\-\n]/g, "") || "";
         const shortDesc =
-          cleanedText.length > 500
-            ? cleanedText.slice(0, 500).trim() + "..."
+          cleanedText.length > 400
+            ? cleanedText.slice(0, 400).trim() + "..."
             : cleanedText;
 
         const firstTwoTags =
@@ -63,18 +85,18 @@ export default function BlogsCard({ blogs = [] }) {
                     "sm:flex-row md:items-start md:gap-x-5"
                   )}
                 >
-                  {/* Text Section */}
+                  {/* 📝 Text Section */}
                   <div className="flex-1 order-2 sm:order-1">
                     <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 font-primary group-hover:text-primary-600 dark:text-white transition-colors">
                       {title}
                     </h2>
 
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed line-clamp-5 sm:line-clamp-2 md:line-clamp-5 font-primary dark:text-white/60">
+                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed line-clamp-5 sm:line-clamp-3 md:line-clamp-5 font-primary dark:text-white/60">
                       {shortDesc || "No description available."}
                     </p>
                   </div>
 
-                  {/* Image Section */}
+                  {/* 🖼️ Image Section */}
                   {imageUrl && (
                     <CardBase.Header
                       className={clsx(
@@ -93,7 +115,7 @@ export default function BlogsCard({ blogs = [] }) {
                   )}
                 </div>
 
-                {/* Footer */}
+                {/* 📅 Footer */}
                 <div className="flex flex-wrap items-center justify-between text-xs text-gray-500 mt-5 gap-y-3">
                   <div className="flex gap-2 flex-wrap">
                     {firstTwoTags.map((tag) => (
@@ -121,6 +143,25 @@ export default function BlogsCard({ blogs = [] }) {
           </Link>
         );
       })}
+
+      {/* 🌀 Infinite Scroll Trigger */}
+      {hasMore && (
+        <div ref={observerRef} className="flex flex-col items-center space-y-5">
+          {loading && (
+            <>
+              <BlogCardSkeleton />
+              <BlogCardSkeleton />
+            </>
+          )}
+        </div>
+      )}
+
+      {/* 🎉 End message */}
+      {!hasMore && (
+        <p className="text-center text-gray-400 text-sm mt-10">
+          🎉 You’ve reached the end.
+        </p>
+      )}
     </div>
   );
 }
