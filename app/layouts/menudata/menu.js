@@ -68,7 +68,7 @@ export const MenuData = [
 export const FooterMenu = [
   {
     title: "Blogs",
-    link: "https://medium.com/@alifazmiruddin",
+    link: "/blogs",
   },
   {
     title: "Terms & Conditions",
