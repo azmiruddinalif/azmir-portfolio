@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ProcessData } from "./Pprodess-data";
 import CardBase from "../../common/Card";
 import Link from "next/link";
+import ReusableButton from "../../common/HireOrContact";
 
 const WorkProcess = () => {
   return (
@@ -20,12 +21,13 @@ const WorkProcess = () => {
                 a data-driven, user-focused process designed to build reliable,
                 scalable, and maintainable full-stack applications.
               </p>
-              <Link href="/how-it-works" target="_blank">
-                <Button
-                  text="How it works ?"
-                  className="text-orange lg:mx-0 mx-auto text-sm lg:text-base bg-transparent font-primary font-semibold py-3 mt-5 mb-3 hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 "
-                />
-              </Link>
+
+              <ReusableButton
+                href="/how-it-works"
+                text="How it works"
+                ariaLabel="how azmir works"
+                className="text-orange lg:mx-0 mx-auto text-sm lg:text-base bg-transparent font-primary font-semibold py-3 mt-5 mb-3 hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 inline-block px-5 rounded-md"
+              />
             </div>
             <Image
               src="/assets/process.svg"

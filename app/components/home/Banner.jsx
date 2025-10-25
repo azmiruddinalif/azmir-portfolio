@@ -3,6 +3,7 @@ import Link from "next/link";
 import Button from "../common/button";
 import Availability from "./availability";
 import Coding from "./Coding";
+import ReusableButton from "../common/HireOrContact";
 
 const Banner = () => {
   return (
@@ -38,23 +39,19 @@ const Banner = () => {
 
             {/* Action Buttons - Responsive layout */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-x-2 mt-4 sm:mt-5">
-              <Link href="#socials" className="w-full sm:w-auto">
-                <Button
-                  text="My Socials"
-                  className="w-full sm:w-auto text-white text-sm lg:text-base font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 sm:mb-3"
-                />
-              </Link>
+              <ReusableButton
+                href="#socials"
+                text="My Socials"
+                ariaLabel="azmir social media"
+                className="w-full sm:w-auto text-white text-sm bg-orange rounded-md lg:text-base font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 sm:mb-3"
+              />
 
-              <Link
+              <ReusableButton
                 href="/meeting/azmir"
-                target="_blank"
-                className="w-full sm:w-auto"
-              >
-                <Button
-                  text="Hire Me"
-                  className="w-full sm:w-auto text-orange text-sm lg:text-base bg-transparent font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 mb-2 sm:mb-3"
-                />
-              </Link>
+                ariaLabel="hire azmir"
+                text="Hire Me"
+                className="w-full sm:w-auto text-orange text-sm lg:text-base bg-transparent font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-orange border border-orange hover:text-white transition-all rounded-md ease-linear duration-100 mb-2 sm:mb-3"
+              />
             </div>
 
             {/* Subtitle - Responsive text */}

@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Button from "../components/common/button";
 import Container from "../components/common/container";
 import { MenuData } from "./menudata/menu";
+import ReusableButton from "../components/common/HireOrContact";
 
 const Header = () => {
   const router = useRouter();
@@ -239,12 +240,12 @@ const Header = () => {
                   </button>
                 </li>
 
-                <Link href="/meeting/azmir" target="_blank">
-                  <Button
-                    text="Hire Me"
-                    className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 text-xs lg:text-base"
-                  />
-                </Link>
+                <ReusableButton
+                  href="/meeting/azmir"
+                  text="Hire Me"
+                  ariaLabel="Hire azmir"
+                  className="text-white bg-orange font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 text-xs lg:text-base inline-block px-5 rounded-md"
+                />
               </ul>
 
               {/* Mobile Menu Items */}
@@ -421,12 +422,12 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="absolute bottom-8 left-0 w-full px-6">
-          <Link href="/meeting/azmir" target="_blank">
-            <Button
-              text="Hire Me"
-              className="text-white font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100"
-            />
-          </Link>
+          <ReusableButton
+            href="/meeting/azmir"
+            text="Hire Me"
+            ariaLabel="Hire azmir"
+            className="text-white w-full font-primary font-semibold bg-orange py-2 text-center hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 inline-block px-5 rounded-md"
+          />
         </div>
       </div>
 

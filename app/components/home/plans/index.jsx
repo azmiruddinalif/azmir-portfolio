@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../../common/button";
 import Link from "next/link";
 import ServicePlansBody from "./servicePlansbody";
+import ReusableButton from "../../common/HireOrContact";
 
 const Plans = () => {
   return (
@@ -17,12 +18,13 @@ const Plans = () => {
               Power your business with scalable web and mobile solutions <br />{" "}
               flexible plans built to grow your brand online.
             </p>
-            <Link href="/how-it-works" target="_blank">
-              <Button
-                text="How it works"
-                className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-primary font-semibold py-3 mt-5 mb-3 border hover:bg-transparent border-orange hover:text-orange transition-all ease-linear duration-100 "
-              />
-            </Link>
+
+            <ReusableButton
+              href="/how-it-works"
+              text="How it works"
+              ariaLabel="how azmir works"
+              className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-primary font-semibold py-3 mt-5 mb-3 border hover:bg-transparent border-orange hover:text-orange transition-all ease-linear duration-100 inline-block px-5 rounded-md"
+            />
           </div>
           <Image
             src="/assets/plans.png"

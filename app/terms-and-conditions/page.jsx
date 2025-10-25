@@ -12,6 +12,7 @@ import {
   HiOutlineScale,
 } from "react-icons/hi";
 import Button from "../components/common/button";
+import ReusableButton from "../components/common/HireOrContact";
 const today = new Date().toLocaleDateString();
 
 const TermsAndConditions = () => {
@@ -134,12 +135,18 @@ const TermsAndConditions = () => {
                   hesitate to contact me.
                 </p>
                 <div className="flex gap-4 justify-center">
-                  <Link href="mailto:alifazmiruddin@gmail.com">
+                  {/* <Link href="mailto:alifazmiruddin@gmail.com">
                     <Button
                       text="Contact Support"
                       className="text-white font-primary font-normal py-3 mt-5 mb-3 mx-auto hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100"
                     />
-                  </Link>
+                  </Link> */}
+                  <ReusableButton
+                    href="mailto:alifazmiruddin@gmail.com"
+                    text="Contact Support"
+                    ariaLabel="support from azmir"
+                    className="text-white font-primary bg-orange font-normal py-3 mt-5 mb-3 mx-auto hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 inline-block px-5 rounded-md"
+                  />
                 </div>
               </div>
             </div>

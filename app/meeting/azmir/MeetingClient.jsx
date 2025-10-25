@@ -27,10 +27,10 @@ const MeetingClient = ({ params }) => {
     (async function () {
       try {
         const cal = await getCalApi({ namespace: config.namespace });
-        cal("ui", { 
-          hideEventTypeDetails: false, 
+        cal("ui", {
+          hideEventTypeDetails: false,
           layout: "month_view",
-          theme: "light"
+          theme: "light",
         });
         setCalLoaded(true);
       } catch (error) {
@@ -47,7 +47,8 @@ const MeetingClient = ({ params }) => {
             Let's Build Something Amazing Together
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 font-primary max-w-2xl mx-auto">
-            Schedule a free consultation to discuss your project and explore how we can bring your ideas to life.
+            Schedule a free consultation to discuss your project and explore how
+            we can bring your ideas to life.
           </p>
         </div>
 
@@ -56,7 +57,10 @@ const MeetingClient = ({ params }) => {
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 bg-orange rounded-full flex items-center justify-center mb-4">
               <span className="text-white font-bold text-2xl">
-                {config.name.split(' ').map(n => n[0]).join('')}
+                {config.name
+                  .split(" ")
+                  .map((n) => n[0])
+                  .join("")}
               </span>
             </div>
             <h2 className="text-2xl font-bold font-primary dark:text-white mb-2">
@@ -70,47 +74,54 @@ const MeetingClient = ({ params }) => {
             </p>
           </div>
           <div className="flex flex-col items-center my-12">
-          <div className="space-y-4">
-            <button
-              data-cal-namespace={config.namespace}
-              data-cal-link={config.calLink}
-              data-cal-config='{"layout":"month_view"}'
-              disabled={!calLoaded}
-              className={`text-white font-primary text-sm lg:text-lg font-semibold py-4 px-12 bg-orange hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 rounded-lg cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 ${
-                !calLoaded ? 'opacity-50 cursor-not-allowed' : ''
-              }`}
-            >
-              {calLoaded ? '📅 Schedule a Free Call' : 'Loading Calendar...'}
-            </button>
-            
-            <p className="text-sm text-gray-500 dark:text-gray-400 font-primary">
-              No commitment required • Completely free
-            </p>
+            <div className="space-y-4">
+              <button
+                data-cal-namespace={config.namespace}
+                data-cal-link={config.calLink}
+                data-cal-config='{"layout":"month_view"}'
+                aria-label="schedule meeting with azmir"
+                disabled={!calLoaded}
+                className={`text-white font-primary text-sm lg:text-lg font-semibold py-4 px-5 md:px-12 bg-orange hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 rounded-lg cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 ${
+                  !calLoaded ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                {calLoaded ? "📅 Schedule a Free Call" : "Loading Calendar..."}
+              </button>
+
+              <p className="text-sm text-gray-500 dark:text-gray-400 font-primary">
+                No commitment required • Completely free
+              </p>
+            </div>
           </div>
-        </div>
         </div>
 
         {/* Meeting Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
             <BsClock className="text-orange text-3xl mx-auto mb-4" />
-            <h3 className="font-primary font-bold dark:text-white mb-2">{config.duration}</h3>
+            <h3 className="font-primary font-bold dark:text-white mb-2">
+              {config.duration}
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 font-primary">
               Free consultation call
             </p>
           </div>
-          
+
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
             <BsCalendar3 className="text-orange text-3xl mx-auto mb-4" />
-            <h3 className="font-primary font-bold dark:text-white mb-2">Flexible Scheduling</h3>
+            <h3 className="font-primary font-bold dark:text-white mb-2">
+              Flexible Scheduling
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 font-primary">
               Pick a time that works for you
             </p>
           </div>
-          
+
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
             <BsCheckCircle className="text-orange text-3xl mx-auto mb-4" />
-            <h3 className="font-primary font-bold dark:text-white mb-2">Expert Advice</h3>
+            <h3 className="font-primary font-bold dark:text-white mb-2">
+              Expert Advice
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 font-primary">
               Get professional insights
             </p>
@@ -131,11 +142,12 @@ const MeetingClient = ({ params }) => {
                   Project Discussion
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300 font-primary text-sm">
-                  We'll discuss your project goals, requirements, and vision in detail.
+                  We'll discuss your project goals, requirements, and vision in
+                  detail.
                 </p>
               </div>
             </div>
-            
+
             <div className="flex items-start gap-4">
               <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <span className="text-white text-sm font-bold">2</span>
@@ -145,11 +157,12 @@ const MeetingClient = ({ params }) => {
                   Technical Consultation
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300 font-primary text-sm">
-                  Get expert advice on technology stack, architecture, and best practices.
+                  Get expert advice on technology stack, architecture, and best
+                  practices.
                 </p>
               </div>
             </div>
-            
+
             <div className="flex items-start gap-4">
               <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <span className="text-white text-sm font-bold">3</span>
@@ -159,11 +172,12 @@ const MeetingClient = ({ params }) => {
                   Timeline & Budget
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300 font-primary text-sm">
-                  We'll outline realistic timelines and discuss project investment.
+                  We'll outline realistic timelines and discuss project
+                  investment.
                 </p>
               </div>
             </div>
-            
+
             <div className="flex items-start gap-4">
               <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <span className="text-white text-sm font-bold">4</span>

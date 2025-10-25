@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../../common/button";
 import SocialBody from "./Socialbody";
+import ReusableButton from "../../common/HireOrContact";
 
 const Socials = () => {
   return (
@@ -17,12 +18,13 @@ const Socials = () => {
               Follow me on social media for tips, tutorials, project updates,
               and a look behind the scenes of my web development journey.
             </p>
-            <Link href="/meeting/azmir" target="_blank">
-              <Button
-                text="Let's Book For a Free Call"
-                className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-primary font-semibold py-3 mt-5 mb-3 border hover:bg-transparent border-orange hover:text-orange transition-all ease-linear duration-100 "
-              />
-            </Link>
+
+            <ReusableButton
+              href="/meeting/azmir"
+              text="Let's Book For a Free Call"
+              ariaLabel="book azmir for a free call"
+              className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-primary font-semibold py-3 mt-5 mb-3 border hover:bg-transparent border-orange hover:text-orange transition-all ease-linear duration-100 inline-block px-5 rounded-md"
+            />
           </div>
           <Image
             src="/assets/social.png"
