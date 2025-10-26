@@ -22,8 +22,8 @@ const BlogRight = () => {
             Azmir Uddin Alif
           </h3>
           <p className="lg:text-xs xl:text-sm font-primary font-normal text-black-400 dark:text-white/50">
-            Helped 20+ Startup & Businesses Scale to $5M+ with Web & Mobile Apps
-            | MERN | Next.js | React Native | Full-stack Developer
+            Helped 20+ Startup & Businesses Scale to $10M+ with Web & Mobile
+            Apps | MERN | Next.js | React Native | Full-stack Developer
           </p>
           <div className="flex items-center justify-between">
             <ReusableButton
