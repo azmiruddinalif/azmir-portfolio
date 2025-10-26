@@ -1,8 +1,16 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import ReusableButton from "../common/HireOrContact";
+import { faqs } from "./faq-data";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
 const BlogRight = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   return (
     <>
       <div className="sticky top-24 h-[calc(100vh-6rem)] border-l border-black/10 p-6 dark:border-white/10 hidden md:block">
@@ -38,6 +46,36 @@ const BlogRight = () => {
               ariaLabel="how azmir works"
               className="text-center text-orange lg:text-xs xl:text-sm bg-transparent font-primary font-semibold py-2 w-[48%] hover:bg-orange border border-orange hover:text-white transition-all rounded-md ease-linear duration-100 mb-2 sm:mb-3 inline-block mt-5"
             />
+          </div>
+          <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10">
+            <h4 className="font-primary font-semibold text-2xl text-black dark:text-white mb-4">
+              Frequently Asked Questions
+            </h4>
+            <div className="space-y-3">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="border border-black/10 dark:border-white/10 rounded-md"
+                >
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="flex gap-x-3 justify-between items-center w-full text-left p-3 font-primary font-medium text-sm dark:text-white"
+                  >
+                    {faq.question}
+                    {openIndex === index ? (
+                      <BsChevronUp size={16} />
+                    ) : (
+                      <BsChevronDown size={16} />
+                    )}
+                  </button>
+                  {openIndex === index && (
+                    <p className="px-3 pb-3 text-sm text-gray-600 dark:text-white/70">
+                      {faq.answer}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

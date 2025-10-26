@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CardBase from "../common/Card";
@@ -17,7 +17,7 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
   // ✅ First load skeleton
   if (!blogs?.length && loading) {
     return (
-      <div className="space-y-8">
+      <div className="space-y-6">
         <BlogCardSkeleton />
         <BlogCardSkeleton />
         <BlogCardSkeleton />
@@ -28,16 +28,33 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
   // ✅ Empty state
   if (!blogs?.length && !loading) {
     return (
-      <p className="text-center text-gray-500 py-10 dark:text-gray-400">
-        No blogs found. Check back soon!
-      </p>
+      <div className="text-center py-16">
+        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gray-100 dark:bg-gray-800 mb-4">
+          <svg
+            className="w-10 h-10 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            />
+          </svg>
+        </div>
+        <p className="text-lg text-gray-500 dark:text-gray-400 font-primary">
+          No blogs found. Check back soon!
+        </p>
+      </div>
     );
   }
 
   // ✅ Blog card render
   return (
-    <div className="space-y-8">
-      {blogs.map((blog) => {
+    <div className="space-y-6 lg:space-y-8">
+      {blogs.map((blog, index) => {
         const data = blog.attributes || blog;
         const {
           title,
@@ -71,70 +88,89 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
           >
             <CardBase
               className={clsx(
-                "rounded-xl overflow-hidden bg-white border border-gray-200",
-                "dark:bg-gray-800/40 dark:backdrop-blur-md dark:border-gray-800/90",
-                "shadow-sm hover:shadow-md transition-all duration-300"
+                "rounded-2xl overflow-hidden bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm",
+                "border border-gray-200/50 dark:border-gray-800/50",
+                "hover:shadow-soft transition-all duration-500",
+                "hover:scale-[1.02]"
               )}
             >
-              <CardBase.Body className="p-5 md:p-6">
+              <CardBase.Body className="p-5 sm:p-6 lg:p-7">
                 <div
                   className={clsx(
-                    "flex flex-col gap-4 sm:gap-6",
-                    "sm:flex-row md:items-start md:gap-x-5"
+                    "flex flex-col gap-5 sm:gap-6",
+                    "sm:flex-row md:items-start lg:gap-x-6"
                   )}
                 >
-                  {/* 📝 Text Section */}
-                  <div className="flex-1 order-2 sm:order-1">
-                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 font-primary group-hover:text-primary-600 dark:text-white transition-colors">
-                      {title}
-                    </h2>
-
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed line-clamp-5 sm:line-clamp-3 md:line-clamp-5 font-primary dark:text-white/60">
-                      {shortDesc || "No description available."}
-                    </p>
-                  </div>
-
                   {/* 🖼️ Image Section */}
                   {imageUrl && (
                     <CardBase.Header
                       className={clsx(
-                        "relative w-full h-56 sm:h-40 md:h-56 rounded-md overflow-hidden flex-shrink-0 order-1 sm:order-2",
-                        "sm:w-1/3"
+                        "relative w-full h-48 sm:h-44 md:h-48 lg:h-52 rounded-xl overflow-hidden flex-shrink-0",
+                        "sm:w-2/5 lg:w-1/3 shadow-md group-hover:shadow-xl transition-shadow duration-500",
+                        "ring-1 ring-gray-200 dark:ring-gray-800"
                       )}
                     >
                       <Image
                         src={imageUrl}
                         alt={title || "Blog Image"}
                         fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 40vw"
+                        className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </CardBase.Header>
                   )}
-                </div>
 
-                {/* 📅 Footer */}
-                <div className="flex flex-wrap items-center justify-between text-xs text-gray-500 mt-5 gap-y-3">
-                  <div className="flex gap-2 flex-wrap">
-                    {firstTwoTags.map((tag) => (
-                      <span
-                        key={tag.id}
-                        className="bg-gray-100 dark:bg-gray-800/90 dark:backdrop-blur-md px-2 py-1 rounded-md text-gray-700 dark:text-white/60 text-xs font-medium"
-                      >
-                        {tag.tag || tag.attributes?.tag}
-                      </span>
-                    ))}
+                  {/* 📝 Text Section */}
+                  <div className="flex-1">
+                    {/* Tags at top */}
+                    {firstTwoTags.length > 0 && (
+                      <div className="flex gap-2 flex-wrap mb-3">
+                        {firstTwoTags.map((tag) => (
+                          <span
+                            key={tag.id}
+                            className="inline-flex items-center bg-gradient-to-r from-primary-400 to-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm"
+                          >
+                            {tag.tag || tag.attributes?.tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <h2 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-bold text-gray-900 dark:text-white mb-3 font-primary group-hover:text-primary-600 dark:group-hover:text-primary-600 transition-colors duration-300 leading-tight">
+                      {title}
+                    </h2>
+
+                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed line-clamp-3 sm:line-clamp-2 lg:line-clamp-3 font-primary mb-4">
+                      {shortDesc || "No description available."}
+                    </p>
+
+                    {/* Date at bottom */}
+                    {date_of_post && (
+                      <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <time dateTime={date_of_post}>
+                          {new Date(date_of_post).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          })}
+                        </time>
+                      </div>
+                    )}
                   </div>
-
-                  {date_of_post && (
-                    <span className="text-gray-400 dark:text-gray-500">
-                      {new Date(date_of_post).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </span>
-                  )}
                 </div>
               </CardBase.Body>
             </CardBase>
@@ -144,7 +180,7 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
 
       {/* 🌀 Infinite Scroll Trigger */}
       {hasMore && (
-        <div ref={observerRef} className="flex flex-col items-center space-y-5">
+        <div ref={observerRef} className="flex flex-col items-center space-y-6">
           {loading && (
             <>
               <BlogCardSkeleton />
@@ -155,10 +191,14 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
       )}
 
       {/* 🎉 End message */}
-      {!hasMore && (
-        <p className="text-center text-gray-400 text-sm mt-10">
-          🎉 You’ve reached the end.
-        </p>
+      {!hasMore && blogs.length > 0 && (
+        <div className="text-center py-12">
+          <div className="inline-flex items-center gap-2 text-gray-400 dark:text-gray-500 text-sm font-medium">
+            <div className="w-12 h-px bg-gradient-to-r from-transparent to-gray-300 dark:to-gray-700"></div>
+            <span>🎉 You've reached the end</span>
+            <div className="w-12 h-px bg-gradient-to-l from-transparent to-gray-300 dark:to-gray-700"></div>
+          </div>
+        </div>
       )}
     </div>
   );
