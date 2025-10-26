@@ -131,14 +131,14 @@ export default async function Blogs() {
                   href="/meeting/azmir"
                   ariaLabel="Book Free Call azmir"
                   text="Book Free Call"
-                  className="group relative overflow-hidden text-white bg-gradient-to-r from-primary-400 to-primary-500 font-primary font-semibold py-3 sm:py-4 px-8 sm:px-10 rounded-md transition-all ease-out duration-300 "
+                  className="text-orange dark:text-orange-400 font-primary font-semibold py-3 sm:py-4 px-10 sm:px-14 border-2 border-primary-500 dark:border-primary-500 hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white transition-all ease-out duration-300 rounded-md"
                 />
 
                 <ReusableButton
                   href="/contact"
                   ariaLabel="Contact azmir"
                   text="Contact Me"
-                  className="text-orange dark:text-orange-400 font-primary font-semibold py-3 sm:py-4 px-10 sm:px-14 border-2 border-primary-500 dark:border-orange-500 hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white transition-all ease-out duration-300 rounded-md"
+                  className="text-orange dark:text-orange-400 font-primary font-semibold py-3 sm:py-4 px-10 sm:px-14 border-2 border-primary-500 dark:border-primary-500 hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white transition-all ease-out duration-300 rounded-md"
                 />
               </div>
             </div>

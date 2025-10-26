@@ -48,7 +48,7 @@ const BlogRight = () => {
             />
           </div>
           <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10">
-            <h4 className="font-primary font-semibold text-2xl text-black dark:text-white mb-4">
+            <h4 className="font-primary font-semibold text-xl text-black dark:text-white mb-4">
               Frequently Asked Questions
             </h4>
             <div className="space-y-3">
