@@ -79,12 +79,14 @@ const Banner = () => {
           {/* Light mode image */}
           <Image
             src="/assets/azmir-2.webp"
-            alt="Light mode image"
+            alt="Azmir Uddin Alif"
             width={700}
             height={700}
             placeholder="blur"
+            priority
+            loading="eager"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="
-            // className="rounded-xl dark:hidden"
+            className="rounded-xl"
           />
 
           {/* Dark mode image */}
