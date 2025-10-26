@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://azmiruddin.com/</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/my-works</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/contact</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/meeting/azmir</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/my-work/linquo</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/my-work/logensa</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/my-work/bocklight</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/how-it-works</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/blogs</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/terms-and-conditions</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/about-me</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/blogs/debugging-react-native-like-a-pro</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://azmiruddin.com/blogs/best-practices-for-building-react-applications-using-node-js</loc>
+  <lastmod>2025-10-26T07:47:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
