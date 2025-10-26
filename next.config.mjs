@@ -7,7 +7,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "supreme-actor-a1b5508506.media.strapiapp.com",
-        pathname: "/**", // allow all image paths
+        pathname: "/**", 
       },
     ],
   },

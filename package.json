@@ -12,6 +12,7 @@
     "@calcom/embed-react": "^1.5.3",
     "@emailjs/browser": "^4.4.1",
     "@lottiefiles/react-lottie-player": "^3.6.0",
+    "@plaiceholder/next": "^3.0.0",
     "clsx": "^2.1.1",
     "emailjs": "^4.0.3",
     "framer-motion": "^12.23.12",

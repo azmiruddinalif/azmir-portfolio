@@ -57,7 +57,7 @@ const SingleWorkClient = ({ params }) => {
 
       {/* Title and CTA Section */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-10 gap-6">
-        <h1 className="text-4xl lg:text-5xl font-bold font-primary dark:text-white leading-tight">
+        <h1 className="text-4xl lg:text-5xl font-bold font-primary dark:text-white leading-tight lg:max-w-xl">
           {project.title}
         </h1>
         {project.link && (
