@@ -161,6 +161,7 @@ export default async function SingleBlog({ params }) {
               prose prose-base sm:prose-lg lg:prose-xl max-w-none 
               text-gray-800 dark:text-gray-200 dark:prose-invert
               transition-all duration-300
+              
 
               [&_h1]:text-2xl sm:[&_h1]:text-3xl [&_h1]:font-bold [&_h1]:mt-10 [&_h1]:mb-4
               [&_h1]:bg-gradient-to-r [&_h1]:from-primary-600 [&_h1]:to-secondary-600 
@@ -216,6 +217,10 @@ export default async function SingleBlog({ params }) {
               [&_table]:shadow-lg [&_table]:ring-1 [&_table]:ring-gray-200 dark:[&_table]:ring-gray-800
               [&_th]:bg-orange-100 dark:[&_th]:bg-orange-900/20 [&_th]:p-3 [&_th]:font-semibold
               [&_td]:p-3 [&_td]:border-t [&_td]:border-gray-200 dark:[&_td]:border-gray-800
+
+              [&_table]:block [&_table]:overflow-x-auto
+              [&_table]:whitespace-nowrap [&_th]:min-w-[240px] [&_td]:min-w-[120px]
+              &_table]:border-collapse [&_th]:text-left [&_td]:align-top 
 
               [&_hr]:my-12 [&_hr]:border-gray-200 dark:[&_hr]:border-gray-800
             "
