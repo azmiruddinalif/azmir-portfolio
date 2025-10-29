@@ -66,6 +66,10 @@ export const MenuData = [
 ];
 
 export const FooterMenu = [
+   {
+    title: "About",
+    link: "/about-me",
+  },
   {
     title: "Blogs",
     link: "/blogs",
@@ -75,7 +79,7 @@ export const FooterMenu = [
     link: "/terms-and-conditions",
   },
   {
-    title: "About",
-    link: "/about-me",
+    title: "Privacy Policy",
+    link: "/privacy-policy",
   },
 ];

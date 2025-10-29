@@ -29,7 +29,7 @@ const MyWorkData = () => {
                 👑My Projects
               </h4>
               <h1 className="font-primary text-5xl font-bold text-black-200 mt-2 dark:text-white">
-                20+ Projects
+                Things I’ve Built
               </h1>
               <p className="max-w-[500px] mt-3 text-black-300 font-primary dark:text-white/70">
                 As a MERN stack developer, I merge technical skill with UX

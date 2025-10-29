@@ -85,11 +85,6 @@ export default async function Blogs() {
     <>
       <main className="min-h-screen py-12 sm:py-16 mt-20 sm:mt-28 lg:mt-32 ">
         {/* Decorative background elements */}
-        <div className="fixed inset-0 overflow-hidden pointer-events-none opacity-30 dark:opacity-20">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-orange-200 dark:bg-orange-900 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-10 w-72 h-72 bg-pink-200 dark:bg-pink-900 rounded-full blur-3xl"></div>
-        </div>
-
         <Container>
           <BlogHeader />
           <div className="mt-12 lg:mt-16 lg:grid lg:grid-cols-[2fr_1fr] lg:gap-x-8 xl:gap-x-12 relative">
@@ -98,9 +93,8 @@ export default async function Blogs() {
           </div>
 
           {/* Enhanced CTA Section */}
-          <div className="relative mt-16 lg:mt-24 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-pink-500/10 to-orange-500/10 dark:from-orange-500/20 dark:via-pink-500/20 dark:to-orange-500/20 rounded-2xl blur-xl"></div>
-            <div className="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 sm:p-10 lg:p-12 text-center shadow-xl ring-1 ring-gray-200/50 dark:ring-gray-800/50">
+          <div className="relative mt-16 lg:mt-24 overflow-hidden rounded-2xl bg-white-200 dark:bg-gray-800 dark:backdrop-blur-md ">
+            <div className="relative  p-8 sm:p-10 lg:p-12 text-center shadow-xl ring-1 ring-gray-200/50 dark:ring-gray-800/50">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary-400 to-primary-500 mb-6 shadow-lg">
                 <svg
                   className="w-8 h-8 text-white"
