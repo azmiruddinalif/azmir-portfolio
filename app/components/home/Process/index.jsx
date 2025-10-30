@@ -6,6 +6,7 @@ import { ProcessData } from "./Pprodess-data";
 import CardBase from "../../common/Card";
 import Link from "next/link";
 import ReusableButton from "../../common/HireOrContact";
+import { ProcessSteps } from "./process-steps";
 
 const WorkProcess = () => {
   return (
@@ -40,7 +41,7 @@ const WorkProcess = () => {
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
             />
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
             {ProcessData.map((data) => (
               <CardBase
                 key={data.step}
@@ -71,7 +72,8 @@ const WorkProcess = () => {
                 </CardBase.Body>
               </CardBase>
             ))}
-          </div>
+          </div> */}
+          <ProcessSteps data={ProcessData} />
         </Container>
       </div>
     </>

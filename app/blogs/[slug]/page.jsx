@@ -98,7 +98,7 @@ export default async function SingleBlog({ params }) {
                 src={imageUrl}
                 alt={title || "Blog image"}
                 fill
-                className="object-cover object-center"
+                className="object-contain object-center"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 896px"
                 priority
               />

@@ -36,7 +36,7 @@ const SingleServiceClient = ({ params }) => {
   }
 
   return (
-    <section className="my-20 lg:my-56 max-w-4xl mx-auto px-4">
+    <section className="my-20 lg:my-30 max-w-4xl mx-auto px-4">
       {/* Back Button */}
       <Link
         href="/"

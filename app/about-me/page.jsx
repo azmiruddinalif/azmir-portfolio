@@ -4,6 +4,7 @@ import Container from "../components/common/container";
 import Link from "next/link";
 import { aboutCards } from "./aboutCards";
 import Button from "../components/common/button";
+import ServiceCards from "./ServiceCards";
 
 export async function generateMetadata({ params, searchParams }) {
   return {
@@ -29,7 +30,8 @@ export async function generateMetadata({ params, searchParams }) {
     twitter: {
       card: "summary_large_image",
       title: "About Me - Azmir Uddin Alif | MERN Stack Developer",
-      description: "Learn about my journey, skills, and experience as a MERN Stack & Full-Stack Developer",
+      description:
+        "Learn about my journey, skills, and experience as a MERN Stack & Full-Stack Developer",
       images: ["/og/azmir_og_learg.png"],
       creator: "@azmiruddinalif",
     },
@@ -86,7 +88,7 @@ const About = () => {
 
       {/* Main Content */}
       <Container>
-        <section className="container mx-auto px-4 py-16">
+        <section className="mx-auto px-4 py-16">
           {/* Introduction */}
           {/* Achievements Timeline */}
           <div className="mb-20">
@@ -240,53 +242,11 @@ const About = () => {
           </div>
 
           {/* Skills Section */}
-          <div className="max-w-4xl mx-auto mb-20">
+          <div className="mb-20">
             <h2 className="text-4xl font-bold text-gray-800 mb-10 text-center dark:text-white">
               What I Do
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Web Development */}
-              <div className="bg-white p-6 rounded-xl shadow-lg text-center dark:bg-gray-800/40 dark:backdrop:blur-md">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">💻</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 dark:text-white">
-                  Web Development
-                </h3>
-                <p className="text-gray-600 dark:text-white/50">
-                  Building responsive and modern web applications using MERN
-                  Stack and Next.js
-                </p>
-              </div>
-
-              {/* Full-Stack Development */}
-              <div className="bg-white p-6 rounded-xl shadow-lg text-center dark:bg-gray-800/40 dark:backdrop:blur-md">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">🧩</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 dark:text-white">
-                  Full-Stack Development
-                </h3>
-                <p className="text-gray-600 dark:text-white/50">
-                  Developing complete web and mobile app ecosystems with React,
-                  Node.js, Express, and MongoDB
-                </p>
-              </div>
-
-              {/* Performance Optimization */}
-              <div className="bg-white p-6 rounded-xl shadow-lg text-center dark:bg-gray-800/40 dark:backdrop:blur-md">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">⚡</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 dark:text-white">
-                  Performance Optimization
-                </h3>
-                <p className="text-gray-600 dark:text-white/50">
-                  Optimizing code, APIs, and databases for speed, scalability,
-                  and seamless user experience
-                </p>
-              </div>
-            </div>
+            <ServiceCards />
           </div>
 
           {/* Call to Action */}
