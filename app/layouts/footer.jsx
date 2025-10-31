@@ -3,8 +3,6 @@ import Link from "next/link";
 import Button from "../components/common/button";
 import Container from "../components/common/container";
 import { FooterMenu } from "./menudata/menu";
-import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 import { useScrollToSection } from "../hooks/useScrollToSection";
 
@@ -30,12 +28,12 @@ const Footer = () => {
                 </svg>
               </div>
               <h2 className="font-primary font-bold text-4xl lg:text-5xl text-black-300 dark:text-white mb-4">
-                Let's Work Together
+                Let&apos;s Work Together
               </h2>
               <p className="font-primary font-normal text-base text-black-400 dark:text-white/70 mb-8">
-                Ready to bring your ideas to life? Let's collaborate and create
-                something amazing together. Get in touch and let's start
-                building!
+                Ready to bring your ideas to life? Let&apos;s collaborate and
+                create something amazing together. Get in touch and let&apos;s
+                start building!
               </p>
               <Link
                 href="/how-it-works"
@@ -44,7 +42,7 @@ const Footer = () => {
               >
                 <Button
                   text="Get In Touch →"
-                  className="text-white font-primary font-semibold py-3 px-8 hover:bg-transparent border-1 border-primary-500 hover:text-primary-500 transition-all ease-linear duration-200 text-base"
+                  className="text-white font-primary font-semibold py-3 px-8 hover:bg-transparent border border-primary-500 hover:text-primary-500 transition-all ease-linear duration-200 text-base"
                 />
               </Link>
             </div>
@@ -54,27 +52,27 @@ const Footer = () => {
         {/* Footer Links Section */}
         <div className="bg-white dark:bg-gray-900 py-16">
           <Container>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-10 text-center sm:text-left">
               {/* Contact Column */}
-              <div className="lg:col-span-1">
+              <div>
                 <h3 className="font-primary font-bold text-lg text-black-300 dark:text-white mb-6">
                   Contact
                 </h3>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <MdPhone className="text-primary-500 text-xl mt-0.5 flex-shrink-0" />
+                  <div className="flex items-center sm:items-start gap-3 justify-center sm:justify-start">
+                    <MdPhone className="text-primary-500 text-xl flex-shrink-0" />
                     <span className="font-primary text-sm text-black-400 dark:text-white/70">
                       +8801849702157
                     </span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <MdLocationOn className="text-primary-500 text-xl mt-0.5 flex-shrink-0" />
+                  <div className="flex items-center sm:items-start gap-3 justify-center sm:justify-start">
+                    <MdLocationOn className="text-primary-500 text-xl flex-shrink-0" />
                     <span className="font-primary text-sm text-black-400 dark:text-white/70">
                       Dhaka, Bangladesh
                     </span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <MdEmail className="text-primary-500 text-xl mt-0.5 flex-shrink-0" />
+                  <div className="flex items-center sm:items-start gap-3 justify-center sm:justify-start">
+                    <MdEmail className="text-primary-500 text-xl flex-shrink-0" />
                     <Link
                       href="mailto:alifazmiruddin@gmail.com"
                       className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
@@ -94,7 +92,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/about-me"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       About Me
                     </Link>
@@ -102,7 +100,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/blogs"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Blogs
                     </Link>
@@ -110,7 +108,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/my-works"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Portfolio
                     </Link>
@@ -118,7 +116,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Contact
                     </Link>
@@ -135,7 +133,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/service/web-application-development"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Web Development
                     </Link>
@@ -143,7 +141,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/service/e-commerce-website-development"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       E-commerce
                     </Link>
@@ -151,7 +149,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/service/mobile-app-development"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       App Development
                     </Link>
@@ -159,7 +157,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/meeting/azmir"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Technical Consulting
                     </Link>
@@ -176,7 +174,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/blogs"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Blog Posts
                     </Link>
@@ -184,7 +182,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/case-studies"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Case Studies
                     </Link>
@@ -192,7 +190,7 @@ const Footer = () => {
                   <li>
                     <button
                       onClick={() => scrollToSection("testimonials")}
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors cursor-pointer"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors cursor-pointer"
                     >
                       Testimonials
                     </button>
@@ -200,7 +198,7 @@ const Footer = () => {
                   <li>
                     <button
                       onClick={() => scrollToSection("faq")}
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors cursor-pointer"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors cursor-pointer"
                     >
                       FAQ
                     </button>
@@ -208,7 +206,7 @@ const Footer = () => {
                 </ul>
               </div>
 
-              {/* Follow Us Column */}
+              {/* Follow Me Column */}
               <div>
                 <h3 className="font-primary font-bold text-lg text-black-300 dark:text-white mb-6">
                   Follow Me
@@ -218,7 +216,7 @@ const Footer = () => {
                     <Link
                       href="https://www.facebook.com/azmiruddinalif"
                       target="_blank"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Facebook
                     </Link>
@@ -227,7 +225,7 @@ const Footer = () => {
                     <Link
                       href="https://www.linkedin.com/in/azmiruddinalif/"
                       target="_blank"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       LinkedIn
                     </Link>
@@ -236,7 +234,7 @@ const Footer = () => {
                     <Link
                       href="https://github.com/azmiruddinalif"
                       target="_blank"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Github
                     </Link>
@@ -245,7 +243,7 @@ const Footer = () => {
                     <Link
                       href="https://x.com/azmiruddinalif"
                       target="_blank"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Twitter
                     </Link>
@@ -259,9 +257,9 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="bg-white-200 dark:bg-gray-800/40 py-6 border-t border-gray-200 dark:border-gray-700">
           <Container>
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
-              <span className="font-primary font-normal text-sm text-black-400 dark:text-white/70 text-center lg:text-left">
-                ©Copyright {getFullYear()} Azmir Uddin Alif (Designed by
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-4 text-center lg:text-left">
+              <span className="font-primary font-normal text-sm text-black-400 dark:text-white/70">
+                © Copyright {getFullYear()} Azmir Uddin Alif (Designed by{" "}
                 <Link
                   href="https://www.ashikprottoy.com/"
                   className="hover:text-orange transition-colors ml-1"
@@ -271,12 +269,12 @@ const Footer = () => {
                 </Link>
                 ) All rights reserved.
               </span>
-              <ul className="flex items-center gap-6">
+              <ul className="flex flex-wrap items-center justify-center lg:justify-end gap-4 sm:gap-6">
                 {FooterMenu.map((data, index) => (
                   <li key={index}>
                     <Link
                       href={data.link}
-                      className="font-primary font-normal text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors whitespace-nowrap"
+                      className="font-primary font-normal text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors whitespace-nowrap"
                     >
                       {data.title}
                     </Link>
