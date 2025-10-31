@@ -129,7 +129,7 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
                         {firstTwoTags.map((tag) => (
                           <span
                             key={tag.id}
-                            className="inline-flex items-center bg-gradient-to-r from-primary-400 to-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm"
+                            className="inline-flex items-center bg-gradient-to-r from-primary-400 to-primary-500 text-gray-600 px-3 py-1 rounded-full text-xs font-semibold shadow-sm"
                           >
                             {tag.tag || tag.attributes?.tag}
                           </span>

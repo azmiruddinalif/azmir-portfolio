@@ -57,7 +57,7 @@ export default async function ProcessSingle({ params }) {
             {/* --- Left side text --- */}
             <div className="space-y-6">
               {/* Step indicator */}
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary-500/10 dark:bg-primary-500/20 backdrop-blur-sm border border-primary-500/20">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-md bg-primary-500/10 dark:bg-primary-500/20 backdrop-blur-sm border border-primary-500/20">
                 <span className="text-sm font-semibold text-primary-600 dark:text-primary-400 tracking-wider uppercase">
                   Step {process.step.toString().padStart(2, "0")}
                 </span>

@@ -79,7 +79,10 @@ const Review = () => {
   if (!hasMounted) return null;
 
   return (
-    <div className="py-10 bg-white-200 dark:bg-gray-800/40 dark:backdrop-blur-md">
+    <section
+      id="testimonials"
+      className="py-10 bg-white-200 dark:bg-gray-800/40 dark:backdrop-blur-md"
+    >
       <Container>
         <div
           style={{
@@ -112,7 +115,7 @@ const Review = () => {
           </Swiper>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

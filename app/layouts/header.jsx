@@ -7,16 +7,18 @@ import Button from "../components/common/button";
 import Container from "../components/common/container";
 import { MenuData } from "./menudata/menu";
 import ReusableButton from "../components/common/HireOrContact";
+import { useScrollToSection } from "../hooks/useScrollToSection";
 
 const Header = () => {
   const router = useRouter();
+  const scrollToSection = useScrollToSection();
+
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const servicesItem = MenuData.find((item) => item.title === "Services");
-
   let hoverTimeout = null;
 
   const handleMouseEnter = () => {
@@ -30,51 +32,53 @@ const Header = () => {
     }, 200);
   };
 
-  // Initialize dark mode from localStorage
+  // Initialize dark mode
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode");
     if (savedMode) {
       setIsDarkMode(savedMode === "true");
     } else {
-      // Check system preference
       setIsDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
     }
   }, []);
 
-  // Apply dark mode to document
+  // Apply dark mode
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    if (isDarkMode) document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
     localStorage.setItem("darkMode", isDarkMode.toString());
   }, [isDarkMode]);
 
-  // Disable body scroll when sidebar is open
+  // Disable scroll when sidebar is open
   useEffect(() => {
     document.body.style.overflow = sidebarOpen ? "hidden" : "";
   }, [sidebarOpen]);
 
-  // Handle scroll animation
+  // Scroll animation header
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 100);
+      setIsScrolled(window.scrollY > 100);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+
+  // Handle navigation or in-page scroll
+  const handleMenuClick = (link) => {
+    if (link.startsWith("#")) {
+      const sectionId = link.replace("#", "");
+      scrollToSection(sectionId);
+    } else {
+      router.push(link);
+    }
   };
 
   return (
     <header className="relative z-50">
-      {/* Top Nav */}
       <div
+        id="site-header"
         className={`fixed left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-out ${
           isScrolled ? "top-0 w-full" : "top-4 w-full max-w-7xl px-4"
         }`}
@@ -87,11 +91,11 @@ const Header = () => {
           } ${
             isDarkMode
               ? isScrolled
-                ? "bg-gray-900/80 border-gray-400/30 backdrop-blur-xl"
-                : "bg-gray-900 border border-gray-400/20 backdrop-blur-xl"
+                ? "bg-gray-900/80 border-gray-400/30"
+                : "bg-gray-900 border border-gray-400/20"
               : isScrolled
-              ? "bg-white/80 border-gray-200/50 backdrop-blur-xl"
-              : "bg-white border border-white/50 backdrop-blur-xl"
+              ? "bg-white/80 border-gray-200/50"
+              : "bg-white border border-white/50"
           }`}
         >
           <div
@@ -115,91 +119,92 @@ const Header = () => {
 
               {/* Desktop Menu */}
               <ul className="hidden md:flex items-center justify-end">
-                {MenuData.map((data, index) => (
-                  <li
-                    key={index}
-                    className={`relative group font-primary font-normal text-sm lg:text-base ${
-                      isDarkMode ? "text-gray-200" : "text-black-200"
-                    }`}
-                    onMouseEnter={
-                      data.title === "Services" ? handleMouseEnter : undefined
-                    }
-                    onMouseLeave={
-                      data.title === "Services" ? handleMouseLeave : undefined
-                    }
-                  >
-                    {data.title === "Services" ? (
-                      // Services menu item - not clickable, just displays text
-                      <span className="relative inline-block px-4 md:px-3 lg:px-6 py-6 text-xs lg:text-base hover:text-orange dark:hover:text-white cursor-pointer">
-                        <span
-                          className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:transition-all after:duration-300
-                          ${isDarkMode ? "after:bg-white" : "after:bg-orange"}
-                          ${
-                            isServicesOpen
-                              ? "after:w-full text-orange dark:text-white"
-                              : "after:w-0 group-hover:after:w-full"
-                          } 
-                        `}
-                        >
-                          {data.title}
+                {MenuData.map((data, index) => {
+                  const isAnchor = data.link.startsWith("#");
+                  return (
+                    <li
+                      key={index}
+                      className={`relative group font-primary font-normal text-sm lg:text-base ${
+                        isDarkMode ? "text-gray-200" : "text-black-200"
+                      }`}
+                      onMouseEnter={
+                        data.title === "Services" ? handleMouseEnter : undefined
+                      }
+                      onMouseLeave={
+                        data.title === "Services" ? handleMouseLeave : undefined
+                      }
+                    >
+                      {data.title === "Services" ? (
+                        // Dropdown menu
+                        <span className="relative inline-block px-4 md:px-3 lg:px-6 py-6 cursor-pointer hover:text-orange dark:hover:text-white">
+                          <span
+                            className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:transition-all after:duration-300 ${
+                              isDarkMode ? "after:bg-white" : "after:bg-orange"
+                            } ${
+                              isServicesOpen
+                                ? "after:w-full text-orange dark:text-white"
+                                : "after:w-0 group-hover:after:w-full"
+                            }`}
+                          >
+                            {data.title}
+                          </span>
                         </span>
-                      </span>
-                    ) : (
-                      // Regular menu items - clickable
-                      <Link
-                        href={data.link}
-                        className="relative inline-block px-4 md:px-3 lg:px-6 py-6 text-xs lg:text-base hover:text-orange dark:hover:text-white"
-                      >
-                        <span
-                          className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:transition-all after:duration-300
-                          ${isDarkMode ? "after:bg-white" : "after:bg-orange"}
-                          after:w-0 group-hover:after:w-full
-                        `}
+                      ) : (
+                        // Handle anchor or normal links
+                        <button
+                          onClick={() => handleMenuClick(data.link)}
+                          className="relative inline-block px-4 md:px-3 lg:px-6 py-6 hover:text-orange dark:hover:text-white text-xs lg:text-base cursor-pointer"
                         >
-                          {data.title}
-                        </span>
-                      </Link>
-                    )}
-
-                    {/* Desktop Dropdown */}
-                    {data.title === "Services" &&
-                      isServicesOpen &&
-                      servicesItem?.dropdown && (
-                        <div
-                          className={`absolute left-0 top-full mt-2 shadow-lg rounded-lg border py-2 w-[320px] z-40 animate-fadeIn ${
-                            isDarkMode
-                              ? "bg-gray-800/95 border-gray-600 backdrop-blur-xl"
-                              : "bg-white/95 border-gray-200 backdrop-blur-xl"
-                          }`}
-                        >
-                          {servicesItem.dropdown.map((item, subIndex) => (
-                            <div
-                              key={subIndex}
-                              onClick={() => {
-                                setIsServicesOpen(false);
-                                router.push(item.link);
-                              }}
-                              className={`px-4 py-2 cursor-pointer transition-colors duration-200 ${
-                                isDarkMode
-                                  ? "hover:bg-gray-700 text-gray-200"
-                                  : "hover:bg-gray-100 text-gray-800"
-                              }`}
-                            >
-                              <span className="text-sm font-medium">
-                                {item.title}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
+                          <span
+                            className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:transition-all after:duration-300 ${
+                              isDarkMode ? "after:bg-white" : "after:bg-orange"
+                            } after:w-0 group-hover:after:w-full`}
+                          >
+                            {data.title}
+                          </span>
+                        </button>
                       )}
-                  </li>
-                ))}
+
+                      {/* Services Dropdown */}
+                      {data.title === "Services" &&
+                        isServicesOpen &&
+                        servicesItem?.dropdown && (
+                          <div
+                            className={`absolute left-0 top-full mt-2 shadow-lg rounded-lg border py-2 w-[320px] z-40 animate-fadeIn ${
+                              isDarkMode
+                                ? "bg-gray-800/95 border-gray-600"
+                                : "bg-white/95 border-gray-200"
+                            }`}
+                          >
+                            {servicesItem.dropdown.map((item, subIndex) => (
+                              <div
+                                key={subIndex}
+                                onClick={() => {
+                                  setIsServicesOpen(false);
+                                  router.push(item.link);
+                                }}
+                                className={`px-4 py-2 cursor-pointer transition-colors duration-200 ${
+                                  isDarkMode
+                                    ? "hover:bg-gray-700 text-gray-200"
+                                    : "hover:bg-gray-100 text-gray-800"
+                                }`}
+                              >
+                                <span className="text-sm font-medium">
+                                  {item.title}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                    </li>
+                  );
+                })}
 
                 {/* Dark Mode Toggle */}
                 <li className="ml-4">
                   <button
                     onClick={toggleDarkMode}
-                    className={`p-2 rounded-lg transition-colors duration-200 ${
+                    className={`p-2 rounded-lg transition-colors duration-200 cursor-pointer ${
                       isDarkMode
                         ? "hover:bg-gray-700 text-gray-200"
                         : "hover:bg-gray-100 text-gray-700"
@@ -207,7 +212,6 @@ const Header = () => {
                     aria-label="Toggle dark mode"
                   >
                     {isDarkMode ? (
-                      // Sun icon for light mode
                       <svg
                         className="w-5 h-5"
                         fill="none"
@@ -222,7 +226,6 @@ const Header = () => {
                         />
                       </svg>
                     ) : (
-                      // Moon icon for dark mode
                       <svg
                         className="w-5 h-5"
                         fill="none"
@@ -248,17 +251,15 @@ const Header = () => {
                 />
               </ul>
 
-              {/* Mobile Menu Items */}
+              {/* Mobile */}
               <div className="md:hidden flex items-center gap-3">
-                {/* Dark Mode Toggle - Mobile */}
                 <button
                   onClick={toggleDarkMode}
-                  className={`p-2 rounded-lg transition-colors duration-200 ${
+                  className={`p-2 rounded-lg cursor-pointer ${
                     isDarkMode
                       ? "hover:bg-gray-700 text-gray-200"
                       : "hover:bg-gray-100 text-gray-700"
                   }`}
-                  aria-label="Toggle dark mode"
                 >
                   {isDarkMode ? (
                     <svg
@@ -291,11 +292,9 @@ const Header = () => {
                   )}
                 </button>
 
-                {/* Hamburger Icon */}
                 <button
                   onClick={() => setSidebarOpen(true)}
-                  className="flex items-center justify-center p-2 focus:outline-none"
-                  aria-label="Open Menu"
+                  className="p-2 focus:outline-none cursor-pointer"
                 >
                   <svg
                     className={`w-8 h-8 ${
@@ -304,7 +303,6 @@ const Header = () => {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       strokeLinecap="round"
@@ -320,18 +318,28 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Sidebar - Mobile */}
+      {/* Overlay + Sidebar */}
+      {sidebarOpen && (
+        <div
+          className={`fixed inset-0 z-40 ${
+            isDarkMode
+              ? "bg-black/40 backdrop-blur-md"
+              : "bg-white/40 backdrop-blur-md"
+          }`}
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[280px] shadow-lg z-50 transform transition-transform duration-300 ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         } ${isDarkMode ? "bg-gray-800" : "bg-white"}`}
       >
-        {/* Close Button */}
         <div className="flex justify-end p-4">
           <button
             onClick={() => setSidebarOpen(false)}
             aria-label="Close Menu"
-            className="p-2 focus:outline-none"
+            className="p-2"
           >
             <svg
               className={`w-6 h-6 ${
@@ -351,76 +359,25 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Sidebar Links */}
         <nav
           className={`flex flex-col px-6 gap-6 font-primary ${
             isDarkMode ? "text-gray-200" : "text-black-200"
           }`}
         >
-          {MenuData.map((data, index) => {
-            if (data.title === "Services" && data.dropdown) {
-              return (
-                <div key={index}>
-                  <button
-                    onClick={() => setIsServicesOpen((prev) => !prev)}
-                    className="w-full text-left flex justify-between items-center text-lg"
-                  >
-                    <span className="font-primary text-base">{data.title}</span>
-                    <svg
-                      className={`w-5 h-5 transition-transform duration-300 ${
-                        isServicesOpen ? "rotate-180" : "rotate-0"
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
-                    </svg>
-                  </button>
-
-                  {isServicesOpen && (
-                    <div className="mt-2 flex flex-col gap-3 pl-4">
-                      {data.dropdown.map((subItem, subIndex) => (
-                        <Link
-                          href={subItem.link}
-                          key={subIndex}
-                          className={`font-normal transition-colors ${
-                            isDarkMode
-                              ? "hover:text-gray-400"
-                              : "hover:text-black-400"
-                          }`}
-                          onClick={() => setSidebarOpen(false)}
-                        >
-                          <span className="font-primary text-sm">
-                            {subItem.title}
-                          </span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            } else {
-              return (
-                <Link
-                  href={data.link}
-                  key={index}
-                  className="text-lg"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  <span className="font-primary text-base">{data.title}</span>
-                </Link>
-              );
-            }
-          })}
+          {MenuData.map((data, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                handleMenuClick(data.link);
+                setSidebarOpen(false);
+              }}
+              className="text-left text-lg font-primary"
+            >
+              {data.title}
+            </button>
+          ))}
         </nav>
 
-        {/* CTA Button */}
         <div className="absolute bottom-8 left-0 w-full px-6">
           <ReusableButton
             href="/meeting/azmir"
@@ -430,20 +387,6 @@ const Header = () => {
           />
         </div>
       </div>
-
-      {/* Overlay */}
-      {sidebarOpen && (
-        <div
-          className={`fixed inset-0 z-40 transition-all duration-300
-      ${
-        isDarkMode
-          ? "bg-black/40 backdrop-blur-md"
-          : "bg-white/40 backdrop-blur-md"
-      }`}
-          onClick={() => setSidebarOpen(false)}
-          aria-hidden="true"
-        />
-      )}
     </header>
   );
 };

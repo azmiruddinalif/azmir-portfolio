@@ -70,14 +70,8 @@ export const ProcessSteps = ({ data = ProcessData }) => {
                   <p className="font-primary text-sm leading-relaxed text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                     {item.desc}
                   </p>
-
-                  {/* Animated divider */}
-                  <div className="pt-4">
-                    <div className="h-1 w-0 group-hover:w-full bg-gradient-to-r from-primary-300 via-primary-500 to-primary-600 rounded-full transition-all duration-500" />
-                  </div>
-
                   {/* CTA */}
-                  <div className="pt-2 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                  <div className="pt-2 flex items-center gap-2 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 delay-100">
                     <span className="text-transparent bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-sm font-semibold">
                       Explore Step
                     </span>

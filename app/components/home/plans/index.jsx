@@ -8,7 +8,7 @@ import ReusableButton from "../../common/HireOrContact";
 const Plans = () => {
   return (
     <>
-      <div id="plans" className="py-[140px]">
+      <section id="plans" className="py-[140px]">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="max-w-[600px] order-1 lg:order-[0] text-center lg:text-left">
             <h4 className="font-primary text-2xl lg:text-3xl font-bold lg:leading-10 text-black-300 dark:text-white">
@@ -38,7 +38,7 @@ const Plans = () => {
           />
         </div>
         <ServicePlansBody />
-      </div>
+      </section>
     </>
   );
 };

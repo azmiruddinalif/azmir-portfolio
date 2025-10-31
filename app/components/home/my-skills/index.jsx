@@ -18,7 +18,6 @@ const MySkills = () => {
               <h4 className="font-primary text-2xl lg:text-3xl font-bold lg:leading-10 text-black-300 dark:text-white">
                 My Skills
               </h4>
-              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-orange to-transparent"></div>
             </div>
             <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-5 dark:text-white/70">
               Crafting digital experiences with cutting-edge technologies

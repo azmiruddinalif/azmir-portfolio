@@ -9,7 +9,7 @@ const ServiceBody = () => {
         {ServiceData.map((data, index) => {
           return (
             <div
-              className="group relative w-full rounded-xl bg-white dark:bg-gray-800/50 p-8 lg:p-9 border border-gray-300 dark:border-gray-700/50 hover:shadow-soft hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+              className="p-8 rounded-3xl bg-white dark:bg-gray-800/40 dark:backdrop-blur-md border border-gray-200/50 dark:border-gray-700/30  transition-all duration-500 hover:shadow-soft hover:-translate-y-2 overflow-hidden cursor-pointer"
               key={index}
             >
               {/* Content */}
@@ -34,9 +34,6 @@ const ServiceBody = () => {
                 <h4 className="font-primary text-xl lg:text-[28px] leading-snug text-gray-900 dark:text-white font-bold group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:via-primary-600 group-hover:to-primary-700 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                   {data.title}
                 </h4>
-
-                {/* Subtle underline animation */}
-                <div className="mt-4 h-1 w-0 bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 rounded-full group-hover:w-16 transition-all duration-500"></div>
               </div>
             </div>
           );

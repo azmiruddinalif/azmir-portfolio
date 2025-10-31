@@ -79,7 +79,7 @@ export default function ProcessContent({ process }) {
           >
             <Link
               href="/"
-              className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-primary-600 via-primary-500 to-primary-600 text-white font-semibold shadow-2xl shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
+              className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-md bg-gradient-to-r from-primary-500 via-primary-500 to-primary-600 text-white font-semibold hover:shadow-primary-500/40 transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
             >
               {/* Shine effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />

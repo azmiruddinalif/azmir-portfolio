@@ -1,4 +1,6 @@
 import Container from "./components/common/container";
+import ScrollToTarget from "./components/common/ScrollToTarget";
+import FAQSection from "./components/faq";
 import Banner from "./components/home/Banner";
 import WormCompany from "./components/home/company";
 import Counter from "./components/home/counter";
@@ -81,6 +83,7 @@ export async function generateMetadata({ params, searchParams }) {
 export default function Home() {
   return (
     <>
+     <ScrollToTarget />
       <Container>
         <Banner />
         <Counter />
@@ -107,6 +110,7 @@ export default function Home() {
       <Container>
         <Plans />
       </Container>
+      <FAQSection/>
     </>
   );
 }

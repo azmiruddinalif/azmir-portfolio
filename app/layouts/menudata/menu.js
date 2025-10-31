@@ -66,14 +66,14 @@ export const MenuData = [
 ];
 
 export const FooterMenu = [
-   {
-    title: "About",
-    link: "/about-me",
-  },
-  {
-    title: "Blogs",
-    link: "/blogs",
-  },
+  //  {
+  //   title: "About",
+  //   link: "/about-me",
+  // },
+  // {
+  //   title: "Blogs",
+  //   link: "/blogs",
+  // },
   {
     title: "Terms & Conditions",
     link: "/terms-and-conditions",

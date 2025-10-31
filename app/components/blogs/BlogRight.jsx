@@ -59,7 +59,7 @@ const BlogRight = () => {
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="flex gap-x-3 justify-between items-center w-full text-left p-3 font-primary font-medium text-sm dark:text-white"
+                    className="flex gap-x-3 justify-between items-center w-full text-left p-3 font-primary font-medium text-sm dark:text-white cursor-pointer"
                   >
                     {faq.question}
                     {openIndex === index ? (
