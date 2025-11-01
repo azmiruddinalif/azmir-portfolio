@@ -1,22 +1,37 @@
 export const HelpData = [
   {
-    title: "Startup MVPs",
-    desc: "Need a fast, responsive, and modern UI to launch your product? I can build it from scratch, fast.",
+    title: "Full-Stack Web Applications",
+    desc: `
+      I build complete MERN apps from backend to frontend fast, secure, and scalable.  
+      Every line of code serves performance, not complexity. You get a product ready to launch, grow, and adapt with your business.
+    `,
     img: "/assets/check.png",
   },
   {
-    title: "UI/UX Implementation",
-    desc: "Have a Figma or design file? I’ll convert it into pixel-perfect, responsive code using React/Next.js.",
+  title: "Next.js & SEO Optimization",
+  desc: `
+    I make products that feel instant not just fast on paper.  
+    Using Next.js SSR, ISR, and structured data, your app becomes both performant and discoverable.  
+    Better load times, higher rankings, and real visibility that drives users, not just traffic.
+  `,
+  img: "/assets/check.png",
+},
+  {
+    title: "API Architecture & Integrations",
+    desc: `
+      Clean, secure APIs make your product reliable and future-proof.  
+      I design well-documented REST or GraphQL structures for easy scaling.  
+      Every integration is optimized for stability and clarity.
+    `,
     img: "/assets/check.png",
   },
   {
-    title: "Performance Issues",
-    desc: "Slow, unresponsive UI? I can optimize your frontend for speed, accessibility, and smooth interactions.",
-    img: "/assets/check.png",
-  },
-  {
-    title: "Cross-Platform Needs",
-    desc: "Want one codebase for Web, Mobile, and PWA? I build with reusable components across platforms.",
+    title: "Maintenance & Scalability",
+    desc: `
+      Growth exposes weak systems I make sure yours can handle it.  
+      From code cleanup to performance tuning and CI/CD setup, I’ve got you.  
+      Your product stays fast, stable, and ready to scale.
+    `,
     img: "/assets/check.png",
   },
 ];
