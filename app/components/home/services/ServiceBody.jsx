@@ -9,7 +9,7 @@ const ServiceBody = () => {
         {ServiceData.map((data, index) => {
           return (
             <div
-              className="p-8 rounded-3xl bg-white dark:bg-gray-800/40 dark:backdrop-blur-md border border-gray-200/50 dark:border-gray-700/30  transition-all duration-500 hover:shadow-soft hover:-translate-y-2 overflow-hidden cursor-pointer"
+              className="p-8 rounded-3xl bg-white dark:bg-gray-800/40 dark:backdrop-blur-md border border-gray-200/90 dark:border-gray-700/30  transition-all duration-500 hover:shadow-soft hover:-translate-y-2 overflow-hidden cursor-pointer"
               key={index}
             >
               {/* Content */}

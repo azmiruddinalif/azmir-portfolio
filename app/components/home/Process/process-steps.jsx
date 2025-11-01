@@ -16,7 +16,7 @@ export const ProcessSteps = ({ data = ProcessData }) => {
               href={`/process/${item.slug || item.step}`}
               className="block group relative"
             >
-              <CardBase className="relative p-8 rounded-3xl bg-white dark:bg-gray-800/40 dark:backdrop-blur-md border border-gray-200/50 dark:border-gray-700/30  transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 dark:hover:shadow-primary-500/20 hover:-translate-y-2 overflow-hidden cursor-pointer">
+              <CardBase className="relative p-8 rounded-3xl bg-white dark:bg-gray-800/40 dark:backdrop-blur-md border border-gray-200/90 dark:border-gray-700/30  transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 dark:hover:shadow-primary-500/20 hover:-translate-y-2 overflow-hidden cursor-pointer">
                 <CardBase.Header className="relative z-10">
                   {/* Step Badge */}
                   <div className="absolute -top-3 -right-3 min-w-[4rem] h-16 px-4 bg-gradient-to-br from-primary-300 via-primary-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-md shadow-primary-500/30 dark:shadow-primary-500/40 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">

@@ -45,39 +45,6 @@ export const faqs = [
       and search-engine friendly.
     `,
   },
-  {
-    question: "What tech stack do you specialize in?",
-    answer: `
-      My core stack includes Next.js, React, Node.js, Express, MongoDB, PostgreSQL,
-      and Firebase. I also integrate tools like Strapi, Supabase, and AWS for scalable content
-      management or storage when needed. For UI, I mainly use Tailwind CSS with Framer Motion
-      for animations and a clean, modern aesthetic.
-    `,
-  },
-  {
-    question: "Can you redesign or optimize an existing website?",
-    answer: `
-      Definitely. I often help teams modernize their old sites — improving speed,
-      design, and responsiveness without rebuilding everything from scratch.
-      I can audit your site, fix layout shifts, refactor the frontend, and align
-      it with current SEO and accessibility standards.
-    `,
-  },
-  {
-    question: "How do I start working with you?",
-    answer: `
-      You can schedule a free consultation through my meeting page.
-      Once we discuss your goals and project scope, I’ll prepare a proposal
-      with a detailed timeline, milestones, and cost. I start projects
-      only after both sides are clear about expectations and deliverables.
-    `,
-  },
-  {
-    question: "Do you work with international clients?",
-    answer: `
-      Yes most of my clients are international (Japan, USA, Germany, Serbia and the Middle East).
-      I’m used to working remotely across time zones using tools like Notion, Slack,
-      and ClickUp for smooth collaboration.
-    `,
-  },
+  
+  
 ];
