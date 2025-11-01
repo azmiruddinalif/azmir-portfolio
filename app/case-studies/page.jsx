@@ -1,18 +1,26 @@
 import React from "react";
 import Container from "../components/common/container";
 import MyCaseStudies from "./MyCaseStudies";
+import { getBaseUrl } from "../lib/getBaseUrl";
 
-const CaseStudies = () => {
+async function getCaseStudies() {
+  const baseUrl = await getBaseUrl();
+  const res = await fetch(`${baseUrl}/api/case-studies`);
+  if (!res.ok) throw new Error("Failed to fetch case studies");
+  return res.json();
+}
+
+export default async function CaseStudies() {
+  const { data } = await getCaseStudies();
+
   return (
     <section>
       <Container>
-        <MyCaseStudies />
+        <MyCaseStudies data={data} />
       </Container>
     </section>
   );
-};
-
-export default CaseStudies;
+}
 
 // generate meta data
 export async function generateMetadata({ params, searchParams }) {
