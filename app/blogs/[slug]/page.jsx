@@ -3,8 +3,8 @@ import { marked } from "marked";
 import hljs from "highlight.js";
 
 // Import highlight themes for both light and dark mode
-import "highlight.js/styles/github.css"; // Light mode
-import "highlight.js/styles/github-dark.css"; // Dark mode
+import "highlight.js/styles/github.css";
+import "highlight.js/styles/github-dark.css";
 
 // ✅ Fetch blog data from Strapi
 async function getBlog(slug) {
