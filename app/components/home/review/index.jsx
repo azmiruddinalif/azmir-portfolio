@@ -10,7 +10,10 @@ export default function TestimonialMarquee() {
   const row2 = testimonials.slice(5, 10);
 
   return (
-    <div className="relative w-full py-12 lg:py-32 bg-gray-50 dark:bg-gray-800/40 dark:backdrop-blur-md overflow-hidden">
+    <section
+      id="testimonials"
+      className="relative w-full py-12 lg:py-32 bg-gray-50 dark:bg-gray-800/40 dark:backdrop-blur-md overflow-hidden"
+    >
       <Container>
         <div className="text-center mb-16">
           <h4 className="font-primary text-2xl lg:text-4xl font-bold text-black-300 dark:text-white text-center">
@@ -72,6 +75,6 @@ export default function TestimonialMarquee() {
           ))}
         </div>
       </Marquee>
-    </div>
+    </section>
   );
 }
