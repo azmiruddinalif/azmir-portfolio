@@ -16,10 +16,10 @@ export const ProcessSteps = ({ data = ProcessData }) => {
               href={`/process/${item.slug || item.step}`}
               className="block group relative"
             >
-              <CardBase className="relative p-8 rounded-3xl bg-white dark:bg-gray-800/40 dark:backdrop-blur-md border border-gray-200/90 dark:border-gray-700/30  transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 dark:hover:shadow-primary-500/20 hover:-translate-y-2 overflow-hidden cursor-pointer">
+              <CardBase className="relative p-5 lg:p-8 rounded-3xl bg-white dark:bg-gray-800/40 dark:backdrop-blur-md border border-gray-200/90 dark:border-gray-700/30  transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 dark:hover:shadow-primary-500/20 hover:-translate-y-2 overflow-hidden cursor-pointer">
                 <CardBase.Header className="relative z-10">
                   {/* Step Badge */}
-                  <div className="absolute -top-3 -right-3 min-w-[4rem] h-16 px-4 bg-gradient-to-br from-primary-300 via-primary-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-md shadow-primary-500/30 dark:shadow-primary-500/40 group-hover:scale-110 transition-all duration-300">
+                  <div className="absolute -top-3 -right-3 min-w-[4rem] h-16 px-4 bg-gradient-to-br from-primary-300 via-primary-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-md shadow-primary-500/30 dark:shadow-primary-500/40 lg:group-hover:scale-110 transition-all duration-300">
                     <span className="text-white font-bold text-lg tracking-wider">
                       {item.step.toString().padStart(2, "0")}
                     </span>
@@ -62,12 +62,12 @@ export const ProcessSteps = ({ data = ProcessData }) => {
 
                 <CardBase.Body className="relative z-10 mt-8 space-y-4">
                   {/* Title */}
-                  <h4 className="font-primary text-xl font-bold text-gray-900 dark:text-white group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-primary-600 dark:group-hover:from-primary-500 dark:group-hover:to-primary-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h4 className="font-primary text-base lg:text-xl font-bold text-gray-900 dark:text-white group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-primary-600 dark:group-hover:from-primary-500 dark:group-hover:to-primary-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     {item.title}
                   </h4>
 
                   {/* Description */}
-                  <p className="font-secondary text-sm leading-relaxed text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                  <p className="font-secondary text-xs lg:text-sm leading-relaxed text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                     {item.desc}
                   </p>
                   {/* CTA */}

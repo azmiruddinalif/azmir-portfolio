@@ -20,10 +20,10 @@ const HelpBody = () => {
               />
             </div>
             <div>
-              <h4 className="font-primary text-xl text-black-300 font-bold leading-[0.8] dark:text-white">
+              <h4 className="font-primary text-sm lg:text-xl text-black-300 font-bold leading-[0.8] dark:text-white">
                 {data.title}
               </h4>
-              <p className="font-secondary font-normal text-base max-w-[500px] mt-4 dark:text-white/70">
+              <p className="font-secondary font-normal text-xs lg:text-base max-w-[500px] mt-4 dark:text-white/70">
                 {data.desc}
               </p>
             </div>
