@@ -19,7 +19,7 @@ export const ProcessSteps = ({ data = ProcessData }) => {
               <CardBase className="relative p-8 rounded-3xl bg-white dark:bg-gray-800/40 dark:backdrop-blur-md border border-gray-200/90 dark:border-gray-700/30  transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 dark:hover:shadow-primary-500/20 hover:-translate-y-2 overflow-hidden cursor-pointer">
                 <CardBase.Header className="relative z-10">
                   {/* Step Badge */}
-                  <div className="absolute -top-3 -right-3 min-w-[4rem] h-16 px-4 bg-gradient-to-br from-primary-300 via-primary-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-md shadow-primary-500/30 dark:shadow-primary-500/40 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <div className="absolute -top-3 -right-3 min-w-[4rem] h-16 px-4 bg-gradient-to-br from-primary-300 via-primary-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-md shadow-primary-500/30 dark:shadow-primary-500/40 group-hover:scale-110 transition-all duration-300">
                     <span className="text-white font-bold text-lg tracking-wider">
                       {item.step.toString().padStart(2, "0")}
                     </span>
@@ -67,12 +67,12 @@ export const ProcessSteps = ({ data = ProcessData }) => {
                   </h4>
 
                   {/* Description */}
-                  <p className="font-primary text-sm leading-relaxed text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                  <p className="font-secondary text-sm leading-relaxed text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                     {item.desc}
                   </p>
                   {/* CTA */}
                   <div className="pt-2 flex items-center gap-2 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 delay-100">
-                    <span className="text-transparent bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-sm font-semibold">
+                    <span className="font-secondary text-transparent bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-sm font-semibold">
                       Explore Step
                     </span>
                     <div className="relative">

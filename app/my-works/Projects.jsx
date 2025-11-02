@@ -31,7 +31,7 @@ const Projects = ({
         <div className="flex flex-col justify-between items-start h-full">
           <div>
             <div className="px-5 py-2 bg-white-200 inline-block rounded-full mb-5 mt-5 lg:mt-0 dark:bg-gray-800/40 dark:backdrop-blur-md">
-              <span className="font-primary text-sm text-black-200 font-semibold dark:text-white">
+              <span className="font-secondary text-sm text-black-200 font-medium dark:text-white">
                 {" "}
                 {category}
               </span>
@@ -53,18 +53,18 @@ const Projects = ({
                 />
               </Link>
             </div>
-            <p className="font-primary text-sm md:text-base font-normal text-black-400 mb-5 dark:text-white/70">
+            <p className="font-secondary text-sm md:text-base font-normal text-black-400 mb-5 dark:text-white/70">
               {description}
             </p>
             <Link
               href={link}
-              className="hidden lg:flex items-center gap-x-3 font-primary text-sm lg:text-base font-semibold text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white/70"
+              className="hidden lg:flex items-center gap-x-3 font-secondary text-sm lg:text-base font-semibold text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white/70"
             >
               {" "}
               Check It Out <GoArrowRight color="currentColor" size={20} />
             </Link>
           </div>
-          <p className="font-primary text-sm lg:text-lg text-black-40 flex items-center gap-x-1 dark:text-white">
+          <p className="font-secondary text-sm lg:text-lg text-black-40 flex items-center gap-x-1 dark:text-white">
             Client:
             <Image
               src={clientLogo}

@@ -27,10 +27,10 @@ const Footer = () => {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </div>
-              <h2 className="font-primary font-bold text-4xl lg:text-5xl text-black-300 dark:text-white mb-4">
+              <h4 className="font-primary text-2xl lg:text-4xl font-bold lg:leading-10 text-black-300 dark:text-white mb-4">
                 Let&apos;s Work Together
-              </h2>
-              <p className="font-primary font-normal text-base text-black-400 dark:text-white/70 mb-8">
+              </h4>
+              <p className="font-secondary font-normal text-base text-black-400 dark:text-white/70 mb-8">
                 Ready to bring your ideas to life? Let&apos;s collaborate and
                 create something amazing together. Get in touch and let&apos;s
                 start building!
@@ -41,8 +41,8 @@ const Footer = () => {
                 className="inline-block"
               >
                 <Button
-                  text="Get In Touch →"
-                  className="text-white font-primary font-semibold py-3 px-8 hover:bg-transparent border border-primary-500 hover:text-primary-500 transition-all ease-linear duration-200 text-base"
+                  text="Schedule a meeting"
+                  className="text-white font-secondary font-medium py-3 px-8 hover:bg-transparent border border-primary-500 hover:text-primary-500 transition-all ease-linear duration-200 text-base"
                 />
               </Link>
             </div>
@@ -61,13 +61,13 @@ const Footer = () => {
                 <div className="space-y-4">
                   <div className="flex items-center sm:items-start gap-3 justify-center sm:justify-start">
                     <MdPhone className="text-primary-500 text-xl flex-shrink-0" />
-                    <span className="font-primary text-sm text-black-400 dark:text-white/70">
+                    <span className="font-secondary text-sm text-black-400 dark:text-white/70">
                       +8801849702157
                     </span>
                   </div>
                   <div className="flex items-center sm:items-start gap-3 justify-center sm:justify-start">
                     <MdLocationOn className="text-primary-500 text-xl flex-shrink-0" />
-                    <span className="font-primary text-sm text-black-400 dark:text-white/70">
+                    <span className="font-secondary text-sm text-black-400 dark:text-white/70">
                       Dhaka, Bangladesh
                     </span>
                   </div>
@@ -75,7 +75,7 @@ const Footer = () => {
                     <MdEmail className="text-primary-500 text-xl flex-shrink-0" />
                     <Link
                       href="mailto:alifazmiruddin@gmail.com"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors"
                     >
                       alifazmiruddin@gmail.com
                     </Link>
@@ -92,7 +92,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/about-me"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       About Me
                     </Link>
@@ -100,7 +100,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/blogs"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Blogs
                     </Link>
@@ -108,7 +108,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/my-works"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Portfolio
                     </Link>
@@ -116,7 +116,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Contact
                     </Link>
@@ -133,7 +133,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/service/web-application-development"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Web Development
                     </Link>
@@ -141,7 +141,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/service/e-commerce-website-development"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       E-commerce
                     </Link>
@@ -149,7 +149,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/service/mobile-app-development"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       App Development
                     </Link>
@@ -157,7 +157,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/meeting/azmir"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Technical Consulting
                     </Link>
@@ -174,7 +174,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/blogs"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Blog Posts
                     </Link>
@@ -182,7 +182,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/case-studies"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Case Studies
                     </Link>
@@ -190,7 +190,7 @@ const Footer = () => {
                   <li>
                     <button
                       onClick={() => scrollToSection("testimonials")}
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors cursor-pointer"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors cursor-pointer"
                     >
                       Testimonials
                     </button>
@@ -198,7 +198,7 @@ const Footer = () => {
                   <li>
                     <button
                       onClick={() => scrollToSection("faq")}
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors cursor-pointer"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors cursor-pointer"
                     >
                       FAQ
                     </button>
@@ -216,7 +216,7 @@ const Footer = () => {
                     <Link
                       href="https://www.facebook.com/azmiruddinalif"
                       target="_blank"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Facebook
                     </Link>
@@ -225,7 +225,7 @@ const Footer = () => {
                     <Link
                       href="https://www.linkedin.com/in/azmiruddinalif/"
                       target="_blank"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       LinkedIn
                     </Link>
@@ -234,7 +234,7 @@ const Footer = () => {
                     <Link
                       href="https://github.com/azmiruddinalif"
                       target="_blank"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Github
                     </Link>
@@ -243,7 +243,7 @@ const Footer = () => {
                     <Link
                       href="https://x.com/azmiruddinalif"
                       target="_blank"
-                      className="font-primary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
+                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Twitter
                     </Link>
@@ -258,7 +258,7 @@ const Footer = () => {
         <div className="bg-white-200 dark:bg-gray-800/40 py-6 border-t border-gray-200 dark:border-gray-700">
           <Container>
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4 text-center lg:text-left">
-              <span className="font-primary font-normal text-sm text-black-400 dark:text-white/70">
+              <span className="font-secondary font-normal text-sm text-black-400 dark:text-white/70">
                 © Copyright {getFullYear()} Azmir Uddin Alif (Designed by{" "}
                 <Link
                   href="https://www.ashikprottoy.com/"
@@ -274,7 +274,7 @@ const Footer = () => {
                   <li key={index}>
                     <Link
                       href={data.link}
-                      className="font-primary font-normal text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors whitespace-nowrap"
+                      className="font-secondary font-normal text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors whitespace-nowrap"
                     >
                       {data.title}
                     </Link>

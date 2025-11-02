@@ -7,7 +7,7 @@ const Skills = ({ activeTab }) => {
     <div className="space-y-8">
       {/* Category Title */}
       <div className="text-center">
-        <h3 className="text-xl lg:text-3xl font-bold text-black-300 dark:text-white capitalize mb-2">
+        <h3 className="text-xl lg:text-3xl font-primary font-bold text-black-300 dark:text-white capitalize mb-2">
           {activeTab} Technologies
         </h3>
         <div className="w-16 h-0.5 bg-orange mx-auto"></div>
@@ -45,7 +45,7 @@ const Skills = ({ activeTab }) => {
                   <div className="absolute -top-2 -right-2 w-6 h-6 bg-orange/20 rounded-full group-hover:bg-orange/40 transition-colors duration-500 group-hover:animate-pulse"></div>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg text-black-300 dark:text-white group-hover:text-orange transition-colors duration-300">
+                  <h4 className="font-secondary font-medium text-base text-black-300 dark:text-white group-hover:text-orange transition-colors duration-300">
                     {skill.name}
                   </h4>
                 </div>

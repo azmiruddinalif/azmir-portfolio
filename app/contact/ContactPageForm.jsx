@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { FaLinkedin, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineMail, HiOutlinePhone, HiOutlineUser } from "react-icons/hi";
@@ -87,14 +87,14 @@ const ContactPageForm = () => {
   };
 
   return (
-    <div className="min-h-screen py-16 mt-12">
+    <div className="min-h-screen py-16 mt-32">
       <Container>
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 dark:text-white">
+          <h1 className="text-4xl md:text-5xl font-primary font-bold text-gray-800 mb-4 dark:text-white">
             Let's Connect
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto dark:text-white/100">
+          <p className="text-xl font-secondary text-gray-600 max-w-2xl mx-auto dark:text-white/100">
             Ready to start your next project? Get in touch and let's make
             something amazing together.
           </p>
@@ -105,9 +105,9 @@ const ContactPageForm = () => {
             {/* Social Links - Left Side */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 dark:bg-gray-800/40 dark:backdrop-blur-md dark:border-white/10">
-                <h2 className="text-2xl font-bold text-gray-800 mb-8 dark:text-white">
+                <h4 className="text-2xl font-bold font-primary text-gray-800 mb-8 dark:text-white">
                   Connect via Social
-                </h2>
+                </h4>
 
                 <div className="space-y-4">
                   <Link
@@ -119,10 +119,10 @@ const ContactPageForm = () => {
                       <FaLinkedin className="text-blue-600 group-hover:text-white text-xl" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800 group-hover:text-blue-600 dark:text-white">
+                      <h3 className="font-semibold font-secondary text-gray-800 group-hover:text-blue-600 dark:text-white">
                         LinkedIn
                       </h3>
-                      <p className="text-sm text-gray-500 dark:text-white-300/50 dark:group-hover:text-black-400">
+                      <p className="font-secondary text-sm text-gray-500 dark:text-white-300/50 dark:group-hover:text-black-400">
                         Professional network
                       </p>
                     </div>
@@ -137,10 +137,10 @@ const ContactPageForm = () => {
                       <FaFacebookF className="text-blue-700 group-hover:text-white text-xl" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800 group-hover:text-blue-700 dark:text-white">
+                      <h3 className="font-semibold font-secondary text-gray-800 group-hover:text-blue-700 dark:text-white">
                         Facebook
                       </h3>
-                      <p className="text-sm text-gray-500 dark:text-white-300/50 dark:group-hover:text-black-400">
+                      <p className="text-sm font-secondary text-gray-500 dark:text-white-300/50 dark:group-hover:text-black-400">
                         Social connection
                       </p>
                     </div>
@@ -155,10 +155,10 @@ const ContactPageForm = () => {
                       <FaWhatsapp className="text-green-600 group-hover:text-white text-xl" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800 group-hover:text-green-600 dark:text-white">
+                      <h3 className="font-semibold font-secondary text-gray-800 group-hover:text-green-600 dark:text-white">
                         WhatsApp
                       </h3>
-                      <p className="text-sm text-gray-500 dark:text-white-300/50 dark:group-hover:text-black-400">
+                      <p className="text-sm font-secondary text-gray-500 dark:text-white-300/50 dark:group-hover:text-black-400">
                         Quick messaging
                       </p>
                     </div>
@@ -167,10 +167,10 @@ const ContactPageForm = () => {
 
                 {/* Quick Info */}
                 <div className="mt-8 pt-8 border-t border-gray-100 dark:border-white/20">
-                  <h3 className="font-semibold text-gray-800 mb-4 dark:text-white">
+                  <h3 className="font-secondary font-semibold text-gray-800 mb-4 dark:text-white">
                     Quick Response
                   </h3>
-                  <div className="space-y-2 text-sm text-gray-600 dark:text-white/70">
+                  <div className="space-y-2 font-secondary text-sm text-gray-600 dark:text-white/70">
                     <p>📧 Email response: Within 24 hours</p>
                     <p>💬 WhatsApp: Usually within 2 hours</p>
                     <p>📞 Meeting: Available for scheduling</p>
@@ -182,9 +182,9 @@ const ContactPageForm = () => {
             {/* Contact Form - Right Side */}
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-white/10 dark:bg-gray-800/40 dark:backdrop-blur-md">
-                <h2 className="text-2xl font-bold text-gray-800 mb-8 dark:text-white">
+                <h4 className="text-2xl font-primary font-bold text-gray-800 mb-8 dark:text-white">
                   Send a Message
-                </h2>
+                </h4>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Fields */}
@@ -197,7 +197,7 @@ const ContactPageForm = () => {
                         placeholder="First Name"
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl 
+                        className="w-full pl-12 font-secondary pr-4 py-4 border border-gray-200 rounded-xl 
              focus:ring-2 dark:border-white/20 focus:ring-blue-500 
              focus:border-transparent outline-none transition-all duration-300
              text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
@@ -212,7 +212,7 @@ const ContactPageForm = () => {
                         placeholder="Last Name"
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl 
+                        className="w-full pl-12 font-secondary pr-4 py-4 border border-gray-200 rounded-xl 
              focus:ring-2 dark:border-white/20 focus:ring-blue-500 
              focus:border-transparent outline-none transition-all duration-300
              text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
@@ -230,7 +230,7 @@ const ContactPageForm = () => {
                       placeholder="your@email.com"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl 
+                      className="w-full pl-12 pr-4 font-secondary py-4 border border-gray-200 rounded-xl 
              focus:ring-2 dark:border-white/20 focus:ring-blue-500 
              focus:border-transparent outline-none transition-all duration-300
              text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
@@ -247,7 +247,7 @@ const ContactPageForm = () => {
                       placeholder="Phone Number"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl 
+                      className="w-full pl-12 pr-4 py-4 font-secondary border border-gray-200 rounded-xl 
                       focus:ring-2 dark:border-white/20 focus:ring-blue-500 
                       focus:border-transparent outline-none transition-all duration-300
                       text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
@@ -256,7 +256,7 @@ const ContactPageForm = () => {
                   </div>
 
                   {/* Profile */}
-                  <div className="relative">
+                  {/* <div className="relative">
                     <FaLinkedin className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                     <input
                       type="text"
@@ -270,17 +270,16 @@ const ContactPageForm = () => {
                       text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
                       required
                     />
-                  </div>
+                  </div> */}
 
                   {/* Description */}
                   <div>
                     <textarea
                       name="description"
-                      placeholder="Tell me about your project... What are your goals, timeline, and requirements?"
+                      placeholder="Tell me about your project.."
                       value={formData.description}
                       onChange={handleChange}
-                      rows="5"
-                      className="w-full p-4 border border-gray-200 rounded-xl 
+                      className="w-full h-[122px] p-4 border font-secondary border-gray-200 rounded-xl 
                       focus:ring-2 focus:ring-blue-500 dark:border-white/20 
                       focus:border-transparent outline-none transition-all duration-300 resize-none
                       text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white"
@@ -293,7 +292,7 @@ const ContactPageForm = () => {
                     <button
                       type="submit"
                       disabled={loading}
-                      className={`flex-1 text-white bg-orange font-semibold py-4 px-8 rounded-xl border border-orange hover:bg-transparent hover:text-orange transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer ${
+                      className={`flex-1 font-secondary text-white bg-primary-500 font-medium py-4 px-8 rounded-md border border-primary-500 hover:bg-transparent hover:text-primary-500 transition-all duration-300 transform cursor-pointer ${
                         loading ? "cursor-not-allowed opacity-70" : ""
                       }`}
                     >
@@ -329,7 +328,7 @@ const ContactPageForm = () => {
                     <button
                       type="button"
                       onClick={handleScheduleMeeting}
-                      className="flex-1 text-orange bg-transparent font-semibold py-4 px-8 rounded-xl border border-orange hover:bg-orange hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
+                      className="flex-1 font-secondary text-primary-500 bg-transparent font-medium py-4 px-8 rounded-md text-base border border-primary-500 hover:bg-primary-500 hover:text-white transition-all duration-300 transform cursor-pointer"
                     >
                       Schedule Meeting
                     </button>
@@ -350,6 +349,6 @@ const ContactPageForm = () => {
       />
     </div>
   );
-}
+};
 
-export default ContactPageForm
+export default ContactPageForm;

@@ -3,7 +3,7 @@ export const faqs = [
     question: "What kind of projects do you usually take on?",
     answer: `
       I mostly work with startups, founders, and small teams who want to turn
-      an idea into a real digital product — fast. Whether it’s an MVP, SaaS app,
+      an idea into a real digital product fast. Whether it’s an MVP, SaaS app,
       eCommerce platform, or custom web dashboard, I handle everything from UI design
       integration to backend architecture and deployment. Most of my projects are built
       using the MERN stack, Next.js, and React Native for mobile.
@@ -29,7 +29,7 @@ export const faqs = [
   {
     question: "Do you provide ongoing maintenance and updates?",
     answer: `
-      Yes — once a project goes live, I offer continuous support, monitoring,
+      Yes once a project goes live, I offer continuous support, monitoring,
       and version updates. Many of my clients keep me on a monthly retainer
       to handle feature upgrades, performance optimization, and bug fixes.
       I believe a great product should evolve over time, not just launch and disappear.
@@ -40,7 +40,7 @@ export const faqs = [
     answer: `
       From the development side, I take care of everything: optimized site structure,
       dynamic metadata with Next.js, semantic HTML, lazy loading, and performance-focused
-      rendering. I also ensure Core Web Vitals are strong — fast load, stable layout,
+      rendering. I also ensure Core Web Vitals are strong fast load, stable layout,
       and responsive interaction. The goal is to make every app both human-friendly
       and search-engine friendly.
     `,

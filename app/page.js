@@ -107,9 +107,9 @@ export default function Home() {
         <Socials />
       </Container>
       <MySkills />
-      <Container>
+      {/* <Container>
         <Plans />
-      </Container>
+      </Container> */}
       <FAQSection/>
     </>
   );

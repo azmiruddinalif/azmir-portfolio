@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+@theme inline {
   /* Primary color scale */
   --color-primary-50: #fffbeb;
   --color-primary-100: #fef3c7;
@@ -40,7 +40,9 @@
   --shadow-soft: 0 14px 24px 4px #0000000a;
 
   /* Font family */
-  --font-primary: Inter, system-ui, sans-serif;
+  /* --font-primary: Inter, system-ui, sans-serif; */
+  --font-primary: var(--font-avenir);
+  --font-secondary: var(--font-geist-sans);
 
   /* Custom breakpoints */
   --breakpoint-xs: 320px;

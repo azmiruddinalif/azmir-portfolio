@@ -9,10 +9,10 @@ const Journey = () => {
     <section className="bg-white-200 dark:bg-gray-900 py-20">
       <Container>
         <div className="text-center mb-16">
-          <h2 className="font-primary text-3xl font-bold text-gray-900 dark:text-white">
+          <h4 className="font-primary text-2xl lg:text-4xl font-bold text-black-300 dark:text-white text-center">
             Professional Journey
-          </h2>
-          <p className="mt-2 text-sm lg:text-base font-primary font-normal text-black-400 dark:text-white/70 max-w-2xl mx-auto">
+          </h4>
+          <p className="mt-2 text-sm lg:text-base font-secondary font-normal text-black-400 dark:text-white/70 max-w-2xl mx-auto">
             Delivering scalable and high-performance applications across web,
             mobile, and cloud platforms for global clients.
           </p>

@@ -12,20 +12,17 @@ export default function FAQSection() {
   };
 
   return (
-    <section
-      id="faq"
-      className="bg-white-200 dark:bg-gray-800/40 py-16 px-4 sm:px-6 lg:px-8"
-    >
+    <section id="faq" className="py-16 px-4 sm:px-6 lg:px-8">
       <Container>
         <div className="lg:px-18">
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-block relative">
-              <h4 className="font-primary text-2xl lg:text-3xl font-bold lg:leading-10 text-black-300 dark:text-white">
+              <h4 className="font-primary text-2xl lg:text-4xl font-bold lg:leading-10 text-black-300 dark:text-white">
                 Frequently Asked Questions
               </h4>
             </div>
-            <p className="font-primary text-sm lg:text-lg max-w-3xl mx-auto font-normal text-black-300 mt-5 dark:text-white/70">
+            <p className="font-secondary text-sm lg:text-lg max-w-3xl mx-auto font-normal text-black-300 mt-5 dark:text-white/70">
               Everything you need to know about working with me from first idea
               to final product.
             </p>
@@ -39,7 +36,7 @@ export default function FAQSection() {
                   onClick={() => toggleFAQ(index)}
                   className="w-full md:px-4 py-4 md:py-6 flex items-center justify-between text-left focus:outline-none group cursor-pointer"
                 >
-                  <span className="text-base sm:text-xl font-semibold text-slate-900 pr-4 dark:text-white">
+                  <span className="text-base sm:text-xl font-primary font-semibold text-black-300 pr-4 dark:text-white">
                     {faq.question}
                   </span>
                   <div
@@ -65,7 +62,7 @@ export default function FAQSection() {
                   }`}
                 >
                   <div className="px-4 pb-6 pt-0">
-                    <p className="text-slate-600 leading-relaxed dark:text-white/80">
+                    <p className="text-black-400 font-secondary leading-relaxed dark:text-white/80">
                       {faq.answer}
                     </p>
                   </div>

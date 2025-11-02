@@ -124,7 +124,7 @@ const Header = () => {
                   return (
                     <li
                       key={index}
-                      className={`relative group font-primary font-normal text-sm lg:text-base ${
+                      className={`relative group font-secondary font-medium text-sm lg:text-base ${
                         isDarkMode ? "text-gray-200" : "text-black-200"
                       }`}
                       onMouseEnter={
@@ -247,7 +247,7 @@ const Header = () => {
                   href="/meeting/azmir"
                   text="Hire Me"
                   ariaLabel="Hire azmir"
-                  className="text-white bg-orange font-primary font-semibold py-2 ml-5 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 text-xs lg:text-base inline-block px-5 rounded-md"
+                  className="text-white bg-orange !font-secondary !font-medium py-2 ml-5 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 text-xs lg:text-base inline-block px-5 rounded-md"
                 />
               </ul>
 
@@ -360,7 +360,7 @@ const Header = () => {
         </div>
 
         <nav
-          className={`flex flex-col px-6 gap-6 font-primary ${
+          className={`flex flex-col px-6 gap-6 font-secondary font-medium ${
             isDarkMode ? "text-gray-200" : "text-black-200"
           }`}
         >
@@ -371,7 +371,7 @@ const Header = () => {
                 handleMenuClick(data.link);
                 setSidebarOpen(false);
               }}
-              className="text-left text-lg font-primary"
+              className="text-left text-lg font-secondary font-medium"
             >
               {data.title}
             </button>
@@ -383,7 +383,7 @@ const Header = () => {
             href="/meeting/azmir"
             text="Hire Me"
             ariaLabel="Hire azmir"
-            className="text-white w-full font-primary font-semibold bg-orange py-2 text-center hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 inline-block px-5 rounded-md"
+            className="text-white w-full font-secondary font-medium bg-orange py-2 text-center hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 inline-block px-5 rounded-md"
           />
         </div>
       </div>

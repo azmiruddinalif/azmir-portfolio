@@ -40,10 +40,10 @@ const SingleServiceClient = ({ params }) => {
       {/* Back Button */}
       <Link
         href="/"
-        className="mb-10 flex items-center gap-x-3 text-gray-700 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors duration-200 w-fit"
+        className="mt-10 lg:mt-0 mb-10 flex items-center gap-x-3 text-gray-700 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors duration-200 w-fit"
       >
         <IoMdArrowBack size={20} />
-        <span className="font-primary text-lg font-semibold">Go Back</span>
+        <span className="font-secondary text-lg font-medium">Go Back</span>
       </Link>
 
       {/* Header Section */}
@@ -52,18 +52,18 @@ const SingleServiceClient = ({ params }) => {
           <h1 className="text-4xl lg:text-5xl font-bold font-primary max-w-[500px] dark:text-white leading-tight mb-4">
             {service.title}
           </h1>
-          {service.shortDescription && (
+          {/* {service.shortDescription && (
             <p className="text-lg text-gray-600 dark:text-gray-300 font-primary">
               {service.shortDescription}
             </p>
-          )}
+          )} */}
         </div>
 
         <div className="flex-shrink-0">
           <Button
             onClick={handleBookCall}
-            text="Book Free Consultation"
-            className="text-white bg-orange font-primary font-semibold py-4 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex items-center gap-2"
+            text="Schedule a meeting"
+            className="text-white bg-orange font-secondary font-medium py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex items-center gap-2"
             icon={<BsCalendar3 />}
           />
         </div>
@@ -90,7 +90,7 @@ const SingleServiceClient = ({ params }) => {
             Service Overview
           </h2>
           <div
-            className="prose prose-lg max-w-none font-primary text-black-200 dark:text-white/90 dark:prose-invert prose-headings:font-primary prose-headings:text-black-300 dark:prose-headings:text-white"
+            className="prose prose-lg max-w-none font-secondary text-black-200 dark:text-white/90 dark:prose-invert prose-headings:font-primary prose-headings:text-black-300 dark:prose-headings:text-white"
             dangerouslySetInnerHTML={{
               __html: service.description,
             }}
@@ -158,7 +158,7 @@ const SingleServiceClient = ({ params }) => {
         <h3 className="text-2xl font-bold font-primary dark:text-white mb-4">
           Ready to Get Started?
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 font-primary mb-6 max-w-2xl mx-auto">
+        <p className="text-gray-600 dark:text-gray-300 font-secondary mb-6 max-w-2xl mx-auto">
           Let's discuss your project and see how I can help you build something
           amazing. Book a free consultation to get started.
         </p>
@@ -166,14 +166,14 @@ const SingleServiceClient = ({ params }) => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
             onClick={handleBookCall}
-            text="Book Free Call"
-            className="text-white bg-orange font-primary font-semibold py-3 px-8 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200"
+            text="Schedule a meeting"
+            className="text-white bg-orange font-secondary font-medium py-3 px-8 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200"
             icon={<BsCalendar3 />}
           />
 
           <Link
             href="/contact"
-            className="text-orange font-primary font-semibold py-3 px-8 border border-orange hover:bg-orange hover:text-white transition-all ease-linear duration-200 rounded-lg"
+            className="text-orange font-secondary font-medium py-3 px-8 border border-orange hover:bg-orange hover:text-white transition-all ease-linear duration-200 rounded-lg"
           >
             Send Message
           </Link>

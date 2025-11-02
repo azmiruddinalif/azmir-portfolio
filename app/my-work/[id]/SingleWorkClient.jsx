@@ -42,15 +42,15 @@ const SingleWorkClient = ({ params }) => {
       {/* Back Button */}
       <Link
         href="/my-works"
-        className="mb-10 flex items-center gap-x-3 text-gray-700 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors duration-200 w-fit"
+        className="mt-10 lg:mt-0 mb-10 flex items-center gap-x-3 text-gray-700 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors duration-200 w-fit"
       >
         <IoMdArrowBack size={20} />
-        <span className="font-primary text-lg font-semibold">Go Back</span>
+        <span className="font-secondary text-lg font-semibold">Go Back</span>
       </Link>
 
       {/* Category Badge */}
       <div className="px-5 py-2 bg-white-200 inline-block rounded-full mb-4 dark:bg-gray-800/40 dark:backdrop-blur-md">
-        <span className="font-primary text-sm text-black-200 font-bold dark:text-white">
+        <span className="font-secondary font-medium text-sm text-black-200 dark:text-white">
           {project.category}
         </span>
       </div>
@@ -64,7 +64,7 @@ const SingleWorkClient = ({ params }) => {
           <Button
             onClick={() => handleRedirect(project.link)}
             text="Visit Project"
-            className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-primary font-semibold py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex-shrink-0"
+            className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-secondary font-medium py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex-shrink-0"
             icon={<BsBoxArrowInUpRight />}
           />
         )}
@@ -101,7 +101,7 @@ const SingleWorkClient = ({ params }) => {
             Project Details
           </h2>
           <div
-            className="prose prose-lg max-w-none font-primary text-black-300 dark:text-white/90 dark:prose-invert prose-headings:font-primary prose-headings:text-black-300 dark:prose-headings:text-white prose-p:text-black-200 dark:prose-p:text-white/90"
+            className="prose prose-lg max-w-none font-secondary text-black-300 dark:text-white/90 dark:prose-invert prose-headings:font-primary prose-headings:text-black-300 dark:prose-headings:text-white prose-p:text-black-200 dark:prose-p:text-white/90"
             dangerouslySetInnerHTML={{
               __html: project.singleInforMation.fullDescription,
             }}

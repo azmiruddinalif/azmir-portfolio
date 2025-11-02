@@ -25,20 +25,20 @@ const MyWorkData = () => {
         <div className="order-1 lg:order-[0] text-center lg:text-left flex justify-between">
           <div className="w-full flex flex-col lg:flex-row items-center justify-between">
             <div className="max-w-[550px] order-1 lg:order-[0] text-center lg:text-left">
-              <h4 className="font-primary text-xl text-black-200 font-bold dark:text-white/70">
-                👑My Projects
+              <h4 className="font-secondary text-xl text-black-200 font-bold dark:text-white/70">
+                👑 My Projects
               </h4>
               <h1 className="font-primary text-5xl font-bold text-black-200 mt-2 dark:text-white">
                 Things I’ve Built
               </h1>
-              <p className="max-w-[500px] mt-3 text-black-300 font-primary dark:text-white/70">
+              <p className="max-w-[500px] mt-3 text-black-300 font-secondary dark:text-white/70">
                 As a MERN stack developer, I merge technical skill with UX
                 design to build seamless, user-centered digital experiences.
               </p>
               <Button
                 onClick={handleRedirect}
                 text="Visit My GitHub"
-                className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-primary font-semibold border py-3 mt-5 mb-3 hover:bg-transparent border-orange hover:text-orange transition-all ease-linear duration-100 "
+                className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-secondary font-medium border py-2.5 mt-5 mb-3 hover:bg-transparent border-orange hover:text-orange transition-all ease-linear duration-100 "
                 icon={<BsBoxArrowInUpRight />}
               />
             </div>

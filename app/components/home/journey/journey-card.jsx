@@ -34,19 +34,19 @@ const JourneyCard = ({ exp, index, isEven }) => {
         <div className="flex-1">
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-2">
             <div>
-              <h3 className="font-bold text-lg lg:text-xl text-gray-900 dark:text-white">
+              <h3 className="font-bold text-lg lg:text-xl text-gray-900 dark:text-white font-primary">
                 {exp.role}
               </h3>
-              <p className="font-medium text-gray-600 dark:text-gray-300">
+              <p className="font-medium font-secondary text-sm text-gray-600 dark:text-gray-300">
                 {exp.company}
               </p>
             </div>
-            <span className="inline-flex items-center px-3 py-1.5 bg-gray-200/50 dark:bg-gray-700/70 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">
+            <span className="inline-flex items-center px-3 py-1.5 bg-gray-200/50 dark:bg-gray-700/70 rounded-full text-sm font-secondary font-medium text-gray-700 dark:text-gray-300">
               {exp.period}
             </span>
           </div>
 
-          <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400 mt-1 flex items-center gap-2">
+          <p className="text-sm font-secondary text-gray-500 dark:text-gray-400 mt-1 flex items-center gap-2">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
@@ -64,7 +64,7 @@ const JourneyCard = ({ exp, index, isEven }) => {
         {exp.details.map((detail, i) => (
           <div key={i} className="flex items-start gap-3">
             <div className="w-1.5 h-1.5 bg-orange rounded-full mt-2 shrink-0"></div>
-            <p className="text-xs sm:text-sm lg:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-secondary leading-relaxed">
               {detail}
             </p>
           </div>
@@ -76,7 +76,7 @@ const JourneyCard = ({ exp, index, isEven }) => {
         {exp.technologies.map((tech, i) => (
           <span
             key={i}
-            className="px-3 py-1 border border-primary-400 dark:border-gray-500 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-white/80"
+            className="px-3 py-1 font-secondary border border-primary-400 dark:border-gray-500 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-white/80"
           >
             {tech}
           </span>

@@ -15,12 +15,13 @@ const MySkills = () => {
           {/* Hero Header */}
           <div className="text-center mb-16">
             <div className="inline-block relative">
-              <h4 className="font-primary text-2xl lg:text-3xl font-bold lg:leading-10 text-black-300 dark:text-white">
-                My Skills
+              <h4 className="font-primary text-2xl lg:text-4xl font-bold lg:leading-10 text-black-300 dark:text-white">
+                Things I Do Best
               </h4>
             </div>
-            <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-5 dark:text-white/70">
-              Crafting digital experiences with cutting-edge technologies
+            <p className="font-secondary text-sm lg:text-lg font-normal text-black-300 mt-5 dark:text-white/70 max-w-2xl mx-auto">
+              I craft digital experiences that blend creativity, performance,
+              and the latest technologies built to engage and grow.
             </p>
           </div>
 

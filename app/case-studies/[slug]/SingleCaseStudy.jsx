@@ -85,7 +85,7 @@ export default async function SingleCaseStudy({ params }) {
         {/* --- Category Badge --- */}
         <div className="flex flex-col lg:flex-row items-center gap-6 justify-between mb-4 sm:mb-5 lg:mb-6">
           <div className="px-4 sm:px-5 py-1.5 sm:py-2 bg-white-200 rounded-full dark:bg-gray-800/40 dark:backdrop-blur-md">
-            <span className="font-primary text-xs sm:text-sm font-semibold text-black-200 dark:text-white uppercase tracking-wide">
+            <span className="font-secondary text-xs sm:text-sm font-semibold text-black-200 dark:text-white uppercase tracking-wide">
               {attr.Category || "Case Study"}
             </span>
           </div>
@@ -94,9 +94,9 @@ export default async function SingleCaseStudy({ params }) {
             <ReusableButton
               href="/meeting/azmir"
               ariaLabel="Book Free Call azmir"
-              text="Book Free Call"
+              text="Schedule a meeting"
               icon={<BsCalendar3 />}
-              className="!text-sm !md:text-base text-white bg-orange font-primary font-semibold py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex items-center gap-2 rounded-md"
+              className="!text-sm !md:text-base text-white bg-orange font-secondary font-medium py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex items-center gap-2 rounded-md"
             />
           </div>
         </div>
@@ -140,7 +140,7 @@ export default async function SingleCaseStudy({ params }) {
           className="
               prose prose-base sm:prose-lg lg:prose-xl max-w-none 
               text-gray-800 dark:text-gray-200 dark:prose-invert
-              transition-all duration-300
+              transition-all duration-300 font-primary
               
 
               [&_h1]:text-2xl sm:[&_h1]:text-3xl [&_h1]:font-bold [&_h1]:mt-10 [&_h1]:mb-4

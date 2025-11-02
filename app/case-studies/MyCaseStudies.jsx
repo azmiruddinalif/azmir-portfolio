@@ -22,13 +22,13 @@ const MyCaseStudies = ({ data }) => {
         <div className="order-1 lg:order-[0] text-center lg:text-left flex justify-between">
           <div className="w-full flex flex-col lg:flex-row items-center justify-between">
             <div className="max-w-[550px] order-1 lg:order-[0] text-center lg:text-left mt-5 lg:mt-0">
-              <h4 className="font-primary text-xl text-black-200 font-bold dark:text-white/70">
+              <h4 className="font-secondary text-xl text-black-200 font-bold dark:text-white/70">
                 🧠 My Case Studies
               </h4>
               <h1 className="font-primary text-5xl font-bold text-black-200 mt-2 dark:text-white">
                 Ideas to Impact.
               </h1>
-              <p className="max-w-[550px] mt-3 text-black-300 font-primary dark:text-white/70">
+              <p className="max-w-[550px] mt-3 text-black-300 font-secondary dark:text-white/70">
                 I build fast, scalable web and mobile apps with{" "}
                 <strong>MERN Stack</strong>,<strong>Next.js</strong>, and{" "}
                 <strong>React Native</strong>. Each case study highlights
@@ -39,7 +39,7 @@ const MyCaseStudies = ({ data }) => {
                 <Button
                   onClick={handleBookCall}
                   text="Book Free Consultation"
-                  className="text-white text-sm md:text-base bg-orange font-primary font-semibold py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex items-center gap-2 mt-5"
+                  className="text-white text-sm md:text-base bg-orange font-secondary font-medium py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex items-center gap-2 mt-5"
                   icon={<BsCalendar3 />}
                 />
               </div>

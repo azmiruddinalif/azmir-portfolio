@@ -17,7 +17,7 @@ const Availability = () => {
         src="/lottie/GreenFlashingCircleIcon.json"
         style={{ height: "14px", width: "14px" }}
       />
-      <span className="font-primary text-xs text-green">
+      <span className="font-secondary text-xs text-green">
         Available for work
       </span>
     </div>

@@ -40,7 +40,7 @@ const CaseStudyCard = ({
         <div>
           {/* Category */}
           <div className="px-5 py-2 bg-white-200 inline-block rounded-full mb-5 mt-5 lg:mt-0 dark:bg-gray-800/40 dark:backdrop-blur-md">
-            <span className="font-primary text-sm text-black-200 font-semibold dark:text-white">
+            <span className="font-secondary text-sm text-black-200 font-medium dark:text-white">
               {category || "Case Study"}
             </span>
           </div>
@@ -70,7 +70,7 @@ const CaseStudyCard = ({
         </div>
         <Link
           href={link}
-          className="flex items-center gap-x-3 font-primary text-sm lg:text-base font-semibold text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white/70 mt-4"
+          className="flex items-center gap-x-3 font-secondary text-sm lg:text-base font-medium text-black-200 hover:underline transition-all duration-300 ease-out dark:text-white/70 mt-4"
         >
           Read Case Study <GoArrowRight color="currentColor" size={20} />
         </Link>

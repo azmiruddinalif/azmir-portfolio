@@ -17,7 +17,7 @@ const TabIndex = ({ activeTab, setActiveTab }) => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative px-4 py-3 rounded-lg font-semibold text-sm transition-all duration-300 ${
+              className={`relative px-4 py-3 font-secondary rounded-lg font-semibold text-sm transition-all duration-300 ${
                 activeTab === tab.id
                   ? "bg-orange text-white shadow-md"
                   : "bg-white dark:bg-gray-700/40 text-black-300 dark:text-white border border-gray-200 dark:border-gray-600/30 hover:border-orange/30"
@@ -25,7 +25,7 @@ const TabIndex = ({ activeTab, setActiveTab }) => {
             >
               <div className="flex flex-col items-center space-y-1">
                 <span className="text-lg">{tab.emoji}</span>
-                <span className="text-xs font-medium">{tab.label}</span>
+                <span className="text-xs font-semibold">{tab.label}</span>
               </div>
             </button>
           ))}
@@ -43,7 +43,7 @@ const TabIndex = ({ activeTab, setActiveTab }) => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative px-4 py-3 rounded-xl font-medium font-primary text-sm transition-all duration-300 group cursor-pointer ${
+              className={`relative px-4 py-3 rounded-xl font-medium font-secondary text-sm transition-all duration-300 group cursor-pointer ${
                 activeTab === tab.id
                   ? "text-white shadow-lg transform scale-105"
                   : "text-black-300/70 dark:text-white/70 hover:text-black-300 dark:hover:text-white hover:bg-white/50 dark:hover:bg-gray-700/50"

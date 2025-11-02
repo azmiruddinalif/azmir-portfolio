@@ -27,14 +27,14 @@ const ProjectBody = () => {
               <h5 className="font-primary text-lg font-semibold text-black-100 dark:text-white">
                 B2C
               </h5>
-              <p className="font-primary text-base text-black-200 dark:text-white/80">
+              <p className="font-secondary text-base text-black-200 dark:text-white/80">
                 An AI-powered chatbot system built to assist users in real-time
                 with website analytics.{" "}
               </p>
             </CardBase.Body>
             <CardBase.Footer className="transition-transform duration-300 ease-in-out group-hover:scale-105 dark:text-white">
               <div className="mt-3">
-                <div className="flex items-center gap-x-2 font-primary font-semibold text-base">
+                <div className="flex items-center gap-x-2 font-secondary font-medium text-base">
                   Details <MdOutlineArrowRightAlt size={20} />
                 </div>
               </div>
@@ -61,14 +61,14 @@ const ProjectBody = () => {
               <h5 className="font-primary text-lg font-semibold text-black-100 dark:text-white">
                 B2B
               </h5>
-              <p className="font-primary text-base text-black-200 dark:text-white/80">
+              <p className="font-secondary text-base text-black-200 dark:text-white/80">
                 Logensa is a scalable healthcare SaaS startup in
                 Baden-Württemberg, Germany.
               </p>
             </CardBase.Body>
             <CardBase.Footer className="transition-transform duration-300 ease-in-out group-hover:scale-105 dark:text-white">
               <div className="mt-3">
-                <div className="flex items-center gap-x-2 font-primary font-semibold text-base">
+                <div className="flex items-center gap-x-2 font-secondary font-medium text-base">
                   Details <MdOutlineArrowRightAlt size={20} />
                 </div>
               </div>
@@ -95,14 +95,14 @@ const ProjectBody = () => {
               <h5 className="font-primary text-lg font-semibold text-black-100 dark:text-white">
                 B2C
               </h5>
-              <p className="font-primary text-base text-black-200 dark:text-white/80">
+              <p className="font-secondary text-base text-black-200 dark:text-white/80">
                 Bock Lighting (2009, Twinsburg, Ohio) continues Spero Electric’s
                 legacy.{" "}
               </p>
             </CardBase.Body>
             <CardBase.Footer className="transition-transform duration-300 ease-in-out group-hover:scale-105 dark:text-white">
               <div className="mt-3">
-                <div className="flex items-center gap-x-2 font-primary font-semibold text-base">
+                <div className="flex items-center gap-x-2 font-secondary font-medium text-base">
                   Details <MdOutlineArrowRightAlt size={20} />
                 </div>
               </div>

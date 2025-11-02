@@ -15,10 +15,10 @@ const WorkProcess = () => {
         <Container>
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="max-w-[550px] order-1 lg:order-[0] text-center lg:text-left">
-              <h4 className="font-primary text-2xl lg:text-3xl font-bold lg:leading-10 text-black-300 dark:text-white">
+              <h4 className="font-primary text-2xl lg:text-4xl font-bold lg:leading-10 text-black-300 dark:text-white">
                 My Development Process
               </h4>
-              <p className="font-primary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
+              <p className="font-secondary text-sm lg:text-lg font-normal text-black-300 mt-3 dark:text-white/70">
                 a data-driven, user-focused process designed to build reliable,
                 scalable, and maintainable full-stack applications.
               </p>
@@ -27,7 +27,7 @@ const WorkProcess = () => {
                 href="/how-it-works"
                 text="How it works"
                 ariaLabel="how azmir works"
-                className="text-orange lg:mx-0 mx-auto text-sm lg:text-base bg-transparent font-primary font-semibold py-3 mt-5 mb-3 hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 inline-block px-5 rounded-md"
+                className="text-orange lg:mx-0 mx-auto text-sm lg:text-base bg-transparent font-secondary font-medium py-3 mt-5 mb-3 hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 inline-block px-5 rounded-md"
               />
             </div>
             <Image

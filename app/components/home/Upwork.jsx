@@ -129,7 +129,7 @@ const Upwork = () => {
               Your Business Growth
             </b>
           </h4>
-          <p className="max-w-[950px] mx-auto mt-3 font-primary text-black-400 text-sm lg:text-xl leading-6 lg:leading-9 dark:text-white/70">
+          <p className="max-w-[900px] mx-auto mt-6 font-secondary text-black-400 text-sm lg:text-lg leading-6 lg:leading-9 dark:text-white/70">
             As a{" "}
             <AnimatedHighlight delay={500}>
               <Link
@@ -152,7 +152,7 @@ const Upwork = () => {
         <Button
           onClick={handleRedirect}
           text="Let's build yours too"
-          className="text-orange text-sm lg:text-base bg-transparent font-primary font-semibold py-3 mt-8 mb-3 mx-auto hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 "
+          className="text-orange text-sm lg:text-base bg-transparent font-secondary font-medium py-3 mt-8 mb-3 mx-auto hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 "
         />
       </Container>
     </div>

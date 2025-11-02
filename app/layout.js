@@ -1,12 +1,37 @@
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import { Geist } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./layouts/header";
 import Footer from "./layouts/footer";
 import "swiper/css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const avenir = localFont({
+  src: [
+    {
+      path: "../public/fonts/AvenirNextLTProBold.otf",
+      weight: "700",
+    },
+    {
+      path: "../public/fonts/AvenirNextLTProRegular.otf",
+      weight: "400",
+    },
+    {
+      path: "../public/fonts/avenir-next-world-extrabold.otf",
+      weight: "800",
+    },
+    {
+      path: "../public/fonts/avenir-next-demi-bold.ttf",
+      weight: "600",
+    },
+  ],
+  variable: "--font-avenir",
+  display: "swap",
 });
 
 export const metadata = {
@@ -44,12 +69,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* <script
-          id="chatway"
-          async
-          src="https://cdn.chatway.app/widget.js?id=9PJUig2t0HHe"
-        ></script> */}
-        {/* Person Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -114,7 +133,7 @@ export default function RootLayout({ children }) {
           async="true"
           src="https://admin.linquo.app/widget.js?id=e3d77fc7-5140-41d0-b3e1-9d58d68a185d"></script>
       </head>
-      <body className={`${inter.variable} antialiased dark:bg-gray-900`}>
+      <body className={`${avenir.variable} ${geistSans.variable} antialiased dark:bg-gray-900`}>
         {/* Background Pattern - Responsive but maintains center positioning */}
         <div className="absolute inset-0 -z-10 mx-0 max-w-none overflow-hidden">
           <div className="absolute left-1/2 top-0 ml-[-38rem] h-[30rem] w-[81.25rem] dark:[mask-image:linear-gradient(white,transparent)]">

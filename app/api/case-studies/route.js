@@ -9,7 +9,7 @@ export async function GET(req) {
 
     const strapiUrl = `${process.env.NEXT_PUBLIC_STRAPI_URL}/case-studies?populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort[0]=${sortField}`;
 
-    const res = await fetch(strapiUrl, { cache: 'no-cache' });
+    const res = await fetch(strapiUrl,  { next: { revalidate: 3600 } });
    
     
     if (!res.ok) {

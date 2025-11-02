@@ -18,8 +18,8 @@ const Banner = () => {
 
           <div className="max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
             {/* Greeting - Responsive text */}
-            <h6 className="font-primary text-xs sm:text-sm lg:text-base font-bold text-theme-secondary my-2 sm:my-3 dark:text-white">
-              👋 Hi! I'm Azmir Uddin Alif & your go-to
+            <h6 className="font-secondary text-xs sm:text-sm lg:text-base font-bold text-black-300 my-2 sm:my-3 dark:text-white">
+              👋 Hi! I'm Azmir Uddin Alif
             </h6>
 
             {/* Main Title - Better responsive scaling */}
@@ -30,7 +30,7 @@ const Banner = () => {
             </h1>
 
             {/* Description - Responsive text size */}
-            <p className="font-primary text-theme-secondary text-black-400 text-xs sm:text-sm lg:text-base mt-2 sm:mt-3 leading-relaxed dark:text-gray-100/80">
+            <p className="font-secondary text-theme-secondary text-black-400 text-xs sm:text-sm lg:text-base mt-2 sm:mt-3 leading-relaxed dark:text-gray-100/80">
               I am a Full Stack & MERN developer skilled in React JS, Next.js,
               React Native, Node.js, Express.js, and MongoDB. I build scalable
               web and mobile applications and MVPs with high performance,
@@ -43,38 +43,25 @@ const Banner = () => {
                 href="#socials"
                 text="My Socials"
                 ariaLabel="azmir social media"
-                className="w-full sm:w-auto text-white text-sm bg-orange rounded-md lg:text-base font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 sm:mb-3"
+                className="w-full sm:w-auto text-white text-sm bg-orange rounded-md lg:text-base font-secondary font-semibold py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 sm:mb-3"
               />
 
               <ReusableButton
                 href="/meeting/azmir"
                 ariaLabel="hire azmir"
                 text="Hire Me"
-                className="w-full sm:w-auto text-orange text-sm lg:text-base bg-transparent font-primary font-semibold py-3 px-4 sm:px-6 hover:bg-orange border border-orange hover:text-white transition-all rounded-md ease-linear duration-100 mb-2 sm:mb-3"
+                className="w-full sm:w-auto text-orange text-sm lg:text-base bg-transparent font-secondary font-semibold py-3 px-4 sm:px-6 hover:bg-orange border border-orange hover:text-white transition-all rounded-md ease-linear duration-100 mb-2 sm:mb-3"
               />
             </div>
 
             {/* Subtitle - Responsive text */}
-            <span className="font-primary text-xs sm:text-sm font-normal text-theme-muted block dark:text-gray-400">
+            <span className="font-secondary text-xs sm:text-sm font-normal text-theme-muted block dark:text-gray-400">
               I work independently, offering exceptional value and quality in my
               services.
             </span>
           </div>
         </div>
 
-        {/* Coding Animation - Responsive sizing while maintaining aspect ratio */}
-        {/* <div className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-none">
-            <Coding />
-          </div> */}
-        {/* <div className="order-1 lg:order-2 mt-4 sm:mt-5 lg:mt-0 flex justify-center overflow-hidden">
-          <Image
-            src="/assets/azmir.jpg"
-            alt="image"
-            width={400}
-            height={400}
-            className="rounded-xl"
-          />
-        </div> */}
         <div className="order-1 lg:order-2 mt-4 sm:mt-5 lg:mt-0 flex justify-center overflow-hidden relative">
           {/* Light mode image */}
           <Image
@@ -88,18 +75,6 @@ const Banner = () => {
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="
             className="rounded-xl"
           />
-
-          {/* Dark mode image */}
-          {/* <Image
-            src="/assets/azmir-dark.png"
-            alt="Dark mode image"
-            width={400}
-            loading="lazy"
-            height={400}
-            placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="
-            className="rounded-xl hidden dark:block"
-          /> */}
         </div>
       </div>
     </>
