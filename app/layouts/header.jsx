@@ -360,21 +360,71 @@ const Header = () => {
         </div>
 
         <nav
-          className={`flex flex-col px-6 gap-6 font-secondary font-medium ${
+          className={`flex flex-col px-6 gap-4 font-secondary font-medium ${
             isDarkMode ? "text-gray-200" : "text-black-200"
           }`}
         >
           {MenuData.map((data, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                handleMenuClick(data.link);
-                setSidebarOpen(false);
-              }}
-              className="text-left text-lg font-secondary font-medium"
-            >
-              {data.title}
-            </button>
+            <div key={index}>
+              {data.title === "Services" ? (
+                <>
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="flex justify-between items-center w-full text-left text-lg py-2"
+                  >
+                    {data.title}
+                    <span
+                      className={`transform transition-transform ${
+                        isServicesOpen ? "rotate-180" : "rotate-0"
+                      }`}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="w-5 h-5 text-orange dark:text-white"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+
+                  {isServicesOpen && (
+                    <div className="space-y-2">
+                      {data.dropdown?.map((item, subIndex) => (
+                        <button
+                          key={subIndex}
+                          onClick={() => {
+                            router.push(item.link);
+                            setSidebarOpen(false);
+                            setIsServicesOpen(false);
+                          }}
+                          className="block text-xs py-1 hover:text-orange text-left"
+                        >
+                          {item.title}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <button
+                  onClick={() => {
+                    handleMenuClick(data.link);
+                    setSidebarOpen(false);
+                  }}
+                  className="text-left text-lg py-2"
+                >
+                  {data.title}
+                </button>
+              )}
+            </div>
           ))}
         </nav>
 

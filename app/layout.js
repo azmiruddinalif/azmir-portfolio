@@ -167,6 +167,24 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const mode = localStorage.getItem('darkMode');
+                  if (mode === 'true' || 
+                    (!mode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
       </body>
     </html>
   );

@@ -40,7 +40,7 @@ const SingleServiceClient = ({ params }) => {
       {/* Back Button */}
       <Link
         href="/"
-        className="mt-10 lg:mt-0 mb-10 flex items-center gap-x-3 text-gray-700 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors duration-200 w-fit"
+        className="mt-30 lg:mt-0 mb-10 flex items-center gap-x-3 text-gray-700 dark:text-white/70 hover:text-orange dark:hover:text-orange transition-colors duration-200 w-fit"
       >
         <IoMdArrowBack size={20} />
         <span className="font-secondary text-lg font-medium">Go Back</span>
