@@ -5,7 +5,9 @@ import { getBaseUrl } from "../lib/getBaseUrl";
 
 async function getCaseStudies() {
   const baseUrl = await getBaseUrl();
-  const res = await fetch(`${baseUrl}/api/case-studies`);
+  const res = await fetch(`${baseUrl}/api/case-studies`, {
+    next: { revalidate: 60 },
+  });
   if (!res.ok) throw new Error("Failed to fetch case studies");
   return res.json();
 }

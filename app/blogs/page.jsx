@@ -73,7 +73,7 @@ export async function generateMetadata({ params, searchParams }) {
 
 async function getBlogs() {
   const baseUrl = await getBaseUrl();
-  const res = await fetch(`${baseUrl}/api/blogs`);
+  const res = await fetch(`${baseUrl}/api/blogs`, { next: { revalidate: 60 } });
   if (!res.ok) throw new Error("Failed to fetch blogs");
   return res.json();
 }
