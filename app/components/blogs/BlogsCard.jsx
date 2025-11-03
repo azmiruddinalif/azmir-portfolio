@@ -3,18 +3,19 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import CardBase from "../common/Card";
 import clsx from "clsx";
+import CardBase from "../common/Card";
 import BlogCardSkeleton from "./BlogCardSkeleton";
 import useInfiniteBlogs from "@/app/hooks/useInfiniteBlogs";
 
-export default function BlogsCard({ blogs: initialBlogs = [] }) {
+export default function BlogsCard({ blogs: initialBlogs = { data: [] } }) {
+  // 🧠 Hook for infinite scroll
   const { blogs, loading, hasMore, observerRef } = useInfiniteBlogs(
     "/api/blogs",
-    initialBlogs
+    initialBlogs?.data || []
   );
 
-  // ✅ First load skeleton
+  // 🧩 Skeleton during first load
   if (!blogs?.length && loading) {
     return (
       <div className="space-y-6">
@@ -25,7 +26,7 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
     );
   }
 
-  // ✅ Empty state
+  // 🚫 No blogs found
   if (!blogs?.length && !loading) {
     return (
       <div className="text-center py-16">
@@ -51,47 +52,51 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
     );
   }
 
-  // ✅ Blog card render
+  // 📰 Render blogs
   return (
     <div className="space-y-6 lg:space-y-8">
-      {blogs.map((blog, index) => {
-        const data = blog.attributes || blog;
+      {blogs.map((blog) => {
         const {
+          id,
           title,
           blog_description,
           date_of_post,
           tags,
           blog_image,
           slug,
-        } = data;
+        } = blog;
 
+        // 🖼️ Handle different image nesting structures from Strapi
         const imageUrl =
           blog_image?.formats?.medium?.url ||
           blog_image?.url ||
           blog_image?.data?.attributes?.formats?.medium?.url ||
-          blog_image?.data?.attributes?.url;
+          blog_image?.data?.attributes?.url ||
+          "/default-blog.jpg"; // fallback
 
-        const cleanedText = blog_description?.replace(/[#*_>\-\n]/g, "") || "";
+        // ✍️ Clean description text
+        const cleanedText =
+          blog_description?.replace(/[#*_>\-\n]/g, "")?.trim() || "";
         const shortDesc =
           cleanedText.length > 400
             ? cleanedText.slice(0, 400).trim() + "..."
             : cleanedText;
 
+        // 🏷️ First two tags
         const firstTwoTags =
           tags?.slice?.(0, 2) || tags?.data?.slice?.(0, 2) || [];
 
         return (
           <Link
             href={`/blogs/${slug}`}
-            key={blog.id}
+            key={id}
             className="block group hover:no-underline"
           >
             <CardBase
               className={clsx(
                 "rounded-2xl overflow-hidden bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm",
                 "border border-gray-200/50 dark:border-gray-800/50",
-                "hover:shadow-soft transition-all duration-500",
-                "hover:scale-[1.02]"
+                "hover:shadow-soft transition-all duration-500 hover:scale-[1.02]"
               )}
             >
               <CardBase.Body className="p-5 sm:p-6 lg:p-7">
@@ -101,7 +106,7 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
                     "sm:flex-row md:items-start lg:gap-x-6"
                   )}
                 >
-                  {/* 🖼️ Image Section */}
+                  {/* 🖼️ Blog Image */}
                   {imageUrl && (
                     <CardBase.Header
                       className={clsx(
@@ -121,9 +126,9 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
                     </CardBase.Header>
                   )}
 
-                  {/* 📝 Text Section */}
+                  {/* 📝 Blog Text */}
                   <div className="flex-1">
-                    {/* Tags at top */}
+                    {/* Tags */}
                     {firstTwoTags.length > 0 && (
                       <div className="flex gap-2 flex-wrap mb-3">
                         {firstTwoTags.map((tag) => (
@@ -137,15 +142,17 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
                       </div>
                     )}
 
+                    {/* Title */}
                     <h2 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-bold text-gray-900 dark:text-white mb-3 font-primary group-hover:text-primary-600 dark:group-hover:text-primary-600 transition-colors duration-300 leading-tight">
                       {title}
                     </h2>
 
+                    {/* Description */}
                     <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed line-clamp-3 sm:line-clamp-2 lg:line-clamp-3 font-primary mb-4">
                       {shortDesc || "No description available."}
                     </p>
 
-                    {/* Date at bottom */}
+                    {/* Date */}
                     {date_of_post && (
                       <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
                         <svg
@@ -178,7 +185,7 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
         );
       })}
 
-      {/* 🌀 Infinite Scroll Trigger */}
+      {/* ♾️ Infinite Scroll Trigger */}
       {hasMore && (
         <div ref={observerRef} className="flex flex-col items-center space-y-6">
           {loading && (
@@ -190,7 +197,7 @@ export default function BlogsCard({ blogs: initialBlogs = [] }) {
         </div>
       )}
 
-      {/* 🎉 End message */}
+      {/* 🎉 End Message */}
       {!hasMore && blogs.length > 0 && (
         <div className="text-center py-12">
           <div className="inline-flex items-center gap-2 text-gray-400 dark:text-gray-500 text-sm font-medium">
