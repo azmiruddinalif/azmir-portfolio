@@ -2,7 +2,7 @@ export async function fetchBlogs({ page = 1, pageSize = 2 } = {}) {
   try {
     const url = `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort[0]=date_of_post:desc`;
 
-    const res = await fetch(url, { cache: "no-store" }); 
+    const res = await fetch(url, { next: { revalidate: 3600 } }); 
 
     if (!res.ok) throw new Error(`Failed to fetch blogs: ${res.statusText}`);
 
