@@ -134,7 +134,6 @@ export default function RootLayout({ children }) {
           src="https://admin.linquo.app/widget.js?id=e3d77fc7-5140-41d0-b3e1-9d58d68a185d"></script>
       </head>
       <body className={`${avenir.variable} ${geistSans.variable} antialiased dark:bg-gray-900`}>
-        {/* Background Pattern - Responsive but maintains center positioning */}
         <div className="absolute inset-0 -z-10 mx-0 max-w-none overflow-hidden">
           <div className="absolute left-1/2 top-0 ml-[-38rem] h-[30rem] w-[81.25rem] dark:[mask-image:linear-gradient(white,transparent)]">
             <div className="absolute inset-0 bg-gradient-to-r from-primary-300 via-primary-500 to-primary-700 opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-primary-300/30 dark:via-primary-500/30 dark:to-primary-700/30 dark:opacity-100">
