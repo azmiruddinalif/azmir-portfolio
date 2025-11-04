@@ -9,10 +9,9 @@ import BlogCardSkeleton from "./BlogCardSkeleton";
 import useInfiniteBlogs from "@/app/hooks/useInfiniteBlogs";
 
 export default function BlogsCard({ blogs: initialBlogs = { data: [] } }) {
-  // 🧠 Hook for infinite scroll
   const { blogs, loading, hasMore, observerRef } = useInfiniteBlogs(
     "/api/blogs",
-    initialBlogs?.data || []
+    initialBlogs
   );
 
   // 🧩 Skeleton during first load

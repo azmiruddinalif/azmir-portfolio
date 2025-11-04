@@ -4,15 +4,16 @@ import BlogHeader from "../components/blogs/BlogHeader";
 import BlogRight from "../components/blogs/BlogRight";
 import BlogsCard from "../components/blogs/BlogsCard";
 import ReusableButton from "../components/common/HireOrContact";
-import blogs from "../data/blogs.json";
+import { fetchBlogs } from "../lib/fetchBlogs";
 
-export default function Blogs() {
+export default async function Blogs() {
+  const { data } = await fetchBlogs();
   return (
     <main className="min-h-screen py-12 sm:py-16 mt-20 sm:mt-28 lg:mt-32">
       <Container>
         <BlogHeader />
         <div className="mt-12 lg:mt-16 lg:grid lg:grid-cols-[2fr_1fr] lg:gap-x-8 xl:gap-x-12 relative">
-          <BlogsCard blogs={blogs} />
+          <BlogsCard blogs={data} />
           <BlogRight />
         </div>
 
