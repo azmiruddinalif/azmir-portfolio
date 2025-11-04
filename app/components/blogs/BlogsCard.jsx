@@ -9,12 +9,9 @@ import BlogCardSkeleton from "./BlogCardSkeleton";
 import useInfiniteBlogs from "@/app/hooks/useInfiniteBlogs";
 
 export default function BlogsCard({ blogs: initialBlogs = { data: [] } }) {
-  const { blogs, loading, hasMore, observerRef } = useInfiniteBlogs(
-    "/api/blogs",
-    initialBlogs
-  );
+  const { blogs, loading, hasMore, observerRef } =
+    useInfiniteBlogs(initialBlogs);
 
-  // 🧩 Skeleton during first load
   if (!blogs?.length && loading) {
     return (
       <div className="space-y-6">

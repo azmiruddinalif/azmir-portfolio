@@ -8,6 +8,7 @@ import { fetchBlogs } from "../lib/fetchBlogs";
 
 export default async function Blogs() {
   const { data } = await fetchBlogs();
+
   return (
     <main className="min-h-screen py-12 sm:py-16 mt-20 sm:mt-28 lg:mt-32">
       <Container>

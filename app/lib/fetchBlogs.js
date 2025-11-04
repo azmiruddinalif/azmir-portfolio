@@ -1,13 +1,10 @@
 export async function fetchBlogs({ page = 1, pageSize = 2 } = {}) {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort[0]=date_of_post:desc`,
-      { next: { revalidate: 60 } }
-    );
+    const url = `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort[0]=date_of_post:desc`;
 
-    if (!res.ok) {
-      throw new Error(`Failed to fetch blogs: ${res.statusText}`);
-    }
+    const res = await fetch(url, { cache: "no-store" }); 
+
+    if (!res.ok) throw new Error(`Failed to fetch blogs: ${res.statusText}`);
 
     const data = await res.json();
 

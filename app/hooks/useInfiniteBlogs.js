@@ -1,23 +1,21 @@
 "use client";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { fetchBlogs } from "../lib/fetchBlogs";
 
-export default function useInfiniteBlogs(apiUrl = "/api/blogs", initialData = []) {
+export default function useInfiniteBlogs(initialData = []) {
   const [blogs, setBlogs] = useState(initialData);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);
   const observerRef = useRef(null);
 
-  // ✅ Fetch more blogs
   const fetchMore = useCallback(async () => {
     if (loading || !hasMore) return;
     setLoading(true);
 
     try {
-      const res = await fetch(`${apiUrl}?page=${page + 1}`);
-      const result = await res.json();
-      const newBlogs = result?.data || [];
-      const pagination = result?.meta?.pagination || {};
+      const nextPage = page + 1;
+      const { data: newBlogs, meta } = await fetchBlogs({ page: nextPage });
 
       if (newBlogs.length > 0) {
         setBlogs((prev) => {
@@ -26,9 +24,8 @@ export default function useInfiniteBlogs(apiUrl = "/api/blogs", initialData = []
           return [...prev, ...filtered];
         });
 
-        setPage((prev) => prev + 1);
-
-        if (pagination.page >= pagination.pageCount) setHasMore(false);
+        setPage(nextPage);
+        if (meta.page >= meta.pageCount) setHasMore(false);
       } else {
         setHasMore(false);
       }
@@ -38,9 +35,9 @@ export default function useInfiniteBlogs(apiUrl = "/api/blogs", initialData = []
     } finally {
       setLoading(false);
     }
-  }, [apiUrl, page, loading, hasMore]);
+  }, [page, hasMore, loading]);
 
-  // ✅ Observe the last element
+  // Observe last blog
   useEffect(() => {
     if (!hasMore || loading) return;
 
@@ -51,15 +48,10 @@ export default function useInfiniteBlogs(apiUrl = "/api/blogs", initialData = []
       { rootMargin: "200px" }
     );
 
-    if (observerRef.current) observer.observe(observerRef.current);
+    const el = observerRef.current;
+    if (el) observer.observe(el);
     return () => observer.disconnect();
   }, [fetchMore, hasMore, loading]);
 
-  return {
-    blogs,
-    loading,
-    hasMore,
-    observerRef,
-    fetchMore,
-  };
+  return { blogs, loading, hasMore, observerRef };
 }
