@@ -174,6 +174,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/blogs"
+                      target="_blank"
                       className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Blog Posts
@@ -182,6 +183,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/case-studies"
+                      target="_blank"
                       className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
                     >
                       Case Studies

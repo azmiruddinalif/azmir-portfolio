@@ -1,19 +1,10 @@
 import React from "react";
 import Container from "../components/common/container";
 import MyCaseStudies from "./MyCaseStudies";
-import { getBaseUrl } from "../lib/getBaseUrl";
-
-async function getCaseStudies() {
-  const baseUrl = await getBaseUrl();
-  const res = await fetch(`${baseUrl}/api/case-studies`, {
-    next: { revalidate: 60 },
-  });
-  if (!res.ok) throw new Error("Failed to fetch case studies");
-  return res.json();
-}
+import { fetchCaseStudies } from "../lib/fetchCaseStudies";
 
 export default async function CaseStudies() {
-  const { data } = await getCaseStudies();
+  const { data } = await fetchCaseStudies();
 
   return (
     <section>
