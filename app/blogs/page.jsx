@@ -4,12 +4,14 @@ import BlogHeader from "../components/blogs/BlogHeader";
 import BlogRight from "../components/blogs/BlogRight";
 import BlogsCard from "../components/blogs/BlogsCard";
 import ReusableButton from "../components/common/HireOrContact";
-import { fetchBlogs } from "../lib/fetchBlogs";
-
-export const revalidate = 3600;
+import blogData from "../lib/blogsData.json";
 
 export default async function Blogs() {
-  const { data } = await fetchBlogs();
+  const data = [...blogData.data].sort((a, b) => {
+    const dateA = new Date(a.date_of_post);
+    const dateB = new Date(b.date_of_post);
+    return dateB - dateA;
+  });
 
   return (
     <main className="min-h-screen py-12 sm:py-16 mt-20 sm:mt-28 lg:mt-32">

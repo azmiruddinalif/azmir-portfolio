@@ -6,12 +6,9 @@ import Link from "next/link";
 import clsx from "clsx";
 import CardBase from "../common/Card";
 import BlogCardSkeleton from "./BlogCardSkeleton";
-import useInfiniteBlogs from "@/app/hooks/useInfiniteBlogs";
+import useInfiniteScroll from "@/app/hooks/useInfiniteScroll";
 
-export default function BlogsCard({ blogs: initialBlogs = { data: [] } }) {
-  const { blogs, loading, hasMore, observerRef } =
-    useInfiniteBlogs(initialBlogs);
-
+export default function BlogsCard({ blogs }) {
   if (!blogs?.length && loading) {
     return (
       <div className="space-y-6">
@@ -180,29 +177,6 @@ export default function BlogsCard({ blogs: initialBlogs = { data: [] } }) {
           </Link>
         );
       })}
-
-      {/* ♾️ Infinite Scroll Trigger */}
-      {hasMore && (
-        <div ref={observerRef} className="flex flex-col items-center space-y-6">
-          {loading && (
-            <>
-              <BlogCardSkeleton />
-              <BlogCardSkeleton />
-            </>
-          )}
-        </div>
-      )}
-
-      {/* 🎉 End Message */}
-      {!hasMore && blogs.length > 0 && (
-        <div className="text-center py-12">
-          <div className="inline-flex items-center gap-2 text-gray-400 dark:text-gray-500 text-sm font-medium">
-            <div className="w-12 h-px bg-gradient-to-r from-transparent to-gray-300 dark:to-gray-700"></div>
-            <span>🎉 You've reached the end</span>
-            <div className="w-12 h-px bg-gradient-to-l from-transparent to-gray-300 dark:to-gray-700"></div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
