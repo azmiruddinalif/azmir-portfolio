@@ -1,8 +1,28 @@
 import SingleBlog from "./SingleBlog";
 
+// ✅ Pre-render all blogs with ISR
+export const revalidate = 3600;
+
+// ✅ Generate static paths for each blog (Next.js 15)
+// ✅ Generate static paths at build time
+export async function generateStaticParams() {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?fields[0]=slug`
+  );
+
+  if (!res.ok) throw new Error("Failed to fetch slugs");
+
+  const data = await res.json();
+  const blogs = data?.data || [];
+
+  return blogs.map((blog) => ({
+    slug: blog?.attributes?.slug || blog?.slug,
+  }));
+}
+
+// ✅ Generate dynamic metadata for each blog
 export async function generateMetadata({ params }) {
-  const resolvedParams = await params;
-  const { slug } = resolvedParams;
+  const { slug } = await params;
 
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?filters[slug][$eq]=${slug}&populate=*`,
@@ -10,16 +30,13 @@ export async function generateMetadata({ params }) {
   );
 
   const data = await res.json();
-  const blog = data?.data[0];
+  const blog = data?.data?.[0];
 
   if (!blog) {
     return {
       title: "Azmir - MERN Stack Developer | Blog Not Found",
       description: "The requested blog post could not be found.",
-      robots: {
-        index: false,
-        follow: false,
-      },
+      robots: { index: false, follow: false },
     };
   }
 
@@ -31,7 +48,7 @@ export async function generateMetadata({ params }) {
     blog_image,
     date_of_post,
     tags,
-  } = blog;
+  } = blog.attributes || blog;
 
   const desc =
     meta_description ||
@@ -101,17 +118,13 @@ export async function generateMetadata({ params }) {
     authors: [{ name: "Azmir Uddin Alif - MERN Stack & Full-Stack Developer" }],
     creator: "Azmir Uddin Alif",
     category: "Technology, Software, Web Development",
-    alternates: {
-      canonical: `/blogs/${slug}`,
-    },
-    other: {
-      "application-name": "Azmir Uddin Alif Blog",
-    },
+    alternates: { canonical: `/blogs/${slug}` },
+    other: { "application-name": "Azmir Uddin Alif Blog" },
   };
 }
 
-// Default Blog Page
+// ✅ Default Blog Page Component
 export default async function BlogSinglePage({ params }) {
-  const resolvedParams = await params;
-  return <SingleBlog params={resolvedParams} />;
+  const { slug } = await params;
+  return <SingleBlog params={{ slug }} />;
 }

@@ -6,6 +6,8 @@ import BlogsCard from "../components/blogs/BlogsCard";
 import ReusableButton from "../components/common/HireOrContact";
 import { fetchBlogs } from "../lib/fetchBlogs";
 
+export const revalidate = 3600;
+
 export default async function Blogs() {
   const { data } = await fetchBlogs();
 
