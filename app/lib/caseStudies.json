@@ -1,0 +1,164 @@
+{
+  "data": [
+    {
+      "id": 4,
+      "documentId": "eg5myc2uf2m78nmqs5p2f1tr",
+      "title": "Linquo AI Chat & Web Analytics",
+      "slug": "linquo-ai-chat-and-web-analytics",
+      "description": "### Overview\n\nLinquo is an advanced AI-powered chat and business assistant built for professionals who manage clients, teams, and data across multiple platforms. It combines real-time messaging, AI automation, and data analytics inside a single mobile-first experience. The goal was to help entrepreneurs, coaches, and business owners turn daily communication into meaningful insights and actions.\n\nDeveloped using the MERN Stack (MongoDB, Express.js, React, Node.js) with React Native for mobile and Next.js for the web dashboard, Linquo offers a powerful blend of performance, scalability, and user-centered design. It delivers fast synchronization, smooth UI transitions, and secure cloud integration powered by Supabase and OpenAI APIs.\n\n### The Challenge\n\nModern professionals spend hours switching between tools — chat apps, CRMs, spreadsheets, and task managers — losing time and focus. Linquo needed to unify these workflows without compromising speed, privacy, or experience.\n\nThe core challenge was to design an AI chat engine capable of delivering instant replies, learning user context, and syncing data across devices — all while maintaining enterprise-grade security and sub-second response latency.\n\n**Key challenges included:**\n\n1. Integrating AI message routing with human context understanding.\n2. Managing large volumes of concurrent users in real time.\n3. Designing a clean and responsive UI for both mobile and web.\n4. Ensuring fast cloud deployment and cross-platform compatibility.\n\n**The Solution**\n\nMy approach focused on scalability, modularity, and performance-driven UX.\n\n1. Developed an AI chat engine using Node.js microservices and Supabase Edge Functions for real-time data processing.\n2. Integrated OpenAI GPT models for intelligent responses and conversational insights.\n3. Built secure JWT authentication and role-based access control for user privacy.\n4. Used React Native and Tailwind CSS to create a consistent UI across Android, iOS, and Web.\n5. Deployed the web version on Next.js, optimized with server-side rendering (SSR) for SEO and performance.\n6. Implemented WebSockets and Supabase Realtime for instant sync between devices.\n7. Connected Supabase storage for structured and scalable data management.\n8. Added light/dark mode and gesture-based navigation to enhance user experience.\n\n**Results & Impact**\n\nLinquo successfully bridged the gap between AI productivity and human collaboration.\n\n1. 99.9% uptime across platforms\n2. 40% reduction in response latency\n3. 2x faster onboarding flow after UX optimization\n4. Adopted by 1,000+ active professionals within the first launch phase\n5. Improved engagement and daily retention through personalized AI suggestions\n\nThe app now serves as a go-to assistant for consultants, founders, and creators looking to automate chat, extract insights, and stay focused — all in one place.\n\n**Tech Stack**\n\n1. **Frontend:** React Native, Next.js, Tailwind CSS\n2. **Backend:** Node.js, Express.js, Supabase\n3. **AI Integration:** OpenAI API (GPT models)\n4. **Hosting & Deployment:** Vercel, Supabase Cloud\n5. **Authentication:** JWT, OAuth\n6. **Realtime:** WebSockets, Supabase Realtime\n\n**Business Value**\n\nBy merging AI and communication, Linquo became more than just a chat app — it became a business intelligence assistant.\nIt helps users:\n\n1. Automate repetitive client responses\n2. Get actionable insights from chat analytics\n3. Manage projects, reminders, and follow-ups inside one dashboard\n4. Scale customer engagement without increasing manual workload",
+      "date": "2025-10-31T18:30:00.000Z",
+      "createdAt": "2025-11-01T10:12:13.020Z",
+      "updatedAt": "2025-11-01T14:49:38.879Z",
+      "publishedAt": "2025-11-01T14:49:39.100Z",
+      "Category": "Web & App Development",
+      "case_study": {
+        "id": 11,
+        "documentId": "xxr3wy8py6tnzo44wv55z6tu",
+        "name": "project11.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 800,
+        "height": 600,
+        "formats": {
+          "small": {
+            "ext": ".png",
+            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_project11_3edfe6b5e4.png",
+            "hash": "small_project11_3edfe6b5e4",
+            "mime": "image/png",
+            "name": "small_project11.png",
+            "path": null,
+            "size": 28.09,
+            "width": 500,
+            "height": 375,
+            "sizeInBytes": 28090
+          },
+          "medium": {
+            "ext": ".png",
+            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/medium_project11_3edfe6b5e4.png",
+            "hash": "medium_project11_3edfe6b5e4",
+            "mime": "image/png",
+            "name": "medium_project11.png",
+            "path": null,
+            "size": 53.41,
+            "width": 750,
+            "height": 563,
+            "sizeInBytes": 53412
+          },
+          "thumbnail": {
+            "ext": ".png",
+            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_project11_3edfe6b5e4.png",
+            "hash": "thumbnail_project11_3edfe6b5e4",
+            "mime": "image/png",
+            "name": "thumbnail_project11.png",
+            "path": null,
+            "size": 8.09,
+            "width": 208,
+            "height": 156,
+            "sizeInBytes": 8087
+          }
+        },
+        "hash": "project11_3edfe6b5e4",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 15.54,
+        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/project11_3edfe6b5e4.png",
+        "previewUrl": null,
+        "provider": "strapi-provider-upload-strapi-cloud",
+        "provider_metadata": null,
+        "createdAt": "2025-11-01T10:05:40.699Z",
+        "updatedAt": "2025-11-01T10:05:40.699Z",
+        "publishedAt": "2025-11-01T10:05:40.699Z"
+      }
+    },
+    {
+      "id": 8,
+      "documentId": "neww1tobmqn9t2jqxpympyv2",
+      "title": "The Psychology of Developers What Really Drives the Code",
+      "slug": "the-psychology-of-developers-what-really-drives-the-code",
+      "description": "### Overview\n\nDevelopers are often described as logical problem-solvers, but under the surface, code is deeply emotional work. This case study looks at what shapes developer motivation, decision-making, and burnout and why understanding this psychology can transform how teams build software.\n\n### The Problem\n\nMost organizations treat developers as **“technical resources”** people who translate requirements into code.\nBut the truth is, developers don’t just build; they interpret, experiment, and wrestle with uncertainty every day.\nWhen leadership ignores the emotional and cognitive realities of coding, teams lose clarity, momentum, and creativity.\n\n### Research Observations\n\nAfter speaking with over 40 developers and studying dozens of team workflows, a few patterns became clear:\n\n1. **Control vs. Chaos:** Developers crave autonomy but fear being blamed for mistakes. Too much control without context leads to paralysis; too much chaos kills motivation.\n2. **The Flow State Addiction:** Once in deep focus, developers can lose track of time. But this “flow” comes with a cost constant interruptions or unclear goals can destroy it instantly.\n3. **Perfectionism as a Shield:** Many developers hide behind refactoring or over-engineering, not because they want perfect code, but because they fear judgment from peers or reviewers.\n4. **The Ego of Ownership:** Pride in one’s code can drive excellence, but it can also create conflict when feedback feels personal rather than collaborative.\n5. **Invisible Emotional Labor:** Debugging, tech debt cleanup, or **“quick fixes”** aren’t just technical they’re emotional weight. Every broken build chips away at confidence if not recognized.\n\n### Findings\n\n- Motivation is highest when developers feel trusted, not monitored.\n- Productivity improves when feedback loops are fast and psychological safety is present.\n- Burnout rarely comes from **coding** itself it comes from context-switching, ambiguous goals, and poor recognition.\n\n### Conclusion\n\nThe most productive developers aren’t the ones with the fastest fingers they’re the ones in environments that respect how their minds work.\nUnderstanding developer psychology isn’t a **“soft skill”** it’s the foundation of technical excellence.\nBecause code is logic but building products is human.\n\n### Key Takeaway\n\n\n>If you want better developers, stop optimizing their keyboards.\nStart optimizing their clarity, autonomy, and mental bandwidth.",
+      "date": "2025-11-01T05:15:00.000Z",
+      "createdAt": "2025-11-01T14:57:11.183Z",
+      "updatedAt": "2025-11-01T15:20:44.125Z",
+      "publishedAt": "2025-11-01T15:20:44.305Z",
+      "Category": "Pshycology",
+      "case_study": {
+        "id": 4,
+        "documentId": "e6flwz8dm5zyw34686odwq8k",
+        "name": "development.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1160,
+        "height": 864,
+        "formats": {
+          "large": {
+            "ext": ".jpg",
+            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/large_development_1cf8093f27.jpg",
+            "hash": "large_development_1cf8093f27",
+            "mime": "image/jpeg",
+            "name": "large_development.jpg",
+            "path": null,
+            "size": 58.41,
+            "width": 1000,
+            "height": 745,
+            "sizeInBytes": 58410
+          },
+          "small": {
+            "ext": ".jpg",
+            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_development_1cf8093f27.jpg",
+            "hash": "small_development_1cf8093f27",
+            "mime": "image/jpeg",
+            "name": "small_development.jpg",
+            "path": null,
+            "size": 20.93,
+            "width": 500,
+            "height": 372,
+            "sizeInBytes": 20925
+          },
+          "medium": {
+            "ext": ".jpg",
+            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/medium_development_1cf8093f27.jpg",
+            "hash": "medium_development_1cf8093f27",
+            "mime": "image/jpeg",
+            "name": "medium_development.jpg",
+            "path": null,
+            "size": 37.91,
+            "width": 750,
+            "height": 559,
+            "sizeInBytes": 37912
+          },
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_development_1cf8093f27.jpg",
+            "hash": "thumbnail_development_1cf8093f27",
+            "mime": "image/jpeg",
+            "name": "thumbnail_development.jpg",
+            "path": null,
+            "size": 5.54,
+            "width": 209,
+            "height": 156,
+            "sizeInBytes": 5541
+          }
+        },
+        "hash": "development_1cf8093f27",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 70.96,
+        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/development_1cf8093f27.jpg",
+        "previewUrl": null,
+        "provider": "strapi-provider-upload-strapi-cloud",
+        "provider_metadata": null,
+        "createdAt": "2025-10-25T16:30:58.315Z",
+        "updatedAt": "2025-10-25T16:30:58.315Z",
+        "publishedAt": "2025-10-25T16:30:58.317Z"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 2
+    }
+  }
+}

@@ -1,4 +1,3 @@
-// import SingleBlog from "./SingleBlog";
 import blogData from "../../lib/blogsData.json";
 import "highlight.js/styles/github.css";
 import "highlight.js/styles/github-dark.css";

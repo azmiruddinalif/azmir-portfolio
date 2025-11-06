@@ -2,9 +2,14 @@ import React from "react";
 import Container from "../components/common/container";
 import MyCaseStudies from "./MyCaseStudies";
 import { fetchCaseStudies } from "../lib/fetchCaseStudies";
+import caseStudyData from "../lib/caseStudies.json";
 
 export default async function CaseStudies() {
-  const { data } = await fetchCaseStudies();
+  const data = [...caseStudyData.data].sort((a, b) => {
+    const dateA = new Date(a.date_of_post);
+    const dateB = new Date(b.date_of_post);
+    return dateB - dateA;
+  });
 
   return (
     <section>
