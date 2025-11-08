@@ -30,7 +30,7 @@ const Skills = ({ activeTab }) => {
 
               <div className="relative z-10 flex flex-col items-center text-center space-y-4">
                 <div className="relative">
-                  <div className="w-14 lg:w-20 h-14 lg:h-20 bg-gradient-to-br from-orange/20 via-orange/10 to-transparent rounded-2xl flex items-center justify-center group-hover:from-orange/30 group-hover:via-orange/20 transition-all duration-500 group-hover:rotate-6">
+                  <div className="w-14 lg:w-20 h-14 lg:h-20 bg-gradient-to-br from-orange/20 via-orange/10 to-transparent rounded-2xl flex items-center justify-center group-hover:from-orange/30 group-hover:via-orange/20 transition-all duration-500">
                     <Image
                       src={skill.icon}
                       alt={skill.name}
@@ -42,7 +42,6 @@ const Skills = ({ activeTab }) => {
                       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAgMBgA1bK9cAAAAASUVORK5CYII="
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-orange/20 rounded-full group-hover:bg-orange/40 transition-colors duration-500 group-hover:animate-pulse"></div>
                 </div>
                 <div>
                   <h4 className="font-secondary font-medium text-base text-black-300 dark:text-white group-hover:text-orange transition-colors duration-300">

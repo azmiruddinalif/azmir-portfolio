@@ -130,7 +130,7 @@ export default function RootLayout({ children }) {
 
         <script
           id="linquo"
-          async="true"
+          async
           src="https://admin.linquo.app/widget.js?id=e3d77fc7-5140-41d0-b3e1-9d58d68a185d"></script>
       </head>
       <body className={`${avenir.variable} ${geistSans.variable} antialiased dark:bg-gray-900`}>
