@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { TiStarFullOutline } from "react-icons/ti";
 
 export const TestimonialCard = ({ testimonial }) => (
@@ -17,12 +18,17 @@ export const TestimonialCard = ({ testimonial }) => (
     </p>
 
     <div className="flex items-center gap-3">
-      <div
-        className={`w-10 h-10 rounded-full ${testimonial.avatar} flex items-center justify-center`}
-      >
-        <span className="text-white text-sm font-semibold">
+      <div className="w-10 h-10 rounded-full flex items-center justify-center">
+        {/* <span className="text-white text-sm font-semibold">
           {testimonial.name.charAt(0)}
-        </span>
+        </span> */}
+        <Image
+          src={testimonial.avatar}
+          alt="avatar"
+          width={200}
+          height={200}
+          priority
+        />
       </div>
       <span className="font-secondary text-sm lg:text-base font-semibold text-gray-900 dark:text-white/85">
         {testimonial.name}

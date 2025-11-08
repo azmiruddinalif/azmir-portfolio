@@ -5,7 +5,7 @@ export const testimonials = [
     title: "Excellent Service",
     text: "Azmir delivered a good result and supported us throughout the project.",
     name: "Arleigh",
-    avatar: "bg-yellow-400",
+    avatar: "/assets/Asset1.png",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const testimonials = [
     title: "Good Work",
     text: "My first project with Azmir was smooth, fast, and perfectly executed.",
     name: "Nayeem A.K.M",
-    avatar: "bg-green-400",
+     avatar: "/assets/Asset2.png",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const testimonials = [
     title: "Best Service",
     text: "Clear communication, great delivery, and strong technical knowledge.",
     name: "Raphael",
-    avatar: "bg-pink-400",
+    avatar: "/assets/Asset4.png",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const testimonials = [
     title: "Great Work",
     text: "Professional, responsive, and always focused on high-quality output.",
     name: "Luke",
-    avatar: "bg-gray-600",
+    avatar: "/assets/Asset6.png",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const testimonials = [
     title: "Good Experience",
     text: "Very skilled developer with an eye for detail and great consistency.",
     name: "Ali Al-mohammad",
-    avatar: "bg-gray-700",
+     avatar: "/assets/Asset10.png",
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const testimonials = [
     title: "Good Work",
     text: "Efficient, reliable, and delivered exactly what was promised on time.",
     name: "Kamrul Islam Chowdhury",
-    avatar: "bg-green-500",
+     avatar: "/assets/Asset2.png",
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const testimonials = [
     title: "Best Service",
     text: "Azmir handled the project with care, skill, and clear communication.",
     name: "Mathew",
-    avatar: "bg-pink-500",
+    avatar: "/assets/Asset10.png",
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const testimonials = [
     title: "Good Work",
     text: "Delivered clean, optimized code with impressive speed and precision.",
     name: "Safir Ahmed",
-    avatar: "bg-gray-500",
+    avatar: "/assets/Asset4.png",
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const testimonials = [
     title: "Great Experience",
     text: "Azmir’s work improved our app performance and UX significantly.",
     name: "Samantha",
-    avatar: "bg-gray-800",
+     avatar: "/assets/Asset5.png",
   },
   {
     id: 10,
@@ -77,6 +77,6 @@ export const testimonials = [
     title: "Excellent Service",
     text: "Outstanding developer who turns ideas into fast, reliable products.",
     name: "Adrian",
-    avatar: "bg-blue-500",
+     avatar: "/assets/Asset2.png",
   },
 ];
