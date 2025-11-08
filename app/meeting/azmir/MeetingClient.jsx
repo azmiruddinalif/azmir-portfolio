@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { IoMdArrowBack } from "react-icons/io";
 import { BsCalendar3, BsClock, BsCheckCircle } from "react-icons/bs";
+import Image from "next/image";
 
 const MeetingClient = ({ params }) => {
   const [calLoaded, setCalLoaded] = useState(false);
@@ -56,12 +57,18 @@ const MeetingClient = ({ params }) => {
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-12 max-w-2xl mx-auto">
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 bg-orange rounded-full flex items-center justify-center mb-4">
-              <span className="text-white font-bold text-2xl">
+              {/* <span className="text-white font-bold text-2xl">
                 {config.name
                   .split(" ")
                   .map((n) => n[0])
                   .join("")}
-              </span>
+              </span> */}
+              <Image
+                src="/assets/Asset10.png"
+                alt="avatar"
+                width={200}
+                height={200}
+              />
             </div>
             <h2 className="text-2xl font-bold font-primary dark:text-white mb-2">
               {config.name}

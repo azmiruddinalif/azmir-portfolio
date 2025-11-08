@@ -30,12 +30,62 @@ const Banner = () => {
             </h1>
 
             {/* Description - Responsive text size */}
-            <p className="font-secondary text-theme-secondary text-black-400 text-xs sm:text-sm lg:text-base mt-2 sm:mt-3 leading-relaxed dark:text-gray-100/80">
+            <p className="font-secondary text-theme-secondary text-black-400 text-xs sm:text-sm mt-2 sm:mt-3 leading-relaxed dark:text-gray-100/80">
               I am a Full Stack & MERN developer skilled in React JS, Next.js,
               React Native, Node.js, Express.js, and MongoDB. I build scalable
               web and mobile applications and MVPs with high performance,
               responsive design, and reliable backend solutions.
             </p>
+
+            <div class="flex flex-col lg:flex-row items-center gap-3 mt-3">
+              <div class="flex">
+                <Image
+                  src="/assets/Asset1.png"
+                  alt="avatar"
+                  width={100}
+                  height={100}
+                  className="w-9 h-9"
+                />
+                <Image
+                  src="/assets/Asset2.png"
+                  alt="avatar"
+                  width={100}
+                  height={100}
+                  className="w-9 h-9 -ml-4"
+                />
+                <Image
+                  src="/assets/Asset3.png"
+                  alt="avatar"
+                  width={100}
+                  height={100}
+                  className="w-9 h-9 -ml-4"
+                />
+                <Image
+                  src="/assets/Asset4.png"
+                  alt="avatar"
+                  width={100}
+                  height={100}
+                  className="w-9 h-9 -ml-4"
+                />
+                <Image
+                  src="/assets/Asset5.png"
+                  alt="avatar"
+                  width={100}
+                  height={100}
+                  className="w-9 h-9 -ml-4"
+                />
+                <Image
+                  src="/assets/Asset6.png"
+                  alt="avatar"
+                  width={100}
+                  height={100}
+                  className="w-9 h-9 -ml-4"
+                />
+              </div>
+              <p class="text-gray-800 dark:text-white-300 font-normal text-sm font-secondary">
+                100+ Happy And Satisfied Clients
+              </p>
+            </div>
 
             {/* Action Buttons - Responsive layout */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-x-2 mt-4 sm:mt-5">
