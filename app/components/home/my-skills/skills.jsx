@@ -6,12 +6,12 @@ const Skills = ({ activeTab }) => {
   return (
     <div className="space-y-8">
       {/* Category Title */}
-      <div className="text-center">
+      {/* <div className="text-center">
         <h3 className="text-xl lg:text-3xl font-primary font-bold text-black-300 dark:text-white capitalize mb-2">
           {activeTab} Technologies
         </h3>
         <div className="w-16 h-0.5 bg-orange mx-auto"></div>
-      </div>
+      </div> */}
 
       {/* Skills Grid with Masonry Effect */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

@@ -24,7 +24,7 @@ const TabIndex = ({ activeTab, setActiveTab }) => {
               }`}
             >
               <div className="flex flex-col items-center space-y-1">
-                <span className="text-lg">{tab.emoji}</span>
+                {/* <span className="text-lg">{tab.emoji}</span> */}
                 <span className="text-xs font-semibold">{tab.label}</span>
               </div>
             </button>
@@ -56,9 +56,9 @@ const TabIndex = ({ activeTab, setActiveTab }) => {
 
               {/* Tab content */}
               <div className="relative flex items-center space-x-2">
-                <span className="text-lg group-hover:animate-bounce">
+                {/* <span className="text-lg group-hover:animate-bounce">
                   {tab.emoji}
-                </span>
+                </span> */}
                 <span>{tab.label}</span>
               </div>
 
@@ -71,7 +71,7 @@ const TabIndex = ({ activeTab, setActiveTab }) => {
         </div>
 
         {/* Floating dots decoration */}
-        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
+        {/* <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
           <div className="flex space-x-2">
             <div className="w-2 h-2 bg-orange/30 rounded-full animate-pulse"></div>
             <div
@@ -83,7 +83,7 @@ const TabIndex = ({ activeTab, setActiveTab }) => {
               style={{ animationDelay: "1s" }}
             ></div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
