@@ -264,8 +264,7 @@ export default async function BlogSinglePage({ params }) {
               [&_p]:text-base sm:[&_p]:text-lg
 
               [&_ul]:list-none [&_ul]:mb-6 [&_ul]:space-y-2
-              [&_li]:relative [&_li]:pl-6 
-              [&_li]:before:content-['→'] [&_li]:before:absolute [&_li]:before:left-0 
+              [&_li]:relative
               [&_li]:before:text-orange-500 dark:[&_li]:before:text-orange-400 [&_li]:before:font-bold
 
               [&_ol]:list-decimal [&_ol]:list-inside [&_ol]:mb-6 [&_ol]:space-y-2
