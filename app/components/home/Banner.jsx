@@ -95,7 +95,6 @@ const Banner = () => {
                 ariaLabel="azmir social media"
                 className="w-full sm:w-auto text-white text-sm bg-orange rounded-md lg:text-base font-secondary font-semibold py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 sm:mb-3"
               />
-
               <ReusableButton
                 href="/meeting/azmir"
                 ariaLabel="hire azmir"

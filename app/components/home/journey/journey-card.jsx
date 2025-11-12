@@ -16,7 +16,14 @@ const JourneyCard = ({ exp, index, isEven }) => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
         <div className="relative">
-          <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center bg-white/80 dark:bg-white">
+          <div
+            className={`w-14 h-14 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center 
+      ${
+        exp.company?.toLowerCase().includes("echologyx")
+          ? "bg-black-400"
+          : "bg-white/80 dark:bg-white"
+      }`}
+          >
             <Image
               src={exp.icon}
               alt={`${exp.company} logo`}
