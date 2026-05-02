@@ -13,7 +13,7 @@ const BlogRight = () => {
   };
   return (
     <>
-      <div className="sticky top-24 h-[calc(100vh-6rem)] border-l border-black/10 p-6 dark:border-white/10 hidden md:block">
+      <div className="sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto border-l border-black/10 p-6 dark:border-white/10 hidden md:block">
         <div className="w-24 h-24 rounded-full overflow-hidden">
           <Image
             src="/assets/azmir-blog.jpg"

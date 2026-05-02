@@ -105,8 +105,8 @@ const Banner = () => {
 
             {/* Subtitle - Responsive text */}
             <span className="font-secondary text-xs sm:text-sm font-normal text-theme-muted block dark:text-gray-400">
-              I work independently, offering exceptional value and quality in my
-              services.
+              Passionate about creating modern, fast, and scalable digital
+              experiences.
             </span>
           </div>
         </div>

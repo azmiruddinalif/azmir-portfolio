@@ -1,50 +1,22 @@
 export const faqs = [
   {
-    question: "What kind of projects do you usually take on?",
-    answer: `
-      I mostly work with startups, founders, and small teams who want to turn
-      an idea into a real digital product fast. Whether it’s an MVP, SaaS app,
-      eCommerce platform, or custom web dashboard, I handle everything from UI design
-      integration to backend architecture and deployment. Most of my projects are built
-      using the MERN stack, Next.js, and React Native for mobile.
-    `,
+    question: "What technologies do you use in your development portfolio?",
+    answer: "My full-stack development portfolio primarily features applications built with the MERN stack (MongoDB, Express.js, React.js, Node.js). I also extensively use Next.js for server-side rendered React applications and React Native for cross-platform mobile app development. For styling, I prefer Tailwind CSS and Material UI.",
   },
   {
-    question: "Do you work solo or with a team?",
-    answer: `
-      I usually start solo on small or mid-sized builds, but for larger projects
-      I collaborate with a small team of designers and developers I’ve trained personally.
-      That helps me scale quickly when needed without compromising code quality or design consistency.
-    `,
+    question: "What types of projects are showcased in your web development portfolio?",
+    answer: "You'll find a diverse range of projects including scalable SaaS applications, e-commerce platforms, custom web dashboards, and progressive web apps (PWAs). Each project demonstrates my expertise in frontend development, backend API design, database management, and responsive UI/UX principles.",
   },
   {
-    question: "How long does it take to build a typical project?",
-    answer: `
-      It depends on the complexity. A simple MVP or portfolio site might take 2–4 weeks.
-      A full-scale SaaS app with authentication, dashboards, and integrations could take
-      8–12 weeks. I always break projects into clear milestones so you know exactly
-      what’s being built and when it’ll be ready.
-    `,
+    question: "How do you ensure the performance of the web applications you build?",
+    answer: "Performance optimization is a core focus of my work. I utilize server-side rendering (SSR) and static site generation (SSG) with Next.js, implement lazy loading, optimize images, and ensure clean, efficient database queries. I strictly adhere to Core Web Vitals best practices to ensure lightning-fast load times and seamless interactions.",
   },
   {
-    question: "Do you provide ongoing maintenance and updates?",
-    answer: `
-      Yes once a project goes live, I offer continuous support, monitoring,
-      and version updates. Many of my clients keep me on a monthly retainer
-      to handle feature upgrades, performance optimization, and bug fixes.
-      I believe a great product should evolve over time, not just launch and disappear.
-    `,
+    question: "Are the projects in your portfolio open source?",
+    answer: "Some of the tools and smaller applications featured in my portfolio are open-source and available on my GitHub. Other larger projects showcase proprietary architectures I've designed. I am a strong advocate for the open-source community and actively contribute to JavaScript and React ecosystems.",
   },
   {
-    question: "How do you ensure your websites and apps are SEO-friendly?",
-    answer: `
-      From the development side, I take care of everything: optimized site structure,
-      dynamic metadata with Next.js, semantic HTML, lazy loading, and performance-focused
-      rendering. I also ensure Core Web Vitals are strong fast load, stable layout,
-      and responsive interaction. The goal is to make every app both human-friendly
-      and search-engine friendly.
-    `,
+    question: "What is your approach to responsive web design and accessibility?",
+    answer: "Every project in my frontend developer portfolio is built with a mobile-first approach ensuring seamless functionality across all devices. I strictly follow WCAG accessibility guidelines, utilizing semantic HTML, proper ARIA labels, and keyboard navigation to make sure web applications are usable by everyone.",
   },
-  
-  
 ];

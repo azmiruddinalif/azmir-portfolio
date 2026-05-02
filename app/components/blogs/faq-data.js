@@ -1,27 +1,22 @@
 export const faqs = [
   {
-    question: "Do you work with international clients?",
-    answer:
-      "Yes. I’ve worked with startups and agencies across Japan, the US, and Europe. All communication is handled remotely using tools like Slack, Notion, and Zoom.",
+    question: "What is the focus of your software development blog?",
+    answer: "My blog focuses on modern web development techniques, full-stack architecture, and coding best practices. I cover deep dives into React, Next.js, Node.js, and MongoDB, alongside tutorials on performance optimization and scalable API design.",
   },
   {
-    question: "What’s your usual project timeline?",
-    answer:
-      "It depends on the project’s size. MVPs usually take 3–6 weeks, while full-scale products can take 2–3 months. I always start with a clear timeline and deliverables.",
+    question: "Do you provide tutorials for MERN stack and Next.js development?",
+    answer: "Yes, I regularly publish technical guides and tutorials detailing how to build scalable applications from scratch using the MERN stack and Next.js. My goal is to help aspiring developers understand complex frontend and backend concepts.",
   },
   {
-    question: "Do you handle both frontend and backend?",
-    answer:
-      "Yes, I’m a full-stack developer. I build complete solutions using React, Next.js, Node.js, Express, and MongoDB — from UI to API integration.",
+    question: "How do you structure the frontend and backend of your applications?",
+    answer: "I structure applications using modern architectural patterns. For the frontend, I utilize component-driven design with React. For the backend, I implement scalable RESTful APIs and GraphQL endpoints using Node.js and Express, connected to secure MongoDB or PostgreSQL databases.",
   },
   {
-    question: "Do you offer ongoing support after project delivery?",
-    answer:
-      "Absolutely. I offer post-launch support, performance monitoring, and feature updates on a monthly or hourly basis.",
+    question: "Are the code examples in your blogs production-ready?",
+    answer: "Absolutely. The code snippets and architectures I share are based on real-world engineering standards. I emphasize clean code, robust error handling, and performance optimization in all my technical write-ups.",
   },
   {
-    question: "Can you join an existing project?",
-    answer:
-      "Yes. I often help teams refactor, optimize, or scale existing codebases. I’ll review the repo and propose a roadmap before starting.",
+    question: "What topics do you cover regarding mobile app development?",
+    answer: "I write about building cross-platform mobile applications using React Native. Topics range from UI/UX implementation and state management to deploying apps on the iOS App Store and Google Play Store.",
   },
 ];
