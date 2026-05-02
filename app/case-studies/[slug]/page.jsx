@@ -59,15 +59,7 @@ export default async function CaseStudyPage({ params }) {
             </span>
           </div>
 
-          <div className="hidden lg:flex flex-shrink-0">
-            <ReusableButton
-              href="/meeting/azmir"
-              ariaLabel="Book Free Call azmir"
-              text="Schedule a meeting"
-              icon={<BsCalendar3 />}
-              className="!text-sm !md:text-base text-white bg-orange font-secondary font-medium py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex items-center gap-2 rounded-md"
-            />
-          </div>
+
         </div>
 
         {/* --- Title --- */}
@@ -78,15 +70,7 @@ export default async function CaseStudyPage({ params }) {
               {attr.title}
             </h1>
           </div>
-          <div className="flex justify-center lg:hidden">
-            <ReusableButton
-              href="/meeting/azmir"
-              ariaLabel="Book Free Call azmir"
-              text="Book Free Call"
-              icon={<BsCalendar3 />}
-              className="!text-xs text-white bg-orange font-primary font-semibold py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex items-center gap-2 rounded-md w-fit"
-            />
-          </div>
+
         </div>
 
         {/* --- Image --- */}

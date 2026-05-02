@@ -83,7 +83,7 @@ const ContactPageForm = () => {
   };
 
   const handleScheduleMeeting = () => {
-    router.push("/meeting/azmir");
+    router.push("/my-works");
   };
 
   return (
@@ -330,7 +330,7 @@ const ContactPageForm = () => {
                       onClick={handleScheduleMeeting}
                       className="flex-1 font-secondary text-primary-500 bg-transparent font-medium py-4 px-8 rounded-md text-base border border-primary-500 hover:bg-primary-500 hover:text-white transition-all duration-300 transform cursor-pointer"
                     >
-                      Schedule Meeting
+                      View Portfolio
                     </button>
                   </div>
                 </form>

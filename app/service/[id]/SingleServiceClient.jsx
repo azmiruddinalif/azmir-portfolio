@@ -59,14 +59,7 @@ const SingleServiceClient = ({ params }) => {
           )} */}
         </div>
 
-        <div className="flex-shrink-0">
-          <Button
-            onClick={handleBookCall}
-            text="Schedule a meeting"
-            className="text-white bg-orange font-secondary font-medium py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex items-center gap-2"
-            icon={<BsCalendar3 />}
-          />
-        </div>
+
       </div>
 
       {/* Service Image */}
@@ -154,31 +147,7 @@ const SingleServiceClient = ({ params }) => {
         </div>
       )}
 
-      <div className="bg-gradient-to-r from-orange/10 to-orange/5 dark:from-orange/20 dark:to-orange/10 rounded-xl p-8 text-center mt-22">
-        <h3 className="text-2xl font-bold font-primary dark:text-white mb-4">
-          Ready to Get Started?
-        </h3>
-        <p className="text-gray-600 dark:text-gray-300 font-secondary mb-6 max-w-2xl mx-auto">
-          Let's discuss your project and see how I can help you build something
-          amazing. Book a free consultation to get started.
-        </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button
-            onClick={handleBookCall}
-            text="Schedule a meeting"
-            className="text-white bg-orange font-secondary font-medium py-3 px-8 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200"
-            icon={<BsCalendar3 />}
-          />
-
-          <Link
-            href="/contact"
-            className="text-orange font-secondary font-medium py-3 px-8 border border-orange hover:bg-orange hover:text-white transition-all ease-linear duration-200 rounded-lg"
-          >
-            Send Message
-          </Link>
-        </div>
-      </div>
     </section>
   );
 };

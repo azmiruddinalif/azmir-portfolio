@@ -80,7 +80,7 @@ const Upwork = () => {
   const sectionRef = useRef(null);
 
   const handleRedirect = () => {
-    router.push("/meeting/azmir");
+    router.push("/my-works");
   };
 
   useEffect(() => {
@@ -151,7 +151,7 @@ const Upwork = () => {
         </div>
         <Button
           onClick={handleRedirect}
-          text="Let's build yours too"
+          text="View My Works"
           className="text-orange text-sm lg:text-base bg-transparent font-secondary font-medium py-3 mt-8 mb-3 mx-auto hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 "
         />
       </Container>

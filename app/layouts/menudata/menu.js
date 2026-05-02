@@ -12,7 +12,7 @@ export const MenuData = [
     link: "/blogs",
   },
   {
-    title: "Services",
+    title: "Specialization",
     link: "https://www.linkedin.com/services/page/94092931a554b121a0/",
     dropdown: [
       {

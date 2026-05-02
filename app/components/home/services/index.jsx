@@ -18,8 +18,8 @@ const Services = () => {
             </p>
             <Button
               text={
-                <Link href="/meeting/azmir" target="_blank">
-                  Let's Book a Free Call
+                <Link href="/my-works">
+                  View Portfolio
                 </Link>
               }
               className="text-orange lg:mx-0 mx-auto text-sm lg:text-base bg-transparent font-secondary font-medium py-3 mt-5 mb-3 border hover:bg-orange border-orange hover:text-white transition-all ease-linear duration-100 "

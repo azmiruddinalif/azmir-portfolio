@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { BsCalendar3 } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import Button from "../components/common/button";
 import CaseStudyCard from "../components/case-study/CaseStudyCard";
 
@@ -13,7 +13,7 @@ const MyCaseStudies = ({ data }) => {
   };
 
   const handleBookCall = () => {
-    window.open("/meeting/azmir", "_blank", "noopener,noreferrer");
+    router.push("/my-works");
   };
 
   return (
@@ -38,9 +38,9 @@ const MyCaseStudies = ({ data }) => {
               <div className="flex justify-center lg:justify-normal">
                 <Button
                   onClick={handleBookCall}
-                  text="Book Free Consultation"
+                  text="View Portfolio"
                   className="text-white text-sm md:text-base bg-orange font-secondary font-medium py-3 px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-200 flex items-center gap-2 mt-5"
-                  icon={<BsCalendar3 />}
+                  icon={<BsArrowRight />}
                 />
               </div>
             </div>

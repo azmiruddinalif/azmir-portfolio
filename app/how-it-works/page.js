@@ -74,18 +74,7 @@ const howItWorksData = [
     from: "You",
     content: "What's next?",
   },
-  // Azmir's reply
-  {
-    type: "message",
-    from: "Azmir",
-    content: "Let's have a meeting and discuss your project in detail.",
-  },
-  // CTA button
-  {
-    type: "cta",
-    title: "Hire & Book a Call",
-    href: "/meeting/azmir",
-  },
+
 ];
 
 export async function generateMetadata({ params, searchParams }) {
@@ -143,12 +132,7 @@ const HowItWorks = () => {
           <p className="text-gray-600 font-primary text-lg dark:text-white-300/80">
             Learn about my development process and how I deliver scalable web and mobile solutions.
           </p>
-          <Link href="/meeting/azmir" target="_blank">
-            <Button
-              text="Hire Me"
-              className="text-white font-primary lg:mx-0 mx-auto text-sm lg:text-base font-semibold py-3 mt-5 mb-3 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100"
-            />
-          </Link>
+
         </div>
         <Image
           src="/assets/chat.svg"
@@ -209,17 +193,7 @@ const HowItWorks = () => {
                 )}
               </div>
             );
-          } else if (item.type === "cta") {
-            return (
-              <div key={index} className="flex justify-center mt-6">
-                <Link href="/meeting/azmir" target="_blank">
-                  <Button
-                    text="Let's Book For a Free Call"
-                    className="text-white font-primary lg:mx-0 mx-auto text-sm lg:text-base font-semibold py-3 mt-5 mb-3 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100"
-                  />
-                </Link>
-              </div>
-            );
+
           }
         })}
       </div>

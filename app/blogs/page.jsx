@@ -41,19 +41,18 @@ export default async function Blogs() {
             </div>
 
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-primary bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent mb-4">
-              Ready to Get Started?
+              Want to see more?
             </h3>
 
             <p className="text-gray-600 dark:text-gray-300 font-primary text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-              Let's discuss your project and see how I can help you build
-              something amazing. Book a free consultation to get started.
+              Explore my portfolio to see more of my work and past projects.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <ReusableButton
-                href="/meeting/azmir"
-                ariaLabel="Book Free Call azmir"
-                text="Book Free Call"
+                href="/my-works"
+                ariaLabel="View Portfolio"
+                text="View Portfolio"
                 className="text-orange dark:text-orange-400 font-primary font-semibold py-3 sm:py-4 px-10 sm:px-14 border-2 border-primary-500 dark:border-primary-500 hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white transition-all ease-out duration-300 rounded-md"
               />
 

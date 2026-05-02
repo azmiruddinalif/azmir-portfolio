@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import ReusableButton from "../components/common/HireOrContact";
+
 import { MenuData } from "./menudata/menu";
 import { useScrollToSection } from "../hooks/useScrollToSection";
 
@@ -16,7 +16,7 @@ const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const servicesItem = MenuData.find((item) => item.title === "Services");
+  const servicesItem = MenuData.find((item) => item.title === "Specialization");
   let hoverTimeout = null;
 
   // Hover behavior for desktop
@@ -110,10 +110,10 @@ const Header = () => {
                     className={`relative group font-secondary font-medium text-sm lg:text-base ${
                       isDarkMode ? "text-gray-200" : "text-black-200"
                     }`}
-                    onMouseEnter={data.title === "Services" ? handleMouseEnter : undefined}
-                    onMouseLeave={data.title === "Services" ? handleMouseLeave : undefined}
+                    onMouseEnter={data.title === "Specialization" ? handleMouseEnter : undefined}
+                    onMouseLeave={data.title === "Specialization" ? handleMouseLeave : undefined}
                   >
-                    {data.title === "Services" ? (
+                    {data.title === "Specialization" ? (
                       // Non-clickable dropdown trigger
                       <span className="relative inline-block px-4 md:px-3 lg:px-6 py-6 cursor-pointer hover:text-orange dark:hover:text-white select-none">
                         <span
@@ -148,7 +148,7 @@ const Header = () => {
                     )}
 
                     {/* Services Dropdown */}
-                    {data.title === "Services" &&
+                    {data.title === "Specialization" &&
                       isServicesOpen &&
                       servicesItem?.dropdown && (
                         <div
@@ -201,12 +201,7 @@ const Header = () => {
                   </button>
                 </li>
 
-                <ReusableButton
-                  href="/meeting/azmir"
-                  text="Hire Me"
-                  ariaLabel="Hire azmir"
-                  className="text-white bg-orange !font-secondary !font-medium py-2 ml-5 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 text-xs lg:text-base inline-block px-5 rounded-md"
-                />
+
               </ul>
 
               {/* Mobile Menu Icon */}
@@ -266,7 +261,7 @@ const Header = () => {
         <nav className={`flex flex-col px-6 gap-4 font-secondary font-medium ${isDarkMode ? "text-gray-200" : "text-black-200"}`}>
           {MenuData.map((data, index) => (
             <div key={index}>
-              {data.title === "Services" ? (
+              {data.title === "Specialization" ? (
                 <>
                   <span
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -312,14 +307,7 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="absolute bottom-8 left-0 w-full px-6">
-          <ReusableButton
-            href="/meeting/azmir"
-            text="Hire Me"
-            ariaLabel="Hire azmir"
-            className="text-white w-full font-secondary font-medium bg-orange py-2 text-center hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 inline-block px-5 rounded-md"
-          />
-        </div>
+
       </div>
     </header>
   );

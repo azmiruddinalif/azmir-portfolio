@@ -20,9 +20,9 @@ const Socials = () => {
             </p>
 
             <ReusableButton
-              href="/meeting/azmir"
-              text="Let's Book For a Free Call"
-              ariaLabel="book azmir for a free call"
+              href="/contact"
+              text="Contact Me"
+              ariaLabel="contact azmir"
               className="text-white lg:mx-0 mx-auto text-sm lg:text-base bg-orange font-primary font-semibold py-3 mt-5 mb-3 border hover:bg-transparent border-orange hover:text-orange transition-all ease-linear duration-100 inline-block px-5 rounded-md"
             />
           </div>

@@ -35,16 +35,10 @@ const BlogRight = () => {
           </p>
           <div className="flex items-center justify-between">
             <ReusableButton
-              href="/meeting/azmir"
-              ariaLabel="hire azmir"
-              text="Hire Me"
-              className="text-center text-orange lg:text-xs xl:text-sm bg-transparent font-primary font-semibold py-2 w-[48%] hover:bg-orange border border-orange hover:text-white transition-all rounded-md ease-linear duration-100 mb-2 sm:mb-3 inline-block mt-5"
-            />
-            <ReusableButton
               href="/how-it-works"
               text="How it works"
               ariaLabel="how azmir works"
-              className="text-center text-orange lg:text-xs xl:text-sm bg-transparent font-primary font-semibold py-2 w-[48%] hover:bg-orange border border-orange hover:text-white transition-all rounded-md ease-linear duration-100 mb-2 sm:mb-3 inline-block mt-5"
+              className="text-center text-orange lg:text-xs xl:text-sm bg-transparent font-primary font-semibold py-2 w-full hover:bg-orange border border-orange hover:text-white transition-all rounded-md ease-linear duration-100 mb-2 sm:mb-3 inline-block mt-5"
             />
           </div>
           <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10">

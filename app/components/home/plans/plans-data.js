@@ -13,7 +13,7 @@ export const planData = [
       { name: "Interactive Animations with Framer Motion & GSAP" },
       { name: "Landing Pages & UI Prototypes" },
     ],
-    cta: "Book a Free Consultation",
+    cta: "View Portfolio",
     recommended: false,
   },
   {
@@ -27,7 +27,7 @@ export const planData = [
       { name: "Authentication & Authorization Systems" },
       { name: "WebSocket & Real-time Features" },
     ],
-    cta: "Schedule a Meeting",
+    cta: "Contact Me",
     recommended: true,
   },
   {

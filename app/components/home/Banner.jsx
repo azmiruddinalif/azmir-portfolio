@@ -90,15 +90,15 @@ const Banner = () => {
             {/* Action Buttons - Responsive layout */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-x-2 mt-4 sm:mt-5">
               <ReusableButton
-                href="#socials"
-                text="My Socials"
-                ariaLabel="azmir social media"
+                href="/my-works"
+                text="View Portfolio"
+                ariaLabel="view azmir portfolio"
                 className="w-full sm:w-auto text-white text-sm bg-orange rounded-md lg:text-base font-secondary font-semibold py-3 px-4 sm:px-6 hover:bg-transparent border border-orange hover:text-orange transition-all ease-linear duration-100 sm:mb-3"
               />
               <ReusableButton
-                href="/meeting/azmir"
-                ariaLabel="hire azmir"
-                text="Hire Me"
+                href="/blogs"
+                text="Read Blogs"
+                ariaLabel="read azmir blogs"
                 className="w-full sm:w-auto text-orange text-sm lg:text-base bg-transparent font-secondary font-semibold py-3 px-4 sm:px-6 hover:bg-orange border border-orange hover:text-white transition-all rounded-md ease-linear duration-100 mb-2 sm:mb-3"
               />
             </div>

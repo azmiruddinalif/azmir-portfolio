@@ -17,9 +17,9 @@ const Help = () => {
             </p>
 
             <ReusableButton
-              href="/meeting/azmir"
-              ariaLabel="book a call with azmir"
-              text="Let's Book For a Free Call"
+              href="/my-works"
+              ariaLabel="view azmir portfolio"
+              text="View Portfolio"
               className="text-orange lg:mx-0 mx-auto text-sm lg:text-base bg-transparent font-secondary font-medium py-3 mt-5 mb-3 hover:bg-orange border border-orange hover:text-white transition-all ease-linear duration-100 inline-block px-5 rounded-md"
             />
           </div>

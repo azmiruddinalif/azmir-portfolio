@@ -13,41 +13,7 @@ const Footer = () => {
   return (
     <>
       <footer>
-        {/* CTA Section */}
-        <div className="bg-gradient-to-br from-orange/10 via-white-200 to-orange/5 py-20 dark:from-gray-800/60 dark:via-gray-800/40 dark:to-gray-800/60 dark:backdrop-blur-md">
-          <Container>
-            <div className="text-center max-w-2xl mx-auto">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-orange rounded-xl mb-6">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-              </div>
-              <h4 className="font-primary text-2xl lg:text-4xl font-bold lg:leading-10 text-black-300 dark:text-white mb-4">
-                Let&apos;s Work Together
-              </h4>
-              <p className="font-secondary font-normal text-base text-black-400 dark:text-white/70 mb-8">
-                Ready to bring your ideas to life? Let&apos;s collaborate and
-                create something amazing together. Get in touch and let&apos;s
-                start building!
-              </p>
-              <Link
-                href="/how-it-works"
-                target="_blank"
-                className="inline-block"
-              >
-                <Button
-                  text="Schedule a meeting"
-                  className="text-white font-secondary font-medium py-3 px-8 hover:bg-transparent border border-primary-500 hover:text-primary-500 transition-all ease-linear duration-200 text-base"
-                />
-              </Link>
-            </div>
-          </Container>
-        </div>
+
 
         {/* Footer Links Section */}
         <div className="bg-white dark:bg-gray-900 py-16">
@@ -127,7 +93,7 @@ const Footer = () => {
               {/* Services Column */}
               <div>
                 <h3 className="font-primary font-bold text-lg text-black-300 dark:text-white mb-6">
-                  Services
+                  Specialization
                 </h3>
                 <ul className="space-y-3">
                   <li>
@@ -154,14 +120,7 @@ const Footer = () => {
                       App Development
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="/meeting/azmir"
-                      className="font-secondary text-sm text-black-400 dark:text-white/70 hover:text-orange transition-colors"
-                    >
-                      Technical Consulting
-                    </Link>
-                  </li>
+
                 </ul>
               </div>
 
@@ -261,15 +220,7 @@ const Footer = () => {
           <Container>
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4 text-center lg:text-left">
               <span className="font-secondary font-normal text-sm text-black-400 dark:text-white/70">
-                © Copyright {getFullYear()} Azmir Uddin Alif (Designed by{" "}
-                <Link
-                  href="https://www.ashikprottoy.com/"
-                  className="hover:text-orange transition-colors ml-1"
-                  target="_blank"
-                >
-                  Ashik Prottoy
-                </Link>
-                ) All rights reserved.
+                © Copyright {getFullYear()} All rights reserved.
               </span>
               <ul className="flex flex-wrap items-center justify-center lg:justify-end gap-4 sm:gap-6">
                 {FooterMenu.map((data, index) => (
