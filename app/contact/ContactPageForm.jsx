@@ -95,8 +95,7 @@ const ContactPageForm = () => {
             Let's Connect
           </h1>
           <p className="text-xl font-secondary text-gray-600 max-w-2xl mx-auto dark:text-white/100">
-            Ready to start your next project? Get in touch and let's make
-            something amazing together.
+            Have a question or just want to say hi? Feel free to reach out and connect!
           </p>
         </div>
 
