@@ -86,7 +86,7 @@ export default function Home() {
      <ScrollToTarget />
       <Container>
         <Banner />
-        <Counter />
+        {/* <Counter /> */}
         {/* <WormCompany /> */}
       </Container>
       <RecentWork />
