@@ -18,7 +18,7 @@ const Availability = () => {
         style={{ height: "14px", width: "14px" }}
       />
       <span className="font-secondary text-xs text-green">
-        Available for work
+       Working on modern web applications
       </span>
     </div>
   );

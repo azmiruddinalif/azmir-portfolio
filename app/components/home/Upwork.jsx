@@ -124,12 +124,12 @@ const Upwork = () => {
         </div>
         <div className="text-center mt-0 lg:mt-8">
           <h4 className="text-2xl lg:text-4xl font-bold font-primary text-black-400 dark:text-white">
-            Professional Web & App Solutions for{" "}
+           Turning Ideas into {" "}
             <b className="bg-clip-text text-transparent bg-linear-to-r font-bold from-primary-600 to-secondary-600 dark:from-primary-400 selection:text-gray-800 dark:selection:text-gray-200">
-              Your Business Growth
+              Scalable Digital Products
             </b>
           </h4>
-          <p className="max-w-[900px] mx-auto mt-6 font-secondary text-black-400 text-sm lg:text-lg leading-6 lg:leading-9 dark:text-white/70">
+          <p className="max-w-[900px] mx-auto mt-6 font-secondary text-black-400 text-sm lg:text-[17px] leading-6 lg:leading-8  dark:text-white/70">
             As a{" "}
             <AnimatedHighlight delay={500}>
               <Link
@@ -141,12 +141,18 @@ const Upwork = () => {
                 MERN Stack and web application Developer
               </Link>
             </AnimatedHighlight>
-            , I've successfully delivered Building MVPs &amp; Scalable Web &amp;
-            Mobile Apps for global clients and companies/agencies with React.js,
-            Next.js, Node.js, Express, MongoDB, and React Native to turn complex
-            ideas into high-performing digital products. With experience working
-            for international clients , I focus on clean architecture, fast
-            delivery, and long-term maintainability.
+            , I specialize in architecting &amp; developing robust MVPs,
+            dynamic web platforms, &amp; scalable mobile applications from the
+            ground up. Leveraging modern technologies like React.js, Next.js,
+            Node.js, Express, MongoDB, &amp; React Native, I enjoy translating
+            complex concepts into high-performing, user-centric digital
+            products. My engineering approach places a strong emphasis on clean
+            code architecture, seamless user experiences, &amp; optimized
+            database performance. By prioritizing both rapid delivery &amp;
+            technical excellence, I ensure that every solution is built for
+            adaptability, security, &amp; long-term maintainability whether
+            I'm crafting responsive frontend interfaces or engineering resilient
+            backend systems.
           </p>
         </div>
         <Button
