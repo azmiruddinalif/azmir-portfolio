@@ -5,28 +5,23 @@ import Availability from "./availability";
 const Banner = () => {
   return (
     <>
-      {/* Main Content - Responsive grid with consistent centering */}
       <div className="grid grid-cols-1 lg:grid-cols-[1.9fr_2fr] items-center gap-6 sm:gap-8 lg:gap-0 sm:px-6 lg:px-0 mt-20 lg:mt-40 mb-4">
-        {/* Text Content - Maintains center alignment on mobile, left on desktop */}
         <div className="order-2 lg:order-1 text-center lg:text-left">
           <div className="flex justify-center lg:justify-start mb-4">
             <Availability />
           </div>
 
           <div className="max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
-            {/* Greeting - Responsive text */}
             <h6 className="font-secondary text-xs sm:text-sm lg:text-base font-bold text-black-300 my-2 sm:my-3 dark:text-white">
               👋 Hi! I'm Azmir Uddin Alif
             </h6>
 
-            {/* Main Title - Better responsive scaling */}
             <h1 className="font-primary text-black-200 text-2xl sm:text-4xl lg:text-[57px] font-bold text-theme-primary leading-tight dark:text-white">
               <span className="bg-clip-text text-transparent bg-linear-to-r font-bold from-primary-600 to-secondary-600 dark:from-primary-400 selection:text-gray-800 dark:selection:text-gray-200">
                 Full Stack Developer
               </span>
             </h1>
 
-            {/* Description - Responsive text size */}
             <p className="font-secondary text-theme-secondary text-black-400 text-xs sm:text-sm mt-2 sm:mt-3 leading-relaxed dark:text-gray-100/80">
               I am a Full Stack & MERN developer skilled in React JS, Next.js,
               React Native, Node.js, Express.js, and MongoDB. I build scalable
@@ -84,7 +79,6 @@ const Banner = () => {
               </p>
             </div>
 
-            {/* Action Buttons - Responsive layout */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-x-2 mt-4 sm:mt-5">
               <ReusableButton
                 href="/my-works"
@@ -109,6 +103,7 @@ const Banner = () => {
         </div>
 
         <div className="order-1 lg:order-2 mt-4 sm:mt-5 lg:mt-0 flex justify-end items-end relative">
+          {/* image new */}
           <Image
             src="/assets/azmir-2.png"
             alt="Azmir Uddin Alif"
