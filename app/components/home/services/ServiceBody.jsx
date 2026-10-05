@@ -1,6 +1,5 @@
-import React from "react";
-import { ServiceData } from "./service-data";
 import Image from "next/image";
+import { ServiceData } from "./service-data";
 
 const ServiceBody = () => {
   return (

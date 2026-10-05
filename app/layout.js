@@ -1,10 +1,10 @@
 // import { Inter } from "next/font/google";
 import { Geist } from "next/font/google";
 import localFont from "next/font/local";
-import "./globals.css";
-import Header from "./layouts/header";
-import Footer from "./layouts/footer";
 import "swiper/css";
+import "./globals.css";
+import Footer from "./layouts/footer";
+import Header from "./layouts/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -67,8 +67,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Apply saved theme before first paint to prevent a light/dark flash on load */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  var stored = localStorage.getItem("darkMode");
+                  var isDark = stored ? stored === "true" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+                  if (isDark) document.documentElement.classList.add("dark");
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -166,24 +180,6 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const mode = localStorage.getItem('darkMode');
-                  if (mode === 'true' || 
-                    (!mode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
       </body>
     </html>
   );

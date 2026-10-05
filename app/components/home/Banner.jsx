@@ -1,9 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import Button from "../common/button";
-import Availability from "./availability";
-import Coding from "./Coding";
 import ReusableButton from "../common/HireOrContact";
+import Availability from "./availability";
 
 const Banner = () => {
   return (
@@ -37,8 +34,8 @@ const Banner = () => {
               responsive design, and reliable backend solutions.
             </p>
 
-            <div class="flex flex-col lg:flex-row items-center gap-3 mt-3">
-              <div class="flex">
+            <div className="flex flex-col lg:flex-row items-center gap-3 mt-3">
+              <div className="flex">
                 <Image
                   src="/assets/Asset1.png"
                   alt="avatar"
@@ -82,7 +79,7 @@ const Banner = () => {
                   className="w-9 h-9 -ml-4"
                 />
               </div>
-              <p class="text-gray-800 dark:text-white-300 font-normal text-sm font-secondary">
+              <p className="text-gray-800 dark:text-white-300 font-normal text-sm font-secondary">
                 100+ Happy And Satisfied Clients
               </p>
             </div>
@@ -111,10 +108,9 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="order-1 lg:order-2 mt-4 sm:mt-5 lg:mt-0 flex justify-center overflow-hidden relative">
-          {/* Light mode image */}
+        <div className="order-1 lg:order-2 mt-4 sm:mt-5 lg:mt-0 flex justify-end items-end relative">
           <Image
-            src="/assets/azmir-2.webp"
+            src="/assets/azmir-2.png"
             alt="Azmir Uddin Alif"
             width={700}
             height={700}
@@ -122,7 +118,7 @@ const Banner = () => {
             priority
             loading="eager"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//8/AzYwirKBEXAABgAX+wP9xCMZDQAAAABJRU5ErkJggg=="
-            className="rounded-xl"
+            className="relative rounded-t-xl [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]"
           />
         </div>
       </div>

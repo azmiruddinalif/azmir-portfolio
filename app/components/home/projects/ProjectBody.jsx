@@ -1,8 +1,7 @@
-import React from "react";
-import CardBase from "../../common/Card";
 import Image from "next/image";
 import Link from "next/link";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
+import CardBase from "../../common/Card";
 
 const ProjectBody = () => {
   return (

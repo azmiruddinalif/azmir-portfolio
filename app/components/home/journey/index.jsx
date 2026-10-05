@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Container from "../../common/container";
 import { experiences } from "./experience";
 import JourneyCard from "./journey-card";

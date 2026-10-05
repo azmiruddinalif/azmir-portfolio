@@ -1,9 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Container from "../../common/container";
-import TabIndex from "./tabs-index";
 import Skills from "./skills";
-import Image from "next/image";
+import TabIndex from "./tabs-index";
 
 const MySkills = () => {
   const [activeTab, setActiveTab] = useState("frontend");

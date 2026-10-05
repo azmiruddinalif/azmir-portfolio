@@ -28,18 +28,11 @@ const Header = () => {
     hoverTimeout = setTimeout(() => setIsServicesOpen(false), 200);
   };
 
-  // Initialize dark mode
+  // Sync with the theme the blocking script in layout.js already applied to <html>.
+  // Only runs once on mount - doesn't touch the class/localStorage, which are already correct.
   useEffect(() => {
-    const saved = localStorage.getItem("darkMode");
-    if (saved) setIsDarkMode(saved === "true");
-    else setIsDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    setIsDarkMode(document.documentElement.classList.contains("dark"));
   }, []);
-
-  // Apply dark mode class
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDarkMode);
-    localStorage.setItem("darkMode", isDarkMode.toString());
-  }, [isDarkMode]);
 
   // Lock body scroll when sidebar open
   useEffect(() => {
@@ -53,7 +46,14 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+  const toggleDarkMode = () => {
+    setIsDarkMode((prev) => {
+      const next = !prev;
+      document.documentElement.classList.toggle("dark", next);
+      localStorage.setItem("darkMode", next.toString());
+      return next;
+    });
+  };
 
   const handleScrollOrNavigate = (link) => {
     if (link.startsWith("#")) {

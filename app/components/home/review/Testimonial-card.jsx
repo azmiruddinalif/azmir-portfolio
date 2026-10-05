@@ -5,7 +5,7 @@ export const TestimonialCard = ({ testimonial }) => (
   <div className="bg-white dark:bg-gray-800/40 dark:backdrop-blur-md rounded-md dark:border-gray-700/30 p-6 border border-gray-100 min-w-[320px] max-w-[320px] mx-1 flex-shrink-0">
     <div className="flex gap-1 mb-3">
       {[...Array(testimonial.rating)].map((_, i) => (
-        <TiStarFullOutline color="#faa135" key={i} />
+        <TiStarFullOutline color="#10b981" key={i} />
       ))}
     </div>
 
