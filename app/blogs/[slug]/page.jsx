@@ -1,16 +1,18 @@
-import blogData from "../../lib/blogsData.json";
+import { getBlogsData } from "../../lib/blogsStore";
 import "highlight.js/styles/github.css";
 import "highlight.js/styles/github-dark.css";
 import Link from "next/link";
 import { marked } from "marked";
 import hljs from "highlight.js";
 import Image from "next/image";
+import BlogImagePlaceholder from "../../components/blogs/BlogImagePlaceholder";
 
 // ✅ Revalidate time (still useful for ISR behavior)
 export const revalidate = 3600;
 
 // ✅ Generate static params (slugs) directly from your JSON
 export async function generateStaticParams() {
+  const blogData = getBlogsData();
   return blogData.data.map((blog) => ({
     slug: blog.slug,
   }));
@@ -20,7 +22,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
-  // Find the blog from your static JSON
+  // Find the blog from your JSON (read live, not bundled at build time)
+  const blogData = getBlogsData();
   const blog = blogData.data.find((b) => b.slug === slug);
 
   if (!blog) {
@@ -101,7 +104,8 @@ export async function generateMetadata({ params }) {
 export default async function BlogSinglePage({ params }) {
   const { slug } = await params;
 
-  // Find the blog data from JSON instead of fetching
+  // Find the blog data from JSON (read live, not bundled at build time)
+  const blogData = getBlogsData();
   const blog = blogData.data.find((b) => b.slug === slug);
 
   if (!blog) {
@@ -177,9 +181,9 @@ export default async function BlogSinglePage({ params }) {
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 mt-14 lg:mt-20">
         {/* ✅ Blog Banner with enhanced styling */}
-        {imageUrl && (
-          <div className="relative w-full mb-8 sm:mb-12 group">
-            <div className="relative w-full h-64 sm:h-80 lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-200 dark:ring-gray-800 transition-transform duration-300 group-hover:scale-[1.02]">
+        <div className="relative w-full mb-8 sm:mb-12 group">
+          <div className="relative w-full h-64 sm:h-80 lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-200 dark:ring-gray-800 transition-transform duration-300 group-hover:scale-[1.02]">
+            {imageUrl ? (
               <Image
                 src={imageUrl}
                 alt={title || "Blog image"}
@@ -188,11 +192,13 @@ export default async function BlogSinglePage({ params }) {
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 896px"
                 priority
               />
-              {/* Gradient overlay for better text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+            ) : (
+              <BlogImagePlaceholder title={title} textClassName="text-8xl sm:text-9xl" />
+            )}
+            {/* Gradient overlay for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
-        )}
+        </div>
 
         {/* ✅ Content Container with card design */}
         <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-3xl shadow-xl ring-1 ring-gray-200/50 dark:ring-gray-800/50 p-6 sm:p-8 lg:p-12">
