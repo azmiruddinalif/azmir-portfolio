@@ -1,6 +1,36 @@
 {
   "data": [
     {
+      "id": 39,
+      "documentId": "understanding-mutationobserver-watching-the-dom-without-polling",
+      "title": "Understanding MutationObserver: Watching the DOM Without Polling",
+      "slug": "understanding-mutationobserver-watching-the-dom-without-polling",
+      "date_of_post": "2026-10-14",
+      "blog_description": "## Ever needed to react when the DOM changes under your feet, without polling it every few milliseconds? That's exactly what the **MutationObserver API** was built for.\r\n\r\nIn this article, we'll cover:\r\n- What MutationObserver is and why it replaced the old Mutation Events\r\n- How to configure and use it correctly\r\n- Real-world use cases\r\n- Common pitfalls and performance tips\r\n\r\n🧩 **What Is MutationObserver?**\r\n\r\n`MutationObserver` is a browser API that lets you watch a DOM node (and optionally its subtree) for changes — added/removed children, attribute changes, or text content changes — and run a callback whenever they happen.\r\n\r\nBefore it existed, developers relied on **Mutation Events** (`DOMNodeInserted`, `DOMSubtreeModified`, etc.), which were synchronous, fired for every single change, and could tank performance on busy pages. `MutationObserver` fixes this by batching changes and delivering them **asynchronously**, in a microtask, after the DOM has already updated.\r\n\r\n**Basic Syntax**\r\n\r\n```\r\nconst observer = new MutationObserver((mutationsList, observer) => {\r\n  for (const mutation of mutationsList) {\r\n    console.log(mutation.type, mutation.target);\r\n  }\r\n});\r\n\r\nobserver.observe(targetNode, {\r\n  childList: true,\r\n  attributes: true,\r\n  subtree: true,\r\n});\r\n```\r\n\r\n**Configuration Options**\r\n\r\n- `childList` — watch for added/removed child nodes\r\n- `attributes` — watch for attribute value changes\r\n- `subtree` — extend the observation to all descendants, not just the target node\r\n- `characterData` — watch for changes to text content\r\n- `attributeOldValue` — include the previous value of changed attributes\r\n- `characterDataOldValue` — include the previous text content\r\n- `attributeFilter` — limit which attributes to watch, e.g. `['class', 'style']`\r\n\r\n> You must set at least one of `childList`, `attributes`, or `characterData` to `true`, otherwise `observe()` throws an error.\r\n\r\n**Stopping and Flushing**\r\n\r\n```\r\nobserver.disconnect(); // stop watching\r\n\r\nconst pending = observer.takeRecords(); // flush queued mutations without waiting for the callback\r\n```\r\n\r\n`takeRecords()` is handy right before calling `disconnect()`, so you don't lose mutations that were queued but not yet delivered.\r\n\r\n🛠️ **Real-World Use Cases**\r\n\r\n1. **Third-party widget integration** — detecting when a chat widget or ad script injects its own DOM nodes, so you can style or reposition them.\r\n2. **Building UI libraries** — libraries like tooltip or modal managers use it to detect when their target element is removed from the DOM, so they can clean up listeners automatically.\r\n3. **Syncing with external editors** — watching a `contenteditable` element for changes without relying on `input` events, which don't always fire consistently across browsers.\r\n4. **Analytics and SPA route tracking** — detecting DOM updates in apps that don't use the History API cleanly.\r\n5. **Polyfills and feature detection** — reacting when specific attributes (like `disabled` or `aria-*`) change on an element you don't control.\r\n\r\n**Example: Watching for Dynamically Added Elements**\r\n\r\n```\r\nconst list = document.querySelector('#items');\r\n\r\nconst observer = new MutationObserver((mutations) => {\r\n  for (const mutation of mutations) {\r\n    mutation.addedNodes.forEach((node) => {\r\n      if (node.nodeType === 1) {\r\n        console.log('New element added:', node);\r\n      }\r\n    });\r\n  }\r\n});\r\n\r\nobserver.observe(list, { childList: true });\r\n```\r\n\r\n**Example: Watching Attribute Changes**\r\n\r\n```\r\nconst button = document.querySelector('#submit-btn');\r\n\r\nconst observer = new MutationObserver((mutations) => {\r\n  mutations.forEach((m) => {\r\n    if (m.attributeName === 'disabled') {\r\n      console.log('Button disabled state changed:', button.disabled);\r\n    }\r\n  });\r\n});\r\n\r\nobserver.observe(button, {\r\n  attributes: true,\r\n  attributeFilter: ['disabled'],\r\n});\r\n```\r\n\r\n⚠️ **Common Pitfalls**\r\n\r\n1. **Forgetting to disconnect** — an observer left running on a removed element keeps references alive and can leak memory. Always call `disconnect()` when the target is unmounted (in React's `useEffect` cleanup, for example).\r\n2. **Over-observing with `subtree: true`** — watching a huge subtree for every attribute change on a busy page can get expensive. Scope your observer as narrowly as possible and use `attributeFilter`.\r\n3. **Infinite loops** — if your callback mutates the same node you're observing, you can trigger yourself repeatedly. Guard against this by disconnecting before you mutate, then reconnecting.\r\n4. **Assuming synchronous delivery** — mutations are batched and delivered as a microtask, not immediately. Don't rely on the callback firing before the next line of your code runs.\r\n\r\n✅ **Best Practices**\r\n\r\n- Observe the smallest possible target, not `document.body`, unless you truly need to.\r\n- Use `attributeFilter` instead of watching every attribute.\r\n- Always pair `observe()` with a matching `disconnect()` in cleanup code.\r\n- Prefer `MutationObserver` over polling with `setInterval` whenever you need to react to DOM changes — it's event-driven and far cheaper.\r\n\r\n🧾 **Final Thoughts**\r\n\r\n`MutationObserver` is one of those browser APIs that quietly powers a lot of the tooling we use every day — from browser extensions to component libraries. Once you understand its configuration options and lifecycle, it becomes a reliable way to react to DOM changes without resorting to brittle polling or deprecated events.",
+      "createdAt": "2026-10-14T20:02:46.714Z",
+      "updatedAt": "2026-10-14T20:02:46.714Z",
+      "publishedAt": "2026-10-14T20:02:46.714Z",
+      "blog_image": null,
+      "tags": [
+        {
+          "id": 1792008166714,
+          "tag": "JavaScript"
+        },
+        {
+          "id": 1792008166715,
+          "tag": "DOM"
+        },
+        {
+          "id": 1792008166716,
+          "tag": "Web APIs"
+        },
+        {
+          "id": 1792008166717,
+          "tag": "Frontend Development"
+        }
+      ]
+    },
+    {
       "id": 6,
       "documentId": "a0qywat7w2o47hqwq9giimbg",
       "title": "Memory Management in JavaScript Leaks, Garbage Collection, and Prevention",
@@ -11,50 +41,7 @@
       "updatedAt": "2025-10-25T14:36:41.553Z",
       "publishedAt": "2025-10-25T14:36:41.806Z",
       "blog_image": {
-        "id": 2,
-        "documentId": "we4ozk6cxwo7eicwj6ijm6td",
-        "name": "1_i0zQPMhdYKlnCkXnh47ggw.webp",
-        "alternativeText": null,
-        "caption": null,
-        "width": 720,
-        "height": 720,
-        "formats": {
-          "small": {
-            "ext": ".webp",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_1_i0z_QP_Mhd_Y_Kln_Ck_Xnh47ggw_67b7ead299.webp",
-            "hash": "small_1_i0z_QP_Mhd_Y_Kln_Ck_Xnh47ggw_67b7ead299",
-            "mime": "image/webp",
-            "name": "small_1_i0zQPMhdYKlnCkXnh47ggw.webp",
-            "path": null,
-            "size": 22.78,
-            "width": 500,
-            "height": 500,
-            "sizeInBytes": 22778
-          },
-          "thumbnail": {
-            "ext": ".webp",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_1_i0z_QP_Mhd_Y_Kln_Ck_Xnh47ggw_67b7ead299.webp",
-            "hash": "thumbnail_1_i0z_QP_Mhd_Y_Kln_Ck_Xnh47ggw_67b7ead299",
-            "mime": "image/webp",
-            "name": "thumbnail_1_i0zQPMhdYKlnCkXnh47ggw.webp",
-            "path": null,
-            "size": 5.51,
-            "width": 156,
-            "height": 156,
-            "sizeInBytes": 5512
-          }
-        },
-        "hash": "1_i0z_QP_Mhd_Y_Kln_Ck_Xnh47ggw_67b7ead299",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 40.62,
-        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/1_i0z_QP_Mhd_Y_Kln_Ck_Xnh47ggw_67b7ead299.webp",
-        "previewUrl": null,
-        "provider": "strapi-provider-upload-strapi-cloud",
-        "provider_metadata": null,
-        "createdAt": "2025-10-25T14:26:10.935Z",
-        "updatedAt": "2025-10-25T14:26:10.935Z",
-        "publishedAt": "2025-10-25T14:26:10.937Z"
+        "url": "/assets/optimizations.jpg"
       },
       "tags": [
         {
@@ -102,74 +89,7 @@
       "updatedAt": "2025-10-25T17:13:07.392Z",
       "publishedAt": "2025-10-25T17:13:07.627Z",
       "blog_image": {
-        "id": 5,
-        "documentId": "e4qfyb81ibm6v7lfbkqv9cwj",
-        "name": "Gemini_Generated_Image_7ss0s17ss0s17ss0.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1024,
-        "height": 1024,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/large_Gemini_Generated_Image_7ss0s17ss0s17ss0_1a80f0d7fc.png",
-            "hash": "large_Gemini_Generated_Image_7ss0s17ss0s17ss0_1a80f0d7fc",
-            "mime": "image/png",
-            "name": "large_Gemini_Generated_Image_7ss0s17ss0s17ss0.png",
-            "path": null,
-            "size": 1736.58,
-            "width": 1000,
-            "height": 1000,
-            "sizeInBytes": 1736579
-          },
-          "small": {
-            "ext": ".png",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_Gemini_Generated_Image_7ss0s17ss0s17ss0_1a80f0d7fc.png",
-            "hash": "small_Gemini_Generated_Image_7ss0s17ss0s17ss0_1a80f0d7fc",
-            "mime": "image/png",
-            "name": "small_Gemini_Generated_Image_7ss0s17ss0s17ss0.png",
-            "path": null,
-            "size": 487.92,
-            "width": 500,
-            "height": 500,
-            "sizeInBytes": 487921
-          },
-          "medium": {
-            "ext": ".png",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/medium_Gemini_Generated_Image_7ss0s17ss0s17ss0_1a80f0d7fc.png",
-            "hash": "medium_Gemini_Generated_Image_7ss0s17ss0s17ss0_1a80f0d7fc",
-            "mime": "image/png",
-            "name": "medium_Gemini_Generated_Image_7ss0s17ss0s17ss0.png",
-            "path": null,
-            "size": 1048.78,
-            "width": 750,
-            "height": 750,
-            "sizeInBytes": 1048782
-          },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_Gemini_Generated_Image_7ss0s17ss0s17ss0_1a80f0d7fc.png",
-            "hash": "thumbnail_Gemini_Generated_Image_7ss0s17ss0s17ss0_1a80f0d7fc",
-            "mime": "image/png",
-            "name": "thumbnail_Gemini_Generated_Image_7ss0s17ss0s17ss0.png",
-            "path": null,
-            "size": 55.25,
-            "width": 156,
-            "height": 156,
-            "sizeInBytes": 55248
-          }
-        },
-        "hash": "Gemini_Generated_Image_7ss0s17ss0s17ss0_1a80f0d7fc",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 456.35,
-        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/Gemini_Generated_Image_7ss0s17ss0s17ss0_1a80f0d7fc.png",
-        "previewUrl": null,
-        "provider": "strapi-provider-upload-strapi-cloud",
-        "provider_metadata": null,
-        "createdAt": "2025-10-25T17:00:11.220Z",
-        "updatedAt": "2025-10-25T17:00:11.220Z",
-        "publishedAt": "2025-10-25T17:00:11.220Z"
+        "url": "/assets/analysis.webp"
       },
       "tags": [
         {
@@ -225,74 +145,7 @@
       "updatedAt": "2025-10-25T14:55:35.519Z",
       "publishedAt": "2025-10-25T14:55:35.755Z",
       "blog_image": {
-        "id": 1,
-        "documentId": "i6kbl3qnumy16hzs2s6ql7df",
-        "name": "1759474748951.jpg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1280,
-        "height": 1600,
-        "formats": {
-          "large": {
-            "ext": ".jpg",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/large_1759474748951_a9ce983a51.jpg",
-            "hash": "large_1759474748951_a9ce983a51",
-            "mime": "image/jpeg",
-            "name": "large_1759474748951.jpg",
-            "path": null,
-            "size": 73.19,
-            "width": 800,
-            "height": 1000,
-            "sizeInBytes": 73191
-          },
-          "small": {
-            "ext": ".jpg",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_1759474748951_a9ce983a51.jpg",
-            "hash": "small_1759474748951_a9ce983a51",
-            "mime": "image/jpeg",
-            "name": "small_1759474748951.jpg",
-            "path": null,
-            "size": 26.33,
-            "width": 400,
-            "height": 500,
-            "sizeInBytes": 26327
-          },
-          "medium": {
-            "ext": ".jpg",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/medium_1759474748951_a9ce983a51.jpg",
-            "hash": "medium_1759474748951_a9ce983a51",
-            "mime": "image/jpeg",
-            "name": "medium_1759474748951.jpg",
-            "path": null,
-            "size": 48.01,
-            "width": 600,
-            "height": 750,
-            "sizeInBytes": 48014
-          },
-          "thumbnail": {
-            "ext": ".jpg",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_1759474748951_a9ce983a51.jpg",
-            "hash": "thumbnail_1759474748951_a9ce983a51",
-            "mime": "image/jpeg",
-            "name": "thumbnail_1759474748951.jpg",
-            "path": null,
-            "size": 4.28,
-            "width": 125,
-            "height": 156,
-            "sizeInBytes": 4283
-          }
-        },
-        "hash": "1759474748951_a9ce983a51",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 136.43,
-        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/1759474748951_a9ce983a51.jpg",
-        "previewUrl": null,
-        "provider": "strapi-provider-upload-strapi-cloud",
-        "provider_metadata": null,
-        "createdAt": "2025-10-25T13:31:07.570Z",
-        "updatedAt": "2025-10-25T13:31:07.570Z",
-        "publishedAt": "2025-10-25T13:31:07.571Z"
+        "url": "/assets/Planning_Architecture.png"
       },
       "tags": [
         {
@@ -348,74 +201,7 @@
       "updatedAt": "2025-10-25T16:31:05.257Z",
       "publishedAt": "2025-10-25T16:31:05.485Z",
       "blog_image": {
-        "id": 4,
-        "documentId": "e6flwz8dm5zyw34686odwq8k",
-        "name": "development.jpg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1160,
-        "height": 864,
-        "formats": {
-          "large": {
-            "ext": ".jpg",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/large_development_1cf8093f27.jpg",
-            "hash": "large_development_1cf8093f27",
-            "mime": "image/jpeg",
-            "name": "large_development.jpg",
-            "path": null,
-            "size": 58.41,
-            "width": 1000,
-            "height": 745,
-            "sizeInBytes": 58410
-          },
-          "small": {
-            "ext": ".jpg",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_development_1cf8093f27.jpg",
-            "hash": "small_development_1cf8093f27",
-            "mime": "image/jpeg",
-            "name": "small_development.jpg",
-            "path": null,
-            "size": 20.93,
-            "width": 500,
-            "height": 372,
-            "sizeInBytes": 20925
-          },
-          "medium": {
-            "ext": ".jpg",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/medium_development_1cf8093f27.jpg",
-            "hash": "medium_development_1cf8093f27",
-            "mime": "image/jpeg",
-            "name": "medium_development.jpg",
-            "path": null,
-            "size": 37.91,
-            "width": 750,
-            "height": 559,
-            "sizeInBytes": 37912
-          },
-          "thumbnail": {
-            "ext": ".jpg",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_development_1cf8093f27.jpg",
-            "hash": "thumbnail_development_1cf8093f27",
-            "mime": "image/jpeg",
-            "name": "thumbnail_development.jpg",
-            "path": null,
-            "size": 5.54,
-            "width": 209,
-            "height": 156,
-            "sizeInBytes": 5541
-          }
-        },
-        "hash": "development_1cf8093f27",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 70.96,
-        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/development_1cf8093f27.jpg",
-        "previewUrl": null,
-        "provider": "strapi-provider-upload-strapi-cloud",
-        "provider_metadata": null,
-        "createdAt": "2025-10-25T16:30:58.315Z",
-        "updatedAt": "2025-10-25T16:30:58.315Z",
-        "publishedAt": "2025-10-25T16:30:58.317Z"
+        "url": "/assets/development.jpg"
       },
       "tags": [
         {
@@ -463,50 +249,7 @@
       "updatedAt": "2025-10-26T07:21:35.945Z",
       "publishedAt": "2025-10-26T07:21:36.177Z",
       "blog_image": {
-        "id": 6,
-        "documentId": "wd6sobrj9gu2e4htie196bqo",
-        "name": "1_Z8v53FpG5MiKbLhuX5E4Yw.webp",
-        "alternativeText": null,
-        "caption": null,
-        "width": 720,
-        "height": 405,
-        "formats": {
-          "small": {
-            "ext": ".webp",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_1_Z8v53_Fp_G5_Mi_Kb_Lhu_X5_E4_Yw_c77a5876e6.webp",
-            "hash": "small_1_Z8v53_Fp_G5_Mi_Kb_Lhu_X5_E4_Yw_c77a5876e6",
-            "mime": "image/webp",
-            "name": "small_1_Z8v53FpG5MiKbLhuX5E4Yw.webp",
-            "path": null,
-            "size": 6.22,
-            "width": 500,
-            "height": 281,
-            "sizeInBytes": 6222
-          },
-          "thumbnail": {
-            "ext": ".webp",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_1_Z8v53_Fp_G5_Mi_Kb_Lhu_X5_E4_Yw_c77a5876e6.webp",
-            "hash": "thumbnail_1_Z8v53_Fp_G5_Mi_Kb_Lhu_X5_E4_Yw_c77a5876e6",
-            "mime": "image/webp",
-            "name": "thumbnail_1_Z8v53FpG5MiKbLhuX5E4Yw.webp",
-            "path": null,
-            "size": 2.93,
-            "width": 245,
-            "height": 138,
-            "sizeInBytes": 2928
-          }
-        },
-        "hash": "1_Z8v53_Fp_G5_Mi_Kb_Lhu_X5_E4_Yw_c77a5876e6",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 10.1,
-        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/1_Z8v53_Fp_G5_Mi_Kb_Lhu_X5_E4_Yw_c77a5876e6.webp",
-        "previewUrl": null,
-        "provider": "strapi-provider-upload-strapi-cloud",
-        "provider_metadata": null,
-        "createdAt": "2025-10-26T07:15:03.963Z",
-        "updatedAt": "2025-10-26T07:15:03.963Z",
-        "publishedAt": "2025-10-26T07:15:03.964Z"
+        "url": "/assets/full-stack-development.png"
       },
       "tags": [
         {
@@ -554,50 +297,7 @@
       "updatedAt": "2025-10-26T07:29:40.195Z",
       "publishedAt": "2025-10-26T07:29:40.517Z",
       "blog_image": {
-        "id": 7,
-        "documentId": "mc1q8kc7gs0vrdp7y1javw7x",
-        "name": "1_o2Qw0lYl6-6UCwzWXsmJDQ.webp",
-        "alternativeText": null,
-        "caption": null,
-        "width": 720,
-        "height": 720,
-        "formats": {
-          "small": {
-            "ext": ".webp",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_1_o2_Qw0l_Yl6_6_U_Cwz_W_Xsm_JDQ_ac28076491.webp",
-            "hash": "small_1_o2_Qw0l_Yl6_6_U_Cwz_W_Xsm_JDQ_ac28076491",
-            "mime": "image/webp",
-            "name": "small_1_o2Qw0lYl6-6UCwzWXsmJDQ.webp",
-            "path": null,
-            "size": 36.51,
-            "width": 500,
-            "height": 500,
-            "sizeInBytes": 36506
-          },
-          "thumbnail": {
-            "ext": ".webp",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_1_o2_Qw0l_Yl6_6_U_Cwz_W_Xsm_JDQ_ac28076491.webp",
-            "hash": "thumbnail_1_o2_Qw0l_Yl6_6_U_Cwz_W_Xsm_JDQ_ac28076491",
-            "mime": "image/webp",
-            "name": "thumbnail_1_o2Qw0lYl6-6UCwzWXsmJDQ.webp",
-            "path": null,
-            "size": 6.44,
-            "width": 156,
-            "height": 156,
-            "sizeInBytes": 6438
-          }
-        },
-        "hash": "1_o2_Qw0l_Yl6_6_U_Cwz_W_Xsm_JDQ_ac28076491",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 79.21,
-        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/1_o2_Qw0l_Yl6_6_U_Cwz_W_Xsm_JDQ_ac28076491.webp",
-        "previewUrl": null,
-        "provider": "strapi-provider-upload-strapi-cloud",
-        "provider_metadata": null,
-        "createdAt": "2025-10-26T07:25:53.910Z",
-        "updatedAt": "2025-10-26T07:25:53.910Z",
-        "publishedAt": "2025-10-26T07:25:53.911Z"
+        "url": "/assets/deployment-and-monitoring.png"
       },
       "tags": [
         {
@@ -645,74 +345,7 @@
       "updatedAt": "2025-10-26T07:39:55.872Z",
       "publishedAt": "2025-10-26T07:39:56.137Z",
       "blog_image": {
-        "id": 8,
-        "documentId": "ghpddshgllabaoet2v5yck2y",
-        "name": "1_tDHAEtI0f8eevnCXcDCn9g.webp",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1024,
-        "height": 1024,
-        "formats": {
-          "large": {
-            "ext": ".webp",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/large_1_t_DHA_Et_I0f8eevn_C_Xc_D_Cn9g_8bcf983769.webp",
-            "hash": "large_1_t_DHA_Et_I0f8eevn_C_Xc_D_Cn9g_8bcf983769",
-            "mime": "image/webp",
-            "name": "large_1_tDHAEtI0f8eevnCXcDCn9g.webp",
-            "path": null,
-            "size": 94.15,
-            "width": 1000,
-            "height": 1000,
-            "sizeInBytes": 94146
-          },
-          "small": {
-            "ext": ".webp",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_1_t_DHA_Et_I0f8eevn_C_Xc_D_Cn9g_8bcf983769.webp",
-            "hash": "small_1_t_DHA_Et_I0f8eevn_C_Xc_D_Cn9g_8bcf983769",
-            "mime": "image/webp",
-            "name": "small_1_tDHAEtI0f8eevnCXcDCn9g.webp",
-            "path": null,
-            "size": 36.54,
-            "width": 500,
-            "height": 500,
-            "sizeInBytes": 36536
-          },
-          "medium": {
-            "ext": ".webp",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/medium_1_t_DHA_Et_I0f8eevn_C_Xc_D_Cn9g_8bcf983769.webp",
-            "hash": "medium_1_t_DHA_Et_I0f8eevn_C_Xc_D_Cn9g_8bcf983769",
-            "mime": "image/webp",
-            "name": "medium_1_tDHAEtI0f8eevnCXcDCn9g.webp",
-            "path": null,
-            "size": 65.01,
-            "width": 750,
-            "height": 750,
-            "sizeInBytes": 65012
-          },
-          "thumbnail": {
-            "ext": ".webp",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_1_t_DHA_Et_I0f8eevn_C_Xc_D_Cn9g_8bcf983769.webp",
-            "hash": "thumbnail_1_t_DHA_Et_I0f8eevn_C_Xc_D_Cn9g_8bcf983769",
-            "mime": "image/webp",
-            "name": "thumbnail_1_tDHAEtI0f8eevnCXcDCn9g.webp",
-            "path": null,
-            "size": 6.76,
-            "width": 156,
-            "height": 156,
-            "sizeInBytes": 6762
-          }
-        },
-        "hash": "1_t_DHA_Et_I0f8eevn_C_Xc_D_Cn9g_8bcf983769",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 116,
-        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/1_t_DHA_Et_I0f8eevn_C_Xc_D_Cn9g_8bcf983769.webp",
-        "previewUrl": null,
-        "provider": "strapi-provider-upload-strapi-cloud",
-        "provider_metadata": null,
-        "createdAt": "2025-10-26T07:33:15.312Z",
-        "updatedAt": "2025-10-26T07:33:15.312Z",
-        "publishedAt": "2025-10-26T07:33:15.313Z"
+        "url": "/assets/api-and-database-design.png"
       },
       "tags": [
         {
@@ -768,62 +401,7 @@
       "updatedAt": "2025-10-29T13:43:06.576Z",
       "publishedAt": "2025-10-29T13:43:06.858Z",
       "blog_image": {
-        "id": 9,
-        "documentId": "w2ijnwtrsieaic80yil5utfz",
-        "name": "Gemini_Generated_Image_tx0w60tx0w60tx0w.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 932,
-        "height": 932,
-        "formats": {
-          "small": {
-            "ext": ".png",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_Gemini_Generated_Image_tx0w60tx0w60tx0w_46b667bc57.png",
-            "hash": "small_Gemini_Generated_Image_tx0w60tx0w60tx0w_46b667bc57",
-            "mime": "image/png",
-            "name": "small_Gemini_Generated_Image_tx0w60tx0w60tx0w.png",
-            "path": null,
-            "size": 371,
-            "width": 500,
-            "height": 500,
-            "sizeInBytes": 370998
-          },
-          "medium": {
-            "ext": ".png",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/medium_Gemini_Generated_Image_tx0w60tx0w60tx0w_46b667bc57.png",
-            "hash": "medium_Gemini_Generated_Image_tx0w60tx0w60tx0w_46b667bc57",
-            "mime": "image/png",
-            "name": "medium_Gemini_Generated_Image_tx0w60tx0w60tx0w.png",
-            "path": null,
-            "size": 852.04,
-            "width": 750,
-            "height": 750,
-            "sizeInBytes": 852043
-          },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_Gemini_Generated_Image_tx0w60tx0w60tx0w_46b667bc57.png",
-            "hash": "thumbnail_Gemini_Generated_Image_tx0w60tx0w60tx0w_46b667bc57",
-            "mime": "image/png",
-            "name": "thumbnail_Gemini_Generated_Image_tx0w60tx0w60tx0w.png",
-            "path": null,
-            "size": 38.06,
-            "width": 156,
-            "height": 156,
-            "sizeInBytes": 38060
-          }
-        },
-        "hash": "Gemini_Generated_Image_tx0w60tx0w60tx0w_46b667bc57",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 336.53,
-        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/Gemini_Generated_Image_tx0w60tx0w60tx0w_46b667bc57.png",
-        "previewUrl": null,
-        "provider": "strapi-provider-upload-strapi-cloud",
-        "provider_metadata": null,
-        "createdAt": "2025-10-29T13:29:54.118Z",
-        "updatedAt": "2025-10-29T13:43:04.367Z",
-        "publishedAt": "2025-10-29T13:29:54.120Z"
+        "url": "/assets/how-to-build-fast-loading-pages-without-any-frameworks.webp"
       },
       "tags": [
         {
@@ -879,50 +457,7 @@
       "updatedAt": "2025-10-29T15:03:36.143Z",
       "publishedAt": "2025-10-29T15:03:36.420Z",
       "blog_image": {
-        "id": 10,
-        "documentId": "w5d9uueg63qprq3s3wgg545z",
-        "name": "Gemini_Generated_Image_3x6sy03x6sy03x6s.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 532,
-        "height": 714,
-        "formats": {
-          "small": {
-            "ext": ".png",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/small_Gemini_Generated_Image_3x6sy03x6sy03x6s_09f230f86f.png",
-            "hash": "small_Gemini_Generated_Image_3x6sy03x6sy03x6s_09f230f86f",
-            "mime": "image/png",
-            "name": "small_Gemini_Generated_Image_3x6sy03x6sy03x6s.png",
-            "path": null,
-            "size": 344.7,
-            "width": 373,
-            "height": 500,
-            "sizeInBytes": 344702
-          },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/thumbnail_Gemini_Generated_Image_3x6sy03x6sy03x6s_09f230f86f.png",
-            "hash": "thumbnail_Gemini_Generated_Image_3x6sy03x6sy03x6s_09f230f86f",
-            "mime": "image/png",
-            "name": "thumbnail_Gemini_Generated_Image_3x6sy03x6sy03x6s.png",
-            "path": null,
-            "size": 35.66,
-            "width": 116,
-            "height": 156,
-            "sizeInBytes": 35656
-          }
-        },
-        "hash": "Gemini_Generated_Image_3x6sy03x6sy03x6s_09f230f86f",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 218.8,
-        "url": "https://supreme-actor-a1b5508506.media.strapiapp.com/Gemini_Generated_Image_3x6sy03x6sy03x6s_09f230f86f.png",
-        "previewUrl": null,
-        "provider": "strapi-provider-upload-strapi-cloud",
-        "provider_metadata": null,
-        "createdAt": "2025-10-29T14:57:32.181Z",
-        "updatedAt": "2025-10-29T14:57:32.181Z",
-        "publishedAt": "2025-10-29T14:57:32.182Z"
+        "url": "/assets/startup.png"
       },
       "tags": [
         {

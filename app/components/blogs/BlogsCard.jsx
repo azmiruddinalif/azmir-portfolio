@@ -6,6 +6,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import CardBase from "../common/Card";
 import BlogCardSkeleton from "./BlogCardSkeleton";
+import BlogImagePlaceholder from "./BlogImagePlaceholder";
 import useInfiniteScroll from "@/app/hooks/useInfiniteScroll";
 
 export default function BlogsCard({ blogs }) {
@@ -65,7 +66,7 @@ export default function BlogsCard({ blogs }) {
           blog_image?.url ||
           blog_image?.data?.attributes?.formats?.medium?.url ||
           blog_image?.data?.attributes?.url ||
-          "/default-blog.jpg"; // fallback
+          null;
 
         // ✍️ Clean description text
         const cleanedText =
@@ -100,14 +101,14 @@ export default function BlogsCard({ blogs }) {
                   )}
                 >
                   {/* 🖼️ Blog Image */}
-                  {imageUrl && (
-                    <CardBase.Header
-                      className={clsx(
-                        "relative w-full h-48 sm:h-44 md:h-48 lg:h-52 rounded-xl overflow-hidden flex-shrink-0",
-                        "sm:w-2/5 lg:w-1/3 shadow-md group-hover:shadow-xl transition-shadow duration-500",
-                        "ring-1 ring-gray-200 dark:ring-gray-800"
-                      )}
-                    >
+                  <CardBase.Header
+                    className={clsx(
+                      "relative w-full h-48 sm:h-44 md:h-48 lg:h-52 rounded-xl overflow-hidden flex-shrink-0",
+                      "sm:w-2/5 lg:w-1/3 shadow-md group-hover:shadow-xl transition-shadow duration-500",
+                      "ring-1 ring-gray-200 dark:ring-gray-800"
+                    )}
+                  >
+                    {imageUrl ? (
                       <Image
                         src={imageUrl}
                         alt={title || "Blog Image"}
@@ -115,9 +116,11 @@ export default function BlogsCard({ blogs }) {
                         sizes="(max-width: 768px) 100vw, 40vw"
                         className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    </CardBase.Header>
-                  )}
+                    ) : (
+                      <BlogImagePlaceholder title={title} textClassName="text-5xl" />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </CardBase.Header>
 
                   {/* 📝 Blog Text */}
                   <div className="flex-1">

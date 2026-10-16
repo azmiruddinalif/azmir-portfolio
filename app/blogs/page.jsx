@@ -4,9 +4,12 @@ import BlogHeader from "../components/blogs/BlogHeader";
 import BlogRight from "../components/blogs/BlogRight";
 import BlogsCard from "../components/blogs/BlogsCard";
 import ReusableButton from "../components/common/HireOrContact";
-import blogData from "../lib/blogsData.json";
+import { getBlogsData } from "../lib/blogsStore";
+
+export const dynamic = "force-dynamic";
 
 export default async function Blogs() {
+  const blogData = getBlogsData();
   const data = [...blogData.data].sort((a, b) => {
     const dateA = new Date(a.date_of_post);
     const dateB = new Date(b.date_of_post);
