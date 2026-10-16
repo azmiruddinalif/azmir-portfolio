@@ -5,9 +5,9 @@ const Player = dynamic(
   () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
   {
     ssr: false,
-  }
+  },
 );
-
+// Availability component to show the availability status of the user
 const Availability = () => {
   return (
     <div className="px-3 py-2 bg-green-200 w-fit mx-auto lg:mx-0 flex items-center gap-x-1.5 rounded-full">
@@ -18,7 +18,7 @@ const Availability = () => {
         style={{ height: "14px", width: "14px" }}
       />
       <span className="font-secondary text-xs text-green">
-       Develop modern web applications
+        Develop modern web applications
       </span>
     </div>
   );
